@@ -16,7 +16,7 @@ const NavIcon: React.FC<NavIconProps> = ({ href, icon: Icon, isTopOfPage }) => {
           : 'hover:text-green hover:bg-brown'
       }`}
     >
-      <Link href={href}>
+      <Link href={href} target='_blank'>
         <Icon size={26} />
       </Link>
     </li>
