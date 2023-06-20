@@ -1,9 +1,10 @@
 'use client'
 
 import Link from 'next/link'
-import Container from './Container'
+import Container from '@/components/Container'
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
+import NavLink from './NavLink'
 
 const Navbar = () => {
   const [isTopOfPage, setIsTopOfPage] = useState<boolean>(true)
@@ -39,30 +40,9 @@ const Navbar = () => {
               isTopOfPage ? 'text-white' : 'text-brown'
             }`}
           >
-            <li>
-              <Link
-                href='/eshop'
-                className='hover:underline hover:underline-offset-4'
-              >
-                E-Shop
-              </Link>
-            </li>
-            <li>
-              <Link
-                href='/informace'
-                className='hover:underline hover:underline-offset-4'
-              >
-                Informace
-              </Link>
-            </li>
-            <li>
-              <Link
-                href='/kontakt'
-                className='hover:underline hover:underline-offset-4'
-              >
-                Kontakt
-              </Link>
-            </li>
+            <NavLink href='/eshop' label='E-Shop' />
+            <NavLink href='/informace' label='Informace' />
+            <NavLink href='/kontakt' label='Kontakt' />
           </ul>
         </div>
       </Container>
