@@ -13,7 +13,6 @@ export default function EshopLayout({
   return (
     <div>
       <Navbar isEshop={true} />
-      <Newsletter />
       {children}
     </div>
   )
