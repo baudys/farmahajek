@@ -1,5 +1,4 @@
 import Container from '@/components/Container'
-import D853 from '@/components/slepicky/D853'
 import Image from 'next/image'
 import Link from 'next/link'
 
