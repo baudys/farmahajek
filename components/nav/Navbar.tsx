@@ -10,7 +10,11 @@ import { AiOutlineInstagram } from 'react-icons/ai'
 import { IoLogoTiktok } from 'react-icons/io5'
 import { FaFacebook } from 'react-icons/fa'
 
-const Navbar = () => {
+interface NavbarProps {
+  isEshop?: boolean
+}
+
+const Navbar: React.FC<NavbarProps> = ({ isEshop }) => {
   const [isTopOfPage, setIsTopOfPage] = useState<boolean>(true)
 
   useEffect(() => {
@@ -35,40 +39,55 @@ const Navbar = () => {
     >
       <Container>
         <div className='flex justify-between items-center'>
-          <Link href='/' className='text-3xl font-bold text-white'>
+          <Link
+            href='/'
+            className={`text-3xl font-bold ${
+              isEshop ? 'text-black' : 'text-white'
+            }`}
+          >
             <h1>LOGO</h1>
           </Link>
 
-          <ul
-            className={`flex gap-3 text-lg uppercase font-medium ${
-              isTopOfPage ? 'text-white' : 'text-brown'
-            }`}
-          >
+          <ul className='flex gap-3 text-lg uppercase font-medium'>
             <NavIcon
               href='https://www.instagram.com/farmahajek/'
               icon={AiOutlineInstagram}
               isTopOfPage={isTopOfPage}
+              isEshop={isEshop}
             />
             <NavIcon
               href='https://www.tiktok.com/@farmahajek'
               icon={IoLogoTiktok}
               isTopOfPage={isTopOfPage}
+              isEshop={isEshop}
             />
             <NavIcon
               href='https://www.facebook.com/people/Farma-H%C3%A1jek/100092479713291/'
               icon={FaFacebook}
               isTopOfPage={isTopOfPage}
+              isEshop={isEshop}
             />
           </ul>
 
-          <ul
-            className={`flex gap-3 text-lg uppercase font-medium ${
-              isTopOfPage ? 'text-white' : 'text-brown'
-            }`}
-          >
-            <NavLink href='/eshop' label='E-Shop' />
-            <NavLink href='/informace' label='Informace' />
-            <NavLink href='/kontakt' label='Kontakt' />
+          <ul className='flex gap-3 text-lg uppercase font-medium'>
+            <NavLink
+              href='/eshop'
+              label='E-Shop'
+              isTopOfPage={isTopOfPage}
+              isEshop={isEshop}
+            />
+            <NavLink
+              href='/informace'
+              label='Informace'
+              isTopOfPage={isTopOfPage}
+              isEshop={isEshop}
+            />
+            <NavLink
+              href='/kontakt'
+              label='Kontakt'
+              isTopOfPage={isTopOfPage}
+              isEshop={isEshop}
+            />
           </ul>
         </div>
       </Container>

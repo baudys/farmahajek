@@ -1,4 +1,5 @@
 import Container from '@/components/Container'
+import Link from 'next/link'
 
 export const metadata = {
   title: 'Farma Hájek - Eshop 🛒',
@@ -6,9 +7,22 @@ export const metadata = {
 
 const Eshop = () => {
   return (
-    <div className='min-h-[200vh] bg-green-900 pt-20'>
+    <div className='min-h-[200vh] bg-white pt-20'>
       <Container>
-        <h1 className='text-5xl'>ESHOOOP</h1>
+        <ul className='flex gap-4'>
+          <li>
+            <Link href='/eshop/slepicky'>Slepičky</Link>
+          </li>
+          <li>
+            <Link href='/eshop/kurniky'>Kurníky</Link>
+          </li>
+          <li>
+            <Link href='/eshop/smesi'>Směsi</Link>
+          </li>
+          <li>
+            <Link href='/eshop/doplnky'>Doplňky</Link>
+          </li>
+        </ul>
       </Container>
     </div>
   )

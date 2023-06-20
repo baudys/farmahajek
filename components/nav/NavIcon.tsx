@@ -5,16 +5,24 @@ interface NavIconProps {
   href: string
   icon: IconType
   isTopOfPage: boolean
+  isEshop?: boolean
 }
 
-const NavIcon: React.FC<NavIconProps> = ({ href, icon: Icon, isTopOfPage }) => {
+const NavIcon: React.FC<NavIconProps> = ({
+  href,
+  icon: Icon,
+  isTopOfPage,
+  isEshop,
+}) => {
   return (
     <li
       className={`rounded-full p-1.5 transition ${
-        isTopOfPage
-          ? 'hover:text-black hover:bg-white'
-          : 'hover:text-green hover:bg-brown'
-      }`}
+        !isEshop && isTopOfPage && 'text-white hover:text-black hover:bg-white'
+      } ${
+        !isEshop && !isTopOfPage && 'text-brown hover:text-green hover:bg-brown'
+      } ${
+        isEshop && isTopOfPage && 'text-black hover:text-white hover:bg-black'
+      } ${isEshop && !isTopOfPage && 'hover:text-green hover:bg-black'}`}
     >
       <Link href={href} target='_blank'>
         <Icon size={26} />
