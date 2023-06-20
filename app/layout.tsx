@@ -1,6 +1,7 @@
 import Navbar from '@/components/nav/Navbar'
 import './globals.css'
 import { Montserrat } from 'next/font/google'
+import Newsletter from '@/components/Newsletter'
 
 const montserrat = Montserrat({ subsets: ['latin'] })
 
@@ -18,6 +19,7 @@ export default function RootLayout({
     <html lang='en'>
       <body className={montserrat.className}>
         <Navbar />
+        <Newsletter />
         {children}
       </body>
     </html>

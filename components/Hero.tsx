@@ -16,7 +16,7 @@ const Hero = () => {
         <div className='absolute bg-black/75 top-0 left-0 w-full h-full'></div>
         <Container styles='z-10 h-full w-full'>
           <div className='pt-20'>
-            <h1 className='bg-white text-4xl font-black'>ahhoooooj</h1>
+            <h1></h1>
           </div>
         </Container>
       </div>
