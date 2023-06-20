@@ -5,6 +5,10 @@ import Container from '@/components/Container'
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import NavLink from './NavLink'
+import NavIcon from './NavIcon'
+import { AiOutlineInstagram } from 'react-icons/ai'
+import { IoLogoTiktok } from 'react-icons/io5'
+import { FaFacebook } from 'react-icons/fa'
 
 const Navbar = () => {
   const [isTopOfPage, setIsTopOfPage] = useState<boolean>(true)
@@ -34,6 +38,28 @@ const Navbar = () => {
           <Link href='/' className='text-3xl font-bold text-white'>
             <h1>LOGO</h1>
           </Link>
+
+          <ul
+            className={`flex gap-3 text-lg uppercase font-medium ${
+              isTopOfPage ? 'text-white' : 'text-brown'
+            }`}
+          >
+            <NavIcon
+              href='https://www.instagram.com/farmahajek/'
+              icon={AiOutlineInstagram}
+              isTopOfPage={isTopOfPage}
+            />
+            <NavIcon
+              href='https://www.tiktok.com/@farmahajek'
+              icon={IoLogoTiktok}
+              isTopOfPage={isTopOfPage}
+            />
+            <NavIcon
+              href='https://www.facebook.com/people/Farma-H%C3%A1jek/100092479713291/'
+              icon={FaFacebook}
+              isTopOfPage={isTopOfPage}
+            />
+          </ul>
 
           <ul
             className={`flex gap-3 text-lg uppercase font-medium ${
