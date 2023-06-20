@@ -2,7 +2,6 @@ import Container from '@/components/Container'
 
 export const metadata = {
   title: 'Farma Hájek - Eshop 🛒',
-  description: '',
 }
 
 const Eshop = () => {
