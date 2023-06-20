@@ -19,17 +19,17 @@ const Newsletter = () => {
     >
       <div className='flex items-center h-full w-full relative'>
         <div className='absolute left-64 grid grid-cols-2 lg:grid-cols-3 items-center'>
-          <h4 className='flex-shrink-0 uppercase font-light'>
+          <h4 className='flex-shrink-0 uppercase mr-24'>
             chcete odebírat novinky?
           </h4>
           <NewsletterInput />
-          <button className='uppercase text-lg bg-white font-semibold p-2 ml-20'>
+          <button className='py-1.5 px-1 rounded-md uppercase text-lg border-2 border-brown font-semibold ml-6 hover:bg-brown hover:text-white transition'>
             potvrdit!
           </button>
         </div>
 
         <AiOutlineClose
-          className='absolute right-5'
+          className='absolute right-5 cursor-pointer'
           onClick={handleClick}
           size={30}
         />
