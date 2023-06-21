@@ -21,8 +21,10 @@ const NavIcon: React.FC<NavIconProps> = ({
       } ${
         !isEshop && !isTopOfPage && 'text-brown hover:text-green hover:bg-brown'
       } ${
-        isEshop && isTopOfPage && 'text-black hover:text-white hover:bg-black'
-      } ${isEshop && !isTopOfPage && 'hover:text-green hover:bg-black'}`}
+        isEshop && isTopOfPage && 'text-brown hover:text-white hover:bg-brown'
+      } ${
+        isEshop && !isTopOfPage && 'text-brown hover:text-green hover:bg-brown'
+      }`}
     >
       <Link href={href} target='_blank'>
         <Icon size={26} />

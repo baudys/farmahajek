@@ -19,7 +19,7 @@ const NavLink: React.FC<NavLinkProps> = ({
         className={`hover:underline hover:underline-offset-4
       ${!isEshop && isTopOfPage && 'text-white'} 
       ${!isEshop && !isTopOfPage && 'text-brown'} 
-      ${isEshop && isTopOfPage && 'text-black '}`}
+      ${isEshop && 'text-brown '}`}
         href={href}
       >
         {label}
