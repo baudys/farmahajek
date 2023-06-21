@@ -31,7 +31,7 @@ const Navbar: React.FC<NavbarProps> = ({ isEshop }) => {
 
   return (
     <div
-      className={`fixed w-full py-5 transition ${
+      className={`fixed w-full py-5 transition z-10 ${
         isTopOfPage
           ? 'bg-transparent'
           : 'bg-green/70 backdrop-blur-xl drop-shadow'
