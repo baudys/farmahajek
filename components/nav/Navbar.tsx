@@ -45,7 +45,7 @@ const Navbar: React.FC<NavbarProps> = ({ isEshop }) => {
               isEshop ? 'text-black' : 'text-white'
             }`}
           >
-            <h1>LOGO</h1>
+            <Image src='/logo.png' width={40} height={40} alt='logo' />
           </Link>
 
           <ul className='flex gap-3 text-lg uppercase font-medium'>
