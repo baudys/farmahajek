@@ -30,8 +30,8 @@ const Sidebar: React.FC = () => {
         <Link
           href='/eshop'
           onClick={() => selectCategory('vse')}
-          className={`rounded-lg border-2 border-black py-1 px-4 w-full ${
-            selectedCategory === 'vse' && 'bg-black text-white'
+          className={`rounded-lg border-2 border-brown py-1 px-4 w-full ${
+            selectedCategory === 'vse' && 'bg-brown text-white'
           }`}
         >
           Vše
@@ -39,8 +39,8 @@ const Sidebar: React.FC = () => {
         <Link
           href='/eshop/slepicky'
           onClick={() => selectCategory('slepicky')}
-          className={`rounded-lg border-2 border-black py-1 px-4 w-full ${
-            selectedCategory === 'slepicky' && 'bg-black text-white'
+          className={`rounded-lg border-2 border-brown py-1 px-4 w-full ${
+            selectedCategory === 'slepicky' && 'bg-brown text-white'
           }`}
         >
           Slepičky
@@ -48,8 +48,8 @@ const Sidebar: React.FC = () => {
         <Link
           href='/eshop/kurniky'
           onClick={() => selectCategory('kurniky')}
-          className={`rounded-lg border-2 border-black py-1 px-4 w-full ${
-            selectedCategory === 'kurniky' && 'bg-black text-white'
+          className={`rounded-lg border-2 border-brown py-1 px-4 w-full ${
+            selectedCategory === 'kurniky' && 'bg-brown text-white'
           }`}
         >
           Kurníky
@@ -57,8 +57,8 @@ const Sidebar: React.FC = () => {
         <Link
           href='/eshop/smesi'
           onClick={() => selectCategory('smesi')}
-          className={`rounded-lg border-2 border-black py-1 px-4 w-full ${
-            selectedCategory === 'smesi' && 'bg-black text-white'
+          className={`rounded-lg border-2 border-brown py-1 px-4 w-full ${
+            selectedCategory === 'smesi' && 'bg-brown text-white'
           }`}
         >
           Směsi
@@ -66,8 +66,8 @@ const Sidebar: React.FC = () => {
         <Link
           href='/eshop/doplnky'
           onClick={() => selectCategory('doplnky')}
-          className={`rounded-lg border-2 border-black py-1 px-4 w-full ${
-            selectedCategory === 'doplnky' && 'bg-black text-white'
+          className={`rounded-lg border-2 border-brown py-1 px-4 w-full ${
+            selectedCategory === 'doplnky' && 'bg-brown text-white'
           }`}
         >
           Doplňky
