@@ -6,10 +6,10 @@ const Slepicky = () => {
   return (
     <div className='bg-white pt-20'>
       <h2 className='uppercase text-brown text-5xl text-center bg-zinc-300 font-bold py-20 mb-8 border-y-2 border-brown'>
-        Všechny produkty
+        Slepičky
       </h2>
       <Container>
-        <div className='grid lg:grid-cols-[25%_75%] gap-20'>
+        <div className='grid lg:grid-cols-[1fr_5fr] gap-20'>
           <Sidebar />
           <SlepickyGallery />
         </div>

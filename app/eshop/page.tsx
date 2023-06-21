@@ -9,7 +9,7 @@ const Eshop = () => {
         Všechny produkty
       </h2>
       <Container>
-        <div className='grid lg:grid-cols-[1fr_3fr] gap-20'>
+        <div className='grid lg:grid-cols-[1fr_5fr] gap-20'>
           <Sidebar />
           <div>
             <div className='flex items-center gap-4 mb-2'>
