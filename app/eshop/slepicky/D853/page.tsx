@@ -1,4 +1,4 @@
-import D853C from '@/components/slepicky/D853C'
+import D853C from '@/components/eshop/slepicky/D853C'
 
 const D853 = () => {
   return <D853C />

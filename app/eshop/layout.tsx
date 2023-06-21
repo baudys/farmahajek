@@ -1,5 +1,4 @@
 import Navbar from '@/components/nav/Navbar'
-import Newsletter from '@/components/Newsletter'
 
 export const metadata = {
   title: 'Farma Hájek - Eshop 🛒',
@@ -12,7 +11,7 @@ export default function EshopLayout({
 }) {
   return (
     <div>
-      <Navbar isEshop={true} />
+      <Navbar isEshop />
       {children}
     </div>
   )

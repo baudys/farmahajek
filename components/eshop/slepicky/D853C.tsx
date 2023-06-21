@@ -4,7 +4,7 @@ const D853C = () => {
   return (
     <div className='pt-40 grid xl:grid-cols-2'>
       <Image
-        src='/slepicky/D853.jpg'
+        src='/slepicky/D853.png'
         alt='D853'
         width={500}
         height={500}
