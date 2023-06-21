@@ -14,24 +14,24 @@ const Newsletter = () => {
   return (
     <div
       className={`transition-all ${
-        isOpen ? 'fixed bottom-0 left-0 min-w-full h-20 bg-green' : 'hidden'
+        isOpen
+          ? 'fixed bottom-0 left-0 min-w-full h-44 lg:h-20 bg-green z-10'
+          : 'hidden'
       }`}
     >
-      <div className='flex items-center h-full w-full relative'>
-        <div className='absolute left-64 grid grid-cols-2 lg:grid-cols-3 items-center'>
-          <h4 className='flex-shrink-0 uppercase mr-24'>
-            chcete odebírat novinky?
-          </h4>
-          <NewsletterInput />
-          <button className='py-1.5 px-1 rounded-md uppercase text-lg border-2 border-brown font-semibold ml-6 hover:bg-brown hover:text-white transition'>
-            potvrdit!
-          </button>
-        </div>
+      <div className='flex flex-col lg:flex-row items-center lg:justify-center lg:gap-4 h-full w-full relative'>
+        <h4 className='uppercase mt-8 mb-3 lg:my-0 lg:mr-32'>
+          chcete odebírat novinky?
+        </h4>
+        <NewsletterInput />
+        <button className='py-1 px-1 mt-4 lg:m-0 rounded-md uppercase text-lg border-2 border-brown font-semibold  hover:bg-brown hover:text-white transition'>
+          potvrdit!
+        </button>
 
         <AiOutlineClose
-          className='absolute right-5 cursor-pointer'
+          className='absolute top-3 right-3 lg:top-[50%] lg:-translate-y-[50%] cursor-pointer'
           onClick={handleClick}
-          size={30}
+          size={25}
         />
       </div>
     </div>
