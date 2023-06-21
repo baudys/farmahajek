@@ -18,10 +18,16 @@ const GalleryItem: React.FC<GalleryItemProps> = ({
   return (
     <Link
       href={href}
-      className='group rounded-md hover:ring-2 hover:ring-brown/80 trasnition'
+      className='group rounded-md hover:ring-2 hover:ring-zinc-200 trasnition'
     >
-      <div className='bg-zinc-200 group-hover:bg-zinc-300 transition grid place-content-center rounded-md'>
-        <Image src={src} alt={label} width={250} height={250} />
+      <div className='bg-zinc-200 group-hover:bg-zinc-300 transition grid place-content-center rounded-t-md'>
+        <Image
+          src={src}
+          alt={label}
+          width={250}
+          height={250}
+          className='group-hover:scale-95 transition'
+        />
       </div>
       <div className='p-1 group-hover:bg-zinc-100 transition rounded-md'>
         <h3 className='font-semibold text-sm text-zinc-600'>{label}</h3>
