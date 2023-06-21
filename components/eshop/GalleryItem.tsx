@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { MdAddShoppingCart } from 'react-icons/md'
+import AddToCartButton from '../buttons/AddToCartButton'
 
 interface GalleryItemProps {
   href: string
@@ -32,9 +32,7 @@ const GalleryItem: React.FC<GalleryItemProps> = ({
       <div className='p-1 group-hover:bg-zinc-100 transition rounded-md'>
         <h3 className='font-semibold text-sm text-zinc-600'>{label}</h3>
         <p className='font-bold text-lg'>{price} Kč</p>
-        <button className='flex items-center justify-center border-2 border-green text-brown bg-green hover:bg-brown hover:border-brown hover:text-zinc-100 py-1.5 px-2 rounded-md w-full gap-2 uppercase font-medium mt-5 transition'>
-          <MdAddShoppingCart size={20} /> do košíku
-        </button>
+        <AddToCartButton />
       </div>
     </Link>
   )

@@ -4,7 +4,7 @@ import Sidebar from '@/components/eshop/sidebar/Sidebar'
 
 const Eshop = () => {
   return (
-    <div className='bg-white pt-20'>
+    <div className='bg-white py-20'>
       <h2 className='uppercase text-white text-5xl text-center bg-brown font-bold py-20 mb-8'>
         Všechny produkty
       </h2>

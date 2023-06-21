@@ -1,24 +1,34 @@
+import AddToCartButton from '@/components/buttons/AddToCartButton'
 import Image from 'next/image'
 
 const D853C = () => {
   return (
-    <div className='pt-40 grid xl:grid-cols-2'>
-      <Image
-        src='/slepicky/D853.png'
-        alt='D853'
-        width={500}
-        height={500}
-        className='place-self-center'
-      />
-      <div>
-        <h2 className='font-bold text-3xl'>Kuřice Dominant Červený D853</h2>
-        <p>
-          DOMINANT ČERVENÝ D853 je velice atraktivně zbarveným programem s
-          hnědou až červenou barvou peří na celém těle. Program využívá možnosti
-          sexování podle geneticky podmíněné odlišné rychlosti růstu letek u
-          jednodenních kohoutů s pomalým a u slepiček s rychlým růstem letek.
-        </p>
+    <div className='grid xl:grid-cols-2'>
+      <Image src='/slepicky/D853.png' alt='D853' width={500} height={500} />
+      <div className='flex items-center w-full'>
+        <div>
+          <div>
+            <h2 className='font-bold text-3xl uppercase mb-2'>
+              Kuřice Dominant Červený D853
+            </h2>
+            <p>
+              DOMINANT ČERVENÝ D853 je velice atraktivně zbarveným programem s
+              hnědou až červenou barvou peří na celém těle. Program využívá
+              možnosti sexování podle geneticky podmíněné odlišné rychlosti
+              růstu letek u jednodenních kohoutů s pomalým a u slepiček s
+              rychlým růstem letek.
+            </p>
+            <AddToCartButton />
+          </div>
+        </div>
+      </div>
 
+      <div />
+
+      <div className='mt-20 space-y-4'>
+        <h3 className='uppercase font-semibold text-2xl mb-8'>
+          Více informací
+        </h3>
         <p className='text-sm font-light'>Období chovu od 19 do 78 týdnů:</p>
         <p>Životnost: 95 %</p>
         <p>Stáří při 50 % snášky: 23 týdnů</p>
