@@ -8,15 +8,15 @@ const Sidebar: React.FC = () => {
   const selectCategory = useSelectCategory(state => state.set)
   const selectedCategory = useSelectCategory(state => state.selected)
 
-  const pathname = window.location.pathname
-
   useEffect(() => {
+    const pathname = window.location.pathname
+
     if (pathname === '/eshop') selectCategory('vse')
     if (pathname === '/eshop/slepicky') selectCategory('slepicky')
     if (pathname === '/eshop/kurniky') selectCategory('kurniky')
     if (pathname === '/eshop/smesi') selectCategory('smesi')
     if (pathname === '/eshop/doplnky') selectCategory('doplnky')
-  }, [pathname, selectCategory])
+  }, [selectCategory])
 
   return (
     <div className='flex flex-col gap-20 items-center mb-16'>
