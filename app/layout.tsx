@@ -8,6 +8,9 @@ const montserrat = Montserrat({ subsets: ['latin'] })
 export const metadata = {
   title: 'Farma Hájek 🐔',
   description: '',
+  icons: {
+    icon: 'favicon.ico',
+  },
 }
 
 export default function RootLayout({
