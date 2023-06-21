@@ -63,6 +63,12 @@ const SlepickyGallery = () => {
         src='/slepicky/DS.png'
         price={300}
       />
+      <GalleryItem
+        href='/eshop/slepicky/kohout'
+        label='Kohout'
+        src='/slepicky/kohout/1.png'
+        price={300}
+      />
     </div>
   )
 }
