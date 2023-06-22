@@ -39,12 +39,7 @@ const Navbar: React.FC<NavbarProps> = ({ isEshop }) => {
     >
       <Container>
         <div className='flex justify-between items-center'>
-          <Link
-            href='/'
-            className={`text-3xl font-bold ${
-              isEshop ? 'text-black' : 'text-white'
-            }`}
-          >
+          <Link href='/'>
             <Image src='/logo.png' width={40} height={40} alt='logo' />
           </Link>
 
@@ -97,9 +92,8 @@ const Navbar: React.FC<NavbarProps> = ({ isEshop }) => {
             {isEshop && (
               <Link
                 href='/eshop/kosik/'
-                className={`ml-4  rounded-full p-2
-                ${isTopOfPage && 'bg-green'}
-                ${!isTopOfPage && 'bg-brown'}`}
+                className={`ml-4 rounded-full p-2
+                ${isTopOfPage ? 'bg-green' : 'bg-brown'}`}
               >
                 <FaShoppingCart
                   size={24}
