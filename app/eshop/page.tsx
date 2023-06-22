@@ -1,6 +1,7 @@
 import Container from '@/components/Container'
 import SlepickyGallery from '@/components/eshop/slepicky/SlepickyGallery'
 import Sidebar from '@/components/eshop/sidebar/Sidebar'
+import KurnikyGallery from '@/components/eshop/kurniky/KurnikyGallery'
 
 const Eshop = () => {
   return (
@@ -11,14 +12,27 @@ const Eshop = () => {
       <Container>
         <div className='grid lg:grid-cols-[1fr_5fr] gap-20'>
           <Sidebar />
+
           <div>
-            <div className='flex items-center gap-4 mb-2'>
-              <h4 className='relative uppercase font-semibold text-2xl text-brown'>
-                Slepičky
-              </h4>
-              <div className='bg-brown w-full h-[2px]' />
+            <div>
+              <div className='flex items-center gap-4 mb-2'>
+                <h4 className='relative uppercase font-semibold text-2xl text-brown'>
+                  Slepičky
+                </h4>
+                <div className='bg-brown w-full h-[2px]' />
+              </div>
+              <SlepickyGallery />
             </div>
-            <SlepickyGallery />
+
+            <div>
+              <div className='flex items-center gap-4 mt-48 mb-2'>
+                <h4 className='relative uppercase font-semibold text-2xl text-brown'>
+                  Kurníky
+                </h4>
+                <div className='bg-brown w-full h-[2px]' />
+              </div>
+              <KurnikyGallery />
+            </div>
           </div>
         </div>
       </Container>

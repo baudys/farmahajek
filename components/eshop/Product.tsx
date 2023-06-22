@@ -1,14 +1,14 @@
 import AddToCartButton from '@/components/buttons/AddToCartButton'
 import Image from 'next/image'
 
-interface SlepiceProps {
+interface ProductProps {
   label: string
   description: string
   src: string
   children: React.ReactNode
 }
 
-const Slepice: React.FC<SlepiceProps> = ({
+const Product: React.FC<ProductProps> = ({
   label,
   description,
   src,
@@ -39,4 +39,4 @@ const Slepice: React.FC<SlepiceProps> = ({
   )
 }
 
-export default Slepice
+export default Product

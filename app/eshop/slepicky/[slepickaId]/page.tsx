@@ -1,19 +1,19 @@
 import Container from '@/components/Container'
-import Kohout from '@/components/eshop/slepicky/Kohout'
-import Slepice from '@/components/eshop/slepicky/Slepice'
+import Product from '@/components/eshop/Product'
+import MultiProduct from '@/components/eshop/MultiProduct'
 
 interface IParams {
   slepickaId?: string
 }
 
-const Slepicka = async ({ params }: { params: IParams }) => {
+const SlepickaPage = async ({ params }: { params: IParams }) => {
   const { slepickaId } = params
 
   return (
-    <div className='pt-52 pb-20'>
+    <div className='pt-40 pb-20'>
       <Container>
         {slepickaId === 'D853' && (
-          <Slepice
+          <Product
             label='Kuřice Dominant Červený D853'
             description='DOMINANT ČERVENÝ D853 je velice atraktivně zbarveným programem s hnědou až červenou barvou peří na celém těle. Program využívá možnosti sexování podle geneticky podmíněné odlišné rychlosti růstu letek u jednodenních kohoutů s pomalým a u slepiček s rychlým růstem letek.'
             src='/slepicky/D853.png'
@@ -46,10 +46,10 @@ const Slepicka = async ({ params }: { params: IParams }) => {
               získává od otce alelu recesivní "k" a je rychle opeřující, což je
               patrné na letkách jednodenních kuřat.
             </p>
-          </Slepice>
+          </Product>
         )}
         {slepickaId === 'D159' && (
-          <Slepice
+          <Product
             label='Kuřice Dominant Červeně Žíhaný D159'
             description='DOMINANT ČERVENĚ ŽÍHANÝ D159 je atraktivně zbarveným programem připomínajícím plemeno Plymutka žíhaná, ovšem v červenohnědé barvě peří s výrazným žíháním. Je velice oblíben jako finální hybrid pro samozásobitelské chovy nejen v Evropě, ale i ve světě.'
             src='/slepicky/D159.png'
@@ -86,10 +86,10 @@ const Slepicka = async ({ params }: { params: IParams }) => {
               recesivní "k" a je rychle opeřující, což je patrné na letkách
               jednodenních kuřat.
             </p>
-          </Slepice>
+          </Product>
         )}
         {slepickaId === 'D109' && (
-          <Slepice
+          <Product
             label='Kuřice Dominant Černý D109'
             description='DOMINANT ČERNÝ D109 je klasický, velmi populární program. Uplatňuje se jako finální hybrid pro samozásobitelské chovy v Česku a dalších zemích Evropy. Současně je také využíván i v exportech prarodičovských a rodičovských kompletů do Afriky, Asie a Ameriky, kde se využívá i pro intenzivní produkci konzumních vajec. Kohouti bývají vykrmováni k produkci tradičního vysoce chutného drůbežího masa.'
             src='/slepicky/D109.png'
@@ -124,10 +124,10 @@ const Slepicka = async ({ params }: { params: IParams }) => {
               recesivní "b", která nezpůsobuje žíhanou kresbu, a proto slepička
               je tmavá bez bílé kresby na hlavě.
             </p>
-          </Slepice>
+          </Product>
         )}
         {slepickaId === 'D959' && (
-          <Slepice
+          <Product
             label='Kuřice Dominant Žíhaný D959'
             description='DOMINANT ŽÍHANÝ D959 je atraktivně zbarveným programem připomínajícím plemeno Plymutka žíhaná. Je velice oblíben jako finální hybrid pro samozásobitelské chovy v mnoha zemích. Díky atraktivnímu zbarvení je využíván i v exportu rodičovských kompletů.'
             src='/slepicky/D959.png'
@@ -160,10 +160,10 @@ const Slepicka = async ({ params }: { params: IParams }) => {
               recesivní "k" a je rychle opeřující, což je patrně na letkách
               jednodenních kuřat.
             </p>
-          </Slepice>
+          </Product>
         )}
         {slepickaId === 'D104' && (
-          <Slepice
+          <Product
             label='Kuřice Dominant Sussex D104'
             description='DOMINANT SUSSEX D104 je velice atraktivně zbarveným programem připomínajícím původní anglické plemeno z hrabství Sussex s tím rozdílem, že náš program je autosexingový a má žlutou barvu kůže  a běháků, díky čemuž také lépe ukládá žlutooranžový pigment do žloutku. Je velice oblíben jako finální hybrid pro samozásobitelské chovy v České republice, Slovensku, Polsku, na Ukrajině a v Rusku.'
             src='/slepicky/D104.png'
@@ -204,10 +204,10 @@ const Slepicka = async ({ params }: { params: IParams }) => {
               slepička získává od otce alelu recesivní "k" a je rychle
               opeřující, což je patrné na letkách jednodenních kuřat.
             </p>
-          </Slepice>
+          </Product>
         )}
         {slepickaId === 'D107' && (
-          <Slepice
+          <Product
             label='Kuřice Dominant Modrý D107'
             description='DOMINANT MODRÝ D107 je jedním z našich nejžádanějších programů díky originalitě v modrém zbarvení peří a možnosti použití kolorsexingu u jednodenních kuřat. Uplatňuje se jako finální hybrid pro samozásobitelské chovy v Česku a v mnoha dalších zemích světa. Kohouti bývají využíváni i k produkci tradičního vysoce chutného drůbežího masa.'
             src='/slepicky/D107.png'
@@ -248,10 +248,10 @@ const Slepicka = async ({ params }: { params: IParams }) => {
               recesivní "b", která nezpůsobuje žíhanou kresbu, a proto slepička
               je tmavá bez bílé kresby na hlavě.
             </p>
-          </Slepice>
+          </Product>
         )}
         {slepickaId === 'D229' && (
-          <Slepice
+          <Product
             label='Kuřice Dominant Leghorn D229'
             description='DOMINANT LEGHORN D229 je velice populární především pro vysokou snášku čistě bílých vajec a nízkou spotřebu krmiva.'
             src='/slepicky/D229.png'
@@ -279,10 +279,10 @@ const Slepicka = async ({ params }: { params: IParams }) => {
               bílých leghorn a finální hybrid je fethersexingový. Jednodenní
               kohoutci jsou pomalu opeřující a slepičky jsou rychle opeřující.
             </p>
-          </Slepice>
+          </Product>
         )}
         {slepickaId === 'D300' && (
-          <Slepice
+          <Product
             label='Kuřice Dominant Vlaška koroptví D300'
             description='DOMINANT černo-hnědý D300 je klasický, velmi populární program. Uplatňuje se jako finální hybrid pro samozásobitelské chovy v Česku a dalších zemích Evropy. Současně je také využíván i v exportech prarodičovských a rodičovských kompletů do Afriky, Asie a Ameriky, kde se využívá i pro intenzivní produkci konzumních vajec. Kohouti bývají vykrmováni k produkci tradičního vysoce chutného drůbežího masa.'
             src='/slepicky/D300.png'
@@ -298,10 +298,10 @@ const Slepicka = async ({ params }: { params: IParams }) => {
             <p>Spotřeba krmiva na slepici a den: 125 g</p>
             <p>Hmotnost těla slepice v 68 týdnu: 2,15 kg</p>
             <p>Barva skořápky: bílá</p>
-          </Slepice>
+          </Product>
         )}
         {slepickaId === 'GS' && (
-          <Slepice
+          <Product
             label='Kuřice Dominant Greenshell'
             description='DOMINANT GREENSHELL GS zahrnuje několik barevných programů s různou barvou opeření a různou barvou skořápky od světle modré přes tyrkysově zelenou až k tmavě olivově zelené. Takovéto zbarvení skořápky vajec finálních hybridů DOMINANT GREENSHELL je výsledkem křížení klasických rodičovských mateřských populací programů DOMINANT a jejich následným křížením s originální otcovskou linií DOMINANT GREENSHELL, vytvořenou na bázi linií drůbeže vyšlechtěných z jihoamerického plemene Araukána, které při domestikaci a následném šlechtění ustálilo geneticky podmíněnou zelenou až modrou barvu skořápky.'
             src='/slepicky/GS.png'
@@ -346,10 +346,10 @@ const Slepicka = async ({ params }: { params: IParams }) => {
               barvy. I přes tuto skutečnost je tento program žádaný v mnoha
               zemích po celém světě.
             </p>
-          </Slepice>
+          </Product>
         )}
         {slepickaId === 'DS' && (
-          <Slepice
+          <Product
             label='Kuřice Dominant Darkshell'
             description='DOMINANT DARKSHELL je velmi populární program. Uplatňuje se jako finální hybrid pro samozásobitelské chovy v Česku a dalších zemích Evropy. Současně je také využíván i v exportech prarodičovských a rodičovských kompletů do Afriky, Asie a Ameriky, kde se využívá i pro intenzivní produkci konzumních vajec. Kohouti bývají vykrmováni k produkci tradičního vysoce chutného drůbežího masa.'
             src='/slepicky/DS.png'
@@ -362,12 +362,36 @@ const Slepicka = async ({ params }: { params: IParams }) => {
             <p>Spotřeba krmiva na slepici a den: 120g</p>
             <p>Hmotnost těla slepice v 68 týdnu: 2,15kg</p>
             <p>Barva skořápky: tmavě hnědá </p>
-          </Slepice>
+          </Product>
         )}
-        {slepickaId === 'kohout' && <Kohout />}
+        {slepickaId === 'kohout' && (
+          <MultiProduct
+            label='Kohout'
+            description='Druh kohouta bude dodán dle druhu kuřic.'
+            price={300}
+            images={[
+              { url: '/slepicky/kohout/1.png' },
+              { url: '/slepicky/kohout/2.png' },
+              { url: '/slepicky/kohout/3.png' },
+              { url: '/slepicky/kohout/4.png' },
+              { url: '/slepicky/kohout/5.png' },
+              { url: '/slepicky/kohout/6.png' },
+              { url: '/slepicky/kohout/7.png' },
+              { url: '/slepicky/kohout/8.png' },
+              { url: '/slepicky/kohout/9.png' },
+              { url: '/slepicky/kohout/10.png' },
+              { url: '/slepicky/kohout/11.png' },
+              { url: '/slepicky/kohout/12.png' },
+              { url: '/slepicky/kohout/13.png' },
+              { url: '/slepicky/kohout/14.png' },
+              { url: '/slepicky/kohout/15.png' },
+              { url: '/slepicky/kohout/16.png' },
+            ]}
+          />
+        )}
       </Container>
     </div>
   )
 }
 
-export default Slepicka
+export default SlepickaPage

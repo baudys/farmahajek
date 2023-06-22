@@ -5,7 +5,27 @@ import Image from 'next/image'
 import { useState } from 'react'
 import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai'
 
-const Kohout = () => {
+interface MultiProductProps {
+  label: string
+  price: number
+  depth?: number
+  height?: number
+  width?: number
+  description?: string
+  images: {
+    url: string
+  }[]
+}
+
+const MultiProduct: React.FC<MultiProductProps> = ({
+  label,
+  price,
+  depth,
+  height,
+  width,
+  description,
+  images,
+}) => {
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const prevImage = () => {
@@ -20,32 +40,16 @@ const Kohout = () => {
     setCurrentIndex(newIndex)
   }
 
-  const images = [
-    { url: '/slepicky/kohout/1.png' },
-    { url: '/slepicky/kohout/2.png' },
-    { url: '/slepicky/kohout/3.png' },
-    { url: '/slepicky/kohout/4.png' },
-    { url: '/slepicky/kohout/5.png' },
-    { url: '/slepicky/kohout/6.png' },
-    { url: '/slepicky/kohout/7.png' },
-    { url: '/slepicky/kohout/8.png' },
-    { url: '/slepicky/kohout/9.png' },
-    { url: '/slepicky/kohout/10.png' },
-    { url: '/slepicky/kohout/11.png' },
-    { url: '/slepicky/kohout/12.png' },
-    { url: '/slepicky/kohout/13.png' },
-    { url: '/slepicky/kohout/14.png' },
-    { url: '/slepicky/kohout/15.png' },
-    { url: '/slepicky/kohout/16.png' },
-  ]
+  console.log(images)
+  console.log(images.length)
 
   return (
     <div className='grid xl:grid-cols-2'>
       <div className='relative max-w-fit'>
         <Image
-          className='relative selection:hidden'
+          className='relative selection:hidden max-h-96 object-cover'
           src={images[currentIndex].url}
-          alt='Kohout'
+          alt={label}
           width={500}
           height={500}
         />
@@ -59,80 +63,97 @@ const Kohout = () => {
           size={40}
           className='absolute right-0 top-[50%] -translate-y-[50%] cursor-pointer'
         />
-        <div className='flex gap-3'>
+        <div className='flex gap-3 mt-2 h-20 overflow-hidden'>
           <Image
             src={
-              currentIndex < 15
+              currentIndex < images.length - 1
                 ? images[currentIndex + 1].url
-                : images[currentIndex - 15].url
+                : images[currentIndex - (images.length - 1)].url
             }
             onClick={() =>
               setCurrentIndex(
-                currentIndex < 15 ? currentIndex + 1 : currentIndex - 15
+                currentIndex < images.length - 1
+                  ? currentIndex + 1
+                  : currentIndex - (images.length - 1)
               )
             }
             width={100}
             height={100}
-            alt='Kohout'
+            alt={label}
             className='selection:hidden cursor-pointer'
           />
           <Image
             src={
-              currentIndex < 14
+              currentIndex < images.length - 2
                 ? images[currentIndex + 2].url
-                : images[currentIndex - 14].url
+                : images[currentIndex - (images.length - 2)].url
             }
             onClick={() =>
               setCurrentIndex(
-                currentIndex < 14 ? currentIndex + 2 : currentIndex - 14
+                currentIndex < images.length - 2
+                  ? currentIndex + 2
+                  : currentIndex - (images.length - 2)
               )
             }
             width={100}
             height={100}
-            alt='Kohout'
+            alt={label}
             className='selection:hidden cursor-pointer'
           />
           <Image
             src={
-              currentIndex < 13
+              currentIndex < images.length - 3
                 ? images[currentIndex + 3].url
-                : images[currentIndex - 13].url
+                : images[currentIndex - (images.length - 3)].url
             }
             onClick={() =>
               setCurrentIndex(
-                currentIndex < 13 ? currentIndex + 3 : currentIndex - 13
+                currentIndex < images.length - 3
+                  ? currentIndex + 3
+                  : currentIndex - (images.length - 3)
               )
             }
             width={100}
             height={100}
-            alt='Kohout'
+            alt={label}
             className='selection:hidden cursor-pointer'
           />
-          <Image
-            src={
-              currentIndex < 12
-                ? images[currentIndex + 4].url
-                : images[currentIndex - 12].url
-            }
-            onClick={() =>
-              setCurrentIndex(
-                currentIndex < 12 ? currentIndex + 4 : currentIndex - 12
-              )
-            }
-            width={100}
-            height={100}
-            alt='Kohout'
-            className='selection:hidden cursor-pointer'
-          />
+          {images.length > 4 && (
+            <Image
+              src={
+                currentIndex < images.length - 4
+                  ? images[currentIndex + 4].url
+                  : images[currentIndex - (images.length - 4)].url
+              }
+              onClick={() =>
+                setCurrentIndex(
+                  currentIndex < images.length - 4
+                    ? currentIndex + 4
+                    : currentIndex - (images.length - 4)
+                )
+              }
+              width={100}
+              height={100}
+              alt={label}
+              className='selection:hidden cursor-pointer'
+            />
+          )}
         </div>
       </div>
       <div className='flex items-center w-full'>
         <div>
           <div>
             <h2 className='font-bold text-3xl uppercase mb-2 selection:hidden'>
-              Kohout
+              {label}
             </h2>
-            <p>Druh kohouta bude dodán dle druhu kuřic.</p>
+            {description && <p>{description}</p>}
+            {width && (
+              <>
+                <p>Délka: {depth}</p>
+                <p>Výška: {height}</p>
+                <p>Šířka: {width}</p>
+              </>
+            )}
             <AddToCartButton />
           </div>
         </div>
@@ -141,4 +162,4 @@ const Kohout = () => {
   )
 }
 
-export default Kohout
+export default MultiProduct
