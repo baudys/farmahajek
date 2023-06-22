@@ -1,5 +1,9 @@
+'use client'
+
 import AddToCartButton from '@/components/buttons/AddToCartButton'
 import Image from 'next/image'
+import { useRouter } from 'next/navigation'
+import { HiArrowLeft } from 'react-icons/hi'
 
 interface ProductProps {
   label: string
@@ -14,9 +18,20 @@ const Product: React.FC<ProductProps> = ({
   src,
   children,
 }) => {
+  const router = useRouter()
+
   return (
     <div className='grid xl:grid-cols-2'>
-      <Image src={src} alt={label} width={500} height={500} />
+      <div>
+        <p
+          className='flex items-center font-bold text-2xl gap-2 cursor-pointer mb-6 w-fit'
+          onClick={() => router.back()}
+        >
+          <HiArrowLeft />
+          Zpět do obchodu
+        </p>
+        <Image src={src} alt={label} width={500} height={500} />
+      </div>
       <div className='flex items-center w-full'>
         <div>
           <div>

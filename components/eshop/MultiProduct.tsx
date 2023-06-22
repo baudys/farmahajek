@@ -4,6 +4,8 @@ import AddToCartButton from '@/components/buttons/AddToCartButton'
 import Image from 'next/image'
 import { useState } from 'react'
 import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai'
+import { useRouter } from 'next/navigation'
+import { HiArrowLeft } from 'react-icons/hi'
 
 interface MultiProductProps {
   label: string
@@ -26,6 +28,8 @@ const MultiProduct: React.FC<MultiProductProps> = ({
   description,
   images,
 }) => {
+  const router = useRouter()
+
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const prevImage = () => {
@@ -40,12 +44,16 @@ const MultiProduct: React.FC<MultiProductProps> = ({
     setCurrentIndex(newIndex)
   }
 
-  console.log(images)
-  console.log(images.length)
-
   return (
     <div className='grid xl:grid-cols-2'>
       <div className='relative max-w-fit'>
+        <p
+          className='flex items-center font-bold text-2xl gap-2 cursor-pointer mb-6 w-fit'
+          onClick={() => router.back()}
+        >
+          <HiArrowLeft />
+          Zpět do obchodu
+        </p>
         <Image
           className='relative selection:hidden max-h-96 object-cover'
           src={images[currentIndex].url}
