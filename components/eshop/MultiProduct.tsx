@@ -53,71 +53,81 @@ const MultiProduct: React.FC<MultiProductProps> = ({
           width={500}
           height={500}
         />
-        <AiOutlineLeft
-          onClick={prevImage}
-          size={40}
-          className='absolute left-0 top-[50%] -translate-y-[50%] cursor-pointer'
-        />
-        <AiOutlineRight
-          onClick={nextImage}
-          size={40}
-          className='absolute right-0 top-[50%] -translate-y-[50%] cursor-pointer'
-        />
+        {images.length > 1 && (
+          <>
+            <AiOutlineLeft
+              onClick={prevImage}
+              size={40}
+              className='absolute left-0 top-[50%] -translate-y-[50%] cursor-pointer'
+            />
+            <AiOutlineRight
+              onClick={nextImage}
+              size={40}
+              className='absolute right-0 top-[50%] -translate-y-[50%] cursor-pointer'
+            />
+          </>
+        )}
         <div className='flex gap-3 mt-2 h-20 overflow-hidden'>
-          <Image
-            src={
-              currentIndex < images.length - 1
-                ? images[currentIndex + 1].url
-                : images[currentIndex - (images.length - 1)].url
-            }
-            onClick={() =>
-              setCurrentIndex(
+          {images.length > 1 && (
+            <Image
+              src={
                 currentIndex < images.length - 1
-                  ? currentIndex + 1
-                  : currentIndex - (images.length - 1)
-              )
-            }
-            width={100}
-            height={100}
-            alt={label}
-            className='selection:hidden cursor-pointer'
-          />
-          <Image
-            src={
-              currentIndex < images.length - 2
-                ? images[currentIndex + 2].url
-                : images[currentIndex - (images.length - 2)].url
-            }
-            onClick={() =>
-              setCurrentIndex(
+                  ? images[currentIndex + 1].url
+                  : images[currentIndex - (images.length - 1)].url
+              }
+              onClick={() =>
+                setCurrentIndex(
+                  currentIndex < images.length - 1
+                    ? currentIndex + 1
+                    : currentIndex - (images.length - 1)
+                )
+              }
+              width={100}
+              height={100}
+              alt={label}
+              className='selection:hidden cursor-pointer'
+            />
+          )}
+          {images.length > 2 && (
+            <Image
+              src={
                 currentIndex < images.length - 2
-                  ? currentIndex + 2
-                  : currentIndex - (images.length - 2)
-              )
-            }
-            width={100}
-            height={100}
-            alt={label}
-            className='selection:hidden cursor-pointer'
-          />
-          <Image
-            src={
-              currentIndex < images.length - 3
-                ? images[currentIndex + 3].url
-                : images[currentIndex - (images.length - 3)].url
-            }
-            onClick={() =>
-              setCurrentIndex(
+                  ? images[currentIndex + 2].url
+                  : images[currentIndex - (images.length - 2)].url
+              }
+              onClick={() =>
+                setCurrentIndex(
+                  currentIndex < images.length - 2
+                    ? currentIndex + 2
+                    : currentIndex - (images.length - 2)
+                )
+              }
+              width={100}
+              height={100}
+              alt={label}
+              className='selection:hidden cursor-pointer'
+            />
+          )}
+          {images.length > 3 && (
+            <Image
+              src={
                 currentIndex < images.length - 3
-                  ? currentIndex + 3
-                  : currentIndex - (images.length - 3)
-              )
-            }
-            width={100}
-            height={100}
-            alt={label}
-            className='selection:hidden cursor-pointer'
-          />
+                  ? images[currentIndex + 3].url
+                  : images[currentIndex - (images.length - 3)].url
+              }
+              onClick={() =>
+                setCurrentIndex(
+                  currentIndex < images.length - 3
+                    ? currentIndex + 3
+                    : currentIndex - (images.length - 3)
+                )
+              }
+              width={100}
+              height={100}
+              alt={label}
+              className='selection:hidden cursor-pointer'
+            />
+          )}
           {images.length > 4 && (
             <Image
               src={
