@@ -8,7 +8,7 @@ import NavLink from './NavLink'
 import NavIcon from './NavIcon'
 import { AiOutlineInstagram, AiFillYoutube } from 'react-icons/ai'
 import { IoLogoTiktok } from 'react-icons/io5'
-import { FaFacebook } from 'react-icons/fa'
+import { FaFacebook, FaShoppingCart } from 'react-icons/fa'
 
 interface NavbarProps {
   isEshop?: boolean
@@ -75,7 +75,7 @@ const Navbar: React.FC<NavbarProps> = ({ isEshop }) => {
             />
           </ul>
 
-          <ul className='flex gap-3 text-lg uppercase font-medium'>
+          <ul className='flex gap-3 text-lg uppercase font-medium items-center'>
             <NavLink
               href='/eshop'
               label='E-Shop'
@@ -94,6 +94,19 @@ const Navbar: React.FC<NavbarProps> = ({ isEshop }) => {
               isTopOfPage={isTopOfPage}
               isEshop={isEshop}
             />
+            {isEshop && (
+              <Link
+                href='/eshop/kosik/'
+                className={`ml-4  rounded-full p-2
+                ${isTopOfPage && 'bg-green'}
+                ${!isTopOfPage && 'bg-brown'}`}
+              >
+                <FaShoppingCart
+                  size={24}
+                  className={`${isTopOfPage ? 'fill-brown' : 'fill-green'}`}
+                />
+              </Link>
+            )}
           </ul>
         </div>
       </Container>
