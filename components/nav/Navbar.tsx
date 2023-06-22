@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import NavLink from './NavLink'
 import NavIcon from './NavIcon'
-import { AiOutlineInstagram } from 'react-icons/ai'
+import { AiOutlineInstagram, AiFillYoutube } from 'react-icons/ai'
 import { IoLogoTiktok } from 'react-icons/io5'
 import { FaFacebook } from 'react-icons/fa'
 
@@ -64,6 +64,12 @@ const Navbar: React.FC<NavbarProps> = ({ isEshop }) => {
             <NavIcon
               href='https://www.facebook.com/people/Farma-H%C3%A1jek/100092479713291/'
               icon={FaFacebook}
+              isTopOfPage={isTopOfPage}
+              isEshop={isEshop}
+            />
+            <NavIcon
+              href='https://www.youtube.com/@miloslavpolak4880'
+              icon={AiFillYoutube}
               isTopOfPage={isTopOfPage}
               isEshop={isEshop}
             />
