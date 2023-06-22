@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { useState } from 'react'
 import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai'
 
-const KohoutC = () => {
+const Kohout = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const prevImage = () => {
@@ -66,10 +66,15 @@ const KohoutC = () => {
                 ? images[currentIndex + 1].url
                 : images[currentIndex - 15].url
             }
+            onClick={() =>
+              setCurrentIndex(
+                currentIndex < 15 ? currentIndex + 1 : currentIndex - 15
+              )
+            }
             width={100}
             height={100}
             alt='Kohout'
-            className='selection:hidden'
+            className='selection:hidden cursor-pointer'
           />
           <Image
             src={
@@ -77,10 +82,15 @@ const KohoutC = () => {
                 ? images[currentIndex + 2].url
                 : images[currentIndex - 14].url
             }
+            onClick={() =>
+              setCurrentIndex(
+                currentIndex < 14 ? currentIndex + 2 : currentIndex - 14
+              )
+            }
             width={100}
             height={100}
             alt='Kohout'
-            className='selection:hidden'
+            className='selection:hidden cursor-pointer'
           />
           <Image
             src={
@@ -88,10 +98,15 @@ const KohoutC = () => {
                 ? images[currentIndex + 3].url
                 : images[currentIndex - 13].url
             }
+            onClick={() =>
+              setCurrentIndex(
+                currentIndex < 13 ? currentIndex + 3 : currentIndex - 13
+              )
+            }
             width={100}
             height={100}
             alt='Kohout'
-            className='selection:hidden'
+            className='selection:hidden cursor-pointer'
           />
           <Image
             src={
@@ -99,10 +114,15 @@ const KohoutC = () => {
                 ? images[currentIndex + 4].url
                 : images[currentIndex - 12].url
             }
+            onClick={() =>
+              setCurrentIndex(
+                currentIndex < 12 ? currentIndex + 4 : currentIndex - 12
+              )
+            }
             width={100}
             height={100}
             alt='Kohout'
-            className='selection:hidden'
+            className='selection:hidden cursor-pointer'
           />
         </div>
       </div>
@@ -121,4 +141,4 @@ const KohoutC = () => {
   )
 }
 
-export default KohoutC
+export default Kohout
