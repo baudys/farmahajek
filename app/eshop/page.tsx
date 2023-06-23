@@ -1,8 +1,7 @@
 import Container from '@/components/Container'
-import SlepickyGallery from '@/components/eshop/slepicky/SlepickyGallery'
 import Sidebar from '@/components/eshop/sidebar/Sidebar'
 import Gallery from '@/components/eshop/Gallery'
-import { kurniky } from '@/database/products'
+import { kurniky, slepicky } from '@/database/products'
 
 const Eshop = () => {
   return (
@@ -22,7 +21,7 @@ const Eshop = () => {
                 </h4>
                 <div className='bg-brown w-full h-[2px]' />
               </div>
-              <SlepickyGallery />
+              <Gallery data={slepicky} isSlepice />
             </div>
 
             <div>
