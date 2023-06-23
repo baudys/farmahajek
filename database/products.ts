@@ -141,3 +141,138 @@ export const kurniky = [
     price: 10890,
   },
 ]
+
+export const smesi = [
+  {
+    href: '/eshop/smesi/startovaci-balicek',
+    label: 'Startovací balíček',
+    src: '/smesi/startovaci-balicek/1.jpg',
+    price: 600,
+  },
+  {
+    href: '/eshop/smesi/krouzky',
+    label: 'Kroužky',
+    src: '/smesi/krouzky.jpg',
+    price: 8,
+  },
+  {
+    href: '/eshop/smesi/ochrana-proti-cmelikum-acaritec',
+    label: 'Ochrana proti čmelíkum - Acaritec (bio)',
+    src: '/smesi/ochrana-proti-cmelikum.jpg',
+    price: 400,
+  },
+  {
+    href: '/eshop/smesi/ochrana-proti-cmelikum-acariflash',
+    label: 'Ochrana proti čmelíkum - Acariflash (bio)',
+    src: '/smesi/ochrana-proti-cmelikum.jpg',
+    price: 400,
+  },
+  {
+    href: '/eshop/smesi/ochrana-proti-cmelikum-mistral-layer',
+    label: 'Ochrana proti čmelíkum - Mistral Layer (bio)',
+    src: '/smesi/ochrana-proti-cmelikum.jpg',
+    price: 400,
+  },
+  {
+    href: '/eshop/smesi/alize',
+    label: 'Alizé',
+    src: '/smesi/alize.jpg',
+    price: 300,
+  },
+  {
+    href: '/eshop/smesi/galli-sweet',
+    label: 'Galli sweet',
+    src: '/smesi/galli-sweet.jpg',
+    price: 380,
+  },
+  {
+    href: '/eshop/smesi/calciplus-250ml',
+    label: 'Calciplus 250ml',
+    src: '/smesi/calciplus-250ml.jpg',
+    price: 200,
+  },
+  {
+    href: '/eshop/smesi/supervitd',
+    label: 'Supervit D',
+    src: '/smesi/supervitd.jpg',
+    price: 40,
+  },
+  {
+    href: '/eshop/smesi/c-compositum-50-500g',
+    label: 'C-compositum 50 500g',
+    src: '/smesi/c-compositum-50-500g.jpg',
+    price: 300,
+  },
+  {
+    href: '/eshop/smesi/aminosol-1l',
+    label: 'Aminosol 1L',
+    src: '/smesi/aminosol-1l.jpg',
+    price: 400,
+  },
+  {
+    href: '/eshop/smesi/aminosol-250ml',
+    label: 'Aminosol 250ml',
+    src: '/smesi/aminosol-250ml.jpg',
+    price: 200,
+  },
+  {
+    href: '/eshop/smesi/kombisol-ad3-30ml',
+    label: 'Kombisol AD3 30ml',
+    src: '/smesi/kombisol-ad3-30ml.jpg',
+    price: 90,
+  },
+  {
+    href: '/eshop/smesi/kombisol-ad3e-1l',
+    label: 'Kombisol AD3E 1L',
+    src: '/smesi/kombisol-ad3e-1l.jpg',
+    price: 950,
+  },
+  {
+    href: '/eshop/smesi/kombisol-ad3e-250ml',
+    label: 'Kombisol AD3E 250ml',
+    src: '/smesi/kombisol-ad3e-250ml.jpg',
+    price: 300,
+  },
+  {
+    href: '/eshop/smesi/kombisol-ad3e-30ml',
+    label: 'Kombisol AD3E 30ml',
+    src: '/smesi/kombisol-ad3e-30ml.jpg',
+    price: 90,
+  },
+  {
+    href: '/eshop/smesi/nutrimix-forticoat-1l',
+    label: 'Nutrimix forticoat 1L',
+    src: '/smesi/nutrimix-forticoat-1l.jpg',
+    price: 300,
+  },
+  {
+    href: '/eshop/smesi/nutrimix-forticoat-250ml',
+    label: 'Nutrimix forticoat 250ml',
+    src: '/smesi/nutrimix-forticoat-250ml.jpg',
+    price: 120,
+  },
+  {
+    href: '/eshop/smesi/nutrimix-3kg-odchov',
+    label: 'Nutrimix 3kg odchov',
+    src: '/smesi/nutrimix-3kg-odchov.jpg',
+    price: 220,
+  },
+  {
+    href: '/eshop/smesi/nutrimix-1kg-odchov',
+    label: 'Nutrimix 1kg odchov',
+    src: '/smesi/nutrimix-1kg-odchov.jpg',
+    price: 90,
+  },
+  {
+    href: '/eshop/smesi/nutrimix-3kg-vykrm',
+    label: 'Mutrimix 3kg výkrm',
+    src: '/smesi/nutrimix-3kg-vykrm.jpg',
+    price: 200,
+  },
+  {
+    href: '/eshop/smesi/nutrimix-1kg-vykrm',
+    label: 'Nutrimix 1kg výkrm',
+    src: '/smesi/nutrimix-1kg-vykrm.jpg',
+    price: 70,
+  },
+]
