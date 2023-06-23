@@ -1,7 +1,8 @@
 import Container from '@/components/Container'
 import SlepickyGallery from '@/components/eshop/slepicky/SlepickyGallery'
 import Sidebar from '@/components/eshop/sidebar/Sidebar'
-import KurnikyGallery from '@/components/eshop/kurniky/KurnikyGallery'
+import Gallery from '@/components/eshop/Gallery'
+import { kurniky } from '@/database/products'
 
 const Eshop = () => {
   return (
@@ -31,7 +32,7 @@ const Eshop = () => {
                 </h4>
                 <div className='bg-brown w-full h-[2px]' />
               </div>
-              <KurnikyGallery />
+              <Gallery data={kurniky} />
             </div>
           </div>
         </div>

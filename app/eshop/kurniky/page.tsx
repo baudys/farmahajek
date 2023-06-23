@@ -1,6 +1,7 @@
 import Container from '@/components/Container'
-import KurnikyGallery from '@/components/eshop/kurniky/KurnikyGallery'
+import Gallery from '@/components/eshop/Gallery'
 import Sidebar from '@/components/eshop/sidebar/Sidebar'
+import { kurniky } from '@/database/products'
 
 const Slepicky = () => {
   return (
@@ -11,7 +12,7 @@ const Slepicky = () => {
       <Container>
         <div className='grid lg:grid-cols-[1fr_5fr] gap-20'>
           <Sidebar />
-          <KurnikyGallery />
+          <Gallery data={kurniky} />
         </div>
       </Container>
     </div>

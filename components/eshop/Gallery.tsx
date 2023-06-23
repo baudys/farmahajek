@@ -1,14 +1,18 @@
 'use client'
 
 import useSearchBar from '@/hooks/useSearchBar'
-import GalleryItem from '../GalleryItem'
-import { kurniky } from '@/database/products'
+import GalleryItem from '@/components/eshop/GalleryItem'
 import { getFilteredProducts } from '@/lib/getFilteredProducts'
 
-const KurnikyGallery = () => {
+interface GalleryProps {
+  data: {}[]
+  isSlepice?: boolean
+}
+
+const Gallery: React.FC<GalleryProps> = ({ data, isSlepice }) => {
   const query = useSearchBar(state => state.query)
 
-  const filteredProducts = getFilteredProducts(query, kurniky)
+  const filteredProducts = getFilteredProducts(query, data)
 
   return (
     <div className='grid grid-cols-1 xl:grid-cols-3 gap-x-6 gap-y-24'>
@@ -18,10 +22,11 @@ const KurnikyGallery = () => {
           label={value.label}
           src={value.src}
           price={value.price}
+          isSlepice={isSlepice}
         />
       ))}
     </div>
   )
 }
 
-export default KurnikyGallery
+export default Gallery
