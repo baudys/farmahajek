@@ -3,7 +3,7 @@
 import Container from '@/components/Container'
 import Sidebar from '@/components/eshop/sidebar/Sidebar'
 import Gallery from '@/components/eshop/Gallery'
-import { kurniky, slepicky } from '@/database/products'
+import { kurniky, slepicky, smesi } from '@/database/products'
 import useSearchBar from '@/hooks/useSearchBar'
 import { getFilteredProducts } from '@/lib/getFilteredProducts'
 
@@ -12,6 +12,7 @@ const Eshop = () => {
 
   const filteredSlepicky = getFilteredProducts(query, slepicky)
   const filteredKurniky = getFilteredProducts(query, kurniky)
+  const filteredSmesi = getFilteredProducts(query, smesi)
 
   return (
     <div className='bg-white py-20'>
@@ -19,7 +20,7 @@ const Eshop = () => {
         Všechny produkty
       </h2>
       <Container>
-        <div className='grid lg:grid-cols-[1fr_5fr] gap-20'>
+        <div className='grid lg:grid-cols-[1fr_5fr] gap-20 transition'>
           <Sidebar />
 
           <div>
@@ -44,6 +45,18 @@ const Eshop = () => {
                   <div className='bg-brown w-full h-[2px]' />
                 </div>
                 <Gallery data={kurniky} />
+              </div>
+            )}
+
+            {filteredSmesi.length !== 0 && (
+              <div className='mb-48'>
+                <div className='flex items-center gap-4 pb-2'>
+                  <h4 className='relative uppercase font-semibold text-2xl text-brown'>
+                    Směsi
+                  </h4>
+                  <div className='bg-brown w-full h-[2px]' />
+                </div>
+                <Gallery data={smesi} />
               </div>
             )}
           </div>
