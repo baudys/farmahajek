@@ -1,5 +1,6 @@
 'use client'
 
+import useSearchBar from '@/hooks/useSearchBar'
 import useSelectCategory from '@/hooks/useSelectCategory'
 import Link from 'next/link'
 import { useEffect } from 'react'
@@ -7,6 +8,9 @@ import { useEffect } from 'react'
 const Sidebar: React.FC = () => {
   const selectCategory = useSelectCategory(state => state.set)
   const selectedCategory = useSelectCategory(state => state.selected)
+
+  const query = useSearchBar(state => state.query)
+  const setQuery = useSearchBar(state => state.setQuery)
 
   useEffect(() => {
     const pathname = window.location.pathname
@@ -23,6 +27,7 @@ const Sidebar: React.FC = () => {
       <input
         type='text'
         placeholder='hledej'
+        onChange={e => setQuery(e.target.value)}
         className='bg-zinc-200 p-1 border-2 border-zinc-400 w-full rounded-lg'
       />
 
