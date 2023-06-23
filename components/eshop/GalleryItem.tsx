@@ -7,7 +7,7 @@ interface GalleryItemProps {
   label: string
   src: string
   price: number
-  isSlepice?: boolean
+  transparentBg?: boolean
 }
 
 const GalleryItem: React.FC<GalleryItemProps> = ({
@@ -15,7 +15,7 @@ const GalleryItem: React.FC<GalleryItemProps> = ({
   label,
   src,
   price,
-  isSlepice,
+  transparentBg,
 }) => {
   return (
     <Link
@@ -24,7 +24,7 @@ const GalleryItem: React.FC<GalleryItemProps> = ({
     >
       <div
         className={`bg-zinc-200 group-hover:bg-zinc-300 transition rounded-t-md h-56 overflow-hidden ${
-          isSlepice && 'grid place-content-center'
+          transparentBg && 'grid place-content-center'
         }`}
       >
         <Image
@@ -33,7 +33,7 @@ const GalleryItem: React.FC<GalleryItemProps> = ({
           width={300}
           height={300}
           className={`${
-            isSlepice ? 'group-hover:scale-95' : 'group-hover:scale-105'
+            transparentBg ? 'group-hover:scale-95' : 'group-hover:scale-105'
           } transition object-cover overflow-hidden w-full h-full`}
         />
       </div>

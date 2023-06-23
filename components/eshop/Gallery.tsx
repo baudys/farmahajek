@@ -6,10 +6,10 @@ import { getFilteredProducts } from '@/lib/getFilteredProducts'
 
 interface GalleryProps {
   data: {}[]
-  isSlepice?: boolean
+  transparentBg?: boolean
 }
 
-const Gallery: React.FC<GalleryProps> = ({ data, isSlepice }) => {
+const Gallery: React.FC<GalleryProps> = ({ data, transparentBg }) => {
   const query = useSearchBar(state => state.query)
 
   const filteredProducts = getFilteredProducts(query, data)
@@ -22,7 +22,7 @@ const Gallery: React.FC<GalleryProps> = ({ data, isSlepice }) => {
           label={value.label}
           src={value.src}
           price={value.price}
-          isSlepice={isSlepice}
+          transparentBg={transparentBg}
         />
       ))}
     </div>

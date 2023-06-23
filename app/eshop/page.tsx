@@ -3,7 +3,7 @@
 import Container from '@/components/Container'
 import Sidebar from '@/components/eshop/sidebar/Sidebar'
 import Gallery from '@/components/eshop/Gallery'
-import { kurniky, slepicky, smesi } from '@/database/products'
+import { doplnky, kurniky, slepicky, smesi } from '@/database/products'
 import useSearchBar from '@/hooks/useSearchBar'
 import { getFilteredProducts } from '@/lib/getFilteredProducts'
 
@@ -13,6 +13,7 @@ const Eshop = () => {
   const filteredSlepicky = getFilteredProducts(query, slepicky)
   const filteredKurniky = getFilteredProducts(query, kurniky)
   const filteredSmesi = getFilteredProducts(query, smesi)
+  const filteredDoplnky = getFilteredProducts(query, doplnky)
 
   return (
     <div className='bg-white py-20'>
@@ -32,7 +33,7 @@ const Eshop = () => {
                   </h4>
                   <div className='bg-brown w-full h-[2px]' />
                 </div>
-                <Gallery data={slepicky} isSlepice />
+                <Gallery data={slepicky} transparentBg />
               </div>
             )}
 
@@ -57,6 +58,20 @@ const Eshop = () => {
                   <div className='bg-brown w-full h-[2px]' />
                 </div>
                 <Gallery data={smesi} />
+              </div>
+            )}
+            {filteredDoplnky.length !== 0 && (
+              <div className='mb-48'>
+                <div className='flex items-center gap-4 pb-2'>
+                  <h4 className='relative uppercase font-semibold text-2xl text-brown'>
+                    Směsi
+                  </h4>
+                  <div className='bg-brown w-full h-[2px]' />
+                </div>
+                <div>
+                  <Gallery data={[doplnky[0], doplnky[1]]} />
+                  <Gallery data={[doplnky[2], doplnky[3]]} transparentBg />
+                </div>
               </div>
             )}
           </div>

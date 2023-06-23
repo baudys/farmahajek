@@ -276,3 +276,30 @@ export const smesi = [
     price: 70,
   },
 ]
+
+export const doplnky = [
+  {
+    href: '/eshop/doplnky/zasterka-velka',
+    label: 'Zástěrka s kapsami na sběr vajec velká',
+    src: '/doplnky/zasterka-velka.jpg',
+    price: 425,
+  },
+  {
+    href: '/eshop/doplnky/zasterka-mala',
+    label: 'Zástěrka s kapsami na sběr vajec malá',
+    src: '/doplnky/zasterka-mala.jpg',
+    price: 300,
+  },
+  {
+    href: '/eshop/doplnky/krmitko',
+    label: 'Krmítko 30L',
+    src: '/doplnky/krmitko.png',
+    price: 1500,
+  },
+  {
+    href: '/eshop/doplnky/pitko',
+    label: 'Pítko 30L',
+    src: '/doplnky/pitko.png',
+    price: 1000,
+  },
+]
