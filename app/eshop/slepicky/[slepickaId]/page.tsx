@@ -16,6 +16,7 @@ const SlepickaPage = async ({ params }: { params: IParams }) => {
           <Product
             label='Kuřice Dominant Červený D853'
             description='DOMINANT ČERVENÝ D853 je velice atraktivně zbarveným programem s hnědou až červenou barvou peří na celém těle. Program využívá možnosti sexování podle geneticky podmíněné odlišné rychlosti růstu letek u jednodenních kohoutů s pomalým a u slepiček s rychlým růstem letek.'
+            price={280}
             src='/slepicky/D853.png'
           >
             <p className='text-sm font-light'>
@@ -52,6 +53,7 @@ const SlepickaPage = async ({ params }: { params: IParams }) => {
           <Product
             label='Kuřice Dominant Červeně Žíhaný D159'
             description='DOMINANT ČERVENĚ ŽÍHANÝ D159 je atraktivně zbarveným programem připomínajícím plemeno Plymutka žíhaná, ovšem v červenohnědé barvě peří s výrazným žíháním. Je velice oblíben jako finální hybrid pro samozásobitelské chovy nejen v Evropě, ale i ve světě.'
+            price={280}
             src='/slepicky/D159.png'
           >
             <p className='text-sm font-light'>
@@ -92,6 +94,7 @@ const SlepickaPage = async ({ params }: { params: IParams }) => {
           <Product
             label='Kuřice Dominant Černý D109'
             description='DOMINANT ČERNÝ D109 je klasický, velmi populární program. Uplatňuje se jako finální hybrid pro samozásobitelské chovy v Česku a dalších zemích Evropy. Současně je také využíván i v exportech prarodičovských a rodičovských kompletů do Afriky, Asie a Ameriky, kde se využívá i pro intenzivní produkci konzumních vajec. Kohouti bývají vykrmováni k produkci tradičního vysoce chutného drůbežího masa.'
+            price={280}
             src='/slepicky/D109.png'
           >
             <p className='text-sm font-light'>
@@ -130,6 +133,7 @@ const SlepickaPage = async ({ params }: { params: IParams }) => {
           <Product
             label='Kuřice Dominant Žíhaný D959'
             description='DOMINANT ŽÍHANÝ D959 je atraktivně zbarveným programem připomínajícím plemeno Plymutka žíhaná. Je velice oblíben jako finální hybrid pro samozásobitelské chovy v mnoha zemích. Díky atraktivnímu zbarvení je využíván i v exportu rodičovských kompletů.'
+            price={280}
             src='/slepicky/D959.png'
           >
             <p className='text-sm font-light'>
@@ -166,6 +170,7 @@ const SlepickaPage = async ({ params }: { params: IParams }) => {
           <Product
             label='Kuřice Dominant Sussex D104'
             description='DOMINANT SUSSEX D104 je velice atraktivně zbarveným programem připomínajícím původní anglické plemeno z hrabství Sussex s tím rozdílem, že náš program je autosexingový a má žlutou barvu kůže  a běháků, díky čemuž také lépe ukládá žlutooranžový pigment do žloutku. Je velice oblíben jako finální hybrid pro samozásobitelské chovy v České republice, Slovensku, Polsku, na Ukrajině a v Rusku.'
+            price={280}
             src='/slepicky/D104.png'
           >
             <p className='text-sm font-light'>
@@ -210,6 +215,7 @@ const SlepickaPage = async ({ params }: { params: IParams }) => {
           <Product
             label='Kuřice Dominant Modrý D107'
             description='DOMINANT MODRÝ D107 je jedním z našich nejžádanějších programů díky originalitě v modrém zbarvení peří a možnosti použití kolorsexingu u jednodenních kuřat. Uplatňuje se jako finální hybrid pro samozásobitelské chovy v Česku a v mnoha dalších zemích světa. Kohouti bývají využíváni i k produkci tradičního vysoce chutného drůbežího masa.'
+            price={280}
             src='/slepicky/D107.png'
           >
             <p className='text-sm font-light'>
@@ -254,6 +260,7 @@ const SlepickaPage = async ({ params }: { params: IParams }) => {
           <Product
             label='Kuřice Dominant Leghorn D229'
             description='DOMINANT LEGHORN D229 je velice populární především pro vysokou snášku čistě bílých vajec a nízkou spotřebu krmiva.'
+            price={280}
             src='/slepicky/D229.png'
           >
             <p className='text-sm font-light'>
@@ -285,6 +292,7 @@ const SlepickaPage = async ({ params }: { params: IParams }) => {
           <Product
             label='Kuřice Dominant Vlaška koroptví D300'
             description='DOMINANT černo-hnědý D300 je klasický, velmi populární program. Uplatňuje se jako finální hybrid pro samozásobitelské chovy v Česku a dalších zemích Evropy. Současně je také využíván i v exportech prarodičovských a rodičovských kompletů do Afriky, Asie a Ameriky, kde se využívá i pro intenzivní produkci konzumních vajec. Kohouti bývají vykrmováni k produkci tradičního vysoce chutného drůbežího masa.'
+            price={280}
             src='/slepicky/D300.png'
           >
             <p className='text-sm font-light'>
@@ -304,6 +312,7 @@ const SlepickaPage = async ({ params }: { params: IParams }) => {
           <Product
             label='Kuřice Dominant Greenshell'
             description='DOMINANT GREENSHELL GS zahrnuje několik barevných programů s různou barvou opeření a různou barvou skořápky od světle modré přes tyrkysově zelenou až k tmavě olivově zelené. Takovéto zbarvení skořápky vajec finálních hybridů DOMINANT GREENSHELL je výsledkem křížení klasických rodičovských mateřských populací programů DOMINANT a jejich následným křížením s originální otcovskou linií DOMINANT GREENSHELL, vytvořenou na bázi linií drůbeže vyšlechtěných z jihoamerického plemene Araukána, které při domestikaci a následném šlechtění ustálilo geneticky podmíněnou zelenou až modrou barvu skořápky.'
+            price={300}
             src='/slepicky/GS.png'
           >
             <p>
@@ -352,6 +361,7 @@ const SlepickaPage = async ({ params }: { params: IParams }) => {
           <Product
             label='Kuřice Dominant Darkshell'
             description='DOMINANT DARKSHELL je velmi populární program. Uplatňuje se jako finální hybrid pro samozásobitelské chovy v Česku a dalších zemích Evropy. Současně je také využíván i v exportech prarodičovských a rodičovských kompletů do Afriky, Asie a Ameriky, kde se využívá i pro intenzivní produkci konzumních vajec. Kohouti bývají vykrmováni k produkci tradičního vysoce chutného drůbežího masa.'
+            price={300}
             src='/slepicky/DS.png'
           >
             <p>Životnost: 94%</p>

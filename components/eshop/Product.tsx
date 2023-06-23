@@ -9,7 +9,8 @@ interface ProductProps {
   label: string
   description: string
   src: string
-  children: React.ReactNode
+  price: number
+  children?: React.ReactNode
 }
 
 const Product: React.FC<ProductProps> = ({
@@ -17,6 +18,7 @@ const Product: React.FC<ProductProps> = ({
   description,
   src,
   children,
+  price,
 }) => {
   const router = useRouter()
 
@@ -30,7 +32,13 @@ const Product: React.FC<ProductProps> = ({
           <HiArrowLeft />
           Zpět do obchodu
         </p>
-        <Image src={src} alt={label} width={500} height={500} />
+        <Image
+          src={src}
+          alt={label}
+          width={500}
+          height={500}
+          className='max-h-[500px] object-cover'
+        />
       </div>
       <div className='flex items-center w-full'>
         <div>
@@ -45,10 +53,14 @@ const Product: React.FC<ProductProps> = ({
       <div />
 
       <div className='mt-20 space-y-4'>
-        <h3 className='uppercase font-semibold text-2xl mb-8'>
-          Více informací
-        </h3>
-        {children}
+        {children && (
+          <>
+            <h3 className='uppercase font-semibold text-2xl mb-8'>
+              Více informací
+            </h3>
+            {children}
+          </>
+        )}
       </div>
     </div>
   )
