@@ -17,8 +17,8 @@ interface CartStore {
     href: string
   }) => void
   remove: (name: string) => void
-  increaseQuantity: (name: string) => void
-  decreaseQuantity: (name: string) => void
+  qtyplus: (name: string) => void
+  qtymin: (name: string) => void
 }
 
 export const useCart = create<CartStore>(set => ({
@@ -42,7 +42,7 @@ export const useCart = create<CartStore>(set => ({
       }
       return state
     }),
-  increaseQuantity: name =>
+  qtyplus: name =>
     set(state => {
       const updatedItems = state.cartItems.map(item => {
         if (item.name === name) {
@@ -59,7 +59,7 @@ export const useCart = create<CartStore>(set => ({
         totalPrice: updatedPrice,
       }
     }),
-  decreaseQuantity: name =>
+  qtymin: name =>
     set(state => {
       const updatedItems = state.cartItems.map(item => {
         if (item.name === name && item.quantity > 1) {

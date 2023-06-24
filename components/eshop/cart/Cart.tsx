@@ -8,11 +8,7 @@ import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai'
 import { IoClose } from 'react-icons/io5'
 
 const Cart = () => {
-  const cartItems = useCart(state => state.cartItems)
-  const remove = useCart(state => state.remove)
-  const qtyplus = useCart(state => state.increaseQuantity)
-  const qtymin = useCart(state => state.decreaseQuantity)
-  const totalPrice = useCart(state => state.totalPrice)
+  const { cartItems, remove, qtyplus, qtymin, totalPrice } = useCart.getState()
 
   return (
     <div className='min-h-screen'>
