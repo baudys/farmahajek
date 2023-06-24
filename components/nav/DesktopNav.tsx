@@ -10,9 +10,14 @@ import { FaFacebook, FaShoppingCart } from 'react-icons/fa'
 interface DesktopNavProps {
   isTopOfPage: boolean
   isEshop: boolean
+  numOfItems: number
 }
 
-const DesktopNav: React.FC<DesktopNavProps> = ({ isTopOfPage, isEshop }) => {
+const DesktopNav: React.FC<DesktopNavProps> = ({
+  isTopOfPage,
+  isEshop,
+  numOfItems,
+}) => {
   return (
     <div
       className={`hidden lg:block fixed w-full py-5 transition z-10 
@@ -77,13 +82,18 @@ const DesktopNav: React.FC<DesktopNavProps> = ({ isTopOfPage, isEshop }) => {
             {isEshop && (
               <Link
                 href='/eshop/kosik/'
-                className={`ml-4 rounded-full p-2
+                className={`ml-4 rounded-full p-2 relative overflow-visible
                 ${isTopOfPage ? 'bg-green' : 'bg-brown'}`}
               >
                 <FaShoppingCart
                   size={24}
                   className={`${isTopOfPage ? 'fill-brown' : 'fill-green'}`}
                 />
+                {numOfItems >= 1 && (
+                  <div className='absolute flex items-center justify-center -top-2 -right-2 overflow-visible bg-red-500 rounded-full p-1 h-6 w-6'>
+                    <p className='text-sm'>{numOfItems}</p>
+                  </div>
+                )}
               </Link>
             )}
           </ul>
