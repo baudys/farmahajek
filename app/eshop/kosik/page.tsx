@@ -1,7 +1,8 @@
+import Cart from '@/components/eshop/cart/Cart'
 import React from 'react'
 
 const KosikPage = () => {
-  return <div>KosikPage</div>
+  return <Cart />
 }
 
 export default KosikPage

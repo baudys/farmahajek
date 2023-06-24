@@ -41,7 +41,7 @@ const GalleryItem: React.FC<GalleryItemProps> = ({
         </div>
       </Link>
       <div className='p-1'>
-        <AddToCartButton name={label} price={price} src={src} />
+        <AddToCartButton name={label} price={price} src={src} href={href} />
       </div>
     </div>
   )
