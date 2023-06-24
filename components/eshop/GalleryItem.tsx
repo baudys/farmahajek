@@ -18,7 +18,7 @@ const GalleryItem: React.FC<GalleryItemProps> = ({
   transparentBg,
 }) => {
   return (
-    <div className='rounded-md hover:ring-2 hover:ring-zinc-200 transition hover:bg-zinc-100'>
+    <div className='rounded-md ring-2 ring-zinc-200 lg:ring-0 hover:ring-2 hover:ring-zinc-200 transition hover:bg-zinc-100'>
       <Link href={href} className='group'>
         <div
           className={`bg-zinc-200 group-hover:bg-zinc-300 transition rounded-t-md h-56 overflow-hidden ${
