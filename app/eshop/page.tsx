@@ -26,7 +26,7 @@ const EshopPage = () => {
 
           <div>
             {filteredSlepicky.length !== 0 && (
-              <div className='mb-48'>
+              <div className='mb-20 lg:mb-48'>
                 <div className='flex items-center gap-4 pb-2'>
                   <h4 className='relative uppercase font-semibold text-2xl text-brown'>
                     Slepičky
@@ -38,7 +38,7 @@ const EshopPage = () => {
             )}
 
             {filteredKurniky.length !== 0 && (
-              <div className='mb-48'>
+              <div className='mb-20 lg:mb-48'>
                 <div className='flex items-center gap-4 pb-2'>
                   <h4 className='relative uppercase font-semibold text-2xl text-brown'>
                     Kurníky
@@ -50,7 +50,7 @@ const EshopPage = () => {
             )}
 
             {filteredSmesi.length !== 0 && (
-              <div className='mb-48'>
+              <div className='mb-20 lg:mb-48'>
                 <div className='flex items-center gap-4 pb-2'>
                   <h4 className='relative uppercase font-semibold text-2xl text-brown'>
                     Směsi
@@ -61,7 +61,7 @@ const EshopPage = () => {
               </div>
             )}
             {filteredDoplnky.length !== 0 && (
-              <div className='mb-48'>
+              <div className='mb-20 lg:mb-48'>
                 <div className='flex items-center gap-4 pb-2'>
                   <h4 className='relative uppercase font-semibold text-2xl text-brown'>
                     Doplňky
