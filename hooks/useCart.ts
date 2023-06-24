@@ -25,10 +25,37 @@ export const useCart = create<CartStore>(set => ({
   cartItems: [],
   totalPrice: 0,
   add: item =>
-    set(state => ({
-      cartItems: [...state.cartItems, item],
-      totalPrice: state.totalPrice + item.price,
-    })),
+    set(state => {
+      const existingItem = state.cartItems.find(
+        cartItem => cartItem.name === item.name
+      )
+      if (existingItem) {
+        const updatedItems = state.cartItems.map(cartItem => {
+          if (cartItem.name === item.name) {
+            return { ...cartItem, quantity: cartItem.quantity + item.quantity }
+          }
+          return cartItem
+        })
+        const updatedPrice = updatedItems.reduce(
+          (total, cartItem) => total + cartItem.price * cartItem.quantity,
+          0
+        )
+        return {
+          cartItems: updatedItems,
+          totalPrice: updatedPrice,
+        }
+      } else {
+        const updatedItems = [...state.cartItems, item]
+        const updatedPrice = updatedItems.reduce(
+          (total, cartItem) => total + cartItem.price * cartItem.quantity,
+          0
+        )
+        return {
+          cartItems: updatedItems,
+          totalPrice: updatedPrice,
+        }
+      }
+    }),
   remove: name =>
     set(state => {
       const itemToRemove = state.cartItems.find(item => item.name === name)
