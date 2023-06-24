@@ -9,13 +9,12 @@ import NavIcon from './NavIcon'
 import { AiOutlineInstagram, AiFillYoutube } from 'react-icons/ai'
 import { IoLogoTiktok } from 'react-icons/io5'
 import { FaFacebook, FaShoppingCart } from 'react-icons/fa'
+import { usePathname } from 'next/navigation'
 
-interface NavbarProps {
-  isEshop?: boolean
-}
-
-const Navbar: React.FC<NavbarProps> = ({ isEshop }) => {
+const Navbar = () => {
   const [isTopOfPage, setIsTopOfPage] = useState<boolean>(true)
+  const pathname = usePathname()
+  const isEshop = pathname.includes('eshop')
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,7 +30,8 @@ const Navbar: React.FC<NavbarProps> = ({ isEshop }) => {
 
   return (
     <div
-      className={`fixed w-full py-5 transition z-10 ${
+      className={`fixed w-full py-5 transition z-10 
+      ${
         isTopOfPage
           ? 'bg-transparent'
           : 'bg-green/70 backdrop-blur-xl drop-shadow'
