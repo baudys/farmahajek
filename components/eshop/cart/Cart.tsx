@@ -8,7 +8,8 @@ import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai'
 import { IoClose } from 'react-icons/io5'
 
 const Cart = () => {
-  const { cartItems, remove, qtyplus, qtymin, totalPrice } = useCart.getState()
+  const { cartItems, totalPrice, remove, increaseQuantity, decreaseQuantity } =
+    useCart(state => state)
 
   return (
     <div className='min-h-screen'>
@@ -49,7 +50,7 @@ const Cart = () => {
                   <div className='flex items-center gap-2 selection:hidden'>
                     <AiOutlinePlus
                       className='cursor-pointer'
-                      onClick={() => qtyplus(item.name)}
+                      onClick={() => increaseQuantity(item.name)}
                     />
 
                     <p className='font-bold'>
@@ -58,7 +59,7 @@ const Cart = () => {
 
                     <AiOutlineMinus
                       className='cursor-pointer'
-                      onClick={() => qtymin(item.name)}
+                      onClick={() => decreaseQuantity(item.name)}
                     />
                   </div>
                   <IoClose

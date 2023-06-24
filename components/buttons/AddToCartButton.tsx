@@ -15,12 +15,12 @@ const AddToCartButton: React.FC<AddToCartButtonProps> = ({
   src,
   href,
 }) => {
-  const addItem = useCart(state => state.add)
+  const { add } = useCart(state => state)
 
   return (
     <button
       onClick={() =>
-        addItem({
+        add({
           name,
           price,
           quantity: 1,

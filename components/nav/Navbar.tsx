@@ -11,7 +11,7 @@ const Navbar = () => {
   const pathname = usePathname()
   const isEshop = pathname.includes('eshop')
 
-  const numOfItems = useCart(state => state.cartItems).length
+  const { totalQuantity } = useCart(state => state)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,12 +30,12 @@ const Navbar = () => {
       <DesktopNav
         isTopOfPage={isTopOfPage}
         isEshop={isEshop}
-        numOfItems={numOfItems}
+        numOfItems={totalQuantity}
       />
       <MobileNav
         isTopOfPage={isTopOfPage}
         isEshop={isEshop}
-        numOfItems={numOfItems}
+        numOfItems={totalQuantity}
       />
     </>
   )
