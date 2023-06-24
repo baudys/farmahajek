@@ -8,6 +8,7 @@ interface CartStore {
     src: string
     href: string
   }[]
+  totalPrice: number
   add: (item: {
     name: string
     price: number
@@ -16,13 +17,63 @@ interface CartStore {
     href: string
   }) => void
   remove: (name: string) => void
+  increaseQuantity: (name: string) => void
+  decreaseQuantity: (name: string) => void
 }
 
 export const useCart = create<CartStore>(set => ({
   cartItems: [],
-  add: item => set(state => ({ cartItems: [...state.cartItems, item] })),
-  remove: name =>
+  totalPrice: 0,
+  add: item =>
     set(state => ({
-      cartItems: state.cartItems.filter(item => item.name !== name),
+      cartItems: [...state.cartItems, item],
+      totalPrice: state.totalPrice + item.price,
     })),
+  remove: name =>
+    set(state => {
+      const itemToRemove = state.cartItems.find(item => item.name === name)
+      if (itemToRemove) {
+        const updatedPrice =
+          state.totalPrice - itemToRemove.price * itemToRemove.quantity
+        return {
+          cartItems: state.cartItems.filter(item => item.name !== name),
+          totalPrice: updatedPrice < 0 ? 0 : updatedPrice,
+        }
+      }
+      return state
+    }),
+  increaseQuantity: name =>
+    set(state => {
+      const updatedItems = state.cartItems.map(item => {
+        if (item.name === name) {
+          return { ...item, quantity: item.quantity + 1 }
+        }
+        return item
+      })
+      const updatedPrice = updatedItems.reduce(
+        (total, item) => total + item.price * item.quantity,
+        0
+      )
+      return {
+        cartItems: updatedItems,
+        totalPrice: updatedPrice,
+      }
+    }),
+  decreaseQuantity: name =>
+    set(state => {
+      const updatedItems = state.cartItems.map(item => {
+        if (item.name === name && item.quantity > 1) {
+          return { ...item, quantity: item.quantity - 1 }
+        }
+        return item
+      })
+      const updatedPrice = updatedItems.reduce(
+        (total, item) => total + item.price * item.quantity,
+        0
+      )
+      return {
+        cartItems: updatedItems,
+        totalPrice: updatedPrice,
+      }
+    }),
 }))
