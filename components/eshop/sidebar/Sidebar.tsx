@@ -23,7 +23,7 @@ const Sidebar: React.FC = () => {
   }, [selectCategory])
 
   return (
-    <div className='flex flex-col gap-20 items-center mb-16'>
+    <div className='flex flex-col gap-8 lg:gap-14 items-center'>
       <input
         type='text'
         placeholder='hledej'
