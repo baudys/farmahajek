@@ -17,13 +17,21 @@ const NavIcon: React.FC<NavIconProps> = ({
   return (
     <li
       className={`rounded-full p-1.5 transition ${
-        !isEshop && isTopOfPage && 'text-white hover:text-black hover:bg-white'
+        !isEshop &&
+        isTopOfPage &&
+        'text-green lg:text-white lg:hover:text-black hover:text-brown hover:bg-green lg:hover:bg-white'
       } ${
-        !isEshop && !isTopOfPage && 'text-brown hover:text-green hover:bg-brown'
+        !isEshop &&
+        !isTopOfPage &&
+        'text-green lg:text-brown hover:text-brown hover:bg-green lg:hover:text-green lg:hover:bg-brown'
       } ${
-        isEshop && isTopOfPage && 'text-brown hover:text-white hover:bg-brown'
+        isEshop &&
+        isTopOfPage &&
+        'text-green lg:text-brown hover:text-brown hover:bg-green lg:hover:text-white lg:hover:bg-brown'
       } ${
-        isEshop && !isTopOfPage && 'text-brown hover:text-green hover:bg-brown'
+        isEshop &&
+        !isTopOfPage &&
+        'text-green lg:text-brown hover:text-brown hover:bg-green lg:hover:text-green lg:hover:bg-brown'
       }`}
     >
       <Link href={href} target='_blank'>
