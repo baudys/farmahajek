@@ -295,11 +295,13 @@ export const doplnky = [
     label: 'Krmítko 30L',
     src: '/doplnky/krmitko.png',
     price: 1500,
+    transparentBg: true,
   },
   {
     href: '/eshop/doplnky/pitko',
     label: 'Pítko 30L',
     src: '/doplnky/pitko.png',
     price: 1000,
+    transparentBg: true,
   },
 ]

@@ -22,7 +22,7 @@ const Gallery: React.FC<GalleryProps> = ({ data, transparentBg }) => {
           label={value.label}
           src={value.src}
           price={value.price}
-          transparentBg={transparentBg}
+          transparentBg={value.transparentBg || transparentBg}
         />
       ))}
     </div>

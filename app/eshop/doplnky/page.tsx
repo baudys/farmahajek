@@ -12,10 +12,7 @@ const Slepicky = () => {
       <Container>
         <div className='grid lg:grid-cols-[1fr_5fr] gap-20'>
           <Sidebar />
-          <div>
-            <Gallery data={[doplnky[0], doplnky[1]]} />
-            <Gallery data={[doplnky[2], doplnky[3]]} transparentBg />
-          </div>
+          <Gallery data={doplnky} />
         </div>
       </Container>
     </div>

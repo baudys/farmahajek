@@ -64,13 +64,12 @@ const Eshop = () => {
               <div className='mb-48'>
                 <div className='flex items-center gap-4 pb-2'>
                   <h4 className='relative uppercase font-semibold text-2xl text-brown'>
-                    Směsi
+                    Doplňky
                   </h4>
                   <div className='bg-brown w-full h-[2px]' />
                 </div>
                 <div>
-                  <Gallery data={[doplnky[0], doplnky[1]]} />
-                  <Gallery data={[doplnky[2], doplnky[3]]} transparentBg />
+                  <Gallery data={doplnky} />
                 </div>
               </div>
             )}
