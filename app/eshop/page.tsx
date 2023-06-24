@@ -7,7 +7,7 @@ import { doplnky, kurniky, slepicky, smesi } from '@/database/products'
 import useSearchBar from '@/hooks/useSearchBar'
 import { getFilteredProducts } from '@/lib/getFilteredProducts'
 
-const Eshop = () => {
+const EshopPage = () => {
   const query = useSearchBar(state => state.query)
 
   const filteredSlepicky = getFilteredProducts(query, slepicky)
@@ -80,4 +80,4 @@ const Eshop = () => {
   )
 }
 
-export default Eshop
+export default EshopPage

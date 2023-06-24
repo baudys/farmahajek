@@ -7,7 +7,7 @@ export const metadata = {
   title: 'Farma Hájek - Kontakt 📞',
 }
 
-const Kontakt = () => {
+const KontaktPage = () => {
   return (
     <div className='py-20 bg-brown'>
       <Container>
@@ -29,4 +29,4 @@ const Kontakt = () => {
   )
 }
 
-export default Kontakt
+export default KontaktPage
