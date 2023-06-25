@@ -122,7 +122,7 @@ const MobileNav: React.FC<MobileNavProps> = ({
                 />
               </ul>
 
-              <ul className='absolute bottom-3 left-[50%] translate-x-[-50%] flex  gap-2 text-lg uppercase font-medium'>
+              <ul className='absolute bottom-20 left-[50%] translate-x-[-50%] flex  gap-2 text-lg uppercase font-medium'>
                 <NavIcon
                   href='https://www.instagram.com/farmahajek/'
                   icon={AiOutlineInstagram}
