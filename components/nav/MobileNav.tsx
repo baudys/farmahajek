@@ -67,7 +67,7 @@ const MobileNav: React.FC<MobileNavProps> = ({
             {isEshop && (
               <Link
                 href='/eshop/kosik/'
-                className={`ml-4 rounded-full p-2 relative overflow-visible
+                className={`ml-3 mr-2 rounded-full p-2 relative overflow-visible
                 ${isTopOfPage ? 'bg-green' : 'bg-brown'}`}
               >
                 <FaShoppingCart
