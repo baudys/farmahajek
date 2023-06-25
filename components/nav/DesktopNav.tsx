@@ -68,8 +68,8 @@ const DesktopNav: React.FC<DesktopNavProps> = ({
               isEshop={isEshop}
             />
             <NavLink
-              href='/informace'
-              label='Informace'
+              href='/sluzby'
+              label='Služby'
               isTopOfPage={isTopOfPage}
               isEshop={isEshop}
             />

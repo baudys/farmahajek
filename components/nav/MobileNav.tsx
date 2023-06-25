@@ -107,8 +107,8 @@ const MobileNav: React.FC<MobileNavProps> = ({
                   handleClick={handleClick}
                 />
                 <NavLink
-                  href='/informace'
-                  label='Informace'
+                  href='/sluzby'
+                  label='Služby'
                   isTopOfPage={isTopOfPage}
                   isEshop={isEshop}
                   handleClick={handleClick}

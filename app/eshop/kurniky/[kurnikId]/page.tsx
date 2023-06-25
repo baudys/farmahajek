@@ -1,5 +1,6 @@
 import Container from '@/components/Container'
 import MultiProduct from '@/components/eshop/MultiProduct'
+import Product from '@/components/eshop/Product'
 
 interface IParams {
   kurnikId?: string
@@ -178,11 +179,11 @@ const KurnikPage = async ({ params }: { params: IParams }) => {
           />
         )}
         {kurnikId === 'vybeh' && (
-          <MultiProduct
+          <Product
             label='Výběh'
             price={10890}
-            description='Výběh kompatibilní s oběma velikostmi rozměr 2,5 * 2,5 m + krytí proti dravcům'
-            images={[{ url: '/kurniky/vybeh/1.jpg' }]}
+            description='Výběh je kompatibilní s oběma velikostmi kurníků. Rozměr 2,5 * 2,5 m + krytí proti dravcům'
+            src='/kurniky/vybeh/1.jpg'
             href='/kurniky/vybeh'
           />
         )}
