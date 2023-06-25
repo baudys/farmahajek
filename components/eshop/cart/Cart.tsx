@@ -10,11 +10,11 @@ const Cart = () => {
   const { cartItems, totalPrice } = useCart(state => state)
 
   return (
-    <div className='min-h-screen'>
+    <div className='min-h-[50vh]'>
       <Container>
         <div className='py-20'>
           {cartItems.length < 1 && (
-            <div className='min-h-screen flex flex-col gap-6 justify-center items-center'>
+            <div className='min-h-[50vh] flex flex-col gap-6 justify-center items-center'>
               <h1 className='text-2xl lg:text-5xl font-bold'>
                 Nákupní košík je prázdný
               </h1>
