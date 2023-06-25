@@ -9,7 +9,7 @@ const KurnikPage = async ({ params }: { params: IParams }) => {
   const { kurnikId } = params
 
   return (
-    <div className='pt-32 pb-20'>
+    <div className='py-20 lg:pt-32'>
       <Container>
         {kurnikId === 'kurnik-6-netepleny' && (
           <MultiProduct

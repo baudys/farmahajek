@@ -10,7 +10,7 @@ const DoplnekPage = async ({ params }: { params: IParams }) => {
   const { doplnekId } = params
 
   return (
-    <div className='pt-32 pb-20'>
+    <div className='py-20 lg:pt-32'>
       <Container>
         {doplnekId === 'zasterka-velka' && (
           <Product

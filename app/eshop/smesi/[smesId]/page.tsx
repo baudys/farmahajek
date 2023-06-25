@@ -10,7 +10,7 @@ const SmesPage = async ({ params }: { params: IParams }) => {
   const { smesId } = params
 
   return (
-    <div className='pt-32 pb-20'>
+    <div className='py-20 lg:pt-32'>
       <Container>
         {smesId === 'startovaci-balicek' && (
           <MultiProduct

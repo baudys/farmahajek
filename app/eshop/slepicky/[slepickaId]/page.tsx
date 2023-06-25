@@ -10,7 +10,7 @@ const SlepickaPage = async ({ params }: { params: IParams }) => {
   const { slepickaId } = params
 
   return (
-    <div className='pt-32 pb-20'>
+    <div className='py-20 lg:pt-32'>
       <Container>
         {slepickaId === 'D853' && (
           <Product

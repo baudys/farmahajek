@@ -9,7 +9,7 @@ export const metadata = {
 
 const KontaktPage = () => {
   return (
-    <div className='py-20 bg-brown'>
+    <div className='py-28 bg-brown'>
       <Container>
         <div className='grid xl:grid-cols-2 gap-12'>
           <div>
