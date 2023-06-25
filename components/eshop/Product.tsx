@@ -29,7 +29,7 @@ const Product: React.FC<ProductProps> = ({
       <div>
         <p
           className='flex items-center font-bold text-2xl gap-2 cursor-pointer mb-6 w-fit'
-          onClick={() => router.back()}
+          onClick={() => router.push('/eshop')}
         >
           <HiArrowLeft />
           Zpět do obchodu
