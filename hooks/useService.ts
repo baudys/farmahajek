@@ -6,6 +6,15 @@ interface ServiceStore {
 
   vejce: boolean
   handleVejce: () => void
+
+  zahradnictvi: boolean
+  handleZahradnictvi: () => void
+
+  zemniprace: boolean
+  handleZemniprace: () => void
+
+  zemedelstvi: boolean
+  handleZemedelstvi: () => void
 }
 
 export const useService = create<ServiceStore>(set => ({
@@ -14,4 +23,14 @@ export const useService = create<ServiceStore>(set => ({
 
   vejce: false,
   handleVejce: () => set(state => ({ vejce: !state.vejce })),
+
+  zahradnictvi: false,
+  handleZahradnictvi: () =>
+    set(state => ({ zahradnictvi: !state.zahradnictvi })),
+
+  zemniprace: false,
+  handleZemniprace: () => set(state => ({ zemniprace: !state.zemniprace })),
+
+  zemedelstvi: false,
+  handleZemedelstvi: () => set(state => ({ zemedelstvi: !state.zemedelstvi })),
 }))
