@@ -1,24 +1,16 @@
 import { useCart } from '@/hooks/useCart'
+import { CartItem } from '@/types/cart'
 import Image from 'next/image'
 import Link from 'next/link'
 import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai'
 import { AiFillDelete } from 'react-icons/ai'
-
-interface CartItem {
-  name: string
-  price: number
-  quantity: number
-  src: string
-  href: string
-}
 
 interface MobileCartItemProps {
   item: CartItem
 }
 
 const MobileCartItem: React.FC<MobileCartItemProps> = ({ item }) => {
-  const { cartItems, totalPrice, remove, increaseQuantity, decreaseQuantity } =
-    useCart(state => state)
+  const { remove, increaseQuantity, decreaseQuantity } = useCart(state => state)
 
   const getItemTotalPrice = (item: CartItem) => {
     return item.price * item.quantity

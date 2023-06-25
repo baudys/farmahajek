@@ -1,12 +1,5 @@
+import { CartItem } from '@/types/cart'
 import { create } from 'zustand'
-
-interface CartItem {
-  name: string
-  price: number
-  quantity: number
-  src: string
-  href: string
-}
 
 interface CartStore {
   cartItems: CartItem[]
