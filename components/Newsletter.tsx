@@ -13,9 +13,9 @@ const Newsletter = () => {
 
   return (
     <div
-      className={`transition-all ${
+      className={`transition-all border-t border-brown ${
         isOpen
-          ? 'fixed bottom-0 left-0 min-w-full h-44 lg:h-20 bg-green z-10'
+          ? 'fixed bottom-0 left-0 min-w-full h-48 lg:h-20 bg-green z-10'
           : 'hidden'
       }`}
     >
@@ -24,10 +24,9 @@ const Newsletter = () => {
           chcete odebírat novinky?
         </h4>
         <NewsletterInput />
-        <button className='py-1 px-1 mt-4 lg:m-0 rounded-md uppercase text-lg border-2 border-brown font-semibold  hover:bg-brown hover:text-white transition'>
+        <button className='py-1 px-1 my-4 lg:m-0 rounded-md uppercase text-lg border-2 border-brown font-semibold  hover:bg-brown text-brown hover:text-white transition'>
           potvrdit!
         </button>
-
         <AiOutlineClose
           className='absolute top-3 right-3 lg:top-[50%] lg:-translate-y-[50%] cursor-pointer'
           onClick={handleClick}
