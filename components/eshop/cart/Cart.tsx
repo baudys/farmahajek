@@ -35,9 +35,26 @@ const Cart = () => {
               </>
             ))}
           {cartItems.length >= 1 && (
-            <p className='text-right text-xl'>
-              Celkem: <span className='font-bold'>{totalPrice} Kč</span>
-            </p>
+            <div className='flex flex-col items-end'>
+              <p className='text-right text-xl'>
+                Celkem: <span className='font-bold'>{totalPrice} Kč</span>
+              </p>
+              <div className='mt-6 flex'>
+                <Link
+                  href='/eshop'
+                  className='ring-2 ring-zinc-600 py-2 px-4 text-zinc-700 rounded-md mr-8'
+                >
+                  Pokračovat v nákupu
+                </Link>
+
+                <Link
+                  href='/eshop/kosik/objednavka'
+                  className='bg-brown ring-2 ring-brown text-green font-bold uppercase py-2 px-4 rounded-md w-max'
+                >
+                  Objednat
+                </Link>
+              </div>
+            </div>
           )}
         </div>
       </Container>
