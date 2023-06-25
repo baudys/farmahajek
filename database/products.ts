@@ -69,10 +69,10 @@ export const slepicky = [
 
 export const kurniky = [
   {
-    href: '/eshop/kurniky/kurnik-6-netepleny/',
-    label: 'Kurník na 6 slepic neteplený',
-    src: '/kurniky/kurnik-6-netepleny/1.jpg',
-    price: 9500,
+    href: '/eshop/kurniky/kurnik-10-tepleny',
+    label: 'Kurník na 10 slepic teplený',
+    src: '/kurniky/kurnik-10-tepleny/1.jpg',
+    price: 39930,
   },
   {
     href: '/eshop/kurniky/kurnik-20-tepleny/',
@@ -81,22 +81,22 @@ export const kurniky = [
     price: 45980,
   },
   {
-    href: '/eshop/kurniky/kurnik-10-tepleny',
-    label: 'Kurník na 10 slepic teplený',
-    src: '/kurniky/kurnik-10-tepleny/1.jpg',
-    price: 39930,
-  },
-  {
-    href: '/eshop/kurniky/kurnik-20-netepleny',
-    label: 'Kurník na 20 slepic neteplený',
-    src: '/kurniky/kurnik-20-netepleny/1.jpg',
-    price: 27830,
+    href: '/eshop/kurniky/kurnik-6-netepleny/',
+    label: 'Kurník na 6 slepic neteplený',
+    src: '/kurniky/kurnik-6-netepleny/1.jpg',
+    price: 9500,
   },
   {
     href: '/eshop/kurniky/kurnik-10-netepleny',
     label: 'Kurník na 10 slepic neteplený',
     src: '/kurniky/kurnik-10-netepleny/1.jpg',
     price: 24200,
+  },
+  {
+    href: '/eshop/kurniky/kurnik-20-netepleny',
+    label: 'Kurník na 20 slepic neteplený',
+    src: '/kurniky/kurnik-20-netepleny/1.jpg',
+    price: 27830,
   },
   {
     href: '/eshop/kurniky/kurnik-terasovy',

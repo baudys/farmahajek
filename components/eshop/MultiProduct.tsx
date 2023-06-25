@@ -18,6 +18,7 @@ interface MultiProductProps {
     url: string
   }[]
   href: string
+  children?: React.ReactNode
 }
 
 const MultiProduct: React.FC<MultiProductProps> = ({
@@ -29,6 +30,7 @@ const MultiProduct: React.FC<MultiProductProps> = ({
   description,
   images,
   href,
+  children,
 }) => {
   const router = useRouter()
 
@@ -169,11 +171,12 @@ const MultiProduct: React.FC<MultiProductProps> = ({
             {description && <p>{description}</p>}
             {width && (
               <>
-                <p>Délka: {depth}</p>
-                <p>Výška: {height}</p>
-                <p>Šířka: {width}</p>
+                <p>Délka: {depth} CM</p>
+                <p>Výška: {height} CM</p>
+                <p>Šířka: {width} CM</p>
               </>
             )}
+            <p className='text-right font-bold text-lg mt-2'>{price} Kč</p>
             <AddToCartButton
               name={label}
               price={price}
@@ -183,6 +186,21 @@ const MultiProduct: React.FC<MultiProductProps> = ({
           </div>
         </div>
       </div>
+
+      <div />
+
+      {children && (
+        <div className='mt-20 space-y-4'>
+          {children && (
+            <>
+              <h3 className='uppercase font-semibold text-2xl mb-8'>
+                Více informací
+              </h3>
+              {children}
+            </>
+          )}
+        </div>
+      )}
     </div>
   )
 }

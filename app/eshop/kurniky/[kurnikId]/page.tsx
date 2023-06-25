@@ -12,37 +12,6 @@ const KurnikPage = async ({ params }: { params: IParams }) => {
   return (
     <div className='py-20 lg:pt-32'>
       <Container>
-        {kurnikId === 'kurnik-6-netepleny' && (
-          <MultiProduct
-            label='Kurník na 6 slepic neteplený'
-            price={9500}
-            depth={80}
-            height={120}
-            width={80}
-            images={[
-              { url: '/kurniky/kurnik-6-netepleny/1.jpg' },
-              { url: '/kurniky/kurnik-6-netepleny/2.jpg' },
-              { url: '/kurniky/kurnik-6-netepleny/3.jpg' },
-              { url: '/kurniky/kurnik-6-netepleny/4.jpg' },
-            ]}
-            href='/kurniky/kurnik-6-netepleny'
-          />
-        )}
-        {kurnikId === 'kurnik-20-tepleny' && (
-          <MultiProduct
-            label='Kurník na 20 slepic teplený'
-            price={45980}
-            depth={250}
-            height={180}
-            width={140}
-            images={[
-              { url: '/kurniky/kurnik-20-tepleny/1.jpg' },
-              { url: '/kurniky/kurnik-20-tepleny/2.jpg' },
-              { url: '/kurniky/kurnik-20-tepleny/3.jpg' },
-            ]}
-            href='/kurniky/kurnik-20-tepleny'
-          />
-        )}
         {kurnikId === 'kurnik-10-tepleny' && (
           <MultiProduct
             label='Kurník na 10 slepic teplený'
@@ -57,7 +26,108 @@ const KurnikPage = async ({ params }: { params: IParams }) => {
               { url: '/kurniky/kurnik-10-tepleny/4.jpg' },
             ]}
             href='/kurniky/kurnik-10-tepleny'
-          />
+          >
+            <p>
+              Jedná se o výrobek z české dílny. Kurník je opláštěn palubkovými
+              prkny, zateplen 50 mm polystyrénem (krom podlahy) a z vnitřku
+              zakryt dřevotřískovou deskou. Dále zde nemůžou chybět snášková
+              hnízda, hřadla, okno na větrání i pro kontrolu. Pro účely odklizu
+              trusu je zadní stěna vyklápěná.
+            </p>
+            <p>
+              Celá konstrukce je zpevněna vruty pro vyšší pevnost a odolnost
+              Celkově tvoří kurník vkusný a praktický doplněk.
+            </p>
+            <p>
+              Výhodou Kurníku je robustnost, snadná manipulace a tepelná izolace
+              (což zajišťuje vysokou úroveň dobrých životních podmínek zvířat).
+            </p>
+          </MultiProduct>
+        )}
+        {kurnikId === 'kurnik-20-tepleny' && (
+          <MultiProduct
+            label='Kurník na 20 slepic teplený'
+            price={45980}
+            depth={250}
+            height={180}
+            width={140}
+            images={[
+              { url: '/kurniky/kurnik-20-tepleny/1.jpg' },
+              { url: '/kurniky/kurnik-20-tepleny/2.jpg' },
+              { url: '/kurniky/kurnik-20-tepleny/3.jpg' },
+            ]}
+            href='/kurniky/kurnik-20-tepleny'
+          >
+            <p>
+              Jedná se o výrobek z české dílny. Kurník je opláštěn palubkovými
+              prkny, zateplen 50 mm polystyrénem (krom podlahy) a z vnitřku
+              zakryt dřevotřískovou deskou. Dále zde nemůžou chybět snášková
+              hnízda, hřadla, okno na větrání i pro kontrolu. Pro účely odklizu
+              trusu je zadní stěna vyklápěná.
+            </p>
+            <p>
+              Celá konstrukce je zpevněna vruty pro vyšší pevnost a odolnost
+              Celkově tvoří kurník vkusný a praktický doplněk.
+            </p>
+            <p>
+              Výhodou Kurníku je robustnost, snadná manipulace a tepelná izolace
+              (což zajišťuje vysokou úroveň dobrých životních podmínek zvířat).
+            </p>
+          </MultiProduct>
+        )}
+        {kurnikId === 'kurnik-6-netepleny' && (
+          <MultiProduct
+            label='Kurník na 6 slepic neteplený'
+            price={9500}
+            depth={80}
+            height={120}
+            width={80}
+            images={[
+              { url: '/kurniky/kurnik-6-netepleny/1.jpg' },
+              { url: '/kurniky/kurnik-6-netepleny/2.jpg' },
+              { url: '/kurniky/kurnik-6-netepleny/3.jpg' },
+              { url: '/kurniky/kurnik-6-netepleny/4.jpg' },
+            ]}
+            href='/kurniky/kurnik-6-netepleny'
+          >
+            <p>
+              Jedná se o výrobek z české dílny. Kurník je opláštěn palubkovými
+              prkny a z vnitřku zakryt dřevotřískovou deskou. Dále zde nemůžou
+              chybět snášková hnízda, hřadla, okno na větrání i pro kontrolu.
+              Pro účely odklizu trusu je zadní stěna vyklápěná.
+            </p>
+            <p>
+              Celá konstrukce je zpevněna vruty pro vyšší pevnost a odolnost
+              Celkově tvoří kurník vkusný a praktický doplněk.
+            </p>
+            <p>Výhodou Kurníku je robustnost a snadná manipulace</p>
+          </MultiProduct>
+        )}
+        {kurnikId === 'kurnik-10-netepleny' && (
+          <MultiProduct
+            label='Kurník neteplený na 10 slepic'
+            price={24200}
+            depth={220}
+            height={180}
+            width={140}
+            images={[
+              { url: '/kurniky/kurnik-10-netepleny/1.jpg' },
+              { url: '/kurniky/kurnik-10-netepleny/2.jpg' },
+            ]}
+            href='/kurniky/kurnik-10-netepleny'
+          >
+            <p>
+              Jedná se o výrobek z české dílny. Kurník je opláštěn palubkovými
+              prkny a z vnitřku zakryt dřevotřískovou deskou. Dále zde nemůžou
+              chybět snášková hnízda, hřadla, okno na větrání i pro kontrolu.
+              Pro účely odklizu trusu je zadní stěna vyklápěná.
+            </p>
+            <p>
+              Celá konstrukce je zpevněna vruty pro vyšší pevnost a odolnost
+              Celkově tvoří kurník vkusný a praktický doplněk.
+            </p>
+            <p>Výhodou Kurníku je robustnost a snadná manipulace</p>
+          </MultiProduct>
         )}
         {kurnikId === 'kurnik-20-netepleny' && (
           <MultiProduct
@@ -72,21 +142,19 @@ const KurnikPage = async ({ params }: { params: IParams }) => {
               { url: '/kurniky/kurnik-20-netepleny/3.jpg' },
             ]}
             href='/kurniky/kurnik-20-netepleny'
-          />
-        )}
-        {kurnikId === 'kurnik-10-netepleny' && (
-          <MultiProduct
-            label='Kurník neteplený na 10 slepic'
-            price={24200}
-            depth={220}
-            height={180}
-            width={140}
-            images={[
-              { url: '/kurniky/kurnik-10-netepleny/1.jpg' },
-              { url: '/kurniky/kurnik-10-netepleny/2.jpg' },
-            ]}
-            href='/kurniky/kurnik-10-netepleny'
-          />
+          >
+            <p>
+              Jedná se o výrobek z české dílny. Kurník je opláštěn palubkovými
+              prkny a z vnitřku zakryt dřevotřískovou deskou. Dále zde nemůžou
+              chybět snášková hnízda, hřadla, okno na větrání i pro kontrolu.
+              Pro účely odklizu trusu je zadní stěna vyklápěná.
+            </p>
+            <p>
+              Celá konstrukce je zpevněna vruty pro vyšší pevnost a odolnost
+              Celkově tvoří kurník vkusný a praktický doplněk.
+            </p>
+            <p>Výhodou Kurníku je robustnost a snadná manipulace</p>
+          </MultiProduct>
         )}
         {kurnikId === 'kurnik-terasovy' && (
           <MultiProduct

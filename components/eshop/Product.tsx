@@ -47,6 +47,7 @@ const Product: React.FC<ProductProps> = ({
           <div>
             <h2 className='font-bold text-3xl uppercase mb-2'>{label}</h2>
             <p>{description}</p>
+            <p className='text-right font-bold text-lg mt-2'>{price} Kč</p>
             <AddToCartButton name={label} price={price} src={src} href={href} />
           </div>
         </div>
