@@ -25,7 +25,7 @@ const MobileCartItem: React.FC<MobileCartItemProps> = ({ item }) => {
   }
 
   return (
-    <div className='lg: hidden relative bg-zinc-300 rounded-md mb-3 flex-1 pr-2'>
+    <div className='lg:hidden relative bg-zinc-300 rounded-md mb-3 flex-1 pr-2'>
       <div className='grid grid-cols-[1.1fr_3fr] gap-1 items-center'>
         <Link href={item.href} className='aspect-square overflow-hidden'>
           <Image
