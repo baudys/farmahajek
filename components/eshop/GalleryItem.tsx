@@ -18,7 +18,7 @@ const GalleryItem: React.FC<GalleryItemProps> = ({
   transparentBg,
 }) => {
   return (
-    <div className='rounded-md ring-2 ring-zinc-200 lg:ring-0 hover:ring-2 hover:ring-zinc-200 transition hover:bg-zinc-100'>
+    <div className='flex flex-col justify-between rounded-md ring-2 ring-zinc-200 lg:ring-0 hover:ring-2 hover:ring-zinc-200 transition hover:bg-zinc-100 xl:h-[22rem]'>
       <Link href={href} className='group'>
         <div
           className={`bg-zinc-200 group-hover:bg-zinc-300 transition rounded-t-md h-56 overflow-hidden ${
@@ -37,10 +37,10 @@ const GalleryItem: React.FC<GalleryItemProps> = ({
         </div>
         <div className='p-1 group-hover:bg-zinc-100 transition rounded-md'>
           <h3 className='font-semibold text-sm text-zinc-600'>{label}</h3>
-          <p className='font-bold text-lg'>{price} Kč</p>
         </div>
       </Link>
       <div className='p-1'>
+        <p className='font-bold text-lg text-right'>{price} Kč</p>
         <AddToCartButton name={label} price={price} src={src} href={href} />
       </div>
     </div>
