@@ -24,6 +24,7 @@ const KurnikPage = async ({ params }: { params: IParams }) => {
               { url: '/kurniky/kurnik-6-netepleny/3.jpg' },
               { url: '/kurniky/kurnik-6-netepleny/4.jpg' },
             ]}
+            href='/kurniky/kurnik-6-netepleny'
           />
         )}
         {kurnikId === 'kurnik-20-tepleny' && (
@@ -38,6 +39,7 @@ const KurnikPage = async ({ params }: { params: IParams }) => {
               { url: '/kurniky/kurnik-20-tepleny/2.jpg' },
               { url: '/kurniky/kurnik-20-tepleny/3.jpg' },
             ]}
+            href='/kurniky/kurnik-20-tepleny'
           />
         )}
         {kurnikId === 'kurnik-10-tepleny' && (
@@ -53,6 +55,7 @@ const KurnikPage = async ({ params }: { params: IParams }) => {
               { url: '/kurniky/kurnik-10-tepleny/3.jpg' },
               { url: '/kurniky/kurnik-10-tepleny/4.jpg' },
             ]}
+            href='/kurniky/kurnik-10-tepleny'
           />
         )}
         {kurnikId === 'kurnik-20-netepleny' && (
@@ -67,6 +70,7 @@ const KurnikPage = async ({ params }: { params: IParams }) => {
               { url: '/kurniky/kurnik-20-netepleny/2.jpg' },
               { url: '/kurniky/kurnik-20-netepleny/3.jpg' },
             ]}
+            href='/kurniky/kurnik-20-netepleny'
           />
         )}
         {kurnikId === 'kurnik-10-netepleny' && (
@@ -80,6 +84,7 @@ const KurnikPage = async ({ params }: { params: IParams }) => {
               { url: '/kurniky/kurnik-10-netepleny/1.jpg' },
               { url: '/kurniky/kurnik-10-netepleny/2.jpg' },
             ]}
+            href='/kurniky/kurnik-10-netepleny'
           />
         )}
         {kurnikId === 'kurnik-terasovy' && (
@@ -94,6 +99,7 @@ const KurnikPage = async ({ params }: { params: IParams }) => {
               { url: '/kurniky/kurnik-terasovy/2.jpg' },
               { url: '/kurniky/kurnik-terasovy/3.jpg' },
             ]}
+            href='/kurniky/kurnik-terasovy'
           />
         )}
         {kurnikId === 'vybeh-bez-vstupu' && (
@@ -108,6 +114,7 @@ const KurnikPage = async ({ params }: { params: IParams }) => {
               { url: '/kurniky/vybeh-bez-vstupu/2.jpg' },
               { url: '/kurniky/vybeh-bez-vstupu/3.jpg' },
             ]}
+            href='/kurniky/vybeh-bez-vstupu'
           />
         )}
         {kurnikId === 'vybeh-se-vstupem' && (
@@ -122,6 +129,7 @@ const KurnikPage = async ({ params }: { params: IParams }) => {
               { url: '/kurniky/vybeh-se-vstupem/2.jpg' },
               { url: '/kurniky/vybeh-se-vstupem/3.jpg' },
             ]}
+            href='/kurniky/vybeh-se-vstupem'
           />
         )}
         {kurnikId === 'kralikarna-6' && (
@@ -136,6 +144,7 @@ const KurnikPage = async ({ params }: { params: IParams }) => {
               { url: '/kurniky/kralikarna-6/2.jpg' },
               { url: '/kurniky/kralikarna-6/3.jpg' },
             ]}
+            href='/kurniky/kralikarna-6'
           />
         )}
         {kurnikId === 'kralikarna-4' && (
@@ -150,6 +159,7 @@ const KurnikPage = async ({ params }: { params: IParams }) => {
               { url: '/kurniky/kralikarna-4/2.jpg' },
               { url: '/kurniky/kralikarna-4/3.jpg' },
             ]}
+            href='/kurniky/kralikarna-4'
           />
         )}
         {kurnikId === 'bedna-preprava' && (
@@ -164,6 +174,7 @@ const KurnikPage = async ({ params }: { params: IParams }) => {
               { url: '/kurniky/bedna-preprava/2.jpg' },
               { url: '/kurniky/bedna-preprava/3.jpg' },
             ]}
+            href='/kurniky/bedna-preprava'
           />
         )}
         {kurnikId === 'vybeh' && (
@@ -172,6 +183,7 @@ const KurnikPage = async ({ params }: { params: IParams }) => {
             price={10890}
             description='Výběh kompatibilní s oběma velikostmi rozměr 2,5 * 2,5 m + krytí proti dravcům'
             images={[{ url: '/kurniky/vybeh/1.jpg' }]}
+            href='/kurniky/vybeh'
           />
         )}
       </Container>

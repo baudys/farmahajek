@@ -18,6 +18,7 @@ const SlepickaPage = async ({ params }: { params: IParams }) => {
             description='DOMINANT ČERVENÝ D853 je velice atraktivně zbarveným programem s hnědou až červenou barvou peří na celém těle. Program využívá možnosti sexování podle geneticky podmíněné odlišné rychlosti růstu letek u jednodenních kohoutů s pomalým a u slepiček s rychlým růstem letek.'
             price={280}
             src='/slepicky/D853.png'
+            href='/slepicky/D853'
           >
             <p className='text-sm font-light'>
               Období chovu od 19 do 78 týdnů:
@@ -55,6 +56,7 @@ const SlepickaPage = async ({ params }: { params: IParams }) => {
             description='DOMINANT ČERVENĚ ŽÍHANÝ D159 je atraktivně zbarveným programem připomínajícím plemeno Plymutka žíhaná, ovšem v červenohnědé barvě peří s výrazným žíháním. Je velice oblíben jako finální hybrid pro samozásobitelské chovy nejen v Evropě, ale i ve světě.'
             price={280}
             src='/slepicky/D159.png'
+            href='/slepicky/D159'
           >
             <p className='text-sm font-light'>
               Období chovu od 19 do 78 týdnů:
@@ -96,6 +98,7 @@ const SlepickaPage = async ({ params }: { params: IParams }) => {
             description='DOMINANT ČERNÝ D109 je klasický, velmi populární program. Uplatňuje se jako finální hybrid pro samozásobitelské chovy v Česku a dalších zemích Evropy. Současně je také využíván i v exportech prarodičovských a rodičovských kompletů do Afriky, Asie a Ameriky, kde se využívá i pro intenzivní produkci konzumních vajec. Kohouti bývají vykrmováni k produkci tradičního vysoce chutného drůbežího masa.'
             price={280}
             src='/slepicky/D109.png'
+            href='/slepicky/D109'
           >
             <p className='text-sm font-light'>
               Období chovu od 19 do 78 týdnů:
@@ -135,6 +138,7 @@ const SlepickaPage = async ({ params }: { params: IParams }) => {
             description='DOMINANT ŽÍHANÝ D959 je atraktivně zbarveným programem připomínajícím plemeno Plymutka žíhaná. Je velice oblíben jako finální hybrid pro samozásobitelské chovy v mnoha zemích. Díky atraktivnímu zbarvení je využíván i v exportu rodičovských kompletů.'
             price={280}
             src='/slepicky/D959.png'
+            href='/slepicky/D959'
           >
             <p className='text-sm font-light'>
               Období chovu od 19 do 78 týdnů:
@@ -172,6 +176,7 @@ const SlepickaPage = async ({ params }: { params: IParams }) => {
             description='DOMINANT SUSSEX D104 je velice atraktivně zbarveným programem připomínajícím původní anglické plemeno z hrabství Sussex s tím rozdílem, že náš program je autosexingový a má žlutou barvu kůže  a běháků, díky čemuž také lépe ukládá žlutooranžový pigment do žloutku. Je velice oblíben jako finální hybrid pro samozásobitelské chovy v České republice, Slovensku, Polsku, na Ukrajině a v Rusku.'
             price={280}
             src='/slepicky/D104.png'
+            href='/slepicky/D104'
           >
             <p className='text-sm font-light'>
               Období chovu od 19 do 78 týdnů:
@@ -217,6 +222,7 @@ const SlepickaPage = async ({ params }: { params: IParams }) => {
             description='DOMINANT MODRÝ D107 je jedním z našich nejžádanějších programů díky originalitě v modrém zbarvení peří a možnosti použití kolorsexingu u jednodenních kuřat. Uplatňuje se jako finální hybrid pro samozásobitelské chovy v Česku a v mnoha dalších zemích světa. Kohouti bývají využíváni i k produkci tradičního vysoce chutného drůbežího masa.'
             price={280}
             src='/slepicky/D107.png'
+            href='/slepicky/D107'
           >
             <p className='text-sm font-light'>
               Období chovu od 19 do 78 týdnů:
@@ -262,6 +268,7 @@ const SlepickaPage = async ({ params }: { params: IParams }) => {
             description='DOMINANT LEGHORN D229 je velice populární především pro vysokou snášku čistě bílých vajec a nízkou spotřebu krmiva.'
             price={280}
             src='/slepicky/D229.png'
+            href='/slepicky/D229'
           >
             <p className='text-sm font-light'>
               Období chovu od 19 do 78 týdnů:
@@ -294,6 +301,7 @@ const SlepickaPage = async ({ params }: { params: IParams }) => {
             description='DOMINANT černo-hnědý D300 je klasický, velmi populární program. Uplatňuje se jako finální hybrid pro samozásobitelské chovy v Česku a dalších zemích Evropy. Současně je také využíván i v exportech prarodičovských a rodičovských kompletů do Afriky, Asie a Ameriky, kde se využívá i pro intenzivní produkci konzumních vajec. Kohouti bývají vykrmováni k produkci tradičního vysoce chutného drůbežího masa.'
             price={280}
             src='/slepicky/D300.png'
+            href='/slepicky/D300'
           >
             <p className='text-sm font-light'>
               Období chovu od 19 do 78 týdnů:
@@ -314,6 +322,7 @@ const SlepickaPage = async ({ params }: { params: IParams }) => {
             description='DOMINANT GREENSHELL GS zahrnuje několik barevných programů s různou barvou opeření a různou barvou skořápky od světle modré přes tyrkysově zelenou až k tmavě olivově zelené. Takovéto zbarvení skořápky vajec finálních hybridů DOMINANT GREENSHELL je výsledkem křížení klasických rodičovských mateřských populací programů DOMINANT a jejich následným křížením s originální otcovskou linií DOMINANT GREENSHELL, vytvořenou na bázi linií drůbeže vyšlechtěných z jihoamerického plemene Araukána, které při domestikaci a následném šlechtění ustálilo geneticky podmíněnou zelenou až modrou barvu skořápky.'
             price={300}
             src='/slepicky/GS.png'
+            href='/slepicky/GS'
           >
             <p>
               Parametry snášky finálních hybridů všech barevných subprogramů
@@ -363,6 +372,7 @@ const SlepickaPage = async ({ params }: { params: IParams }) => {
             description='DOMINANT DARKSHELL je velmi populární program. Uplatňuje se jako finální hybrid pro samozásobitelské chovy v Česku a dalších zemích Evropy. Současně je také využíván i v exportech prarodičovských a rodičovských kompletů do Afriky, Asie a Ameriky, kde se využívá i pro intenzivní produkci konzumních vajec. Kohouti bývají vykrmováni k produkci tradičního vysoce chutného drůbežího masa.'
             price={300}
             src='/slepicky/DS.png'
+            href='/slepicky/DS'
           >
             <p>Životnost: 94%</p>
             <p>Stáří při 50 % snášky: 23týdnů</p>
@@ -397,6 +407,7 @@ const SlepickaPage = async ({ params }: { params: IParams }) => {
               { url: '/slepicky/kohout/15.png' },
               { url: '/slepicky/kohout/16.png' },
             ]}
+            href='/slepicky/kohout/1.png'
           />
         )}
       </Container>

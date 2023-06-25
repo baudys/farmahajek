@@ -11,6 +11,7 @@ interface ProductProps {
   src: string
   price: number
   children?: React.ReactNode
+  href: string
 }
 
 const Product: React.FC<ProductProps> = ({
@@ -19,6 +20,7 @@ const Product: React.FC<ProductProps> = ({
   src,
   children,
   price,
+  href,
 }) => {
   const router = useRouter()
 
@@ -45,7 +47,7 @@ const Product: React.FC<ProductProps> = ({
           <div>
             <h2 className='font-bold text-3xl uppercase mb-2'>{label}</h2>
             <p>{description}</p>
-            <AddToCartButton />
+            <AddToCartButton name={label} price={price} src={src} href={href} />
           </div>
         </div>
       </div>

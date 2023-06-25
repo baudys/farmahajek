@@ -23,6 +23,7 @@ const SmesPage = async ({ params }: { params: IParams }) => {
               { url: '/smesi/startovaci-balicek/3.jpg' },
               { url: '/smesi/startovaci-balicek/4.jpg' },
             ]}
+            href='/smesi/startovaci-balicek'
           />
         )}
         {smesId === 'krouzky' && (
@@ -31,6 +32,7 @@ const SmesPage = async ({ params }: { params: IParams }) => {
             description='Různá barevnost a velikost'
             price={8}
             src='/smesi/krouzky.jpg'
+            href='/smesi/krouzky'
           />
         )}
         {smesId === 'ochrana-proti-cmelikum-acaritec' && (
@@ -39,6 +41,7 @@ const SmesPage = async ({ params }: { params: IParams }) => {
             description='Složen z jemných částeček amorfního oxidu křemičitého a jedlé sody. Co to znamená v praxi? Velmi jemný produkt se smíchá s vodou a aplikuje mokrou cestou, pomocí odpovídajících postřikovačů.'
             price={400}
             src='/smesi/ochrana-proti-cmelikum.jpg'
+            href='/smesi/ochrana-proti-cmelikum-acaritec'
           />
         )}
         {smesId === 'ochrana-proti-cmelikum-acariflash' && (
@@ -47,6 +50,7 @@ const SmesPage = async ({ params }: { params: IParams }) => {
             description='Jediný nechemický prostředek, který se dostane ke všem čmelíkům bez výjimky! Vznikl na základě vlastního výzkumu firmy CCPA. Jedná se o směs přírodních látek, které se dávkují do pitné vody a působí vůči čmelíkům repelentně. Čmelíky přímo nezabíjí, ale významně omezuje příjem krve, a tím omezuje jejich rozmnožování. Přípravek je s úspěchem používán u produkčních i u plemenných nosnic.'
             price={400}
             src='/smesi/ochrana-proti-cmelikum.jpg'
+            href='/smesi/ochrana-proti-cmelikum-acarifalsh'
           />
         )}
         {smesId === 'ochrana-proti-cmelikum-mistral-layer' && (
@@ -55,6 +59,7 @@ const SmesPage = async ({ params }: { params: IParams }) => {
             description='Velmi jemně mleté diatomické usazeniny (křemelina), čili křemičité schránky druhohorních mořských živočichů. Mistral Layer se "nafouká" na technologii v chovech nosnic. Plošně a za jejich přítomnosti! Nosnicím to nepůsobí žádné problémy. Prakticky se jedná o náhražku popelení pro nosnice v klecových technologiích. Ve voliérách a v podestýlkových chovech jej lze využít právě v popelištích, nebo jej aplikovat přímo do snáškových hnízd.'
             price={400}
             src='/smesi/ochrana-proti-cmelikum.jpg'
+            href='/smesi/ochrana-proti-cmelikum-mistral-layer'
           />
         )}
         {smesId === 'alize' && (
@@ -63,6 +68,7 @@ const SmesPage = async ({ params }: { params: IParams }) => {
             description='Alizé 2 kg pohlcovač vlhkosti do podestýlky pro králíky a drůbež snižuje rozmnožovací schopnost bakterií v chovech drůbeže a králíků. Pohlcovač vlhkosti snižuje výskyt bakterií a redukuje uvolňování čpavku do ovzduší. Éterické oleje provoní stájové prostředí.'
             price={300}
             src='/smesi/alize.jpg'
+            href='/smesi/alize'
           >
             <p>
               Díky obsahu specifických jílů (fylosilikátů) dojde k navázání vody
@@ -92,6 +98,7 @@ const SmesPage = async ({ params }: { params: IParams }) => {
             description='Minerální blok GALLI Sweet podporuje přirozené chování drůbeže a zároveň doplňuje nezbytné nutriční látky. Je účinnou prevencí kanibalismu, snižuje stres v chovech drůbeže.'
             price={380}
             src='/smesi/galli-sweet.jpg'
+            href='/smesi/galli-sweet'
           >
             <p>Pomáhá přirozenému opotřebení zobáku.</p>
             <p>Určené pro všechny druhy hrabavé drůbeže a bažanty.</p>
@@ -119,6 +126,7 @@ const SmesPage = async ({ params }: { params: IParams }) => {
             description='Podporuje růst a vývoj kostí.'
             price={200}
             src='/smesi/calciplus-250ml.jpg'
+            href='/smesi/calciplus-250ml'
           >
             <p>Zlepšuje kvalitu vaječných skořápek.</p>
             <p>Pozitivně ovlivňuje pevnost kostí.</p>
@@ -156,6 +164,7 @@ const SmesPage = async ({ params }: { params: IParams }) => {
             description='Vodorozpustný a multivitaminový koncentrát pro drůbež Při zvýšené fyziologické zátěži.'
             price={40}
             src='/smesi/supervitd.jpg'
+            href='/smesi/supervitd'
           >
             <p>
               • podporuje organismus při zvýšené fyziologické zátěži nebo stresu
@@ -197,6 +206,7 @@ const SmesPage = async ({ params }: { params: IParams }) => {
             description='Vodorozpustný 50% koncentrát vitaminu C Proti tepelnému a transportnímu stresu'
             price={300}
             src='/smesi/c-compositum-50-500g.jpg'
+            href='/smesi/c-compositum-50-500g'
           >
             <p>• snižuje projevy tepelného a transportního stresu</p>
             <p>
@@ -241,6 +251,7 @@ const SmesPage = async ({ params }: { params: IParams }) => {
             description='Tekutý koncentrát hydrofi lních vitaminů, aminokyselin a solí makroprvků Na podporu užitkovosti.'
             price={400}
             src='/smesi/aminosol-1l.jpg'
+            href='/smesi/aminosol-1l'
           >
             <p>• podporuje užitkovost</p>
             <p>• napomáhá k vyrovnání s následky stresu</p>
@@ -277,7 +288,8 @@ const SmesPage = async ({ params }: { params: IParams }) => {
             label='Aminosol 250ml'
             description='Tekutý koncentrát hydrofi lních vitaminů, aminokyselin a solí makroprvků Na podporu užitkovosti.'
             price={200}
-            src='/smesi/aminosol-250ml'
+            src='/smesi/aminosol-250ml.jpg'
+            href='/smesi/aminosol-250ml'
           >
             <p>• podporuje užitkovost</p>
             <p>• napomáhá k vyrovnání s následky stresu</p>
@@ -315,6 +327,7 @@ const SmesPage = async ({ params }: { params: IParams }) => {
             description='Tekutý koncentrát vitaminů A a D3 Součinnost vitaminů A a D3'
             price={90}
             src='/smesi/kombisol-ad3-30ml.jpg'
+            href='/smesi/kombisol-ad3-30ml'
           >
             <p>• ochraňuje epitelové buňky sliznic</p>
             <p>• podporuje tvorbu zrakového pigmentu</p>
@@ -357,6 +370,7 @@ const SmesPage = async ({ params }: { params: IParams }) => {
             description='Tekutý koncentrát vitaminů A, D3 a E Součinnost vitaminů A, D3 a E'
             price={950}
             src='/smesi/kombisol-ad3e-1l.jpg'
+            href='/smesi/kombisol-ad3e-1l'
           >
             <p>• ochraňuje epitelové buňky zejména v trávicím traktu</p>
             <p>• podporuje tvorbu zrakového pigmentu</p>
@@ -401,6 +415,7 @@ const SmesPage = async ({ params }: { params: IParams }) => {
             description='Tekutý koncentrát vitaminů A, D3 a E Součinnost vitaminů A, D3 a E'
             price={300}
             src='/smesi/kombisol-ad3e-250ml.jpg'
+            href='/smesi/kombisol-ad3e-250ml'
           >
             <p>• ochraňuje epitelové buňky zejména v trávicím traktu</p>
             <p>• podporuje tvorbu zrakového pigmentu</p>
@@ -445,6 +460,7 @@ const SmesPage = async ({ params }: { params: IParams }) => {
             description='Tekutý koncentrát vitaminů A, D3 a E Součinnost vitaminů A, D3 a E'
             price={90}
             src='/smesi/kombisol-ad3e-30ml.jpg'
+            href='/smesi/kombisol-ad3e-30ml'
           >
             <p>• ochraňuje epitelové buňky zejména v trávicím traktu</p>
             <p>• podporuje tvorbu zrakového pigmentu</p>
@@ -489,6 +505,7 @@ const SmesPage = async ({ params }: { params: IParams }) => {
             description='Tekutý koncentrát konzervantů s antimikrobiálním účinkem Na podporu trávení a hygieny napájecího systému.'
             price={300}
             src='/smesi/nutrimix-forticoat-1l.jpg'
+            href='/smesi/nutrimix-forticoat-1l'
           >
             <p>• snižuje výskyt průjmů</p>
             <p>• podporuje trávení zvýšením kyselosti žaludečního obsahu</p>
@@ -523,6 +540,7 @@ const SmesPage = async ({ params }: { params: IParams }) => {
             description='Tekutý koncentrát konzervantů s antimikrobiálním účinkem Na podporu trávení a hygieny napájecího systému.'
             price={120}
             src='/smesi/nutrimix-forticoat-250ml.jpg'
+            href='/smesi/nutrimix-forticoat-250ml'
           >
             <p>• snižuje výskyt průjmů</p>
             <p>• podporuje trávení zvýšením kyselosti žaludečního obsahu</p>
@@ -557,6 +575,7 @@ const SmesPage = async ({ params }: { params: IParams }) => {
             description='Minerální krmivo s vitaminy pro drůbež Denní doplnění minerálních látek a vitaminů.'
             price={220}
             src='/smesi/nutrimix-3kg-odchov.jpg'
+            href='/smesi/nutrimix-3kg-odchov'
           >
             <p>• zajišťuje odpovídající růst a vývoj mladé drůbeže</p>
             <p>• zvyšuje přírůstky a využití krmiva u vykrmované drůbeže</p>
@@ -592,6 +611,7 @@ const SmesPage = async ({ params }: { params: IParams }) => {
             description='Minerální krmivo s vitaminy pro drůbež Denní doplnění minerálních látek a vitaminů.'
             price={90}
             src='/smesi/nutrimix-1kg-odchov.jpg'
+            href='/smesi/nutrimix-1kg-odchov'
           >
             <p>• zajišťuje odpovídající růst a vývoj mladé drůbeže</p>
             <p>• zvyšuje přírůstky a využití krmiva u vykrmované drůbeže</p>
@@ -626,7 +646,8 @@ const SmesPage = async ({ params }: { params: IParams }) => {
             label='Mutrimix 3kg výkrm'
             description='Minerální krmivo s vitaminy pro nosnice Denní doplnění minerálních látek a vitaminů.'
             price={200}
-            src='/smesi/nutrimix-3kg-vykrm'
+            src='/smesi/nutrimix-3kg-vykrm.jpg'
+            href='/smesi/nutrimix-3kg-vykrm'
           >
             <p>• zvyšuje snášku a kvalitu vajec</p>
             <p>• zlepšuje oplozenost a líhnivost násadových vajec</p>
@@ -660,7 +681,8 @@ const SmesPage = async ({ params }: { params: IParams }) => {
             label='Nutrimix 1kg výkrm'
             description='Minerální krmivo s vitaminy pro nosnice Denní doplnění minerálních látek a vitaminů.'
             price={70}
-            src='/smesi/nutrimix-1kg-vykrm'
+            src='/smesi/nutrimix-1kg-vykrm.jpg'
+            href='/smesi/nutrimix-1kg-vykrm'
           >
             <p>• zvyšuje snášku a kvalitu vajec</p>
             <p>• zlepšuje oplozenost a líhnivost násadových vajec</p>

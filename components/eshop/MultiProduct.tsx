@@ -17,6 +17,7 @@ interface MultiProductProps {
   images: {
     url: string
   }[]
+  href: string
 }
 
 const MultiProduct: React.FC<MultiProductProps> = ({
@@ -27,6 +28,7 @@ const MultiProduct: React.FC<MultiProductProps> = ({
   width,
   description,
   images,
+  href,
 }) => {
   const router = useRouter()
 
@@ -172,7 +174,12 @@ const MultiProduct: React.FC<MultiProductProps> = ({
                 <p>Šířka: {width}</p>
               </>
             )}
-            <AddToCartButton />
+            <AddToCartButton
+              name={label}
+              price={price}
+              src={images[0].url}
+              href={href}
+            />
           </div>
         </div>
       </div>

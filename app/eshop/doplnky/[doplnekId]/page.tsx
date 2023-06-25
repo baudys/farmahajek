@@ -18,6 +18,7 @@ const DoplnekPage = async ({ params }: { params: IParams }) => {
             description=''
             price={425}
             src='/doplnky/zasterka-velka.jpg'
+            href='/doplnky/zasterka-velka'
           />
         )}
         {doplnekId === 'zasterka-mala' && (
@@ -26,6 +27,7 @@ const DoplnekPage = async ({ params }: { params: IParams }) => {
             description=''
             price={300}
             src='/doplnky/zasterka-mala.jpg'
+            href='/doplnky/zasterka-mala'
           />
         )}
         {doplnekId === 'krmitko' && (
@@ -34,6 +36,7 @@ const DoplnekPage = async ({ params }: { params: IParams }) => {
             description='Plastové sifonové krmítko na nožkách o obsahu suché pšenice a granulí 30L je určeno pro všechnu drůbež, která dosáhne do misky ve výšce 150mm od podlahy ke krmivu uvnitř misky. Miska ke dělená mřížkou.'
             price={1500}
             src='/doplnky/krmitko.png'
+            href='/doplnky/krmitko'
           >
             <p>Zajišťuje:</p>
             <p>- šetření krmení</p>
@@ -49,6 +52,7 @@ const DoplnekPage = async ({ params }: { params: IParams }) => {
             description='Sifonová napáječka plastová pro střední a velkou drůbež - 30 litrů, pro 25 až 40ks slepic'
             price={1000}
             src='/doplnky/pitko.png'
+            href='/doplnky/pitko'
           >
             <p> Na kovových nohách.</p>
             <p>
