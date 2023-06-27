@@ -125,7 +125,7 @@ const Footer = () => {
               </p>
             </div>
 
-            <div className='text-center'>
+            <div className='text-center text-sm'>
               <p>Hájek 36</p>
               <p>34506 Všeruby - Hájek</p>
               <p>okres Domažlice, Plzeňský kraj, Česko</p>
