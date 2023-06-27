@@ -47,7 +47,7 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ item }) => (
   <VerticalTimelineElement
     contentStyle={{ background: '#BBD700', border: 'none', boxShadow: 'none' }}
-    contentArrowStyle={{ borderRight: '7px solid #3D1A04' }}
+    contentArrowStyle={{ borderRight: '7px solid #BBD700' }}
     iconStyle={{ background: '#BBD700' }}
   >
     <h1 className='font-bold text-brown uppercase text-2xl'>{item.title}</h1>
@@ -61,17 +61,10 @@ const Card: React.FC<CardProps> = ({ item }) => (
 
 const Hen = () => {
   return (
-    <div className='bg-brown pt-28'>
+    <div className='bg-brown pt-16 lg:pt-28'>
       <Container>
-        <h2 className='text-zinc-300 font-semibold text-4xl text-center mb-4'>
+        <h2 className='text-zinc-300 font-semibold text-2xl lg:text-4xl text-center mb-4'>
           Jistě by vás zajímalo jaká byla životní cesta Vaší budoucí slepičky
-          {/* Chov je prováděn od jednodenních kuřátek, které nakupujeme v Líhni Studenec, až po finální výkrm kuřic.
-Kuřice dostávají vyváženou stravu ve formě krmných směsí.
-Chov je pod stálým veterinárním dohledem. 
-Chov je prováděn na volné podestýlce, tudíž kuřice jsou vhodné pro domácí chov na dvorech a zahradách (jsou zvyklé na pohyb).
-
-
-*/}
         </h2>
         <VerticalTimeline lineColor='#BBD700'>
           {timeline.map((item, i) => (

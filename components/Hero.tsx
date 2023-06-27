@@ -4,7 +4,7 @@ import Video from './Video'
 const Hero = () => {
   return (
     <header>
-      <div className='sticky top-0 -z-10 flex min-h-screen'>
+      <div className='sticky top-0 -z-10 flex h-[90vh] lg:min-h-screen'>
         <Video />
 
         <div className='absolute bg-black/80 top-0 left-0 w-full h-full flex pt-32 lg:pt-0 lg:items-center lg:justify-center'>
