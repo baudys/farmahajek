@@ -20,9 +20,8 @@ const Video = () => {
       playsInline
       className='absolute h-full w-full object-cover'
     >
-      <source src='/hero.webm' type='video/webm; codecs=vp9' />
-      <source src='/hero.m4v' type='video/mp4; codecs=hvc1' />
-      <source src='/hero.m4v' type='video/mp4; codecs=avc1.42E01E' />
+      <source src='/hero.mp4' type='video/mp4; codecs=hvc1' />
+      <source src='/hero.mp4' type='video/mp4; codecs=avc1.42E01E' />
     </video>
   )
 }

@@ -11,7 +11,7 @@ import {
   AiOutlineClose,
 } from 'react-icons/ai'
 import { IoLogoTiktok, IoMenu } from 'react-icons/io5'
-import { FaFacebook, FaShoppingCart } from 'react-icons/fa'
+import { FaFacebook } from 'react-icons/fa'
 import { useState } from 'react'
 
 interface MobileNavProps {
@@ -96,7 +96,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ isTopOfPage }) => {
                 />
               </ul>
 
-              <ul className='absolute bottom-20 left-[50%] translate-x-[-50%] flex  gap-2 text-lg uppercase font-medium'>
+              <ul className='absolute bottom-40 left-[50%] translate-x-[-50%] flex  gap-2 text-lg uppercase font-medium'>
                 <NavIcon
                   href='https://www.instagram.com/farmahajek/'
                   icon={AiOutlineInstagram}
