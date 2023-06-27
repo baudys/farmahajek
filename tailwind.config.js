@@ -7,14 +7,19 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
       colors: {
         green: '#BBD700',
         brown: '#3D1A04',
+      },
+      keyframes: {
+        scroll: {
+          '0%': { left: 0 },
+          '100%': { left: '-100%' },
+        },
+      },
+      animation: {
+        'scroll-slow': 'scroll 20s linear infinite',
+        'scroll-fast': 'scroll 10s linear infinite',
       },
     },
   },

@@ -1,0 +1,51 @@
+import Image from 'next/image'
+
+const images = [
+  '/obchody/ecofeed.png',
+  'TESPRA Kdyně',
+  '/obchody/kvidera.png',
+  'Jitka Šilhánková – přebytky Kdyně',
+  '/obchody/vicenice.png',
+  'Luboš Ouřada Domažlice',
+  '/obchody/zod-mrakov.png',
+  'Trhy ve Strakonicích',
+]
+
+const Companies = () => {
+  return (
+    <div className='overflow-hidden p-0 m-0'>
+      <div className='w-[200%] h-56 overflow-hidden relative'>
+        <div className='w-[200%] flex items-center h-56 justify-around absolute left-0 animate-scroll-fast xl:animate-scroll-slow gap-6 xl:gap-0'>
+          {images.map(content => (
+            <div className='flex justify-center items-start min-w-[20rem]'>
+              {!content.startsWith('/') ? (
+                <h1 className='font-bold text-base xl:text-2xl'>{content}</h1>
+              ) : (
+                <img
+                  src={content}
+                  alt='company logo'
+                  className='w-auto h-20 xl:h-32'
+                />
+              )}
+            </div>
+          ))}
+          {images.map(content => (
+            <div className='flex justify-center items-start min-w-[20rem]'>
+              {!content.startsWith('/') ? (
+                <h1 className='font-bold text-base xl:text-2xl'>{content}</h1>
+              ) : (
+                <img
+                  src={content}
+                  alt='company logo'
+                  className='w-auto h-20 xl:h-32'
+                />
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default Companies
