@@ -14,7 +14,7 @@ interface DesktopNavProps {
 const DesktopNav: React.FC<DesktopNavProps> = ({ isTopOfPage }) => {
   return (
     <div
-      className={`hidden lg:block fixed w-full py-1 transition z-10 
+      className={`hidden lg:block fixed w-full py-4 transition z-10 
       ${
         isTopOfPage
           ? 'bg-transparent'
@@ -26,8 +26,8 @@ const DesktopNav: React.FC<DesktopNavProps> = ({ isTopOfPage }) => {
           <Link href='/'>
             <Image
               src={`${isTopOfPage ? '/logo/3.png' : '/logo/2.png'}`}
-              width={150}
-              height={150}
+              width={130}
+              height={130}
               alt='logo'
             />
           </Link>

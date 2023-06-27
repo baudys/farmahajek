@@ -35,7 +35,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ isTopOfPage }) => {
 
   return (
     <div
-      className={`block lg:hidden fixed w-full py-1 transition z-10 
+      className={`block lg:hidden fixed w-full py-3 transition z-10 
       ${
         isTopOfPage
           ? 'bg-transparent'
@@ -47,8 +47,8 @@ const MobileNav: React.FC<MobileNavProps> = ({ isTopOfPage }) => {
           <Link href='/'>
             <Image
               src={`${isTopOfPage ? '/logo/3.png' : '/logo/2.png'}`}
-              width={140}
-              height={140}
+              width={115}
+              height={115}
               alt='logo'
             />
           </Link>
