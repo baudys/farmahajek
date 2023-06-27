@@ -34,7 +34,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className='h-px w-full bg-brown my-10' />
+        <div className='h-px w-full bg-brown/60 my-10' />
 
         <div className='grid xl:grid-cols-2'>
           <div className='flex items-start justify-center xl:justify-start gap-16'>
@@ -85,7 +85,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className='xl:hidden h-px w-full bg-brown my-10' />
+          <div className='xl:hidden h-px w-full bg-brown/60 my-10' />
 
           <div className='grid xl:grid-cols-2 text-center xl:text-left'>
             <div />
@@ -106,7 +106,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className='h-px w-full bg-brown my-10' />
+        <div className='h-px w-full bg-brown/60 my-10' />
 
         <div className='grid place-items-center'>
           <div className='bg-brown p-4 text-zinc-400 rounded-md shadow'>
@@ -133,7 +133,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className='h-px w-full bg-brown my-10' />
+        <div className='h-px w-full bg-brown/60 my-10' />
 
         <p className='text-center text-light text-xs md:text-base mt-12 sm:mt-4'>
           &copy;{new Date().getFullYear()}

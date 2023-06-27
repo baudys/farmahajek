@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Container from './Container'
 
 const images = [
   '/obchody/ecofeed.png',
@@ -14,8 +15,13 @@ const images = [
 const Companies = () => {
   return (
     <div className='overflow-hidden p-0 m-0'>
-      <div className='w-[200%] h-56 overflow-hidden relative'>
-        <div className='w-[200%] flex items-center h-56 justify-around absolute left-0 animate-scroll-fast xl:animate-scroll-slow'>
+      <Container>
+        <h1 className='font-semibold text-zinc-500/70 text-center text-lg xl:text-4xl uppercase tracking-wider'>
+          Naše produkty můžete najít také v těchto prodejnách
+        </h1>
+      </Container>
+      <div className='w-[200%] h-40 lg:h-56 overflow-hidden relative'>
+        <div className='w-[200%] flex items-center h-40 lg:h-56 justify-around absolute left-0 animate-scroll-fast xl:animate-scroll-slow'>
           {images.map(content => (
             <div className='flex justify-center items-start min-w-[15rem]'>
               {!content.startsWith('/') ? (
