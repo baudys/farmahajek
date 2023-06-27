@@ -14,7 +14,7 @@ interface DesktopNavProps {
 const DesktopNav: React.FC<DesktopNavProps> = ({ isTopOfPage }) => {
   return (
     <div
-      className={`hidden lg:block fixed w-full py-5 transition z-10 
+      className={`hidden lg:block fixed w-full py-1 transition z-10 
       ${
         isTopOfPage
           ? 'bg-transparent'
@@ -24,7 +24,12 @@ const DesktopNav: React.FC<DesktopNavProps> = ({ isTopOfPage }) => {
       <Container>
         <div className='flex justify-between items-center'>
           <Link href='/'>
-            <Image src='/logo.png' width={40} height={40} alt='logo' />
+            <Image
+              src={`${isTopOfPage ? '/logo/3.png' : '/logo/2.png'}`}
+              width={150}
+              height={150}
+              alt='logo'
+            />
           </Link>
 
           <ul className='flex gap-3 text-lg uppercase font-medium'>

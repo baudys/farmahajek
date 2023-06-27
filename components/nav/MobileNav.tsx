@@ -35,7 +35,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ isTopOfPage }) => {
 
   return (
     <div
-      className={`block lg:hidden fixed w-full py-5 transition z-10 
+      className={`block lg:hidden fixed w-full py-1 transition z-10 
       ${
         isTopOfPage
           ? 'bg-transparent'
@@ -45,7 +45,12 @@ const MobileNav: React.FC<MobileNavProps> = ({ isTopOfPage }) => {
       <Container>
         <div className='flex justify-between items-center'>
           <Link href='/'>
-            <Image src='/logo.png' width={40} height={40} alt='logo' />
+            <Image
+              src={`${isTopOfPage ? '/logo/3.png' : '/logo/2.png'}`}
+              width={140}
+              height={140}
+              alt='logo'
+            />
           </Link>
 
           <div className='flex items-center'>
