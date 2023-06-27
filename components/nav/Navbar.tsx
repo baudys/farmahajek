@@ -4,14 +4,9 @@ import { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
 import DesktopNav from './DesktopNav'
 import MobileNav from './MobileNav'
-import { useCart } from '@/hooks/useCart'
 
 const Navbar = () => {
   const [isTopOfPage, setIsTopOfPage] = useState<boolean>(true)
-  const pathname = usePathname()
-  const isEshop = pathname.includes('eshop')
-
-  const { totalQuantity } = useCart(state => state)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,16 +22,8 @@ const Navbar = () => {
 
   return (
     <>
-      <DesktopNav
-        isTopOfPage={isTopOfPage}
-        isEshop={isEshop}
-        numOfItems={totalQuantity}
-      />
-      <MobileNav
-        isTopOfPage={isTopOfPage}
-        isEshop={isEshop}
-        numOfItems={totalQuantity}
-      />
+      <DesktopNav isTopOfPage={isTopOfPage} />
+      <MobileNav isTopOfPage={isTopOfPage} />
     </>
   )
 }
