@@ -1,5 +1,7 @@
+import Link from 'next/link'
 import Container from './Container'
 import Video from './Video'
+import { FaLongArrowAltDown } from 'react-icons/fa'
 
 const Hero = () => {
   return (
@@ -7,27 +9,38 @@ const Hero = () => {
       <div className='sticky top-0 -z-10 flex h-[90vh] lg:min-h-screen'>
         <Video />
 
-        <div className='absolute bg-black/80 top-0 left-0 w-full h-full flex pt-32 lg:pt-0 lg:items-center lg:justify-center'>
+        <div className='absolute bg-black/70 top-0 left-0 w-full h-full flex pt-32 lg:pt-0 lg:items-center lg:justify-center'>
           <Container>
-            <div className='grid xl:grid-cols-[2fr_1fr] gap-16 lg:gap-12 p-1'>
+            <div className='flex flex-col justify-center items-center gap-8 lg:gap-12 p-1'>
               <div className='flex flex-col justify-center'>
-                <h1 className='text-white text-2xl xl:text-5xl 2xl:text-7xl font-black uppercase text-center xl:text-left'>
-                  Ryze čeští chovatelé, farmáři a zahradníci
+                <h1 className='text-white text-2xl xl:text-5xl 2xl:text-7xl font-black uppercase text-center'>
+                  Ryze čeští chovatelé, <br className='hidden lg:block' />{' '}
+                  farmáři a zahradníci
                 </h1>
-                <span className='text-3xl xl:text-5xl 2xl:text-7xl text-center animate-bounce'>
+                <span className='text-3xl xl:text-5xl 2xl:text-7xl text-center'>
                   🙏🇨🇿🐣🐔🥚🥔🌷🌹
                 </span>
-                <h4 className='text-zinc-300 text-xl xl:text-3xl 2xl:text-4xl text-center xl:text-left font-light mt-20'>
-                  Momentálně jsou naší hlavní činností slepičky, jejich chov,
-                  prodej a produkce vajíček
-                </h4>
               </div>
-              <div>
-                <h2 className='text-zinc-300 text-xl xl:text-4xl 2xl:text-6xl text-center xl:text-left font-light'>
-                  Našemu oboru se věnujeme{' '}
-                  <span className='font-semibold'>již od roku 2000</span>,
-                  můžeme Vám zajistit kvalitu a poctivost
-                </h2>
+              <h2 className='text-zinc-300 text-lg xl:text-xl 2xl:text-2xl text-center font-light'>
+                Našemu oboru se věnujeme{' '}
+                <span className='font-semibold'>již od roku 2000</span>, můžeme
+                Vám zajistit kvalitu a poctivost
+              </h2>
+
+              <Link
+                href='https://eshop-farmahajek.vercel.app'
+                className='bg-green text-brown font-bold p-4 text-xl xl:text-2xl 2xl:text-3xl mt-8 rounded-md cursor-pointer shadow-lg'
+              >
+                E-SHOP
+              </Link>
+              <div className='flex flex-col bottom-5 absolute items-center'>
+                <h3 className='xl:text-lg text-white pb-2'>
+                  zkoukni životní cestu slepičky
+                </h3>
+                <FaLongArrowAltDown
+                  size={40}
+                  className='text-white animate-bounce'
+                />
               </div>
             </div>
           </Container>
