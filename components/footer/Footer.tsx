@@ -36,7 +36,7 @@ const Footer = () => {
 
         <div className='h-px w-full bg-brown/60 my-10' />
 
-        <div className='grid xl:grid-cols-2'>
+        <div className='grid xl:grid-cols-3'>
           <div className='flex items-start justify-center xl:justify-start gap-16'>
             <div>
               <Link href=''>
@@ -87,6 +87,29 @@ const Footer = () => {
 
           <div className='xl:hidden h-px w-full bg-brown/60 my-10' />
 
+          <div className='bg-brown p-4 text-zinc-400 rounded-md shadow hidden xl:block'>
+            <h2 className='text-white font-semibold mb-5 text-lg'>
+              Miloslav Polák Ml.
+            </h2>
+
+            <div className='mb-7 text-zinc-200 ml-6'>
+              <p className='flex gap-2'>
+                <AiFillPhone />
+                +420 720 566 212
+              </p>
+              <p className='flex gap-2'>
+                <MdEmail />
+                farma.hajek@seznam.cz
+              </p>
+            </div>
+
+            <div className='text-center text-sm'>
+              <p>Hájek 36</p>
+              <p>34506 Všeruby - Hájek</p>
+              <p>okres Domažlice, Plzeňský kraj, Česko</p>
+            </div>
+          </div>
+
           <div className='grid xl:grid-cols-2 text-center xl:text-left'>
             <div />
             <div>
@@ -106,9 +129,9 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className='h-px w-full bg-brown/60 my-10' />
+        <div className='h-px w-full bg-brown/60 my-10 xl:hidden' />
 
-        <div className='grid place-items-center'>
+        <div className='grid place-items-center xl:hidden'>
           <div className='bg-brown p-4 text-zinc-400 rounded-md shadow'>
             <h2 className='text-white font-semibold mb-5 text-lg'>
               Miloslav Polák Ml.
