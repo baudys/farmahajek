@@ -22,7 +22,7 @@ const DesktopNav: React.FC<DesktopNavProps> = ({ isTopOfPage }) => {
       }`}
     >
       <Container>
-        <div className='flex justify-between items-center'>
+        <div className='grid grid-cols-3 justify-between items-center'>
           <Link href='/'>
             <Image
               src={`${isTopOfPage ? '/logo/3.png' : '/logo/2.png'}`}
@@ -32,7 +32,7 @@ const DesktopNav: React.FC<DesktopNavProps> = ({ isTopOfPage }) => {
             />
           </Link>
 
-          <ul className='flex gap-3 text-lg uppercase font-medium'>
+          <ul className='flex gap-3 text-lg uppercase font-medium place-self-center'>
             <NavIcon
               href='https://www.instagram.com/farmahajek/'
               icon={AiOutlineInstagram}
@@ -55,7 +55,7 @@ const DesktopNav: React.FC<DesktopNavProps> = ({ isTopOfPage }) => {
             />
           </ul>
 
-          <ul className='flex gap-3 text-lg uppercase font-medium items-center'>
+          <ul className='flex gap-3 text-lg uppercase font-medium items-center justify-self-end'>
             <NavLink
               href='https://eshop-farmahajek.vercel.app'
               label='E-Shop'
