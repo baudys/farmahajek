@@ -1,12 +1,17 @@
+'use client'
+
 import Link from 'next/link'
 import Container from './Container'
 import Video from './Video'
 import { FaLongArrowAltDown } from 'react-icons/fa'
+import { useRouter } from 'next/navigation'
 
 const Hero = () => {
+  const router = useRouter()
+
   return (
     <header>
-      <div className='sticky top-0 -z-10 flex h-[90vh] lg:min-h-screen'>
+      <div className='sticky top-0  flex h-[90vh] lg:min-h-screen'>
         <Video />
 
         <div className='absolute bg-black/70 top-0 left-0 w-full h-full flex pt-32 lg:pt-0 lg:items-center lg:justify-center'>
@@ -29,11 +34,15 @@ const Hero = () => {
 
               <Link
                 href='https://eshop-farmahajek.vercel.app'
+                target='_blank'
                 className='bg-green text-brown font-bold p-4 text-xl xl:text-2xl 2xl:text-3xl mt-8 rounded-md cursor-pointer shadow-lg'
               >
                 E-SHOP
               </Link>
-              <div className='flex flex-col bottom-5 absolute items-center'>
+              <div
+                className='flex flex-col bottom-5 absolute items-center cursor-pointer'
+                onClick={() => router.push('#timeline')}
+              >
                 <h3 className='xl:text-lg text-white pb-2'>
                   zkoukni životní cestu slepičky
                 </h3>

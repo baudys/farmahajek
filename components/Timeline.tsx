@@ -59,9 +59,9 @@ const Card: React.FC<CardProps> = ({ item }) => (
   </VerticalTimelineElement>
 )
 
-const Hen = () => {
+const Timeline = () => {
   return (
-    <div className='bg-brown'>
+    <div className='bg-brown' id='timeline'>
       <Container>
         <VerticalTimeline lineColor='#BBD700'>
           {timeline.map((item, i) => (
@@ -73,4 +73,4 @@ const Hen = () => {
   )
 }
 
-export default Hen
+export default Timeline

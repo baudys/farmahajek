@@ -1,12 +1,12 @@
 import Companies from '@/components/Companies'
-import Hen from '@/components/Hen'
 import Hero from '@/components/Hero'
+import Timeline from '@/components/Timeline'
 
 export default function Home() {
   return (
     <div className=''>
       <Hero />
-      <Hen />
+      <Timeline />
       <Companies />
     </div>
   )
