@@ -61,11 +61,8 @@ const Card: React.FC<CardProps> = ({ item }) => (
 
 const Hen = () => {
   return (
-    <div className='bg-brown pt-16 lg:pt-28'>
+    <div className='bg-brown'>
       <Container>
-        <h2 className='text-zinc-300 font-semibold text-2xl lg:text-4xl text-center mb-4'>
-          Jistě by vás zajímalo jaká byla životní cesta Vaší budoucí slepičky
-        </h2>
         <VerticalTimeline lineColor='#BBD700'>
           {timeline.map((item, i) => (
             <Card key={i} item={item} />
