@@ -23,7 +23,7 @@ const Accordion: React.FC<AccordionProps> = ({
       >
         <div className='group absolute top-0 left-0 w-full h-full bg-black/70 backdrop-blur-sm rounded-t-lg' />
         <div className='z-[1]'>
-          <h1 className='uppercase text-white text-6xl font-bold z-[1] group-hover:text-zinc-200 '>
+          <h1 className='uppercase text-white text-2xl xl:text-4xl 2xl:text-6xl font-bold z-[1] group-hover:text-zinc-200 text-center'>
             {title}
           </h1>
           <p className='z-[1] text-zinc-300 flex gap-2 items-center justify-center group-hover:text-zinc-400'>
