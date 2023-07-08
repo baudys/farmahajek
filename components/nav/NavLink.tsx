@@ -17,7 +17,7 @@ const NavLink: React.FC<NavLinkProps> = ({
     <li>
       <Link
         className={`hover:underline hover:underline-offset-4
-      ${isTopOfPage ? 'text-white' : 'lg:text-brown'}`}
+      ${isTopOfPage ? 'text-white' : 'text-white lg:text-brown'}`}
         href={href}
         onClick={handleClick}
       >
