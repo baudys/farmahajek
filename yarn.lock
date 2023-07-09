@@ -910,11 +910,6 @@ nanoid@^3.3.4, nanoid@^3.3.6:
   resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.3.6.tgz#443380c856d6e9f9824267d960b4236ad583ea4c"
   integrity sha512-BGcqMMJuToF7i1rt+2PWSNVnWIkGCU78jBG3RxO/bZlnZPK2Cmi2QaffxGO/2RvWi9sL+FAiRiXMgsyxQ1DIDA==
 
-next-gallery@^1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/next-gallery/-/next-gallery-1.2.1.tgz#8fb0c5d5e78055e9754a9b205f51f68bbe59e909"
-  integrity sha512-sCNNN9ANNzgEyjtefuxpEkG/MH6erCfCUsfHvZrD3jG+zlhi3jwdSg/S4G+ZRjlcgYbhyhBE475nciQz0+jUXQ==
-
 next@13.4.6:
   version "13.4.6"
   resolved "https://registry.yarnpkg.com/next/-/next-13.4.6.tgz#ebe52f5c74d60176d45b45e73f25a51103713ea4"
