@@ -94,6 +94,12 @@ const MobileNav: React.FC<MobileNavProps> = ({ isTopOfPage }) => {
                   isTopOfPage={isTopOfPage}
                   handleClick={handleClick}
                 />
+                <NavLink
+                  href='/galerie'
+                  label='Galerie'
+                  isTopOfPage={isTopOfPage}
+                  handleClick={handleClick}
+                />
               </ul>
 
               <ul className='absolute bottom-40 left-[50%] translate-x-[-50%] flex  gap-2 text-lg uppercase font-medium'>

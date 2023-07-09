@@ -67,6 +67,11 @@ const DesktopNav: React.FC<DesktopNavProps> = ({ isTopOfPage }) => {
               label='Kontakt'
               isTopOfPage={isTopOfPage}
             />
+            <NavLink
+              href='/galerie'
+              label='Galerie'
+              isTopOfPage={isTopOfPage}
+            />
           </ul>
         </div>
       </Container>
