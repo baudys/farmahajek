@@ -19,11 +19,11 @@ const Hero = () => {
             <div className='flex flex-col justify-center items-center gap-8 lg:gap-12 p-1'>
               <div className='flex flex-col justify-center'>
                 <h1 className='text-white text-2xl xl:text-5xl 2xl:text-7xl font-black uppercase text-center'>
-                  Ryze čeští chovatelé, <br className='hidden lg:block' />{' '}
-                  farmáři a zahradníci
+                  Ryze čeští chovatelé
+                  <br /> a farmáři
                 </h1>
                 <span className='text-3xl xl:text-5xl 2xl:text-7xl text-center'>
-                  🙏🇨🇿🐣🐔🥚🥔🌷🌹
+                  🙏🇨🇿🐣🐔🥚🥔
                 </span>
               </div>
               <h2 className='text-zinc-300 text-lg xl:text-xl 2xl:text-2xl text-center font-light'>
