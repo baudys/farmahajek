@@ -81,6 +81,11 @@ const Footer = () => {
                     Kontakt
                   </Link>
                 </li>
+                <li>
+                  <Link href='Galerie' className='hover:underline'>
+                    Galerie
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>
