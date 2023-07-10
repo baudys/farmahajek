@@ -1,14 +1,39 @@
+import Link from 'next/link'
 import Container from './Container'
 
-const images = [
-  '/obchody/ecofeed.png',
-  'TESPRA Kdyně',
-  '/obchody/kvidera.png',
-  'Jitka Šilhánková – přebytky Kdyně',
-  '/obchody/vicenice.png',
-  'Luboš Ouřada Domažlice',
-  '/obchody/zod-mrakov.png',
-  'Trhy ve Strakonicích',
+const companies = [
+  {
+    content: '/obchody/ecofeed.png',
+    href: 'https://krmiva-ecofeed.cz/',
+  },
+  {
+    content: 'TESPRA Kdyně',
+    href: 'https://www.tespra.cz/',
+  },
+  {
+    content: '/obchody/kvidera.png',
+    href: 'https://www.krmnesmesikvidera.cz/',
+  },
+  {
+    content: 'Jitka Šilhánková – přebytky Kdyně',
+    href: 'https://rejstrik-firem.kurzy.cz/zivnostnik/a3GTo5mdk6U=',
+  },
+  {
+    content: '/obchody/vicenice.png',
+    href: 'https://www.farmavicenice.cz/',
+  },
+  {
+    content: 'Luboš Ouřada Domažlice',
+    href: 'https://www.firmy.cz/detail/2031327-lubos-ourada-domazlice-mesto.html',
+  },
+  {
+    content: '/obchody/zod-mrakov.png',
+    href: 'https://zodmrakov.cz/',
+  },
+  {
+    content: 'Trhy ve Strakonicích',
+    href: 'http://farmarsketrhy.strakonice.eu/',
+  },
 ]
 
 const Companies = () => {
@@ -21,31 +46,43 @@ const Companies = () => {
       </Container>
       <div className='w-[200%] h-40 lg:h-56 overflow-hidden relative'>
         <div className='w-[200%] flex items-center h-40 lg:h-56 justify-around absolute left-0 animate-scroll-fast xl:animate-scroll-slow'>
-          {images.map(content => (
-            <div className='flex justify-center items-start min-w-[15rem]'>
-              {!content.startsWith('/') ? (
-                <h1 className='font-bold text-base xl:text-2xl'>{content}</h1>
+          {companies.map(company => (
+            <Link
+              href={company.href}
+              target='_blank'
+              className='flex justify-center items-start min-w-[15rem]'
+            >
+              {!company.content.startsWith('/') ? (
+                <h1 className='font-bold text-base xl:text-2xl'>
+                  {company.content}
+                </h1>
               ) : (
                 <img
-                  src={content}
+                  src={company.content}
                   alt='company logo'
                   className='w-auto h-20 xl:h-32'
                 />
               )}
-            </div>
+            </Link>
           ))}
-          {images.map(content => (
-            <div className='flex justify-center items-start min-w-[15rem]'>
-              {!content.startsWith('/') ? (
-                <h1 className='font-bold text-base xl:text-2xl'>{content}</h1>
+          {companies.map(company => (
+            <Link
+              href={company.href}
+              target='_blank'
+              className='flex justify-center items-start min-w-[15rem]'
+            >
+              {!company.content.startsWith('/') ? (
+                <h1 className='font-bold text-base xl:text-2xl'>
+                  {company.content}
+                </h1>
               ) : (
                 <img
-                  src={content}
+                  src={company.content}
                   alt='company logo'
                   className='w-auto h-20 xl:h-32'
                 />
               )}
-            </div>
+            </Link>
           ))}
         </div>
       </div>
