@@ -5,13 +5,14 @@ import Container from './Container'
 import Video from './Video'
 import { FaLongArrowAltDown } from 'react-icons/fa'
 import { useRouter } from 'next/navigation'
+import Image from 'next/image'
 
 const Hero = () => {
   const router = useRouter()
 
   return (
     <header>
-      <div className='sticky top-0  flex h-[90vh] lg:min-h-screen'>
+      <div className='sticky top-0 flex h-[90vh] lg:min-h-screen'>
         <Video />
 
         <div className='absolute bg-black/70 top-0 left-0 w-full h-full flex pt-32 lg:pt-0 lg:items-center lg:justify-center'>
@@ -35,9 +36,20 @@ const Hero = () => {
               <Link
                 href='https://eshop-farmahajek.vercel.app'
                 target='_blank'
-                className='bg-green text-brown font-bold p-4 text-xl xl:text-2xl 2xl:text-3xl mt-8 rounded-md cursor-pointer shadow-lg'
+                className='text-brown font-bold p-4 text-xl xl:text-2xl 2xl:text-3xl -mt-7 md:mt-4 xl:mt-0 xl:pb-10 cursor-pointer'
               >
-                E-SHOP
+                <div className='relative'>
+                  <Image
+                    src='/hen.png'
+                    width={300}
+                    height={300}
+                    alt='hen'
+                    className='w-[170px] h-[170px] lg:w-[220px] lg:h-[220px] 2xl:h-[270px] 2xl:w-[270px]'
+                  />
+                  <p className='absolute top-1/2 left-1/2 translate-x-[-50%]'>
+                    E-SHOP
+                  </p>
+                </div>
               </Link>
               <div
                 className='flex flex-col bottom-5 absolute items-center cursor-pointer'
