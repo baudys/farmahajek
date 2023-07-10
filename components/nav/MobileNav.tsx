@@ -60,23 +60,23 @@ const MobileNav: React.FC<MobileNavProps> = ({ isTopOfPage }) => {
           </Link>
 
           <div className='flex items-center'>
-            <li className='mr-6 cursor-pointer'>
-              <select
-                value={language}
-                onChange={handleChange}
-                className='bg-transparent text-2xl text-white cursor-pointer'
-              >
-                <option value='cs' className='cursor-pointer'>
-                  🇨🇿
-                </option>
-                <option value='en' className='cursor-pointer'>
-                  🇬🇧
-                </option>
-                <option value='de' className='cursor-pointer'>
-                  🇩🇪
-                </option>
-              </select>
-            </li>
+            <select
+              value={language}
+              onChange={handleChange}
+              className={`mr-6 bg-transparent text-2xl cursor-pointer ${
+                isTopOfPage ? 'text-white' : 'text-brown'
+              }`}
+            >
+              <option value='cs' className='cursor-pointer'>
+                🇨🇿
+              </option>
+              <option value='en' className='cursor-pointer'>
+                🇬🇧
+              </option>
+              <option value='de' className='cursor-pointer'>
+                🇩🇪
+              </option>
+            </select>
 
             <IoMenu
               onClick={handleOpen}

@@ -69,7 +69,9 @@ const DesktopNav: React.FC<DesktopNavProps> = ({ isTopOfPage }) => {
               <select
                 value={language}
                 onChange={handleChange}
-                className='bg-transparent text-2xl text-white cursor-pointer'
+                className={`bg-transparent text-2xl cursor-pointer ${
+                  isTopOfPage ? 'text-white' : 'text-brown'
+                }`}
               >
                 <option value='cs' className='cursor-pointer'>
                   🇨🇿
