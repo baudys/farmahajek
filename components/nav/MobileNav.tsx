@@ -35,7 +35,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ isTopOfPage }) => {
 
   return (
     <div
-      className={`block lg:hidden fixed w-full py-3 transition z-10 
+      className={`block xl:hidden fixed w-full py-3 transition z-10 
       ${
         isTopOfPage
           ? 'bg-transparent'
