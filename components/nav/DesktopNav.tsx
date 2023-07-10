@@ -69,11 +69,17 @@ const DesktopNav: React.FC<DesktopNavProps> = ({ isTopOfPage }) => {
               <select
                 value={language}
                 onChange={handleChange}
-                className='bg-transparent text-2xl text-white'
+                className='bg-transparent text-2xl text-white cursor-pointer'
               >
-                <option value='cs'>🇨🇿</option>
-                <option value='en'>🇬🇧</option>
-                <option value='de'>🇩🇪</option>
+                <option value='cs' className='cursor-pointer'>
+                  🇨🇿
+                </option>
+                <option value='en' className='cursor-pointer'>
+                  🇬🇧
+                </option>
+                <option value='de' className='cursor-pointer'>
+                  🇩🇪
+                </option>
               </select>
             </li>
             <NavLink
