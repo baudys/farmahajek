@@ -1,3 +1,5 @@
+'use client'
+
 import Link from 'next/link'
 import Container from '@/components/Container'
 import Image from 'next/image'
@@ -6,15 +8,22 @@ import NavIcon from './NavIcon'
 import { AiOutlineInstagram, AiFillYoutube } from 'react-icons/ai'
 import { IoLogoTiktok } from 'react-icons/io5'
 import { FaFacebook } from 'react-icons/fa'
+import { useLanguage } from '@/hooks/useLanguage'
 
 interface DesktopNavProps {
   isTopOfPage: boolean
 }
 
 const DesktopNav: React.FC<DesktopNavProps> = ({ isTopOfPage }) => {
+  const { language, setLanguage } = useLanguage(state => state)
+
+  const handleChange = (e: any) => {
+    setLanguage(e.target.value)
+  }
+
   return (
     <div
-      className={`hidden xl:block fixed w-full py-4 transition z-10 
+      className={`hidden xl:block fixed w-full py-4 transition z-10 whitespace-nowrap 
       ${
         isTopOfPage
           ? 'bg-transparent'
@@ -32,7 +41,7 @@ const DesktopNav: React.FC<DesktopNavProps> = ({ isTopOfPage }) => {
             />
           </Link>
 
-          <ul className='flex gap-3 text-lg uppercase font-medium place-self-center'>
+          <ul className='flex gap-3 text-lg uppercase font-medium'>
             <NavIcon
               href='https://www.instagram.com/farmahajek/'
               icon={AiOutlineInstagram}
@@ -56,20 +65,59 @@ const DesktopNav: React.FC<DesktopNavProps> = ({ isTopOfPage }) => {
           </ul>
 
           <ul className='flex gap-3 text-lg uppercase font-medium items-center justify-self-end'>
+            <li className='mr-6 cursor-pointer'>
+              <select
+                value={language}
+                onChange={handleChange}
+                className='bg-transparent text-2xl text-white'
+              >
+                <option value='cs'>🇨🇿</option>
+                <option value='en'>🇬🇧</option>
+                <option value='de'>🇩🇪</option>
+              </select>
+            </li>
             <NavLink
               href='https://eshop-farmahajek.vercel.app'
               label='E-Shop'
               isTopOfPage={isTopOfPage}
             />
-            <NavLink href='/sluzby' label='Služby' isTopOfPage={isTopOfPage} />
+            <NavLink
+              href='/sluzby'
+              label={
+                language === 'cs'
+                  ? 'Služby'
+                  : language === 'en'
+                  ? 'Services'
+                  : language === 'de'
+                  ? 'Dienstleistungen'
+                  : ''
+              }
+              isTopOfPage={isTopOfPage}
+            />
             <NavLink
               href='/kontakt'
-              label='Kontakt'
+              label={
+                language === 'cs'
+                  ? 'Kontakt'
+                  : language === 'en'
+                  ? 'Contact'
+                  : language === 'de'
+                  ? 'Kontakt'
+                  : ''
+              }
               isTopOfPage={isTopOfPage}
             />
             <NavLink
               href='/galerie'
-              label='Galerie'
+              label={
+                language === 'cs'
+                  ? 'Galerie'
+                  : language === 'en'
+                  ? 'Gallery'
+                  : language === 'de'
+                  ? 'Gallerie'
+                  : ''
+              }
               isTopOfPage={isTopOfPage}
             />
           </ul>
