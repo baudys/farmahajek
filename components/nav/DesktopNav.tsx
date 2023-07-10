@@ -41,7 +41,7 @@ const DesktopNav: React.FC<DesktopNavProps> = ({ isTopOfPage }) => {
             />
           </Link>
 
-          <ul className='flex gap-3 text-lg uppercase font-medium'>
+          <ul className='flex gap-3 text-lg uppercase font-medium xl:place-content-start 2xl:place-content-center'>
             <NavIcon
               href='https://www.instagram.com/farmahajek/'
               icon={AiOutlineInstagram}

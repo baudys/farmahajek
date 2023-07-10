@@ -7,8 +7,9 @@ export const metadata = {
 
 const GaleriePage = () => {
   return (
-    <div className='py-28'>
-      <Container>
+    <div className='pb-28'>
+      <div className='w-full h-[70.72px] xl:h-[84.81px] bg-black' />
+      <Container styles='mt-10'>
         <ModalGallery />
       </Container>
     </div>

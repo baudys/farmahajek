@@ -23,8 +23,9 @@ const SluzbyPage = () => {
   const { language } = useLanguage(state => state)
 
   return (
-    <div className='py-28 bg-brown'>
-      <Container>
+    <div className='pb-28 bg-gradient-to-br from-zinc-200 to-zinc-400 '>
+      <div className='w-full h-[70.72px] xl:h-[84.81px] bg-black' />
+      <Container styles='mt-10'>
         <Accordion
           src='bg-[url(/sluzby/drubezarna.jpg)]'
           isOpen={drubezarna}
