@@ -21,6 +21,9 @@ module.exports = {
         'scroll-slow': 'scroll 20s linear infinite',
         'scroll-fast': 'scroll 10s linear infinite',
       },
+      screens: {
+        '2xl': '1560px',
+      },
     },
   },
   plugins: [],
