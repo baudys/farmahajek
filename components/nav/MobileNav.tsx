@@ -13,6 +13,7 @@ import {
 import { IoLogoTiktok, IoMenu } from 'react-icons/io5'
 import { FaFacebook } from 'react-icons/fa'
 import { useState } from 'react'
+import { useLanguage } from '@/hooks/useLanguage'
 
 interface MobileNavProps {
   isTopOfPage: boolean
@@ -20,6 +21,7 @@ interface MobileNavProps {
 
 const MobileNav: React.FC<MobileNavProps> = ({ isTopOfPage }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false)
+  const { language, setLanguage } = useLanguage(state => state)
 
   const handleOpen = () => {
     setIsOpen(true)
@@ -31,6 +33,10 @@ const MobileNav: React.FC<MobileNavProps> = ({ isTopOfPage }) => {
 
   const handleClick = () => {
     setIsOpen(false)
+  }
+
+  const handleChange = (e: any) => {
+    setLanguage(e.target.value)
   }
 
   return (
@@ -54,6 +60,18 @@ const MobileNav: React.FC<MobileNavProps> = ({ isTopOfPage }) => {
           </Link>
 
           <div className='flex items-center'>
+            <li className='mr-6 cursor-pointer'>
+              <select
+                value={language}
+                onChange={handleChange}
+                className='bg-transparent text-2xl text-white'
+              >
+                <option value='cs'>🇨🇿</option>
+                <option value='en'>🇬🇧</option>
+                <option value='de'>🇩🇪</option>
+              </select>
+            </li>
+
             <IoMenu
               onClick={handleOpen}
               size={35}
@@ -72,7 +90,15 @@ const MobileNav: React.FC<MobileNavProps> = ({ isTopOfPage }) => {
               <ul className='grid gap-4 text-2xl uppercase font-medium mt-52 text-center'>
                 <NavLink
                   href='/'
-                  label='Domů'
+                  label={
+                    language === 'cs'
+                      ? 'Domů'
+                      : language === 'en'
+                      ? 'Home'
+                      : language === 'de'
+                      ? 'Startseite'
+                      : ''
+                  }
                   isTopOfPage={isTopOfPage}
                   handleClick={handleClick}
                 />
@@ -84,19 +110,43 @@ const MobileNav: React.FC<MobileNavProps> = ({ isTopOfPage }) => {
                 />
                 <NavLink
                   href='/sluzby'
-                  label='Služby'
+                  label={
+                    language === 'cs'
+                      ? 'Služby'
+                      : language === 'en'
+                      ? 'Services'
+                      : language === 'de'
+                      ? 'Dienstleistungen'
+                      : ''
+                  }
                   isTopOfPage={isTopOfPage}
                   handleClick={handleClick}
                 />
                 <NavLink
                   href='/kontakt'
-                  label='Kontakt'
+                  label={
+                    language === 'cs'
+                      ? 'Kontakt'
+                      : language === 'en'
+                      ? 'Contact'
+                      : language === 'de'
+                      ? 'Kontakt'
+                      : ''
+                  }
                   isTopOfPage={isTopOfPage}
                   handleClick={handleClick}
                 />
                 <NavLink
                   href='/galerie'
-                  label='Galerie'
+                  label={
+                    language === 'cs'
+                      ? 'Galerie'
+                      : language === 'en'
+                      ? 'Gallery'
+                      : language === 'de'
+                      ? 'Gallerie'
+                      : ''
+                  }
                   isTopOfPage={isTopOfPage}
                   handleClick={handleClick}
                 />
