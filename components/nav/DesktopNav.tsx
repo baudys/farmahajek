@@ -5,7 +5,7 @@ import NavLink from './NavLink'
 import NavIcon from './NavIcon'
 import { AiOutlineInstagram, AiFillYoutube } from 'react-icons/ai'
 import { IoLogoTiktok } from 'react-icons/io5'
-import { FaFacebook, FaShoppingCart } from 'react-icons/fa'
+import { FaFacebook } from 'react-icons/fa'
 
 interface DesktopNavProps {
   isTopOfPage: boolean
