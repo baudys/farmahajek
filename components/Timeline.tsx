@@ -7,57 +7,51 @@ import {
   VerticalTimelineElement,
 } from 'react-vertical-timeline-component'
 import 'react-vertical-timeline-component/style.min.css'
-
-const timeline = [
-  {
-    title: 'Narození kuřátek v Líhni Studenec',
-    text: 'Kuřátka si bereme hned první den narození.',
-    photo: '/timeline/1.jpg',
-  },
-  {
-    title: 'Výkrm kuřic u nás na farmě',
-    text: 'Kuřice dostávají vyváženou stravu ve formě krmných směsí pocházející z České republiky.',
-    photo: '/timeline/3.jpg',
-  },
-  {
-    title: 'Chov je pod stálým veterinárním dohledem',
-    text: 'Slepičkám se nemůže nic stát a vyrůstají v dobrém prostředí',
-    photo: '/timeline/2.jpg',
-  },
-  {
-    title: 'Chov na volné podestýlce',
-    text: 'Kuřice jsou vhodné pro domácí chov na dvorech a zahradách (jsou zvyklé na pohyb)',
-    photo: '/timeline/5.jpg',
-  },
-  {
-    title: '100 % české',
-    text: 'Kuřátka pochází z české líhně, vyrůstají u nás na české rodinné farmě a dostávají krmení z Česka',
-    photo: '/timeline/6.png',
-  },
-]
+import { useLanguage } from '@/hooks/useLanguage'
+import { timeline } from '@/database/timeline'
 
 interface CardProps {
   item: {
-    title: string
-    text: string
+    titlecs: string
+    titleen: string
+    titlede: string
+    textcs: string
+    texten: string
+    textde: string
     photo: string
   }
 }
 
-const Card: React.FC<CardProps> = ({ item }) => (
-  <VerticalTimelineElement
-    contentStyle={{ background: '#BBD700', border: 'none', boxShadow: 'none' }}
-    contentArrowStyle={{ borderRight: '7px solid #BBD700' }}
-    iconStyle={{ background: '#BBD700' }}
-  >
-    <h1 className='font-bold text-brown uppercase text-2xl'>{item.title}</h1>
-    <p className='text-brown/80 !leading-5 !text-base'>{item.text}</p>
-    <img
-      className='mt-4 max-h-52 lg:max-h-72 w-auto mx-auto'
-      src={item.photo}
-    />
-  </VerticalTimelineElement>
-)
+const Card: React.FC<CardProps> = ({ item }) => {
+  const { language } = useLanguage(state => state)
+
+  return (
+    <VerticalTimelineElement
+      contentStyle={{
+        background: '#BBD700',
+        border: 'none',
+        boxShadow: 'none',
+      }}
+      contentArrowStyle={{ borderRight: '7px solid #BBD700' }}
+      iconStyle={{ background: '#BBD700' }}
+    >
+      <h1 className='font-bold text-brown uppercase text-2xl'>
+        {language === 'cs' && <>{item.titlecs}</>}
+        {language === 'en' && <>{item.titleen}</>}
+        {language === 'de' && <>{item.titlede}</>}
+      </h1>
+      <p className='text-brown/80 !leading-5 !text-base'>
+        {language === 'cs' && <>{item.textcs}</>}
+        {language === 'en' && <>{item.texten}</>}
+        {language === 'de' && <>{item.textde}</>}
+      </p>
+      <img
+        className='mt-4 max-h-52 lg:max-h-72 w-auto mx-auto'
+        src={item.photo}
+      />
+    </VerticalTimelineElement>
+  )
+}
 
 const Timeline = () => {
   return (
