@@ -1,4 +1,5 @@
 import Container from '@/components/Container'
+import ModalGallery from '@/components/ModalGallery'
 
 export const metadata = {
   title: 'Farma Hájek - Galerie 🖼',
@@ -8,7 +9,7 @@ const GaleriePage = () => {
   return (
     <div className='py-28'>
       <Container>
-        <h1>galerie</h1>
+        <ModalGallery />
       </Container>
     </div>
   )
