@@ -6,9 +6,11 @@ import Video from './Video'
 import { FaLongArrowAltDown } from 'react-icons/fa'
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'
+import { useLanguage } from '@/hooks/useLanguage'
 
 const Hero = () => {
   const router = useRouter()
+  const { language } = useLanguage(state => state)
 
   return (
     <header>
@@ -20,17 +22,51 @@ const Hero = () => {
             <div className='flex flex-col justify-center items-center gap-8 lg:gap-12 p-1'>
               <div className='flex flex-col justify-center'>
                 <h1 className='text-white text-2xl xl:text-5xl 2xl:text-7xl font-black uppercase text-center'>
-                  Ryze čeští chovatelé
-                  <br /> a farmáři
+                  {language === 'cs' && (
+                    <>
+                      Ryze čeští chovatelé
+                      <br /> a farmáři
+                    </>
+                  )}
+                  {language === 'en' && (
+                    <>
+                      PURELY CZECH BREEDERS <br /> AND FARMERS
+                    </>
+                  )}
+                  {language === 'de' && (
+                    <>
+                      REIN TSCHECHISCHE ZÜCHTER
+                      <br />
+                      UND ZÜCHTER
+                    </>
+                  )}
                 </h1>
                 <span className='text-3xl xl:text-5xl 2xl:text-7xl text-center'>
                   🙏🇨🇿🐣🐔🥚🥔
                 </span>
               </div>
               <h2 className='text-zinc-300 text-lg xl:text-xl 2xl:text-2xl text-center font-light'>
-                Našemu oboru se věnujeme{' '}
-                <span className='font-semibold'>již od roku 2000</span>, můžeme
-                Vám zajistit kvalitu a poctivost
+                {language === 'cs' && (
+                  <>
+                    Našemu oboru se věnujeme{' '}
+                    <span className='font-semibold'>již od roku 2000</span>,
+                    můžeme Vám zajistit kvalitu a poctivost
+                  </>
+                )}
+                {language === 'en' && (
+                  <>
+                    We have been in business{' '}
+                    <span className='font-semibold'>since 2000</span>, we can
+                    assure you quality and honesty
+                  </>
+                )}
+                {language === 'de' && (
+                  <>
+                    Wir sind <span className='font-semibold'>seit 2000</span> im
+                    Geschäft und können Ihnen Qualität und Ehrlichkeit
+                    versichern.
+                  </>
+                )}
               </h2>
 
               <Link
@@ -56,7 +92,11 @@ const Hero = () => {
                 onClick={() => router.push('#timeline')}
               >
                 <h3 className='xl:text-lg text-white pb-2'>
-                  zkoukni životní cestu slepičky
+                  {language === 'cs' && <>zkoukni životní cestu slepičky</>}
+                  {language === 'en' && (
+                    <>explore the life journey of a chicken</>
+                  )}
+                  {language === 'de' && <>den Lebensweg eines Huhns erkunden</>}
                 </h3>
                 <FaLongArrowAltDown
                   size={40}
