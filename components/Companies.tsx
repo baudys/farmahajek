@@ -1,5 +1,8 @@
+'use client'
+
 import Link from 'next/link'
 import Container from './Container'
+import { useLanguage } from '@/hooks/useLanguage'
 
 const companies = [
   {
@@ -37,11 +40,23 @@ const companies = [
 ]
 
 const Companies = () => {
+  const { language } = useLanguage(state => state)
+
   return (
     <div className='overflow-hidden pt-8'>
       <Container>
         <h1 className='font-semibold text-zinc-500/70 text-center text-lg xl:text-4xl uppercase tracking-wider'>
-          Naše produkty můžete najít také v těchto prodejnách
+          {language === 'cs' && (
+            <>Naše produkty můžete najít také v těchto prodejnách</>
+          )}
+          {language === 'en' && (
+            <>You can also find our products in the following stores</>
+          )}
+          {language === 'de' && (
+            <>
+              Sie können unsere Produkte auch in den folgenden Geschäften finden
+            </>
+          )}
         </h1>
       </Container>
       <div className='w-[200%] h-40 lg:h-56 overflow-hidden relative'>
