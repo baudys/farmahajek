@@ -1,3 +1,4 @@
+import { useLanguage } from '@/hooks/useLanguage'
 import { TbHandClick } from 'react-icons/tb'
 
 interface AccordionProps {
@@ -15,6 +16,8 @@ const Accordion: React.FC<AccordionProps> = ({
   handleToggle,
   title,
 }) => {
+  const { language } = useLanguage(state => state)
+
   return (
     <div className='group mb-10 shadow-md'>
       <div
@@ -27,7 +30,10 @@ const Accordion: React.FC<AccordionProps> = ({
             {title}
           </h1>
           <p className='z-[1] text-zinc-300 flex gap-2 items-center justify-center group-hover:text-zinc-400'>
-            pro více informací klikněte <TbHandClick />
+            {language === 'cs' && <>pro více informací klikněte</>}
+            {language === 'en' && <>click for more information</>}
+            {language === 'de' && <>Klicken Sie für weitere Informationen</>}
+            <TbHandClick />
           </p>
         </div>
       </div>
