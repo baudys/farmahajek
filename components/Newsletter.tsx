@@ -33,7 +33,7 @@ const Newsletter = () => {
           )}
         </h4>
         <NewsletterInput />
-        <button className='py-1 px-1 my-4 lg:m-0 rounded-md uppercase text-lg border-2 border-brown font-semibold  hover:bg-brown text-brown hover:text-white transition'>
+        <button className='py-1 px-1 my-4 lg:m-0 rounded-md uppercase text-lg border-2 border-brown font-semibold  hover:bg-brown text-brown hover:text-white transition duration-300'>
           {language === 'cs' && <>potvrdit!</>}
           {language === 'en' && <>confirm!</>}
           {language === 'de' && <>bestätigen!</>}

@@ -10,7 +10,7 @@ interface NavIconProps {
 const NavIcon: React.FC<NavIconProps> = ({ href, icon: Icon, isTopOfPage }) => {
   return (
     <li
-      className={`text-green rounded-full p-1.5 transition ${
+      className={`text-green rounded-full p-1.5 transition duration-300 ${
         isTopOfPage
           ? 'lg:text-white lg:hover:text-black hover:text-brown hover:bg-green lg:hover:bg-white'
           : 'lg:text-brown hover:text-brown hover:bg-green lg:hover:text-green lg:hover:bg-brown'
