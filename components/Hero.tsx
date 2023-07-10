@@ -19,7 +19,7 @@ const Hero = () => {
 
         <div className='absolute bg-black/70 top-0 left-0 w-full h-full flex pt-32 lg:pt-0 lg:items-center lg:justify-center'>
           <Container>
-            <div className='flex flex-col justify-center items-center gap-8 lg:gap-12 p-1'>
+            <div className='flex flex-col justify-center items-center gap-8 2xl:gap-12 p-1'>
               <div className='flex flex-col justify-center'>
                 <h1 className='text-white text-2xl xl:text-5xl 2xl:text-7xl font-black uppercase text-center'>
                   {language === 'cs' && (
@@ -80,7 +80,7 @@ const Hero = () => {
                     width={300}
                     height={300}
                     alt='hen'
-                    className='w-[170px] h-[170px] lg:w-[220px] lg:h-[220px] group-hover:scale-105 transition'
+                    className='w-[170px] h-[170px] lg:w-[200px] lg:h-[200px] 2xl:h-[220px] 2xl:w-[220px] group-hover:scale-105 transition'
                   />
                   <p className='absolute top-1/2 left-1/2 translate-x-[-50%] group-hover:text-black transition'>
                     E-SHOP
