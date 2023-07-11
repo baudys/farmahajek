@@ -8,7 +8,9 @@ interface NavIconProps {
 
 const FooterIcon: React.FC<NavIconProps> = ({ href, icon: Icon }) => {
   return (
-    <li className={`text-brown rounded-full p-1.5 transition list-none`}>
+    <li
+      className={`text-brown rounded-full p-1.5 transition list-none hover:bg-brown hover:text-green`}
+    >
       <Link href={href} target='_blank'>
         <Icon size={26} />
       </Link>
