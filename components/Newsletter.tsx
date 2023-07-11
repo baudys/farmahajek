@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { AiOutlineClose } from 'react-icons/ai'
 import NewsletterInput from './inputs/NewsletterInput'
 import { useLanguage } from '@/hooks/useLanguage'
+import { motion } from 'framer-motion'
 
 const Newsletter = () => {
   const [isOpen, setIsOpen] = useState(true)
@@ -15,7 +16,9 @@ const Newsletter = () => {
   const { language } = useLanguage(state => state)
 
   return (
-    <div
+    <motion.div
+      initial={{ y: 200 }}
+      animate={{ y: 0 }}
       className={`transition-all border-t border-brown ${
         isOpen
           ? 'fixed bottom-0 left-0 min-w-full h-48 lg:h-20 bg-green z-10'
@@ -44,7 +47,7 @@ const Newsletter = () => {
           size={25}
         />
       </div>
-    </div>
+    </motion.div>
   )
 }
 
