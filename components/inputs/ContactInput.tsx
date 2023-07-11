@@ -10,7 +10,7 @@ const ContactInput: React.FC<ContactInputProps> = ({ id, type, label }) => {
       id={id}
       type={type}
       placeholder={label}
-      className='rounded-md py-1.5 px-1 text-zinc-900 placeholder:text-zinc-500 shadow-sm sm:text-sm sm:leading-6'
+      className='rounded-md py-1.5 px-1 text-zinc-900 placeholder:text-zinc-500 shadow-sm sm:text-sm sm:leading-6 focus:outline-none focus:bg-zinc-100'
     />
   )
 }
