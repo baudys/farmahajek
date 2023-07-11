@@ -7,6 +7,9 @@ import { FaLongArrowAltDown } from 'react-icons/fa'
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 import { useLanguage } from '@/hooks/useLanguage'
+import { Lobster } from 'next/font/google'
+
+const lobster = Lobster({ subsets: ['latin'], weight: '400' })
 
 const Hero = () => {
   const router = useRouter()
@@ -21,7 +24,9 @@ const Hero = () => {
           <Container>
             <div className='flex flex-col justify-center items-center gap-8 2xl:gap-12 p-1'>
               <div className='flex flex-col justify-center'>
-                <h1 className='text-white text-2xl xl:text-5xl 2xl:text-7xl font-black uppercase text-center'>
+                <h1
+                  className={`text-white text-2xl xl:text-5xl 2xl:text-7xl font-black uppercase text-center pt-1 ${lobster.className}`}
+                >
                   {language === 'cs' && (
                     <>
                       Ryze čeští chovatelé
