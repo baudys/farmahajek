@@ -19,12 +19,22 @@ const Accordion: React.FC<AccordionProps> = ({
   const { language } = useLanguage(state => state)
 
   return (
-    <div className='group mb-10'>
+    <div
+      className={`${
+        isOpen ? 'mb-10' : 'mb-0'
+      } group transition-all duration-300`}
+    >
       <div
-        className={`relative flex items-center justify-center w-full h-[150px] bg-cover bg-center cursor-pointer rounded-t-lg ${src}`}
+        className={`relative flex items-center justify-center w-full h-[150px] bg-cover bg-center cursor-pointer rounded-t-lg ${
+          isOpen ? 'rounded-b-none' : 'rounded-b-lg'
+        } ${src}`}
         onClick={handleToggle}
       >
-        <div className='group absolute top-0 left-0 w-full h-full bg-black/70 backdrop-blur-sm rounded-t-lg' />
+        <div
+          className={`group absolute top-0 left-0 w-full h-full bg-black/70 backdrop-blur-sm rounded-t-lg transition ${
+            isOpen ? 'rounded-b-none' : 'rounded-b-lg'
+          }`}
+        />
         <div className='z-[1]'>
           <h1 className='uppercase text-white text-2xl xl:text-4xl 2xl:text-6xl font-bold z-[1] group-hover:text-zinc-200 text-center transition'>
             {title}
@@ -37,9 +47,6 @@ const Accordion: React.FC<AccordionProps> = ({
           </p>
         </div>
       </div>
-      {/* {isOpen && (
-        <div className='bg-white text-black rounded-b-lg p-3'>{children}</div>
-      )} */}
       <div
         className={`bg-white text-black rounded-b-lg p-3 transition-all duration-300 shadow-md ${
           isOpen ? 'h-full opacity-100' : 'h-0 opacity-0'

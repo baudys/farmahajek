@@ -27,7 +27,10 @@ const SluzbyPage = () => {
     <div className='pb-28 bg-gradient-to-br from-zinc-200 to-zinc-400 '>
       <div className='w-full h-[70.72px] xl:h-[84.81px] bg-black' />
       <Container styles='mt-10'>
-        <motion.div initial={{ x: -500 }} animate={{ x: 0 }}>
+        <motion.div
+          initial={{ x: -500, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+        >
           <Accordion
             src='bg-[url(/sluzby/drubezarna.jpg)]'
             isOpen={drubezarna}
@@ -115,8 +118,8 @@ const SluzbyPage = () => {
         </motion.div>
 
         <motion.div
-          initial={{ x: 500 }}
-          animate={{ x: 0 }}
+          initial={{ x: 500, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
           transition={{ delay: 0.2 }}
         >
           <Accordion
@@ -188,8 +191,8 @@ const SluzbyPage = () => {
         </motion.div>
 
         <motion.div
-          initial={{ x: -500 }}
-          animate={{ x: 0 }}
+          initial={{ x: -500, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
           transition={{ delay: 0.4 }}
         >
           <Accordion
@@ -242,8 +245,8 @@ const SluzbyPage = () => {
         </motion.div>
 
         <motion.div
-          initial={{ x: 500 }}
-          animate={{ x: 0 }}
+          initial={{ x: 500, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
           transition={{ delay: 0.6 }}
         >
           <Accordion
@@ -339,8 +342,8 @@ const SluzbyPage = () => {
         </motion.div>
 
         <motion.div
-          initial={{ x: -500 }}
-          animate={{ x: 0 }}
+          initial={{ x: -500, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
           transition={{ delay: 0.8 }}
         >
           <Accordion
