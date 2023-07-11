@@ -1,16 +1,47 @@
-import React from 'react'
+'use client'
+
+import L from 'leaflet'
+import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet'
+import 'leaflet/dist/leaflet.css'
+import markerIcon2x from 'leaflet/dist/images/marker-icon-2x.png'
+import markerIcon from 'leaflet/dist/images/marker-icon.png'
+import markerShadow from 'leaflet/dist/images/marker-shadow.png'
+import { useMediaQuery } from '@/hooks/useMediaQuery'
+
+// @ts-ignore
+delete L.Icon.Default.prototype._getIconUrl
+L.Icon.Default.mergeOptions({
+  iconUrl: markerIcon.src,
+  iconRetinaUrl: markerIcon2x.src,
+  shadowUrl: markerShadow.src,
+})
 
 const Map = () => {
+  const isDesktop = useMediaQuery('(min-width: 700px)')
+
   return (
-    <div>
-      <iframe
-        src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d41581.253022067205!2d13.004754000000002!3d49.35539800000001!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470ab52faca54e71%3A0xc633bcb1c79da4c3!2zUHJvZGVqbmEgZHLFr2Jlxb5lIC0gRmFybWEgSMOhamVr!5e0!3m2!1sen!2sus!4v1687264052380!5m2!1sen!2sus'
-        className='max-h-[600px] w-full aspect-square rounded'
-        scrolling='no'
-        referrerPolicy='no-referrer-when-downgrade'
-        loading='lazy'
-      ></iframe>
-    </div>
+    <MapContainer
+      center={[49.9171208544799, 14.67178354882282] as L.LatLngExpression}
+      zoom={isDesktop ? 8 : 6}
+      scrollWheelZoom={false}
+      className='rounded-lg h-[400px] md:h-[700px]'
+    >
+      <TileLayer url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png' />
+      <Marker
+        position={[49.355362810666996, 13.004856931980328]}
+        eventHandlers={{
+          mouseover: event => event.target.openPopup(),
+          mouseout: event => event.target.closePopup(),
+        }}
+      >
+        <Popup>
+          <h3>Farma Hájek</h3>
+          <p>Hájek 36</p>
+          <p>34506 Všeruby - Hájek</p>
+          <p>okres Domažlice, Plzeňský kraj, Česko</p>
+        </Popup>
+      </Marker>
+    </MapContainer>
   )
 }
 
