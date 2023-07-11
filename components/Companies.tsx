@@ -65,7 +65,7 @@ const Companies = () => {
             <Link
               href={company.href}
               target='_blank'
-              className='flex justify-center items-start min-w-[15rem]'
+              className='flex justify-center items-start min-w-[15rem] hover:bg-zinc-300 p-3 rounded-lg'
             >
               {!company.content.startsWith('/') ? (
                 <h1 className='font-bold text-base xl:text-2xl'>
@@ -84,7 +84,7 @@ const Companies = () => {
             <Link
               href={company.href}
               target='_blank'
-              className='flex justify-center items-start min-w-[15rem]'
+              className='flex justify-center items-start min-w-[15rem] hover:bg-zinc-300 p-3 rounded-lg'
             >
               {!company.content.startsWith('/') ? (
                 <h1 className='font-bold text-base xl:text-2xl'>
