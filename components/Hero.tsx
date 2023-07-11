@@ -7,10 +7,11 @@ import { FaLongArrowAltDown } from 'react-icons/fa'
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 import { useLanguage } from '@/hooks/useLanguage'
-import { Lobster } from 'next/font/google'
+import { Lobster, Noto_Color_Emoji } from 'next/font/google'
 import { motion } from 'framer-motion'
 
 const lobster = Lobster({ subsets: ['latin'], weight: '400' })
+const emoji = Noto_Color_Emoji({ subsets: ['emoji'], weight: '400' })
 
 const Hero = () => {
   const router = useRouter()
@@ -26,9 +27,9 @@ const Hero = () => {
             <div className='flex flex-col justify-center items-center gap-8 2xl:gap-12 p-1'>
               <div className='flex flex-col justify-center'>
                 <motion.h1
-                  initial={{ y: -200 }}
-                  animate={{ y: 0 }}
-                  className={`text-white text-2xl xl:text-5xl 2xl:text-7xl font-black uppercase text-center pt-1 ${lobster.className}`}
+                  initial={{ y: -200, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  className={`text-white text-4xl xl:text-5xl 2xl:text-7xl font-black uppercase text-center pt-1 ${lobster.className}`}
                 >
                   {language === 'cs' && (
                     <>
@@ -50,16 +51,16 @@ const Hero = () => {
                   )}
                 </motion.h1>
                 <motion.span
-                  initial={{ y: 50 }}
-                  animate={{ y: 0 }}
-                  className='text-3xl xl:text-5xl 2xl:text-7xl text-center'
+                  initial={{ y: 50, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  className={`text-3xl xl:text-5xl 2xl:text-7xl text-center ${emoji.className}`}
                 >
                   🙏🇨🇿🐣🐔🥚🥔
                 </motion.span>
               </div>
               <motion.h2
-                initial={{ x: -50 }}
-                animate={{ x: 0 }}
+                initial={{ x: -50, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
                 className='text-zinc-300 text-lg xl:text-xl 2xl:text-2xl text-center font-light'
               >
                 {language === 'cs' && (
@@ -91,8 +92,8 @@ const Hero = () => {
                 className='text-brown font-bold lg:text-xl xl:text-2xl mt-4 xl:mt-0 xl:pb-6 cursor-pointer'
               >
                 <motion.div
-                  initial={{ scale: '25%' }}
-                  animate={{ scale: '100%' }}
+                  initial={{ scale: '25%', opacity: 0 }}
+                  animate={{ scale: '100%', opacity: 1 }}
                   className='relative group'
                 >
                   <Image
@@ -108,8 +109,8 @@ const Hero = () => {
                 </motion.div>
               </Link>
               <motion.div
-                initial={{ y: 50 }}
-                animate={{ y: 0 }}
+                initial={{ y: 50, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
                 className='flex flex-col bottom-5 absolute items-center cursor-pointer'
                 onClick={() => router.push('#timeline')}
               >
