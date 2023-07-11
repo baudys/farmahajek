@@ -107,26 +107,24 @@ const Hero = () => {
                   </p>
                 </motion.div>
               </Link>
-              <div
+              <motion.div
+                initial={{ y: 50 }}
+                animate={{ y: 0 }}
                 className='flex flex-col bottom-5 absolute items-center cursor-pointer'
                 onClick={() => router.push('#timeline')}
               >
-                <motion.h3
-                  initial={{ y: 50 }}
-                  animate={{ y: 0 }}
-                  className='xl:text-lg text-white pb-2'
-                >
+                <h3 className='xl:text-lg text-white pb-2'>
                   {language === 'cs' && <>zkoukni životní cestu slepičky</>}
                   {language === 'en' && (
                     <>explore the life journey of a chicken</>
                   )}
                   {language === 'de' && <>den Lebensweg eines Huhns erkunden</>}
-                </motion.h3>
+                </h3>
                 <FaLongArrowAltDown
                   size={40}
                   className='text-white animate-bounce'
                 />
-              </div>
+              </motion.div>
             </div>
           </Container>
         </div>
