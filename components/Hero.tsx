@@ -100,9 +100,9 @@ const Hero = () => {
                     width={300}
                     height={300}
                     alt='hen'
-                    className='min-h-full w-[130px] md:w-[200px] group-hover:scale-105 transition'
+                    className='min-h-full w-[130px] md:w-[200px] group-hover:scale-105 group-hover:rotate-12 transition'
                   />
-                  <p className='absolute top-1/2 left-1/2 translate-x-[-40%] translate-y-[-60%] group-hover:text-black transition'>
+                  <p className='absolute top-1/2 left-1/2 translate-x-[-40%] translate-y-[-60%] transition'>
                     E-SHOP
                   </p>
                 </motion.div>
