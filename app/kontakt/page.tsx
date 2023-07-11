@@ -1,8 +1,8 @@
 'use client'
 
-import ContactUs from '@/components/ContactUs'
+import ContactUs from '@/components/contact/ContactUs'
 import Container from '@/components/Container'
-import Map from '@/components/Map'
+import Map from '@/components/contact/Map'
 import React from 'react'
 import { motion } from 'framer-motion'
 

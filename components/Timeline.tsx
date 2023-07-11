@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import { useState, useEffect } from 'react'
 import Container from './Container'
 import {
   VerticalTimeline,
@@ -24,7 +24,6 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ item }) => {
   const { language } = useLanguage(state => state)
-
   return (
     <VerticalTimelineElement
       contentStyle={{
@@ -54,10 +53,22 @@ const Card: React.FC<CardProps> = ({ item }) => {
 }
 
 const Timeline = () => {
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    setIsLoading(false)
+  }, [])
+
   return (
     <div className='bg-brown' id='timeline'>
       <Container>
-        <VerticalTimeline lineColor='#BBD700'>
+        <VerticalTimeline
+          lineColor='#BBD700'
+          className={`${
+            !isLoading &&
+            'before:content-none before:absolute before:top-0 before:h-full before:left-[18px] before:w-[4px] before:bg-green xl:before:left-1/2 xl:before:ml-[-2px] before:z-[1110]'
+          }`}
+        >
           {timeline.map((item, i) => (
             <Card key={i} item={item} />
           ))}

@@ -1,5 +1,8 @@
+'use client'
+
 import Companies from '@/components/Companies'
 import Hero from '@/components/Hero'
+import Map from '@/components/Map'
 import Timeline from '@/components/Timeline'
 
 export default function Home() {
@@ -8,6 +11,7 @@ export default function Home() {
       <Hero />
       <Timeline />
       <Companies />
+      <Map />
     </div>
   )
 }
