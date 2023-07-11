@@ -8,6 +8,7 @@ import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 import { useLanguage } from '@/hooks/useLanguage'
 import { Lobster } from 'next/font/google'
+import { motion } from 'framer-motion'
 
 const lobster = Lobster({ subsets: ['latin'], weight: '400' })
 
@@ -24,7 +25,9 @@ const Hero = () => {
           <Container>
             <div className='flex flex-col justify-center items-center gap-8 2xl:gap-12 p-1'>
               <div className='flex flex-col justify-center'>
-                <h1
+                <motion.h1
+                  initial={{ y: -200 }}
+                  animate={{ y: 0 }}
                   className={`text-white text-2xl xl:text-5xl 2xl:text-7xl font-black uppercase text-center pt-1 ${lobster.className}`}
                 >
                   {language === 'cs' && (
@@ -45,12 +48,20 @@ const Hero = () => {
                       UND ZÜCHTER
                     </>
                   )}
-                </h1>
-                <span className='text-3xl xl:text-5xl 2xl:text-7xl text-center'>
+                </motion.h1>
+                <motion.span
+                  initial={{ y: 50 }}
+                  animate={{ y: 0 }}
+                  className='text-3xl xl:text-5xl 2xl:text-7xl text-center'
+                >
                   🙏🇨🇿🐣🐔🥚🥔
-                </span>
+                </motion.span>
               </div>
-              <h2 className='text-zinc-300 text-lg xl:text-xl 2xl:text-2xl text-center font-light'>
+              <motion.h2
+                initial={{ x: -50 }}
+                animate={{ x: 0 }}
+                className='text-zinc-300 text-lg xl:text-xl 2xl:text-2xl text-center font-light'
+              >
                 {language === 'cs' && (
                   <>
                     Našemu oboru se věnujeme{' '}
@@ -72,14 +83,18 @@ const Hero = () => {
                     versichern.
                   </>
                 )}
-              </h2>
+              </motion.h2>
 
               <Link
                 href='https://eshop-farmahajek.vercel.app'
                 target='_blank'
                 className='text-brown font-bold lg:text-xl xl:text-2xl mt-4 xl:mt-0 xl:pb-6 cursor-pointer'
               >
-                <div className='relative group'>
+                <motion.div
+                  initial={{ scale: '25%' }}
+                  animate={{ scale: '100%' }}
+                  className='relative group'
+                >
                   <Image
                     src='/hen/green.png'
                     width={300}
@@ -90,19 +105,23 @@ const Hero = () => {
                   <p className='absolute top-1/2 left-1/2 translate-x-[-40%] translate-y-[-60%] group-hover:text-black transition'>
                     E-SHOP
                   </p>
-                </div>
+                </motion.div>
               </Link>
               <div
                 className='flex flex-col bottom-5 absolute items-center cursor-pointer'
                 onClick={() => router.push('#timeline')}
               >
-                <h3 className='xl:text-lg text-white pb-2'>
+                <motion.h3
+                  initial={{ y: 50 }}
+                  animate={{ y: 0 }}
+                  className='xl:text-lg text-white pb-2'
+                >
                   {language === 'cs' && <>zkoukni životní cestu slepičky</>}
                   {language === 'en' && (
                     <>explore the life journey of a chicken</>
                   )}
                   {language === 'de' && <>den Lebensweg eines Huhns erkunden</>}
-                </h3>
+                </motion.h3>
                 <FaLongArrowAltDown
                   size={40}
                   className='text-white animate-bounce'
