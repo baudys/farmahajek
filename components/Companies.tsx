@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import Container from './Container'
 import { useLanguage } from '@/hooks/useLanguage'
+import { motion } from 'framer-motion'
 
 const companies = [
   {
@@ -45,7 +46,11 @@ const Companies = () => {
   return (
     <div className='overflow-hidden pt-8'>
       <Container>
-        <h1 className='font-semibold text-zinc-500/70 text-center text-lg xl:text-4xl uppercase tracking-wider'>
+        <motion.h1
+          initial={{ y: -200, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          className='font-semibold text-zinc-500/70 text-center text-lg xl:text-4xl uppercase tracking-wider'
+        >
           {language === 'cs' && (
             <>Naše produkty můžete najít také v těchto prodejnách</>
           )}
@@ -57,7 +62,7 @@ const Companies = () => {
               Sie können unsere Produkte auch in den folgenden Geschäften finden
             </>
           )}
-        </h1>
+        </motion.h1>
       </Container>
       <div className='w-[200%] h-40 lg:h-56 overflow-hidden relative'>
         <div className='w-[200%] flex items-center h-40 lg:h-56 justify-around absolute left-0 animate-scroll-fast xl:animate-scroll-slow'>
