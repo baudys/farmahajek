@@ -51,7 +51,10 @@ const MobileNav: React.FC<MobileNavProps> = ({ isTopOfPage }) => {
     >
       <Container>
         <div className='flex justify-between items-center'>
-          <motion.div initial={{ y: -100 }} animate={{ y: 0 }}>
+          <motion.div
+            initial={{ y: -100, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+          >
             <Link href='/'>
               <Image
                 src={`${isTopOfPage ? '/logo/3.png' : '/logo/2.png'}`}
@@ -64,8 +67,8 @@ const MobileNav: React.FC<MobileNavProps> = ({ isTopOfPage }) => {
 
           <div className='flex items-center'>
             <motion.select
-              initial={{ x: -100 }}
-              animate={{ x: 0 }}
+              initial={{ x: -100, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
               value={language}
               onChange={handleChange}
               className={`mr-6 bg-transparent text-2xl cursor-pointer ${
@@ -83,7 +86,10 @@ const MobileNav: React.FC<MobileNavProps> = ({ isTopOfPage }) => {
               </option>
             </motion.select>
 
-            <motion.div initial={{ y: 100 }} animate={{ y: 0 }}>
+            <motion.div
+              initial={{ y: 100, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+            >
               <IoMenu
                 onClick={handleOpen}
                 size={35}
@@ -94,7 +100,10 @@ const MobileNav: React.FC<MobileNavProps> = ({ isTopOfPage }) => {
 
           {isOpen && (
             <div className='absolute top-0 left-0 min-w-[100vw] min-h-[100vh] bg-brown'>
-              <motion.div initial={{ x: 50, y: -50 }} animate={{ x: 0, y: 0 }}>
+              <motion.div
+                initial={{ x: 50, y: -50, opacity: 0 }}
+                animate={{ x: 0, y: 0, opacity: 1 }}
+              >
                 <AiOutlineClose
                   className='text-white absolute right-3 top-3'
                   onClick={handleClose}
@@ -103,8 +112,8 @@ const MobileNav: React.FC<MobileNavProps> = ({ isTopOfPage }) => {
               </motion.div>
 
               <motion.ul
-                initial={{ y: -100 }}
-                animate={{ y: 0 }}
+                initial={{ y: -100, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
                 className='grid gap-4 text-2xl uppercase font-medium mt-52 text-center'
               >
                 <NavLink
@@ -172,8 +181,8 @@ const MobileNav: React.FC<MobileNavProps> = ({ isTopOfPage }) => {
               </motion.ul>
 
               <motion.ul
-                initial={{ x: -200 }}
-                animate={{ x: '-50%' }}
+                initial={{ x: -200, opacity: 0 }}
+                animate={{ x: '-50%', opacity: 1 }}
                 className='absolute bottom-40 left-[50%] translate-x-[-50%] flex gap-2 text-lg uppercase font-medium'
               >
                 <NavIcon
