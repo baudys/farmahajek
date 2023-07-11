@@ -72,7 +72,7 @@ const Hero = () => {
               <Link
                 href='https://eshop-farmahajek.vercel.app'
                 target='_blank'
-                className='text-brown font-bold p-4 text-xl xl:text-2xl -mt-7 md:mt-4 xl:mt-0 xl:pb-10 cursor-pointer'
+                className='text-brown font-bold lg:text-xl xl:text-2xl mt-4 xl:mt-0 xl:pb-6 cursor-pointer'
               >
                 <div className='relative group'>
                   <Image
@@ -80,9 +80,9 @@ const Hero = () => {
                     width={300}
                     height={300}
                     alt='hen'
-                    className='w-[170px] h-[170px] lg:w-[200px] lg:h-[200px] 2xl:h-[220px] 2xl:w-[220px] group-hover:scale-105 transition'
+                    className='min-h-full w-[130px] md:w-[200px] group-hover:scale-105 transition'
                   />
-                  <p className='absolute top-1/2 left-1/2 translate-x-[-50%] group-hover:text-black transition'>
+                  <p className='absolute top-1/2 left-1/2 translate-x-[-40%] translate-y-[-60%] group-hover:text-black transition'>
                     E-SHOP
                   </p>
                 </div>
