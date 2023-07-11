@@ -14,6 +14,7 @@ import { IoLogoTiktok, IoMenu } from 'react-icons/io5'
 import { FaFacebook } from 'react-icons/fa'
 import { useState } from 'react'
 import { useLanguage } from '@/hooks/useLanguage'
+import { motion } from 'framer-motion'
 
 interface MobileNavProps {
   isTopOfPage: boolean
@@ -50,17 +51,21 @@ const MobileNav: React.FC<MobileNavProps> = ({ isTopOfPage }) => {
     >
       <Container>
         <div className='flex justify-between items-center'>
-          <Link href='/'>
-            <Image
-              src={`${isTopOfPage ? '/logo/3.png' : '/logo/2.png'}`}
-              width={115}
-              height={115}
-              alt='logo'
-            />
-          </Link>
+          <motion.div initial={{ y: -100 }} animate={{ y: 0 }}>
+            <Link href='/'>
+              <Image
+                src={`${isTopOfPage ? '/logo/3.png' : '/logo/2.png'}`}
+                width={115}
+                height={115}
+                alt='logo'
+              />
+            </Link>
+          </motion.div>
 
           <div className='flex items-center'>
-            <select
+            <motion.select
+              initial={{ x: -100 }}
+              animate={{ x: 0 }}
               value={language}
               onChange={handleChange}
               className={`mr-6 bg-transparent text-2xl cursor-pointer ${
@@ -76,24 +81,32 @@ const MobileNav: React.FC<MobileNavProps> = ({ isTopOfPage }) => {
               <option value='de' className='cursor-pointer'>
                 🇩🇪
               </option>
-            </select>
+            </motion.select>
 
-            <IoMenu
-              onClick={handleOpen}
-              size={35}
-              className={`${isTopOfPage ? 'text-white' : 'text-brown'}`}
-            />
+            <motion.div initial={{ y: 100 }} animate={{ y: 0 }}>
+              <IoMenu
+                onClick={handleOpen}
+                size={35}
+                className={`${isTopOfPage ? 'text-white' : 'text-brown'}`}
+              />
+            </motion.div>
           </div>
 
           {isOpen && (
             <div className='absolute top-0 left-0 min-w-[100vw] min-h-[100vh] bg-brown'>
-              <AiOutlineClose
-                className='text-white absolute right-3 top-3'
-                onClick={handleClose}
-                size={40}
-              />
+              <motion.div initial={{ x: 50, y: -50 }} animate={{ x: 0, y: 0 }}>
+                <AiOutlineClose
+                  className='text-white absolute right-3 top-3'
+                  onClick={handleClose}
+                  size={40}
+                />
+              </motion.div>
 
-              <ul className='grid gap-4 text-2xl uppercase font-medium mt-52 text-center'>
+              <motion.ul
+                initial={{ y: -100 }}
+                animate={{ y: 0 }}
+                className='grid gap-4 text-2xl uppercase font-medium mt-52 text-center'
+              >
                 <NavLink
                   href='/'
                   label={
@@ -156,9 +169,13 @@ const MobileNav: React.FC<MobileNavProps> = ({ isTopOfPage }) => {
                   isTopOfPage={isTopOfPage}
                   handleClick={handleClick}
                 />
-              </ul>
+              </motion.ul>
 
-              <ul className='absolute bottom-40 left-[50%] translate-x-[-50%] flex  gap-2 text-lg uppercase font-medium'>
+              <motion.ul
+                initial={{ x: -200 }}
+                animate={{ x: '-50%' }}
+                className='absolute bottom-40 left-[50%] translate-x-[-50%] flex gap-2 text-lg uppercase font-medium'
+              >
                 <NavIcon
                   href='https://www.instagram.com/farmahajek/'
                   icon={AiOutlineInstagram}
@@ -179,7 +196,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ isTopOfPage }) => {
                   icon={AiFillYoutube}
                   isTopOfPage={isTopOfPage}
                 />
-              </ul>
+              </motion.ul>
             </div>
           )}
         </div>

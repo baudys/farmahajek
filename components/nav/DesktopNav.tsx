@@ -9,6 +9,7 @@ import { AiOutlineInstagram, AiFillYoutube } from 'react-icons/ai'
 import { IoLogoTiktok } from 'react-icons/io5'
 import { FaFacebook } from 'react-icons/fa'
 import { useLanguage } from '@/hooks/useLanguage'
+import { motion } from 'framer-motion'
 
 interface DesktopNavProps {
   isTopOfPage: boolean
@@ -32,16 +33,22 @@ const DesktopNav: React.FC<DesktopNavProps> = ({ isTopOfPage }) => {
     >
       <Container>
         <div className='grid grid-cols-3 justify-between items-center'>
-          <Link href='/'>
-            <Image
-              src={`${isTopOfPage ? '/logo/3.png' : '/logo/2.png'}`}
-              width={130}
-              height={130}
-              alt='logo'
-            />
-          </Link>
+          <motion.div initial={{ x: -200 }} animate={{ x: 0 }}>
+            <Link href='/'>
+              <Image
+                src={`${isTopOfPage ? '/logo/3.png' : '/logo/2.png'}`}
+                width={130}
+                height={130}
+                alt='logo'
+              />
+            </Link>
+          </motion.div>
 
-          <ul className='flex gap-3 text-lg uppercase font-medium xl:place-content-start 2xl:place-content-center'>
+          <motion.ul
+            initial={{ y: -200 }}
+            animate={{ y: 0 }}
+            className='flex gap-3 text-lg uppercase font-medium xl:place-content-start 2xl:place-content-center'
+          >
             <NavIcon
               href='https://www.instagram.com/farmahajek/'
               icon={AiOutlineInstagram}
@@ -62,10 +69,18 @@ const DesktopNav: React.FC<DesktopNavProps> = ({ isTopOfPage }) => {
               icon={AiFillYoutube}
               isTopOfPage={isTopOfPage}
             />
-          </ul>
+          </motion.ul>
 
-          <ul className='flex gap-3 text-lg uppercase font-medium items-center justify-self-end'>
-            <li className='mr-6 cursor-pointer'>
+          <motion.ul
+            initial={{ x: 400 }}
+            animate={{ x: 0 }}
+            className='flex gap-3 text-lg uppercase font-medium items-center justify-self-end'
+          >
+            <motion.li
+              initial={{ y: 200 }}
+              animate={{ y: 0 }}
+              className='mr-6 cursor-pointer'
+            >
               <select
                 value={language}
                 onChange={handleChange}
@@ -83,7 +98,7 @@ const DesktopNav: React.FC<DesktopNavProps> = ({ isTopOfPage }) => {
                   🇩🇪
                 </option>
               </select>
-            </li>
+            </motion.li>
             <NavLink
               href='https://eshop-farmahajek.vercel.app'
               label='E-Shop'
@@ -128,7 +143,7 @@ const DesktopNav: React.FC<DesktopNavProps> = ({ isTopOfPage }) => {
               }
               isTopOfPage={isTopOfPage}
             />
-          </ul>
+          </motion.ul>
         </div>
       </Container>
     </div>
