@@ -21,7 +21,7 @@ const Newsletter = () => {
       animate={{ y: 0 }}
       className={`transition-all border-t border-brown ${
         isOpen
-          ? 'fixed bottom-0 left-0 min-w-full h-48 lg:h-20 bg-green z-10'
+          ? 'fixed bottom-0 left-0 min-w-full h-48 lg:h-20 bg-green z-[1111]'
           : 'hidden'
       }`}
     >

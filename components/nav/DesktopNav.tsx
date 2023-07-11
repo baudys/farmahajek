@@ -24,7 +24,7 @@ const DesktopNav: React.FC<DesktopNavProps> = ({ isTopOfPage }) => {
 
   return (
     <div
-      className={`hidden xl:block fixed w-full py-4 transition z-10 whitespace-nowrap 
+      className={`hidden xl:block fixed w-full py-4 transition z-[1111] whitespace-nowrap 
       ${
         isTopOfPage
           ? 'bg-transparent'
