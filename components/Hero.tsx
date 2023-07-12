@@ -41,7 +41,7 @@ const Hero = () => {
       <div className='sticky top-0 flex h-[90vh] lg:min-h-screen'>
         <Video />
 
-        <div className='absolute bg-black/70 top-0 left-0 w-full h-full flex pt-32 lg:pt-0 lg:items-center lg:justify-center'>
+        <div className='absolute bg-black/60 top-0 left-0 w-full h-full flex pt-32 lg:pt-0 lg:items-center lg:justify-center'>
           <Container>
             <div className='flex flex-col justify-center items-center p-1'>
               <motion.h1
