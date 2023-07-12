@@ -7,15 +7,34 @@ import { FaLongArrowAltDown } from 'react-icons/fa'
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 import { useLanguage } from '@/hooks/useLanguage'
-import { Lobster, Noto_Color_Emoji } from 'next/font/google'
+import { Lobster } from 'next/font/google'
 import { motion } from 'framer-motion'
+import { useEffect, useState } from 'react'
 
 const lobster = Lobster({ subsets: ['latin'], weight: '400' })
-const emoji = Noto_Color_Emoji({ subsets: ['emoji'], weight: '400' })
 
 const Hero = () => {
   const router = useRouter()
   const { language } = useLanguage(state => state)
+
+  const henSrcs = [
+    '/slepicky/D109.png',
+    '/slepicky/D159.png',
+    '/slepicky/D853.png',
+  ]
+
+  const [currentHenIndex, setCurrentHenIndex] = useState(0)
+  const [currentHenSrc, setCurrentHenSrc] = useState(henSrcs[0])
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const nextImageIndex = (currentHenIndex + 1) % henSrcs.length
+      setCurrentHenIndex(nextImageIndex)
+      setCurrentHenSrc(henSrcs[nextImageIndex])
+    }, 3000)
+
+    return () => clearInterval(interval)
+  }, [currentHenIndex, henSrcs])
 
   return (
     <header>
@@ -24,64 +43,40 @@ const Hero = () => {
 
         <div className='absolute bg-black/70 top-0 left-0 w-full h-full flex pt-32 lg:pt-0 lg:items-center lg:justify-center'>
           <Container>
-            <div className='flex flex-col justify-center items-center gap-8 2xl:gap-12 p-1'>
-              <div className='flex flex-col justify-center'>
-                <motion.h1
-                  initial={{ y: -200, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  className={`text-white text-4xl xl:text-5xl 2xl:text-7xl font-black uppercase text-center pt-1 ${lobster.className}`}
-                >
-                  {language === 'cs' && (
-                    <>
-                      Ryze čeští chovatelé
-                      <br /> a farmáři
-                    </>
-                  )}
-                  {language === 'en' && (
-                    <>
-                      PURELY CZECH BREEDERS <br /> AND FARMERS
-                    </>
-                  )}
-                  {language === 'de' && (
-                    <>
-                      REIN TSCHECHISCHE ZÜCHTER
-                      <br />
-                      UND ZÜCHTER
-                    </>
-                  )}
-                </motion.h1>
-                <motion.span
-                  initial={{ y: 50, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  className={`text-3xl xl:text-5xl 2xl:text-7xl text-center ${emoji.className}`}
-                >
-                  🙏🇨🇿🐣🐔🥚🥔
-                </motion.span>
-              </div>
+            <div className='flex flex-col justify-center items-center p-1'>
+              <motion.h1
+                initial={{ y: -200, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                className={`text-white text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl mb-3 font-black uppercase text-center pt-1 ${lobster.className}`}
+              >
+                {language === 'cs' && <>Ryze čeští chovatelé a farmáři</>}
+                {language === 'en' && <>PURELY CZECH BREEDERS AND FARMERS</>}
+                {language === 'de' && (
+                  <>REIN TSCHECHISCHE ZÜCHTER UND ZÜCHTER</>
+                )}
+              </motion.h1>
+
               <motion.h2
                 initial={{ x: -50, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
-                className='text-zinc-300 text-lg xl:text-xl 2xl:text-2xl text-center font-light'
+                className='text-zinc-300 text-lg xl:text-xl text-center lg:text-right w-full font-light mb-12 2xl:mb-28'
               >
                 {language === 'cs' && (
                   <>
-                    Našemu oboru se věnujeme{' '}
-                    <span className='font-semibold'>již od roku 2000</span>,
-                    můžeme Vám zajistit kvalitu a poctivost
+                    V oboru
+                    <span className='font-semibold'> již od roku 2000</span>
                   </>
                 )}
                 {language === 'en' && (
                   <>
-                    We have been in business{' '}
-                    <span className='font-semibold'>since 2000</span>, we can
-                    assure you quality and honesty
+                    In the industry
+                    <span className='font-semibold'> since 2000</span>
                   </>
                 )}
                 {language === 'de' && (
                   <>
-                    Wir sind <span className='font-semibold'>seit 2000</span> im
-                    Geschäft und können Ihnen Qualität und Ehrlichkeit
-                    versichern.
+                    <span className='font-semibold'>seit 2000</span> in der
+                    Branche tätig
                   </>
                 )}
               </motion.h2>
@@ -97,13 +92,13 @@ const Hero = () => {
                   className='relative group'
                 >
                   <Image
-                    src='/hen/green.png'
-                    width={300}
-                    height={300}
+                    src={currentHenSrc}
+                    width={500}
+                    height={500}
                     alt='hen'
-                    className='min-h-full w-[130px] md:w-[200px] group-hover:scale-105 group-hover:rotate-12 transition'
+                    className='min-h-full w-[230px] md:w-[300px] xl:w-[350px] group-hover:scale-105 group-hover:rotate-12 transition'
                   />
-                  <p className='absolute top-1/2 left-1/2 translate-x-[-40%] translate-y-[-60%] transition'>
+                  <p className='absolute bg-green rounded-md p-2 top-1/2 left-1/2 translate-x-[-60%] translate-y-[-50%] transition group-hover:scale-[99%] group-hover:rotate-12'>
                     E-SHOP
                   </p>
                 </motion.div>
