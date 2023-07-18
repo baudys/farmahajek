@@ -5,8 +5,11 @@ import Container from '@/components/Container'
 import Map from '@/components/contact/Map'
 import React from 'react'
 import { motion } from 'framer-motion'
+import { useLanguage } from '@/hooks/useLanguage'
 
 const KontaktPage = () => {
+  const { language } = useLanguage(state => state)
+
   return (
     <div className='py-28 bg-brown'>
       <Container>
@@ -17,7 +20,9 @@ const KontaktPage = () => {
               animate={{ y: 0, opacity: 1 }}
             >
               <h2 className='text-white font-bold text-4xl uppercase'>
-                kontaktujte nás
+                {language === 'cs' && <>kontaktujte nás</>}
+                {language === 'en' && <>contact us</>}
+                {language === 'de' && <>Kontaktieren Sie uns</>}
               </h2>
             </motion.div>
             <motion.div
@@ -25,8 +30,24 @@ const KontaktPage = () => {
               animate={{ y: 0, opacity: 1 }}
             >
               <p className='text-white font-medium mb-8'>
-                Neváhejte a ptejte se nás na otázky kolem farmy, slepiček,
-                techniky, či čehokoliv jiného vás napadne
+                {language === 'cs' && (
+                  <>
+                    Neváhejte a ptejte se nás na otázky kolem farmy, slepiček,
+                    techniky, či čehokoliv jiného vás napadne
+                  </>
+                )}
+                {language === 'en' && (
+                  <>
+                    Feel free to ask us questions about the farm, the chickens,
+                    technology, or anything else you can think of
+                  </>
+                )}
+                {language === 'de' && (
+                  <>
+                    Sie können uns gerne Fragen über den Hof, die Hühner, die
+                    Technik Technik oder was Ihnen sonst noch einfällt
+                  </>
+                )}
               </p>
             </motion.div>
             <motion.div
