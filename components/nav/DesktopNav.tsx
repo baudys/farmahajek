@@ -91,13 +91,22 @@ const DesktopNav: React.FC<DesktopNavProps> = ({ isTopOfPage }) => {
                   isTopOfPage ? 'text-white' : 'text-brown'
                 }`}
               >
-                <option value='cs' className='cursor-pointer'>
+                <option
+                  value='cs'
+                  className='cursor-pointer bg-black checked:bg-zinc-900'
+                >
                   🇨🇿
                 </option>
-                <option value='en' className='cursor-pointer'>
+                <option
+                  value='en'
+                  className='cursor-pointer bg-black checked:bg-zinc-900'
+                >
                   🇬🇧
                 </option>
-                <option value='de' className='cursor-pointer'>
+                <option
+                  value='de'
+                  className='cursor-pointer bg-black checked:bg-zinc-900'
+                >
                   🇩🇪
                 </option>
               </select>
