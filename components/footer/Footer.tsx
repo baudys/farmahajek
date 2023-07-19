@@ -233,15 +233,22 @@ const Footer = () => {
         </Fade>
 
         <Fade bottom>
-          <p className='text-center text-light text-xs md:text-base mt-12 sm:mt-4'>
-            &copy;{new Date().getFullYear()}{' '}
-            <Link href='<https://github.com/ton1czech>' className='underline'>
-              Daniel Anthony Baudyš.
-            </Link>
-            {language === 'cs' && <> Všechna práva vyhrazena.</>}
-            {language === 'en' && <> All rights reserved.</>}
-            {language === 'de' && <> Alle Rechte vorbehalten.</>}
-          </p>
+          <div className='flex flex-col lg:flex-row justify-center gap-20'>
+            <p className='text-center text-light text-xs md:text-base mt-12 sm:mt-4'>
+              &copy;{new Date().getFullYear()} Farmahájek.
+              {language === 'cs' && <> Všechna práva vyhrazena.</>}
+              {language === 'en' && <> All rights reserved.</>}
+              {language === 'de' && <> Alle Rechte vorbehalten.</>}
+            </p>
+            <p className='text-center text-light text-xs md:text-base mt-12 sm:mt-4 bg-brown text-green px-2 py-1 rounded-md'>
+              {language === 'cs' && <>Vytvořil </>}
+              {language === 'en' && <>Created by </>}
+              {language === 'de' && <>Erstellt von </>}
+              <Link href='<https://github.com/ton1czech>' className='underline'>
+                Daniel Anthony Baudyš.
+              </Link>
+            </p>
+          </div>
         </Fade>
       </Container>
     </footer>
