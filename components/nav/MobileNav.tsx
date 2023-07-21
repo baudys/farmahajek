@@ -15,6 +15,7 @@ import { FaFacebook } from 'react-icons/fa'
 import { useState } from 'react'
 import { useLanguage } from '@/hooks/useLanguage'
 import { motion } from 'framer-motion'
+import LanguageSelector from './LanguageSelector'
 
 interface MobileNavProps {
   isTopOfPage: boolean
@@ -22,7 +23,7 @@ interface MobileNavProps {
 
 const MobileNav: React.FC<MobileNavProps> = ({ isTopOfPage }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false)
-  const { language, setLanguage } = useLanguage(state => state)
+  const { language } = useLanguage(state => state)
 
   const handleOpen = () => {
     setIsOpen(true)
@@ -34,10 +35,6 @@ const MobileNav: React.FC<MobileNavProps> = ({ isTopOfPage }) => {
 
   const handleClick = () => {
     setIsOpen(false)
-  }
-
-  const handleChange = (e: any) => {
-    setLanguage(e.target.value)
   }
 
   return (
@@ -66,25 +63,9 @@ const MobileNav: React.FC<MobileNavProps> = ({ isTopOfPage }) => {
           </motion.div>
 
           <div className='flex items-center'>
-            <motion.select
-              initial={{ x: -100, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              value={language}
-              onChange={handleChange}
-              className={`mr-6 bg-transparent text-2xl cursor-pointer ${
-                isTopOfPage ? 'text-white' : 'text-brown'
-              }`}
-            >
-              <option value='cs' className='cursor-pointer'>
-                🇨🇿
-              </option>
-              <option value='en' className='cursor-pointer'>
-                🇬🇧
-              </option>
-              <option value='de' className='cursor-pointer'>
-                🇩🇪
-              </option>
-            </motion.select>
+            <div className='mr-5'>
+              <LanguageSelector />
+            </div>
 
             <motion.div
               initial={{ y: 100, opacity: 0 }}

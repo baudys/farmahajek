@@ -10,17 +10,14 @@ import { IoLogoTiktok } from 'react-icons/io5'
 import { FaFacebook } from 'react-icons/fa'
 import { useLanguage } from '@/hooks/useLanguage'
 import { motion } from 'framer-motion'
+import LanguageSelector from './LanguageSelector'
 
 interface DesktopNavProps {
   isTopOfPage: boolean
 }
 
 const DesktopNav: React.FC<DesktopNavProps> = ({ isTopOfPage }) => {
-  const { language, setLanguage } = useLanguage(state => state)
-
-  const handleChange = (e: any) => {
-    setLanguage(e.target.value)
-  }
+  const { language } = useLanguage(state => state)
 
   return (
     <div
@@ -84,32 +81,7 @@ const DesktopNav: React.FC<DesktopNavProps> = ({ isTopOfPage }) => {
               animate={{ y: 0, opacity: 1 }}
               className='mr-6 cursor-pointer'
             >
-              <select
-                value={language}
-                onChange={handleChange}
-                className={`bg-transparent text-2xl cursor-pointer ${
-                  isTopOfPage ? 'text-white' : 'text-brown'
-                }`}
-              >
-                <option
-                  value='cs'
-                  className='cursor-pointer bg-black checked:bg-zinc-900'
-                >
-                  🇨🇿
-                </option>
-                <option
-                  value='en'
-                  className='cursor-pointer bg-black checked:bg-zinc-900'
-                >
-                  🇬🇧
-                </option>
-                <option
-                  value='de'
-                  className='cursor-pointer bg-black checked:bg-zinc-900'
-                >
-                  🇩🇪
-                </option>
-              </select>
+              <LanguageSelector />
             </motion.li>
             <NavLink
               href='https://eshop-farmahajek.vercel.app'

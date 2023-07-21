@@ -1,8 +1,8 @@
 import { create } from 'zustand'
 
 interface LanguageStore {
-  language: 'cs' | 'de' | 'en'
-  setLanguage: (value: 'cs' | 'de' | 'en') => void
+  language: string
+  setLanguage: (value: string) => void
 }
 
 export const useLanguage = create<LanguageStore>(set => ({
