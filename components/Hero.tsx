@@ -7,11 +7,8 @@ import { FaLongArrowAltDown } from 'react-icons/fa'
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 import { useLanguage } from '@/hooks/useLanguage'
-import { Lobster } from 'next/font/google'
 import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
-
-const lobster = Lobster({ subsets: ['latin'], weight: '400' })
 
 const Hero = () => {
   const router = useRouter()
@@ -47,7 +44,7 @@ const Hero = () => {
               <motion.h1
                 initial={{ y: -200, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
-                className={`text-white text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl mb-3 font-black uppercase text-center pt-1 ${lobster.className}`}
+                className={`text-white text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl mb-3 font-black uppercase text-center pt-1`}
               >
                 {language === 'cs' && <>Ryze čeští chovatelé a farmáři</>}
                 {language === 'en' && <>PURELY CZECH BREEDERS AND FARMERS</>}
