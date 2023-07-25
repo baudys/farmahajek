@@ -9,6 +9,7 @@ import {
 import 'react-vertical-timeline-component/style.min.css'
 import { useLanguage } from '@/hooks/useLanguage'
 import { timeline } from '@/database/timeline'
+import Image from 'next/image'
 
 interface CardProps {
   item: {
@@ -34,7 +35,7 @@ const Card: React.FC<CardProps> = ({ item }) => {
       contentArrowStyle={{ borderRight: '7px solid #BBD700' }}
       iconStyle={{ background: '#BBD700' }}
     >
-      <h1 className='font-bold text-brown uppercase text-2xl'>
+      <h1 className='text-2xl font-bold uppercase text-brown'>
         {language === 'cs' && <>{item.titlecs}</>}
         {language === 'en' && <>{item.titleen}</>}
         {language === 'de' && <>{item.titlede}</>}
@@ -44,9 +45,12 @@ const Card: React.FC<CardProps> = ({ item }) => {
         {language === 'en' && <>{item.texten}</>}
         {language === 'de' && <>{item.textde}</>}
       </p>
-      <img
-        className='mt-4 max-h-52 lg:max-h-72 w-auto mx-auto'
+      <Image
         src={item.photo}
+        className='mx-auto mt-4 max-h-52 lg:max-h-72'
+        alt={item.titlecs}
+        width={500}
+        height={500}
       />
     </VerticalTimelineElement>
   )
