@@ -53,8 +53,7 @@ const Newsletter = () => {
           name='EMAIL'
           id='mce-EMAIL'
           required
-          value={value}
-          onChange={onChange}
+          defaultValue={value}
         />
         <div
           aria-hidden='true'
