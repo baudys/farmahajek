@@ -1,3 +1,5 @@
+'use client'
+
 import { create } from 'zustand'
 import { persist, createJSONStorage } from 'zustand/middleware'
 
@@ -10,7 +12,10 @@ interface LanguageStore {
 export const useLanguage = create(
   persist<LanguageStore>(
     set => ({
-      language: localStorage.getItem('language-storage') || 'cs',
+      language:
+        typeof localStorage !== 'undefined'
+          ? localStorage.getItem('language-storage') || 'cs'
+          : 'cs',
       imgSrc: lang => `/flags/${lang}.png`,
       setLanguage: value => {
         set({ language: value })

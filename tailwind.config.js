@@ -75,8 +75,6 @@ module.exports = {
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
-        'scroll-slow': 'scroll 20s linear infinite',
-        'scroll-fast': 'scroll 10s linear infinite',
       },
       screens: {
         '2xl': '1560px',
