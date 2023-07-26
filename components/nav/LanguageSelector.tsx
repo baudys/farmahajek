@@ -44,12 +44,12 @@ const LanguageSelector = () => {
           className='w-[70px] justify-between bg-transparent text-white border-none hover:bg-zinc-100/10 hover:text-white'
         >
           <Image src={src} width={30} height={30} alt={language} />
-          <ChevronsUpDown className='ml-2 h-4 w-4 shrink-0 opacity-50' />
+          <ChevronsUpDown className='w-4 h-4 ml-2 opacity-50 shrink-0' />
         </Button>
       </PopoverTrigger>
       <PopoverContent className='w-[100px] p-2 z-[1112] bg-zinc-300'>
         <Command>
-          <CommandGroup className='bg-zinc-300'>
+          <CommandGroup className='space-y-2 bg-zinc-300'>
             {languages.map(({ src, value }: { src: string; value: string }) => (
               <CommandItem
                 key={value}
@@ -58,7 +58,7 @@ const LanguageSelector = () => {
                   setSrc(src)
                   setOpen(false)
                 }}
-                className='cursor-pointer hover:bg-zinc-400/30'
+                className='mb-2 cursor-pointer hover:bg-zinc-400/30'
               >
                 <Check
                   className={cn(
