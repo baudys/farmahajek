@@ -16,6 +16,14 @@ L.Icon.Default.mergeOptions({
   shadowUrl: markerShadow.src,
 })
 
+const createEmojiIcon = (emoji: string) => {
+  const iconHTML = `<div class="text-4xl">${emoji}</div>`
+  return L.divIcon({
+    html: iconHTML,
+    className: 'custom-icon',
+  })
+}
+
 const Map = () => {
   const isDesktop = useMediaQuery('(min-width: 700px)')
 
@@ -29,6 +37,7 @@ const Map = () => {
       <TileLayer url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png' />
       <Marker
         position={[49.355362810666996, 13.004856931980328]}
+        icon={createEmojiIcon('🧑‍🌾')}
         eventHandlers={{
           mouseover: event => event.target.openPopup(),
           mouseout: event => event.target.closePopup(),
