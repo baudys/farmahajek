@@ -1,3 +1,5 @@
+'use client'
+
 import { useLanguage } from '@/hooks/useLanguage'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'

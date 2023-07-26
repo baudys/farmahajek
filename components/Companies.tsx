@@ -1,6 +1,5 @@
 'use client'
 
-import Link from 'next/link'
 import Container from './Container'
 import { useLanguage } from '@/hooks/useLanguage'
 import { motion } from 'framer-motion'

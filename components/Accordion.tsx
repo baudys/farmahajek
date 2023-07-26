@@ -1,3 +1,5 @@
+'use client'
+
 import { useLanguage } from '@/hooks/useLanguage'
 import { TbHandClick } from 'react-icons/tb'
 

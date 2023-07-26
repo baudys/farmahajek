@@ -65,7 +65,7 @@ const Newsletter = () => {
             type='text'
             name='b_4f24db18e7450d7f4259c5da5_f24627c63d'
             tabIndex={-1}
-            value=''
+            defaultValue=''
           />
         </div>
         <button

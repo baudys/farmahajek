@@ -8,12 +8,18 @@ import ToasterProvider from '@/providers/ToasterProvider'
 const montserrat = Montserrat({ subsets: ['latin'] })
 
 export const metadata = {
+  metadataBase: new URL('https://farmahajek.cz'),
   title: 'Farma Hájek 🐔',
   description: 'Rodinná farma již od roku 2000.',
   icons: {
     icon: 'favicon.ico',
   },
   applicationName: 'Farma Hájek',
+  languages: {
+    'cz-CS': '/',
+    'en-US': '/',
+    'de-DE': '/',
+  },
   authors: [
     { name: 'Daniel Anthony Baudyš', url: 'https://github.com/ton1czech' },
   ],
