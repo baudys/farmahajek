@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
 import emailjs from '@emailjs/browser'
+import { toast } from 'react-hot-toast'
 
 const schema = z.object({
   name: z.string().min(1),
@@ -32,8 +33,11 @@ const ContactUs = () => {
       )
 
       console.log(emailResponse)
+      toast.success('Odeslání proběhlo úspěšně.')
     } catch (error) {
       console.log('Error sending email:', error)
+      toast.error('Něco se pokazilo, zkuste to prosím později.')
+    } finally {
       reset()
     }
   }

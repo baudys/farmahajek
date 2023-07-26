@@ -35,9 +35,9 @@ const Newsletter = () => {
         id='mc-embedded-subscribe-form'
         name='mc-embedded-subscribe-form'
         target='_blank'
-        className='flex flex-col lg:flex-row items-center lg:justify-center lg:gap-4 h-full w-full relative'
+        className='relative flex flex-col items-center w-full h-full lg:flex-row lg:justify-center lg:gap-4'
       >
-        <h4 className='uppercase mt-8 mb-3 lg:my-0 lg:mr-32'>
+        <h4 className='mt-8 mb-3 uppercase lg:my-0 lg:mr-32'>
           {language === 'cs' && <>chcete odebírat novinky?</>}
           {language === 'en' && (
             <>Would you like to subscribe to the newsletter?</>
@@ -75,7 +75,7 @@ const Newsletter = () => {
           id='mc-embedded-subscribe'
           value='Subscribe'
           onClick={() => setIsOpen(false)}
-          className='py-1 px-1 my-4 lg:m-0 rounded-md uppercase text-lg border-2 border-brown font-semibold  hover:bg-brown text-brown hover:text-white transition duration-300'
+          className='px-1 py-1 my-4 text-lg font-semibold uppercase transition duration-300 border-2 rounded-md lg:m-0 border-brown hover:bg-brown text-brown hover:text-white'
         >
           {language === 'cs' && <>potvrdit!</>}
           {language === 'en' && <>confirm!</>}
