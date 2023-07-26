@@ -35,10 +35,26 @@ const ContactUs = () => {
       )
 
       console.log(emailResponse)
-      toast.success('Odeslání proběhlo úspěšně.')
+      toast.success(
+        language === 'cs'
+          ? 'Úspěšně odesláno.'
+          : language === 'en'
+          ? 'Sent Successfully.'
+          : language === 'de'
+          ? 'Erfolgreich gesendet.'
+          : ''
+      )
     } catch (error) {
       console.log('Error sending email:', error)
-      toast.error('Něco se pokazilo, zkuste to prosím později.')
+      toast.error(
+        language === 'cs'
+          ? 'Něco se pokazilo, zkuste to prosím později.'
+          : language === 'en'
+          ? 'Something went wrong, please try again later.'
+          : language === 'de'
+          ? 'Es ist ein Fehler aufgetreten, bitte versuchen Sie es später noch einmal.'
+          : ''
+      )
     } finally {
       reset()
     }
