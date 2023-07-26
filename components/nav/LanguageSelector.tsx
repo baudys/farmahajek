@@ -29,10 +29,9 @@ const languages = [
 ]
 
 const LanguageSelector = () => {
-  const { language, setLanguage } = useLanguage(state => state)
+  const { language, imgSrc, setLanguage } = useLanguage(state => state)
 
   const [open, setOpen] = useState<boolean>(false)
-  const [src, setSrc] = useState<string>('/flags/cz.png')
 
   return (
     <Popover open={open} onOpenChange={setOpen}>
@@ -43,7 +42,7 @@ const LanguageSelector = () => {
           aria-expanded={open}
           className='w-[70px] justify-between bg-transparent text-white border-none hover:bg-zinc-100/10 hover:text-white'
         >
-          <Image src={src} width={30} height={30} alt={language} />
+          <Image src={imgSrc(language)} width={30} height={30} alt={language} />
           <ChevronsUpDown className='w-4 h-4 ml-2 opacity-50 shrink-0' />
         </Button>
       </PopoverTrigger>
@@ -55,7 +54,6 @@ const LanguageSelector = () => {
                 key={value}
                 onSelect={() => {
                   setLanguage(value)
-                  setSrc(src)
                   setOpen(false)
                 }}
                 className='mb-2 cursor-pointer hover:bg-zinc-400/30'
