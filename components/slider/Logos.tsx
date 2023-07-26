@@ -13,7 +13,6 @@ const Logos: React.FC = () => (
         src='/obchody/ecofeed.png'
         width={150}
         height={150}
-        objectFit='contain'
         alt='Shopify'
       />
     </SliderItem>
@@ -25,7 +24,6 @@ const Logos: React.FC = () => (
         src='/obchody/kvidera.png'
         width={150}
         height={150}
-        objectFit='contain'
         alt='Coinbase'
       />
     </SliderItem>
@@ -42,7 +40,6 @@ const Logos: React.FC = () => (
         src='/obchody/vicenice.png'
         width={150}
         height={150}
-        objectFit='contain'
         alt='Rainbow'
       />
     </SliderItem>
@@ -59,7 +56,6 @@ const Logos: React.FC = () => (
         src='/obchody/zod-mrakov.png'
         width={100}
         height={100}
-        objectFit='contain'
         alt='Redbull'
       />
     </SliderItem>
