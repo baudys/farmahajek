@@ -9,7 +9,7 @@ const montserrat = Montserrat({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Farma Hájek 🐔',
-  description: '',
+  description: 'Rodinná farma již od roku 2000.',
   icons: {
     icon: 'favicon.ico',
   },
