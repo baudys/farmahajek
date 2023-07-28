@@ -30,7 +30,7 @@ const Newsletter = () => {
       }`}
     >
       <form
-        action='https://gmail.us21.list-manage.com/subscribe/post?u=4f24db18e7450d7f4259c5da5&amp;id=f24627c63d&amp;f_id=00915fe1f0'
+        action='https://gmail.us10.list-manage.com/subscribe/post?u=795e0d434ac0487dfca82ea10&amp;id=49d9d1e3f3&amp;f_id=000cbee5f0'
         method='post'
         id='mc-embedded-subscribe-form'
         name='mc-embedded-subscribe-form'
