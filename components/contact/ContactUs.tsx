@@ -80,7 +80,13 @@ const ContactUs = () => {
         {...register('name')}
         className='rounded-md py-1.5 px-1 text-zinc-900 placeholder:text-zinc-500 shadow-sm sm:text-sm sm:leading-6 focus:outline-none focus:bg-zinc-100'
       />
-      {errors.name && <div className='text-red-500'>Zadejte vaše jméno</div>}
+      {errors.name && (
+        <div className='text-red-500'>
+          {language === 'cs' && <>Zadejte vaše jméno</>}
+          {language === 'en' && <>Enter your name</>}
+          {language === 'de' && <>Geben Sie Ihren Namen ein</>}
+        </div>
+      )}
       <input
         id='email'
         placeholder='E-mail'
@@ -88,7 +94,13 @@ const ContactUs = () => {
         {...register('email')}
         className='rounded-md py-1.5 px-1 text-zinc-900 placeholder:text-zinc-500 shadow-sm sm:text-sm sm:leading-6 focus:outline-none focus:bg-zinc-100'
       />
-      {errors.email && <div className='text-red-500'>Neplatný E-mail</div>}
+      {errors.email && (
+        <div className='text-red-500'>
+          {language === 'cs' && <>Neplatný E-mail</>}
+          {language === 'en' && <>Invalid E-mail</>}
+          {language === 'de' && <>Ungültige E-Mail</>}
+        </div>
+      )}
       <textarea
         id='message'
         placeholder={
@@ -105,7 +117,13 @@ const ContactUs = () => {
         {...register('message')}
         className='rounded-md py-1.5 px-1 text-zinc-900 resize-none focus:outline-none focus:bg-zinc-100 transition placeholder:text-zinc-500'
       />
-      {errors.message && <div className='text-red-500'>Zadejte zprávu</div>}
+      {errors.message && (
+        <div className='text-red-500'>
+          {language === 'cs' && <>Zadejte zprávu</>}
+          {language === 'en' && <>Enter message</>}
+          {language === 'de' && <>Nachricht eingeben</>}
+        </div>
+      )}
       <button className='bg-green p-2 rounded-md placeholder:text-zinc-500 hover:scale-[99%] text-lg font-semibold transition'>
         {language === 'cs' && <> ODESLAT!</>}
         {language === 'en' && <> SEND!</>}
