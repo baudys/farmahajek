@@ -4,6 +4,7 @@ import Newsletter from '@/components/Newsletter'
 import Footer from '@/components/footer/Footer'
 import Navbar from '@/components/nav/Navbar'
 import ToasterProvider from '@/providers/ToasterProvider'
+import { Analytics } from '@vercel/analytics/react'
 
 const montserrat = Montserrat({ subsets: ['latin'] })
 
@@ -69,6 +70,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={montserrat.className}>
+        <Analytics />
         <ToasterProvider />
         <Navbar />
         <Newsletter />
