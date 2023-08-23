@@ -31,27 +31,35 @@ const Card: React.FC<CardProps> = ({ item }) => {
         background: '#BBD700',
         border: 'none',
         boxShadow: 'none',
+        padding: 0,
+        borderRadius: '20px 20px 0 0',
+        height: '300px',
       }}
       contentArrowStyle={{ borderRight: '7px solid #BBD700' }}
       iconStyle={{ background: '#BBD700' }}
+      className='relative h-[400px]'
     >
-      <h1 className='text-2xl font-bold uppercase text-brown'>
-        {language === 'cs' && <>{item.titlecs}</>}
-        {language === 'en' && <>{item.titleen}</>}
-        {language === 'de' && <>{item.titlede}</>}
-      </h1>
-      <p className='text-brown/80 !leading-5 !text-base'>
-        {language === 'cs' && <>{item.textcs}</>}
-        {language === 'en' && <>{item.texten}</>}
-        {language === 'de' && <>{item.textde}</>}
-      </p>
-      <Image
-        src={item.photo}
-        className='mx-auto mt-4 max-h-52 lg:max-h-72'
-        alt={item.titlecs}
-        width={500}
-        height={500}
-      />
+      <div className='bg-[url(/textures/grass.webp)] rounded-[20px] relative'>
+        <div className='p-3 bg-green/70 rounded-t-[20px]'>
+          <h1 className='text-2xl font-bold uppercase text-brown'>
+            {language === 'cs' && <>{item.titlecs}</>}
+            {language === 'en' && <>{item.titleen}</>}
+            {language === 'de' && <>{item.titlede}</>}
+          </h1>
+          <p className='text-brown/80 !leading-5 !text-base'>
+            {language === 'cs' && <>{item.textcs}</>}
+            {language === 'en' && <>{item.texten}</>}
+            {language === 'de' && <>{item.textde}</>}
+          </p>
+        </div>
+        <Image
+          src={item.photo}
+          className='w-full max-h-52 lg:max-h-72'
+          alt={item.titlecs}
+          width={500}
+          height={500}
+        />
+      </div>
     </VerticalTimelineElement>
   )
 }
@@ -64,7 +72,11 @@ const Timeline = () => {
   }, [])
 
   return (
-    <div className='bg-brown' id='timeline'>
+    <div
+      className='bg-[url(/textures/soil.webp)] bg-cover relative'
+      id='timeline'
+    >
+      <div className='absolute top-0 left-0 w-full h-full bg-brown/70' />
       <Container>
         <VerticalTimeline
           lineColor='#BBD700'
