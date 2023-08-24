@@ -112,7 +112,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ isTopOfPage }) => {
                   handleClick={handleClick}
                 />
                 <NavLink
-                  href='/eshop'
+                  href='https://eshop-farmahajek.cz'
                   label='E-Shop'
                   isTopOfPage={isTopOfPage}
                   handleClick={handleClick}

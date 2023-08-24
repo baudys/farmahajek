@@ -84,7 +84,7 @@ const DesktopNav: React.FC<DesktopNavProps> = ({ isTopOfPage }) => {
               <LanguageSelector />
             </motion.li>
             <NavLink
-              href='https://eshop-farmahajek.vercel.app'
+              href='https://eshop-farmahajek.cz'
               label='E-Shop'
               isTopOfPage={isTopOfPage}
             />
