@@ -19,6 +19,8 @@ const SluzbyPage = () => {
     handleZemniprace,
     zemedelstvi,
     handleZemedelstvi,
+    brambory,
+    handleBrambory,
   } = useService(state => state)
 
   const { language } = useLanguage(state => state)
@@ -191,9 +193,67 @@ const SluzbyPage = () => {
         </motion.div>
 
         <motion.div
-          initial={{ x: -500, opacity: 0 }}
+          initial={{ x: 500, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ delay: 0.4 }}
+        >
+          <Accordion
+            src='bg-[url(/sluzby/brambory.jpg)]'
+            isOpen={brambory}
+            handleToggle={handleBrambory}
+            title={
+              language === 'cs'
+                ? 'Prodej brambor'
+                : language === 'en'
+                ? 'sale of potatoes'
+                : language === 'de'
+                ? 'Verkauf von Kartoffeln'
+                : ''
+            }
+          >
+            {language === 'cs' && (
+              <>
+                <p>
+                  Možnost nakoupit v našem samooblužném obchůdku. Otevřeno 24
+                  hodin, 7 dní v týdnu.
+                </p>
+                <p>Brambory jsou 100% české. Vypěstované v okolí farmy.</p>
+              </>
+            )}
+            {language === 'en' && (
+              <>
+                <p>
+                  You can buy in our self-service shop. Open 24 hours hours, 7
+                  days a week.
+                </p>
+                <p>The potatoes are 100% Czech. Grown around the farm.</p>
+              </>
+            )}
+            {language === 'de' && (
+              <>
+                <p>
+                  Sie können in unserem Selbstbedienungsladen einkaufen.
+                  Geöffnet 24 Stunden, 7 Tage die Woche.
+                </p>
+                <p>
+                  Die Kartoffeln sind 100% tschechisch. Sie werden rund um den
+                  Bauernhof angebaut.
+                </p>
+              </>
+            )}
+            <Image
+              src='/gallery/9.jpg'
+              alt='brambory'
+              width={600}
+              height={200}
+            />
+          </Accordion>
+        </motion.div>
+
+        <motion.div
+          initial={{ x: -500, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ delay: 0.6 }}
         >
           <Accordion
             src='bg-[url(/sluzby/zahradnictvi.jpg)]'
@@ -247,7 +307,7 @@ const SluzbyPage = () => {
         <motion.div
           initial={{ x: 500, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
-          transition={{ delay: 0.6 }}
+          transition={{ delay: 0.8 }}
         >
           <Accordion
             src='bg-[url(/sluzby/zemni-prace.jpeg)]'
@@ -344,7 +404,7 @@ const SluzbyPage = () => {
         <motion.div
           initial={{ x: -500, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
-          transition={{ delay: 0.8 }}
+          transition={{ delay: 1 }}
         >
           <Accordion
             src='bg-[url(/sluzby/zemedelstvi.jpg)]'

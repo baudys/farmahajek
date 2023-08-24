@@ -7,6 +7,9 @@ interface ServiceStore {
   vejce: boolean
   handleVejce: () => void
 
+  brambory: boolean
+  handleBrambory: () => void
+
   zahradnictvi: boolean
   handleZahradnictvi: () => void
 
@@ -23,6 +26,9 @@ export const useService = create<ServiceStore>(set => ({
 
   vejce: false,
   handleVejce: () => set(state => ({ vejce: !state.vejce })),
+
+  brambory: false,
+  handleBrambory: () => set(state => ({ brambory: !state.brambory })),
 
   zahradnictvi: false,
   handleZahradnictvi: () =>
