@@ -10,7 +10,7 @@ const Logos: React.FC = () => (
   >
     <SliderItem width={300} href='https://krmiva-ecofeed.cz/'>
       <Image
-        src='/obchody/ecofeed.png'
+        src='/obchody/ecofeed.webp'
         width={150}
         height={150}
         alt='Shopify'
@@ -21,7 +21,7 @@ const Logos: React.FC = () => (
     </SliderItem>
     <SliderItem width={300} href='https://www.krmnesmesikvidera.cz/'>
       <Image
-        src='/obchody/kvidera.png'
+        src='/obchody/kvidera.webp'
         width={150}
         height={150}
         alt='Coinbase'
@@ -37,7 +37,7 @@ const Logos: React.FC = () => (
     </SliderItem>
     <SliderItem width={300} href='https://www.farmavicenice.cz/'>
       <Image
-        src='/obchody/vicenice.png'
+        src='/obchody/vicenice.webp'
         width={150}
         height={150}
         alt='Rainbow'
@@ -53,7 +53,7 @@ const Logos: React.FC = () => (
     </SliderItem>
     <SliderItem width={300} href='https://zodmrakov.cz/'>
       <Image
-        src='/obchody/zod-mrakov.png'
+        src='/obchody/zod-mrakov.webp'
         width={100}
         height={100}
         alt='Redbull'
