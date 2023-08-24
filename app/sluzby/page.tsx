@@ -219,6 +219,10 @@ const SluzbyPage = () => {
                   hodin, 7 dní v týdnu.
                 </p>
                 <p>Brambory jsou 100% české. Vypěstované v okolí farmy.</p>
+                <p>
+                  V případě dotazů volejte na číslo{' '}
+                  <span className='font-bold'>+420 720 566 212</span>
+                </p>
               </>
             )}
             {language === 'en' && (
@@ -228,6 +232,10 @@ const SluzbyPage = () => {
                   days a week.
                 </p>
                 <p>The potatoes are 100% Czech. Grown around the farm.</p>
+                <p>
+                  If you have any questions, please call{' '}
+                  <span className='font-bold'>+420 720 566 212</span>
+                </p>
               </>
             )}
             {language === 'de' && (
@@ -240,10 +248,14 @@ const SluzbyPage = () => {
                   Die Kartoffeln sind 100% tschechisch. Sie werden rund um den
                   Bauernhof angebaut.
                 </p>
+                <p>
+                  Wenn Sie Fragen haben, rufen Sie bitte an{' '}
+                  <span className='font-bold'>+420 720 566 212</span>
+                </p>
               </>
             )}
             <Image
-              src='/gallery/9.jpg'
+              src='/gallery/9.webp'
               alt='brambory'
               width={600}
               height={200}
