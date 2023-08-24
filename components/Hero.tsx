@@ -15,9 +15,9 @@ const Hero = () => {
   const { language } = useLanguage(state => state)
 
   const henSrcs = [
-    '/slepicky/D109.png',
-    '/slepicky/D159.png',
-    '/slepicky/D853.png',
+    '/slepicky/D109.webp',
+    '/slepicky/D159.webp',
+    '/slepicky/D853.webp',
   ]
 
   const [currentHenIndex, setCurrentHenIndex] = useState(0)
@@ -38,9 +38,9 @@ const Hero = () => {
       <div className='sticky top-0 flex h-[90vh] lg:min-h-screen'>
         <Video />
 
-        <div className='absolute bg-black/60 top-0 left-0 w-full h-full flex pt-32 lg:pt-0 lg:items-center lg:justify-center'>
+        <div className='absolute top-0 left-0 flex w-full h-full pt-32 bg-black/60 lg:pt-0 lg:items-center lg:justify-center'>
           <Container>
-            <div className='flex flex-col justify-center items-center p-1'>
+            <div className='flex flex-col items-center justify-center p-1'>
               <motion.h1
                 initial={{ y: -200, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
@@ -56,7 +56,7 @@ const Hero = () => {
               <motion.h2
                 initial={{ x: -50, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
-                className='text-zinc-300 text-lg xl:text-xl text-center lg:text-right w-full font-light mb-12 2xl:mb-28'
+                className='w-full mb-12 text-lg font-light text-center text-zinc-300 xl:text-xl lg:text-right 2xl:mb-28'
               >
                 {language === 'cs' && (
                   <>
@@ -81,7 +81,7 @@ const Hero = () => {
               <Link
                 href='https://eshop-farmahajek.vercel.app'
                 target='_blank'
-                className='text-brown font-bold lg:text-xl xl:text-2xl mt-4 xl:mt-0 xl:pb-6 cursor-pointer'
+                className='mt-4 font-bold cursor-pointer text-brown lg:text-xl xl:text-2xl xl:mt-0 xl:pb-6'
               >
                 <motion.div
                   initial={{ scale: '25%', opacity: 0 }}
@@ -103,10 +103,10 @@ const Hero = () => {
               <motion.div
                 initial={{ y: 50, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
-                className='flex flex-col bottom-5 absolute items-center cursor-pointer'
+                className='absolute flex flex-col items-center cursor-pointer bottom-5'
                 onClick={() => router.push('#timeline')}
               >
-                <h3 className='xl:text-lg text-white pb-2'>
+                <h3 className='pb-2 text-white xl:text-lg'>
                   {language === 'cs' && <>zkoukni životní cestu slepičky</>}
                   {language === 'en' && (
                     <>explore the life journey of a chicken</>
