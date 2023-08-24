@@ -79,7 +79,7 @@ const Hero = () => {
               </motion.h2>
 
               <Link
-                href='https://eshop-farmahajek.vercel.app'
+                href='https://eshop-farmahajek.cz'
                 target='_blank'
                 className='mt-4 font-bold cursor-pointer text-brown lg:text-xl xl:text-2xl xl:mt-0 xl:pb-6'
               >
