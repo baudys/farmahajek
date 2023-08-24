@@ -29,14 +29,14 @@ const DesktopNav: React.FC<DesktopNavProps> = ({ isTopOfPage }) => {
       }`}
     >
       <Container>
-        <div className='grid grid-cols-3 justify-between items-center'>
+        <div className='grid items-center justify-between grid-cols-3'>
           <motion.div
             initial={{ x: -200, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
           >
             <Link href='/'>
               <Image
-                src={`${isTopOfPage ? '/logo/3.png' : '/logo/2.png'}`}
+                src={`${isTopOfPage ? '/logo/3.webp' : '/logo/2.webp'}`}
                 width={130}
                 height={130}
                 alt='logo'
@@ -47,7 +47,7 @@ const DesktopNav: React.FC<DesktopNavProps> = ({ isTopOfPage }) => {
           <motion.ul
             initial={{ y: -200, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            className='flex gap-3 text-lg uppercase font-medium xl:place-content-start 2xl:place-content-center'
+            className='flex gap-3 text-lg font-medium uppercase xl:place-content-start 2xl:place-content-center'
           >
             <NavIcon
               href='https://www.instagram.com/farmahajek/'
@@ -74,7 +74,7 @@ const DesktopNav: React.FC<DesktopNavProps> = ({ isTopOfPage }) => {
           <motion.ul
             initial={{ x: 400, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            className='flex gap-3 text-lg uppercase font-medium items-center justify-self-end'
+            className='flex items-center gap-3 text-lg font-medium uppercase justify-self-end'
           >
             <motion.li
               initial={{ y: 200, opacity: 0 }}

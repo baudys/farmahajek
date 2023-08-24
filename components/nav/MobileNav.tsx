@@ -47,14 +47,14 @@ const MobileNav: React.FC<MobileNavProps> = ({ isTopOfPage }) => {
       }`}
     >
       <Container>
-        <div className='flex justify-between items-center'>
+        <div className='flex items-center justify-between'>
           <motion.div
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
           >
             <Link href='/'>
               <Image
-                src={`${isTopOfPage ? '/logo/3.png' : '/logo/2.png'}`}
+                src={`${isTopOfPage ? '/logo/3.webp' : '/logo/2.webp'}`}
                 width={115}
                 height={115}
                 alt='logo'
@@ -86,7 +86,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ isTopOfPage }) => {
                 animate={{ x: 0, y: 0, opacity: 1 }}
               >
                 <AiOutlineClose
-                  className='text-white absolute right-3 top-3'
+                  className='absolute text-white right-3 top-3'
                   onClick={handleClose}
                   size={40}
                 />
@@ -95,7 +95,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ isTopOfPage }) => {
               <motion.ul
                 initial={{ y: -100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
-                className='grid gap-4 text-2xl uppercase font-medium mt-52 text-center'
+                className='grid gap-4 text-2xl font-medium text-center uppercase mt-52'
               >
                 <NavLink
                   href='/'
