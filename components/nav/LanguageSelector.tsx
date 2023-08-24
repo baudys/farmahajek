@@ -16,15 +16,15 @@ import { useLanguage } from '@/hooks/useLanguage'
 const languages = [
   {
     value: 'cs',
-    src: '/flags/cs.png',
+    src: '/flags/cs.webp',
   },
   {
     value: 'en',
-    src: '/flags/en.png',
+    src: '/flags/en.webp',
   },
   {
     value: 'de',
-    src: '/flags/de.png',
+    src: '/flags/de.webp',
   },
 ]
 
