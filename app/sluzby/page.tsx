@@ -34,7 +34,7 @@ const SluzbyPage = () => {
           animate={{ x: 0, opacity: 1 }}
         >
           <Accordion
-            src='bg-[url(/sluzby/drubezarna.jpg)]'
+            src='bg-[url(/sluzby/drubezarna.webp)]'
             isOpen={drubezarna}
             handleToggle={handleDrubezarna}
             title={
@@ -125,7 +125,7 @@ const SluzbyPage = () => {
           transition={{ delay: 0.2 }}
         >
           <Accordion
-            src='bg-[url(/sluzby/vejce.jpg)]'
+            src='bg-[url(/sluzby/vejce.webp)]'
             isOpen={vejce}
             handleToggle={handleVejce}
             title={
@@ -189,6 +189,7 @@ const SluzbyPage = () => {
                 </p>
               </>
             )}
+            g
           </Accordion>
         </motion.div>
 
@@ -198,7 +199,7 @@ const SluzbyPage = () => {
           transition={{ delay: 0.4 }}
         >
           <Accordion
-            src='bg-[url(/sluzby/brambory.jpg)]'
+            src='bg-[url(/sluzby/brambory.webp)]'
             isOpen={brambory}
             handleToggle={handleBrambory}
             title={
@@ -256,7 +257,7 @@ const SluzbyPage = () => {
           transition={{ delay: 0.6 }}
         >
           <Accordion
-            src='bg-[url(/sluzby/zahradnictvi.jpg)]'
+            src='bg-[url(/sluzby/zahradnictvi.webp)]'
             isOpen={zahradnictvi}
             handleToggle={handleZahradnictvi}
             title={
@@ -310,7 +311,7 @@ const SluzbyPage = () => {
           transition={{ delay: 0.8 }}
         >
           <Accordion
-            src='bg-[url(/sluzby/zemni-prace.jpeg)]'
+            src='bg-[url(/sluzby/zemniprace.webp)]'
             isOpen={zemniprace}
             handleToggle={handleZemniprace}
             title={
@@ -374,25 +375,25 @@ const SluzbyPage = () => {
             )}
             <div className='flex flex-col lg:flex-row'>
               <Image
-                src='/sluzby/zemniprace/1.jpg'
+                src='/sluzby/zemniprace/1.webp'
                 alt=''
                 width={300}
                 height={300}
               />
               <Image
-                src='/sluzby/zemniprace/2.jpg'
+                src='/sluzby/zemniprace/2.webp'
                 alt=''
                 width={300}
                 height={300}
               />
               <Image
-                src='/sluzby/zemniprace/3.jpg'
+                src='/sluzby/zemniprace/3.webp'
                 alt=''
                 width={300}
                 height={300}
               />
               <Image
-                src='/sluzby/zemniprace/4.jpg'
+                src='/sluzby/zemniprace/4.webp'
                 alt=''
                 width={300}
                 height={300}
@@ -407,7 +408,7 @@ const SluzbyPage = () => {
           transition={{ delay: 1 }}
         >
           <Accordion
-            src='bg-[url(/sluzby/zemedelstvi.jpg)]'
+            src='bg-[url(/sluzby/zemedelstvi.webp)]'
             isOpen={zemedelstvi}
             handleToggle={handleZemedelstvi}
             title={
