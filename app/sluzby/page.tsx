@@ -255,7 +255,7 @@ const SluzbyPage = () => {
               </>
             )}
             <Image
-              src='/gallery/9.webp'
+              src='/gallery/27.webp'
               alt='brambory'
               width={600}
               height={200}
