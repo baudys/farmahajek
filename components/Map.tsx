@@ -7,6 +7,7 @@ import markerIcon2x from 'leaflet/dist/images/marker-icon-2x.png'
 import markerIcon from 'leaflet/dist/images/marker-icon.png'
 import markerShadow from 'leaflet/dist/images/marker-shadow.png'
 import { useMediaQuery } from '@/hooks/useMediaQuery'
+import Link from 'next/link'
 
 // @ts-ignore
 delete L.Icon.Default.prototype._getIconUrl
@@ -17,7 +18,7 @@ L.Icon.Default.mergeOptions({
 })
 
 const createEmojiIcon = (emoji: string) => {
-  const iconHTML = `<div class="text-4xl">${emoji}</div>`
+  const iconHTML = `<div class="emoji-icon text-2xl">${emoji}</div>`
   return L.divIcon({
     html: iconHTML,
     className: 'custom-icon',
@@ -40,14 +41,44 @@ const Map = () => {
         icon={createEmojiIcon('🧑‍🌾')}
         eventHandlers={{
           mouseover: event => event.target.openPopup(),
-          mouseout: event => event.target.closePopup(),
         }}
       >
         <Popup>
-          <h3>Farma Hájek</h3>
-          <p>Hájek 36</p>
-          <p>34506 Všeruby - Hájek</p>
-          <p>okres Domažlice, Plzeňský kraj, Česko</p>
+          <h3 className='text-lg font-bold'>Farma Hájek</h3>
+          <div className='mt-2'>
+            <p className='!m-0'>Hájek 36</p>
+            <p className='!m-0'>
+              <span className='mr-2'>345 06</span>Kdyně
+            </p>
+          </div>
+        </Popup>
+      </Marker>
+      <Marker
+        position={[50.66706246845249, 15.093818038881734]}
+        icon={createEmojiIcon('🐔')}
+        eventHandlers={{
+          mouseover: event => event.target.openPopup(),
+        }}
+      >
+        <Popup>
+          <Link
+            href='https://krmiva-ecofeed.cz/'
+            className='text-lg font-bold underline'
+          >
+            Ecofeed
+          </Link>
+          <div className='mt-2'>
+            <p className='!m-0'>Rychnovská 422</p>
+            <p className='!m-0'>
+              <span className='mr-2'>463 42</span> Hodkovice nad Mohelkou
+            </p>
+          </div>
+          <div className='mt-4'>
+            <h3 className='font-semibold !m-0'>Kontaktní údaje</h3>
+            <p className='!m-0'>+420 734 257 555</p>
+            <p className='!m-0'>+420 601 580 048</p>
+            <p className='!m-0'>adabareska@seznam.cz</p>
+          </div>
         </Popup>
       </Marker>
     </MapContainer>
