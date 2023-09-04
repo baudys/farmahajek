@@ -14,7 +14,7 @@ const Companies = () => {
         <motion.h1
           initial={{ y: -200, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          className='text-lg font-semibold tracking-wider text-center uppercase text-zinc-500/70 xl:text-4xl'
+          className='py-2 text-lg font-semibold tracking-wider text-center uppercase text-zinc-500/70 xl:text-4xl'
         >
           {language === 'cs' && (
             <>Naše produkty můžete najít také v těchto prodejnách</>
