@@ -18,7 +18,7 @@ L.Icon.Default.mergeOptions({
 })
 
 const createEmojiIcon = (emoji: string) => {
-  const iconHTML = `<div class="emoji-icon text-2xl">${emoji}</div>`
+  const iconHTML = `<div class="emoji-icon text-lg">${emoji}</div>`
   return L.divIcon({
     html: iconHTML,
     className: 'custom-icon',
@@ -78,6 +78,31 @@ const Map = () => {
             <p className='!m-0'>+420 734 257 555</p>
             <p className='!m-0'>+420 601 580 048</p>
             <p className='!m-0'>adabareska@seznam.cz</p>
+          </div>
+        </Popup>
+      </Marker>
+      <Marker
+        position={[49.25440734518299, 13.920485639888442]}
+        icon={createEmojiIcon('🐔')}
+        eventHandlers={{
+          mouseover: event => event.target.openPopup(),
+        }}
+      >
+        <Popup>
+          <Link
+            href='https://www.cschstrakonice.cz/clanky/novinky/nedelni-trhy.html'
+            className='text-lg font-bold underline'
+          >
+            Trhy Strakonice
+          </Link>
+          <div className='mt-2'>
+            <p className='!m-0'>Podsrpenská 339</p>
+            <p className='!m-0'>
+              <span className='mr-2'>386 01</span> Strakonice
+            </p>
+          </div>
+          <div className='mt-4'>
+            <p className='!m-0'>každou neděli od 8 hodin</p>
           </div>
         </Popup>
       </Marker>
