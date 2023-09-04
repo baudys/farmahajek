@@ -219,6 +219,7 @@ const SluzbyPage = () => {
                   hodin, 7 dní v týdnu.
                 </p>
                 <p>Brambory jsou 100% české. Vypěstované v okolí farmy.</p>
+                <p className='my-2 text-lg font-bold'>Cena: 400 Kč za 24 kg</p>
                 <p>
                   V případě dotazů volejte na číslo{' '}
                   <span className='font-bold'>+420 720 566 212</span>
@@ -232,6 +233,9 @@ const SluzbyPage = () => {
                   days a week.
                 </p>
                 <p>The potatoes are 100% Czech. Grown around the farm.</p>
+                <p className='my-2 text-lg font-bold'>
+                  Price: 400 CZK for 24 kg
+                </p>
                 <p>
                   If you have any questions, please call{' '}
                   <span className='font-bold'>+420 720 566 212</span>
@@ -248,6 +252,9 @@ const SluzbyPage = () => {
                   Die Kartoffeln sind 100% tschechisch. Sie werden rund um den
                   Bauernhof angebaut.
                 </p>
+                <p className='my-2 text-lg font-bold'>
+                  Preis: 400 CZK für 24 kg
+                </p>
                 <p>
                   Wenn Sie Fragen haben, rufen Sie bitte an{' '}
                   <span className='font-bold'>+420 720 566 212</span>
@@ -257,7 +264,13 @@ const SluzbyPage = () => {
             <Image
               src='/gallery/27.webp'
               alt='brambory'
-              width={600}
+              width={400}
+              height={200}
+            />
+            <Image
+              src='/sluzby/prodejna.webp'
+              alt='prodejna'
+              width={400}
               height={200}
             />
           </Accordion>
