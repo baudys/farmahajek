@@ -8,6 +8,8 @@ import markerIcon from 'leaflet/dist/images/marker-icon.png'
 import markerShadow from 'leaflet/dist/images/marker-shadow.png'
 import { useMediaQuery } from '@/hooks/useMediaQuery'
 import Link from 'next/link'
+import { FullscreenControl } from 'react-leaflet-fullscreen'
+import 'react-leaflet-fullscreen/styles.css'
 
 // @ts-ignore
 delete L.Icon.Default.prototype._getIconUrl
@@ -36,6 +38,8 @@ const Map = () => {
       className='rounded-lg h-[400px] md:h-[700px]'
     >
       <TileLayer url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png' />
+      <FullscreenControl />
+
       <Marker
         position={[49.355362810666996, 13.004856931980328]}
         icon={createEmojiIcon('🧑‍🌾')}
