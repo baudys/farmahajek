@@ -4,6 +4,7 @@ import Newsletter from '@/components/Newsletter'
 import Footer from '@/components/footer/Footer'
 import Navbar from '@/components/nav/Navbar'
 import ToasterProvider from '@/providers/ToasterProvider'
+import Script from 'next/script'
 
 const montserrat = Montserrat({ subsets: ['latin'] })
 
@@ -74,6 +75,19 @@ export default function RootLayout({
         <Newsletter />
         {children}
         <Footer />
+        <Script
+          async
+          src='https://www.googletagmanager.com/gtag/js?id=G-GD4D34EF5P'
+        ></Script>
+        <Script>
+          {`
+             window.dataLayer = window.dataLayer || [];
+             function gtag(){dataLayer.push(arguments);}
+             gtag('js', new Date());
+
+             gtag('config', 'G-GD4D34EF5P');
+          `}
+        </Script>
       </body>
     </html>
   )
