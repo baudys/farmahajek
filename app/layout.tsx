@@ -5,6 +5,7 @@ import Footer from '@/components/footer/Footer'
 import Navbar from '@/components/nav/Navbar'
 import ToasterProvider from '@/providers/ToasterProvider'
 import Script from 'next/script'
+import Head from 'next/head'
 
 const montserrat = Montserrat({ subsets: ['latin'] })
 
@@ -69,6 +70,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
+      <Head>
+        <meta
+          name='google-site-verification'
+          content='qX0rcP5-c8gZODKkUbQJXJoUU6eHXkVfPCrEVV-Afcc'
+        />
+      </Head>
       <body className={montserrat.className}>
         <ToasterProvider />
         <Navbar />
