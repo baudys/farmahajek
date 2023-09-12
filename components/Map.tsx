@@ -110,6 +110,76 @@ const Map = () => {
           </div>
         </Popup>
       </Marker>
+      <Marker
+        position={[50.37943323600494, 13.269738104650584]}
+        icon={createEmojiIcon('🐔')}
+        eventHandlers={{
+          mouseover: event => event.target.openPopup(),
+        }}
+      >
+        <Popup>
+          <Link
+            href='https://zooarcha.cz/index.php?str=kadan'
+            className='text-lg font-bold underline'
+          >
+            Archa ZOO
+          </Link>
+          <div className='mt-2'>
+            <p className='!m-0'>Jungmannova 655</p>
+            <p className='!m-0'>
+              <span className='mr-2'>432 01</span> Kadaň
+            </p>
+          </div>
+          <div className='mt-4'>
+            <h3 className='font-semibold !m-0'>Kontaktní údaje</h3>
+            <p className='!m-0'>+420 724 690 603</p>
+          </div>
+        </Popup>
+      </Marker>
+      <Marker
+        position={[50.67884198277531, 14.546394201393023]}
+        icon={createEmojiIcon('🌾')}
+        eventHandlers={{
+          mouseover: event => event.target.openPopup(),
+        }}
+      >
+        <Popup>
+          <Link
+            href='https://www.amv-krmiva.cz/'
+            className='text-lg font-bold underline'
+          >
+            AMV Krmiva
+          </Link>
+          <div className='mt-2'>
+            <p className='!m-0'>Partyzánská 2345/14</p>
+            <p className='!m-0'>
+              <span className='mr-2'>470 01</span> Česká Lípa
+            </p>
+          </div>
+        </Popup>
+      </Marker>
+      <Marker
+        position={[49.61727895651927, 13.612682776462778]}
+        icon={createEmojiIcon('🐤')}
+        eventHandlers={{
+          mouseover: event => event.target.openPopup(),
+        }}
+      >
+        <Popup>
+          <Link
+            href='https://www.krmnesmesikvidera.cz/brojlerova-kuratka'
+            className='text-lg font-bold underline'
+          >
+            Kvídera
+          </Link>
+          <div className='mt-2'>
+            <p className='!m-0'>Varta 328</p>
+            <p className='!m-0'>
+              <span className='mr-2'>332 04</span> Nezvěstice
+            </p>
+          </div>
+        </Popup>
+      </Marker>
     </MapContainer>
   )
 }
