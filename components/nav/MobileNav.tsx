@@ -171,6 +171,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ isTopOfPage }) => {
                       : ''
                   }
                   isTopOfPage={isTopOfPage}
+                  handleClick={handleClick}
                 />
               </motion.ul>
 
