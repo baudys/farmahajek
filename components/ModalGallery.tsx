@@ -13,7 +13,7 @@ const ModalGallery = ({ images, tall }: ModalGalleryProps) => {
       {images.map(image => (
         <div
           className={`h-56 overflow-hidden md:h-52 lg:h-44 xl:h-52 ${
-            tall && '!h-80 overflow-hidden'
+            tall && '!h-full !w-full overflow-hidden aspect-[3/4]'
           }`}
         >
           <ModalImage
