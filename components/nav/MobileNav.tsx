@@ -159,6 +159,19 @@ const MobileNav: React.FC<MobileNavProps> = ({ isTopOfPage }) => {
                   isTopOfPage={isTopOfPage}
                   handleClick={handleClick}
                 />
+                <NavLink
+                  href='/strongman'
+                  label={
+                    language === 'cs'
+                      ? 'Strongman'
+                      : language === 'en'
+                      ? 'Strongman'
+                      : language === 'de'
+                      ? 'Strongman'
+                      : ''
+                  }
+                  isTopOfPage={isTopOfPage}
+                />
               </motion.ul>
 
               <motion.ul

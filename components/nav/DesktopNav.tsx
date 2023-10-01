@@ -127,6 +127,19 @@ const DesktopNav: React.FC<DesktopNavProps> = ({ isTopOfPage }) => {
               }
               isTopOfPage={isTopOfPage}
             />
+            <NavLink
+              href='/strongman'
+              label={
+                language === 'cs'
+                  ? 'Strongman'
+                  : language === 'en'
+                  ? 'Strongman'
+                  : language === 'de'
+                  ? 'Strongman'
+                  : ''
+              }
+              isTopOfPage={isTopOfPage}
+            />
           </motion.ul>
         </div>
       </Container>
