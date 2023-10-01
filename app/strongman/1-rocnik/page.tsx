@@ -1,20 +1,16 @@
 import Container from '@/components/Container'
 import ModalGallery from '@/components/ModalGallery'
-import { images } from '@/database/gallery'
+import { strongman1 } from '@/database/strongman-1'
 
-export const metadata = {
-  title: 'Farma Hájek - Galerie 🖼',
-}
-
-const GaleriePage = () => {
+const Rocnik1Page = () => {
   return (
     <div className='pb-28'>
       <div className='w-full h-[70.72px] xl:h-[84.81px] bg-black' />
       <Container styles='mt-10'>
-        <ModalGallery images={images} />
+        <ModalGallery images={strongman1} tall />
       </Container>
     </div>
   )
 }
 
-export default GaleriePage
+export default Rocnik1Page

@@ -1,18 +1,25 @@
 'use client'
 
-import { images } from '@/database/gallery'
 import ModalImage from 'react-modal-image'
 
-const ModalGallery = () => {
+interface ModalGalleryProps {
+  images: any[]
+  tall?: boolean
+}
+
+const ModalGallery = ({ images, tall }: ModalGalleryProps) => {
   return (
-    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4'>
+    <div className='grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4'>
       {images.map(image => (
-        <div className='h-56 md:h-52 lg:h-44 xl:h-52 overflow-hidden'>
+        <div
+          className={`h-56 overflow-hidden md:h-52 lg:h-44 xl:h-52 ${
+            tall && '!h-80 overflow-hidden'
+          }`}
+        >
           <ModalImage
             key={image.original}
-            small={image.thumbnail}
+            small={image.original}
             large={image.original}
-            className='object-cover'
           />
         </div>
       ))}
