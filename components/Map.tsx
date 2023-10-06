@@ -72,7 +72,7 @@ const Map = () => {
             Ecofeed
           </Link>
           <div className='mt-2'>
-            <p className='!m-0'>Rychnovská 422</p>
+            <p className='!m-0'>Parkoviště ČD, Nádražní ul.</p>
             <p className='!m-0'>
               <span className='mr-2'>463 42</span> Hodkovice nad Mohelkou
             </p>
