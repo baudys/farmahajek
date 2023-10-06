@@ -74,7 +74,7 @@ const DesktopNav: React.FC<DesktopNavProps> = ({ isTopOfPage }) => {
           <motion.ul
             initial={{ x: 400, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            className='flex items-center gap-3 text-lg font-medium uppercase justify-self-end'
+            className='flex items-center gap-3 font-medium justify-self-end'
           >
             <motion.li
               initial={{ y: 200, opacity: 0 }}
