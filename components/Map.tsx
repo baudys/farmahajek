@@ -160,23 +160,27 @@ const Map = () => {
       </Marker>
       <Marker
         position={[49.61727895651927, 13.612682776462778]}
-        icon={createEmojiIcon('🐤')}
+        icon={createEmojiIcon('🐔')}
         eventHandlers={{
           mouseover: event => event.target.openPopup(),
         }}
       >
         <Popup>
           <Link
-            href='https://www.krmnesmesikvidera.cz/brojlerova-kuratka'
+            href='https://www.krmnesmesikvidera.cz/prodej-kuric'
             className='text-lg font-bold underline'
           >
-            Kvídera
+            Krmné směsi Kvídera s.r.o.
           </Link>
           <div className='mt-2'>
             <p className='!m-0'>Varta 328</p>
             <p className='!m-0'>
-              <span className='mr-2'>332 04</span> Nezvěstice
+              <span className='mr-2'>335 61</span> Spálené Poříčí
             </p>
+
+            <p className='!m-0 !mt-4'>Kontaktní údaje:</p>
+            <p className='!m-0'>+420 602 830 823</p>
+            <p className='!m-0'>+420 724 981 414</p>
           </div>
         </Popup>
       </Marker>
