@@ -173,7 +173,7 @@ const Map = () => {
             Krmné směsi Kvídera s.r.o.
           </Link>
           <div className='mt-2'>
-            <p className='!m-0'>Varta 328</p>
+            <p className='!m-0'>Zámecká 200</p>
             <p className='!m-0'>
               <span className='mr-2'>335 61</span> Spálené Poříčí
             </p>
