@@ -178,9 +178,34 @@ const Map = () => {
               <span className='mr-2'>335 61</span> Spálené Poříčí
             </p>
 
-            <p className='!m-0 !mt-4'>Kontaktní údaje:</p>
+            <p className='!m-0 !mt-4 font-semibold'>Kontaktní údaje:</p>
             <p className='!m-0'>+420 602 830 823</p>
             <p className='!m-0'>+420 724 981 414</p>
+          </div>
+        </Popup>
+      </Marker>
+      <Marker
+        position={[50.38785533623291, 13.19428235875933]}
+        icon={createEmojiIcon('🐔')}
+        eventHandlers={{
+          mouseover: event => event.target.openPopup(),
+        }}
+      >
+        <Popup>
+          <Link
+            href='https://zooarcha.cz/index.php?str=klasterec'
+            className='text-lg font-bold underline'
+          >
+            Archa ZOO
+          </Link>
+          <div className='mt-2'>
+            <p className='!m-0'>Osvobozená 777 200</p>
+            <p className='!m-0'>
+              <span className='mr-2'>431 51</span> Klášterec nad Ohří
+            </p>
+
+            <p className='!m-0 !mt-4 font-semibold'>Kontaktní údaje:</p>
+            <p className='!m-0'>+420 720 739 769</p>
           </div>
         </Popup>
       </Marker>
