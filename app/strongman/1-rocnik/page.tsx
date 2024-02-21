@@ -7,7 +7,7 @@ const Rocnik1Page = () => {
     <div className='pb-28'>
       <div className='w-full h-[70.72px] xl:h-[84.81px] bg-black' />
       <Container styles='mt-10'>
-        <ModalGallery images={strongman1} tall />
+        <ModalGallery images={strongman1} square />
       </Container>
     </div>
   )
