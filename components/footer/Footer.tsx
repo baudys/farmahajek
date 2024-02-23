@@ -265,7 +265,7 @@ const Footer = () => {
               {language === 'cs' && <>Vytvořil </>}
               {language === 'en' && <>Created by </>}
               {language === 'de' && <>Erstellt von </>}
-              <Link href='<https://github.com/ton1czech>' className='underline'>
+              <Link href='https://baudys.dev' className='underline'>
                 Daniel Anthony Baudyš.
               </Link>
             </p>
