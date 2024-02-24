@@ -164,14 +164,15 @@ const Footer = () => {
               </h2>
 
               <div className='ml-6 mb-7 text-zinc-200'>
-                <p className='flex gap-2'>
+                <p className='flex items-center gap-2'>
                   <AiFillPhone />
                   +420 720 566 212
                 </p>
-                <p className='flex gap-2'>
+                <p className='flex items-center gap-2'>
                   <MdEmail />
                   farma.hajek@seznam.cz
                 </p>
+                <p>IČO: 04005198</p>
               </div>
 
               <div className='text-sm text-center'>
@@ -230,14 +231,15 @@ const Footer = () => {
               </h2>
 
               <div className='ml-6 mb-7 text-zinc-200'>
-                <p className='flex gap-2'>
+                <p className='flex items-center gap-2'>
                   <AiFillPhone />
                   +420 720 566 212
                 </p>
-                <p className='flex gap-2'>
+                <p className='flex items-center gap-2'>
                   <MdEmail />
                   farma.hajek@seznam.cz
                 </p>
+                <p>IČO: 04005198</p>
               </div>
 
               <div className='text-sm text-center'>
