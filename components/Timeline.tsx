@@ -52,13 +52,14 @@ const Card: React.FC<CardProps> = ({ item }) => {
             {language === 'de' && <>{item.textde}</>}
           </p>
         </div>
-        <Image
-          src={item.photo}
-          className='w-full max-h-52 lg:max-h-72'
-          alt={item.titlecs}
-          width={500}
-          height={500}
-        />
+        <div className='relative h-52 lg:h-72'>
+          <Image
+            src={item.photo}
+            fill
+            alt={item.titlecs}
+            className='object-cover w-full'
+          />
+        </div>
       </div>
     </VerticalTimelineElement>
   )
