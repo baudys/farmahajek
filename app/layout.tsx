@@ -4,7 +4,6 @@ import Newsletter from '@/components/Newsletter'
 import Footer from '@/components/footer/Footer'
 import Navbar from '@/components/nav/Navbar'
 import ToasterProvider from '@/providers/ToasterProvider'
-import Script from 'next/script'
 import Head from 'next/head'
 
 const montserrat = Montserrat({ subsets: ['latin'] })
