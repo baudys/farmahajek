@@ -5,6 +5,8 @@ import Footer from '@/components/footer/Footer'
 import Navbar from '@/components/nav/Navbar'
 import ToasterProvider from '@/providers/ToasterProvider'
 import Head from 'next/head'
+import { AnalyticsProvider } from '@/providers/AnalyticsProvider'
+import { Cookies } from '@/components/Cookies'
 
 const montserrat = Montserrat({ subsets: ['latin'] })
 
@@ -77,8 +79,12 @@ export default function RootLayout({
       </Head>
       <body className={montserrat.className}>
         <ToasterProvider />
-        <Navbar />
+        <AnalyticsProvider />
+
         <Newsletter />
+        <Cookies />
+
+        <Navbar />
         {children}
         <Footer />
       </body>
