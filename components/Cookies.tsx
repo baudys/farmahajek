@@ -48,7 +48,7 @@ export const Cookies = () => {
                 onClick={closeCookiesPermanently}
                 className='bg-white rounded-2xl py-6 text-lg text-black hover:bg-zinc-100 w-full font-bold'
               >
-                {language === 'cs' && 'Neouhlasím'}
+                {language === 'cs' && 'Nesouhlasím'}
                 {language === 'en' && 'Disagree'}
                 {language === 'de' && 'Nicht einverstanden'}
               </Button>
