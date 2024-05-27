@@ -76,10 +76,10 @@ export default function RootLayout({
           name='google-site-verification'
           content='qX0rcP5-c8gZODKkUbQJXJoUU6eHXkVfPCrEVV-Afcc'
         />
+        <AnalyticsProvider />
       </Head>
       <body className={montserrat.className}>
         <ToasterProvider />
-        <AnalyticsProvider />
 
         <Newsletter />
         <Cookies />
