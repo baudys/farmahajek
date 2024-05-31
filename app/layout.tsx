@@ -4,7 +4,6 @@ import Newsletter from '@/components/Newsletter'
 import Footer from '@/components/footer/Footer'
 import Navbar from '@/components/nav/Navbar'
 import ToasterProvider from '@/providers/ToasterProvider'
-import Head from 'next/head'
 import { AnalyticsProvider } from '@/providers/AnalyticsProvider'
 import { Cookies } from '@/components/Cookies'
 
@@ -71,13 +70,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <Head>
-        <meta
-          name='google-site-verification'
-          content='qX0rcP5-c8gZODKkUbQJXJoUU6eHXkVfPCrEVV-Afcc'
-        />
-        <AnalyticsProvider />
-      </Head>
+      <AnalyticsProvider />
+
       <body className={montserrat.className}>
         <ToasterProvider />
 

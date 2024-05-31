@@ -17,25 +17,31 @@ export const AnalyticsProvider = () => {
     <>
       {mounted && (
         <>
-          {cookiesEnabled ||
-            (window &&
-              window.localStorage
-                .getItem('cookies-storage')
-                ?.includes('"cookiesEnabled":true') && (
-                <>
-                  <Script
-                    async
-                    src='https://www.googletagmanager.com/gtag/js?id=G-XZY4E8TSVH'
-                  />
-                  <Script>
-                    {`
-                        window.dataLayer = window.dataLayer || []; 
-                        function gtag(){dataLayer.push(arguments);} 
-                        gtag('js', new Date()); 
-                        gtag('config', 'G-XZY4E8TSVH');`}
-                  </Script>
-                </>
-              ))}
+          {(cookiesEnabled ||
+            window?.localStorage
+              .getItem('cookies-storage')
+              ?.includes('"cookiesEnabled":true')) && (
+            <>
+              <Script
+                strategy='afterInteractive'
+                src={`https://www.googletagmanager.com/gtag/js?id=${process.env
+                  .NEXT_PUBLIC_GTAG!}`}
+              />
+              <Script
+                id='google-analytics'
+                strategy='afterInteractive'
+                dangerouslySetInnerHTML={{
+                  __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+
+                gtag('config', '${process.env.NEXT_PUBLIC_GTAG!}');
+                `,
+                }}
+              />
+            </>
+          )}
         </>
       )}
     </>
