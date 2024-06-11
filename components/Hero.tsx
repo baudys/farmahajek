@@ -107,11 +107,9 @@ const Hero = () => {
                 onClick={() => router.push('#timeline')}
               >
                 <h3 className='pb-2 text-white xl:text-lg'>
-                  {language === 'cs' && <>zkoukni životní cestu slepičky</>}
-                  {language === 'en' && (
-                    <>explore the life journey of a chicken</>
-                  )}
-                  {language === 'de' && <>den Lebensweg eines Huhns erkunden</>}
+                  {language === 'cs' && <>sleduj novinky</>}
+                  {language === 'en' && <>watch the news</>}
+                  {language === 'de' && <>Verfolgen Sie die Nachrichten</>}
                 </h3>
                 <FaLongArrowAltDown
                   size={40}
