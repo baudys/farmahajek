@@ -32,14 +32,32 @@ export const AnalyticsProvider = () => {
                 strategy='afterInteractive'
                 dangerouslySetInnerHTML={{
                   __html: `
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
 
-                gtag('config', '${process.env.NEXT_PUBLIC_GTAG!}');
+                    gtag('config', '${process.env.NEXT_PUBLIC_GTAG!}');
                 `,
                 }}
               />
+
+
+
+              <Script type="text/javascript" strategy='afterInteractive' src="https://c.seznam.cz/js/rc.js"/>
+                <Script id='seznam' strategy='afterInteractive' dangerouslySetInnerHTML={{
+                  __html:`
+                    window.sznIVA.IS.updateIdentities({
+                      eid: null
+                    });
+
+                    var retargetingConf = {
+                      rtgId: 1355943,
+                      consent: null
+                    };
+                    window.rc.retargetingHit(retargetingConf);
+                  `
+                }}>
+                </Script>
             </>
           )}
         </>
