@@ -35,7 +35,7 @@ const Map = () => {
       center={[49.9171208544799, 14.67178354882282] as L.LatLngExpression}
       zoom={isDesktop ? 8 : 6}
       scrollWheelZoom={false}
-      className='rounded-lg h-[400px] md:h-[700px]'
+      className='h-[400px] rounded-lg md:h-[700px]'
     >
       <TileLayer url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png' />
       <FullscreenControl />
@@ -44,7 +44,7 @@ const Map = () => {
         position={[49.355362810666996, 13.004856931980328]}
         icon={createEmojiIcon('🧑‍🌾')}
         eventHandlers={{
-          mouseover: event => event.target.openPopup(),
+          mouseover: (event) => event.target.openPopup(),
         }}
       >
         <Popup>
@@ -61,7 +61,7 @@ const Map = () => {
         position={[50.66706246845249, 15.093818038881734]}
         icon={createEmojiIcon('🐔')}
         eventHandlers={{
-          mouseover: event => event.target.openPopup(),
+          mouseover: (event) => event.target.openPopup(),
         }}
       >
         <Popup>
@@ -78,7 +78,7 @@ const Map = () => {
             </p>
           </div>
           <div className='mt-4'>
-            <h3 className='font-semibold !m-0'>Kontaktní údaje</h3>
+            <h3 className='!m-0 font-semibold'>Kontaktní údaje</h3>
             <p className='!m-0'>+420 734 257 555</p>
             <p className='!m-0'>+420 601 580 048</p>
             <p className='!m-0'>adabareska@seznam.cz</p>
@@ -89,7 +89,7 @@ const Map = () => {
         position={[49.25440734518299, 13.920485639888442]}
         icon={createEmojiIcon('🐔')}
         eventHandlers={{
-          mouseover: event => event.target.openPopup(),
+          mouseover: (event) => event.target.openPopup(),
         }}
       >
         <Popup>
@@ -114,7 +114,7 @@ const Map = () => {
         position={[50.37943323600494, 13.269738104650584]}
         icon={createEmojiIcon('🐔')}
         eventHandlers={{
-          mouseover: event => event.target.openPopup(),
+          mouseover: (event) => event.target.openPopup(),
         }}
       >
         <Popup>
@@ -131,30 +131,8 @@ const Map = () => {
             </p>
           </div>
           <div className='mt-4'>
-            <h3 className='font-semibold !m-0'>Kontaktní údaje</h3>
+            <h3 className='!m-0 font-semibold'>Kontaktní údaje</h3>
             <p className='!m-0'>+420 724 690 603</p>
-          </div>
-        </Popup>
-      </Marker>
-      <Marker
-        position={[50.67884198277531, 14.546394201393023]}
-        icon={createEmojiIcon('🌾')}
-        eventHandlers={{
-          mouseover: event => event.target.openPopup(),
-        }}
-      >
-        <Popup>
-          <Link
-            href='https://www.amv-krmiva.cz/'
-            className='text-lg font-bold underline'
-          >
-            AMV Krmiva
-          </Link>
-          <div className='mt-2'>
-            <p className='!m-0'>Partyzánská 2345/14</p>
-            <p className='!m-0'>
-              <span className='mr-2'>470 01</span> Česká Lípa
-            </p>
           </div>
         </Popup>
       </Marker>
@@ -162,7 +140,7 @@ const Map = () => {
         position={[49.61727895651927, 13.612682776462778]}
         icon={createEmojiIcon('🐔')}
         eventHandlers={{
-          mouseover: event => event.target.openPopup(),
+          mouseover: (event) => event.target.openPopup(),
         }}
       >
         <Popup>
@@ -188,7 +166,7 @@ const Map = () => {
         position={[50.38785533623291, 13.19428235875933]}
         icon={createEmojiIcon('🐔')}
         eventHandlers={{
-          mouseover: event => event.target.openPopup(),
+          mouseover: (event) => event.target.openPopup(),
         }}
       >
         <Popup>
@@ -206,6 +184,51 @@ const Map = () => {
 
             <p className='!m-0 !mt-4 font-semibold'>Kontaktní údaje:</p>
             <p className='!m-0'>+420 720 739 769</p>
+          </div>
+        </Popup>
+      </Marker>
+
+      <Marker
+        position={[50.18710388612348, 14.036772990471738]}
+        icon={createEmojiIcon('🐔')}
+        eventHandlers={{
+          mouseover: (event) => event.target.openPopup(),
+        }}
+      >
+        <Popup>
+          <Link href='#' className='text-lg font-bold underline'>
+            Prodejní sklad Smečno
+          </Link>
+          <div className='mt-2'>
+            <p className='!m-0'>Osvobozená 777 200</p>
+            <p className='!m-0'>
+              <span className='mr-2'>273 05</span> Smečno
+            </p>
+
+            <p className='!m-0 !mt-4 font-semibold'>Kontaktní údaje:</p>
+            <p className='!m-0'>+420 774 090 296</p>
+          </div>
+        </Popup>
+      </Marker>
+      <Marker
+        position={[50.505117522156155, 14.260882544285527]}
+        icon={createEmojiIcon('🐔')}
+        eventHandlers={{
+          mouseover: (event) => event.target.openPopup(),
+        }}
+      >
+        <Popup>
+          <Link href='#' className='text-lg font-bold underline'>
+            Prodejní sklad Polepy
+          </Link>
+          <div className='mt-2'>
+            <p className='!m-0'>areál firmy HARIS</p>
+            <p className='!m-0'>
+              <span className='mr-2'>431 51</span> Polepy
+            </p>
+
+            <p className='!m-0 !mt-4 font-semibold'>Kontaktní údaje:</p>
+            <p className='!m-0'>+420 608 717 483</p>
           </div>
         </Popup>
       </Marker>
