@@ -41,23 +41,23 @@ export const AnalyticsProvider = () => {
                 }}
               />
 
-
-
-              <Script type="text/javascript" strategy='afterInteractive' src="https://c.seznam.cz/js/rc.js"/>
-                <Script id='seznam' strategy='afterInteractive' dangerouslySetInnerHTML={{
-                  __html:`
+              <Script
+                type='text/javascript'
+                src='https://c.seznam.cz/js/rc.js'
+              />
+              <Script>
+                {`
                     window.sznIVA.IS.updateIdentities({
-                      eid: null
+                        eid: null
                     });
 
                     var retargetingConf = {
-                      rtgId: 1355943,
-                      consent: null
+                        rtgId: ${process.env.NEXT_PUBLIC_SEZNAM!},
+                        consent: null
                     };
                     window.rc.retargetingHit(retargetingConf);
-                  `
-                }}>
-                </Script>
+                `}
+              </Script>
             </>
           )}
         </>
