@@ -72,7 +72,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <AnalyticsProvider />
-      <SklikProvider />
+      {/* <SklikProvider /> */}
 
       <body className={montserrat.className}>
         <ToasterProvider />
