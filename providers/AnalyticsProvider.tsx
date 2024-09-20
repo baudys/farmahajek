@@ -43,9 +43,10 @@ export const AnalyticsProvider = () => {
 
               <Script
                 type='text/javascript'
+                strategy='afterInteractive'
                 src='https://c.seznam.cz/js/rc.js'
               />
-              <Script>
+              <Script id='retargeting-script' strategy='afterInteractive'>
                 {`
                     window.sznIVA.IS.updateIdentities({
                         eid: null
