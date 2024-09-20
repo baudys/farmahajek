@@ -12,7 +12,10 @@ declare global {
       }
     }
     rc?: {
-      retargetingHit: (config: { rtgId: number; consent: null }) => void
+      retargetingHit: (config: {
+        rtgId: number
+        consent: null | number
+      }) => void
     }
   }
 }
@@ -44,7 +47,7 @@ export const SklikProvider = () => {
 
         const retargetingConf = {
           rtgId: 1355943,
-          consent: null,
+          consent: 1,
         }
 
         if (window.rc) {
