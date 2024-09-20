@@ -98,8 +98,11 @@ export default function RootLayout({
         strategy='afterInteractive'
         src='https://c.seznam.cz/js/rc.js'
       />
-      <Script id='retargeting-script' strategy='afterInteractive'>
-        {`
+      <Script
+        id='retargeting-script'
+        strategy='afterInteractive'
+        dangerouslySetInnerHTML={{
+          __html: `
                     window.sznIVA.IS.updateIdentities({
                         eid: null
                     });
@@ -109,8 +112,9 @@ export default function RootLayout({
                         consent: null
                     };
                     window.rc.retargetingHit(retargetingConf);
-                `}
-      </Script>
+          `,
+        }}
+      />
 
       <body className={montserrat.className}>
         <ToasterProvider />
