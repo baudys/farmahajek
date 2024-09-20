@@ -72,49 +72,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      {/* <AnalyticsProvider />
-      <SklikProvider /> */}
-      <Script
-        strategy='afterInteractive'
-        src={`https://www.googletagmanager.com/gtag/js?id=${process.env
-          .NEXT_PUBLIC_GTAG!}`}
-      />
-      <Script
-        id='google-analytics'
-        strategy='afterInteractive'
-        dangerouslySetInnerHTML={{
-          __html: `
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments);}
-                    gtag('js', new Date());
-
-                    gtag('config', '${process.env.NEXT_PUBLIC_GTAG!}');
-                `,
-        }}
-      />
-
-      <Script
-        type='text/javascript'
-        strategy='afterInteractive'
-        src='https://c.seznam.cz/js/rc.js'
-      />
-      <Script
-        id='retargeting-script'
-        strategy='afterInteractive'
-        dangerouslySetInnerHTML={{
-          __html: `
-                    window.sznIVA.IS.updateIdentities({
-                        eid: null
-                    });
-
-                    var retargetingConf = {
-                        rtgId: ${process.env.NEXT_PUBLIC_SEZNAM!},
-                        consent: null
-                    };
-                    window.rc.retargetingHit(retargetingConf);
-          `,
-        }}
-      />
+      <AnalyticsProvider />
+      <SklikProvider />
 
       <body className={montserrat.className}>
         <ToasterProvider />
