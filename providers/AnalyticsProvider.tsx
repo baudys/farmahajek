@@ -40,25 +40,6 @@ export const AnalyticsProvider = () => {
                 `,
                 }}
               />
-
-              <Script
-                type='text/javascript'
-                strategy='afterInteractive'
-                src='https://c.seznam.cz/js/rc.js'
-              />
-              <Script id='retargeting-script' strategy='afterInteractive'>
-                {`
-                    window.sznIVA.IS.updateIdentities({
-                        eid: null
-                    });
-
-                    var retargetingConf = {
-                        rtgId: ${process.env.NEXT_PUBLIC_SEZNAM!},
-                        consent: null
-                    };
-                    window.rc.retargetingHit(retargetingConf);
-                `}
-              </Script>
             </>
           )}
         </>

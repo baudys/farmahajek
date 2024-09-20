@@ -6,6 +6,7 @@ import Navbar from '@/components/nav/Navbar'
 import ToasterProvider from '@/providers/ToasterProvider'
 import { AnalyticsProvider } from '@/providers/AnalyticsProvider'
 import { Cookies } from '@/components/Cookies'
+import { SklikProvider } from '@/providers/SklikProvider'
 
 const montserrat = Montserrat({ subsets: ['latin'] })
 
@@ -71,6 +72,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <AnalyticsProvider />
+      <SklikProvider />
 
       <body className={montserrat.className}>
         <ToasterProvider />
