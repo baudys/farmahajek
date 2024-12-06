@@ -1,13 +1,11 @@
 import './globals.css'
 import { Montserrat } from 'next/font/google'
-import Newsletter from '@/components/Newsletter'
-import Footer from '@/components/footer/Footer'
-import Navbar from '@/components/nav/Navbar'
-import ToasterProvider from '@/providers/ToasterProvider'
+import { NewsletterBanner } from '@/components/newsletter-banner'
+import { Footer } from '@/components/footer/footer'
+import { Navbar } from '@/components/nav/navbar'
 import { AnalyticsProvider } from '@/providers/AnalyticsProvider'
-import { Cookies } from '@/components/Cookies'
+import { CookiesBanner } from '@/components/cookies-banner'
 import { SklikProvider } from '@/providers/SklikProvider'
-import Script from 'next/script'
 
 const montserrat = Montserrat({ subsets: ['latin'] })
 
@@ -76,10 +74,8 @@ export default function RootLayout({
       <SklikProvider />
 
       <body className={montserrat.className}>
-        <ToasterProvider />
-
-        <Newsletter />
-        <Cookies />
+        <NewsletterBanner />
+        <CookiesBanner />
 
         <Navbar />
         {children}

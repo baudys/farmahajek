@@ -1,20 +1,20 @@
-'use client'
+import { Hero } from '@/containers/home/hero'
+import { Timeline } from '@/containers/home/timeline'
+import { Outlets } from '@/containers/home/outlets'
+import { Franchise } from '@/containers/home/franchise'
+import { Blog } from '@/containers/home/blog'
+import { getPosts } from '@/actions/get-posts'
 
-import Companies from '@/components/Companies'
-import Hero from '@/components/Hero'
-import { News } from '@/components/News'
-import Timeline from '@/components/Timeline'
-import dynamic from 'next/dynamic'
-const Map = dynamic(() => import('@/components/Map'), { ssr: false })
+export default async function Home() {
+  const posts = await getPosts()
 
-export default function Home() {
   return (
-    <div>
+    <main>
       <Hero />
-      <News />
+      <Blog posts={posts} />
+      <Franchise />
       <Timeline />
-      <Companies />
-      <Map />
-    </div>
+      <Outlets />
+    </main>
   )
 }

@@ -1,16 +1,22 @@
+import { cn } from '@/lib/utils'
+
 interface ContainerProps {
   children: React.ReactNode
-  styles?: string
+  className?: string
 }
 
-const Container: React.FC<ContainerProps> = ({ children, styles }) => {
+export const Container: React.FC<ContainerProps> = ({
+  children,
+  className,
+}) => {
   return (
     <div
-      className={`2xl:max-w-screen-2xl xl:max-w-screen-xl mx-auto px-3 overflow-hidden ${styles}`}
+      className={cn(
+        'mx-auto px-3 xl:max-w-screen-xl 2xl:max-w-screen-2xl',
+        className,
+      )}
     >
       {children}
     </div>
   )
 }
-
-export default Container

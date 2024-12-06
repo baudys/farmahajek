@@ -1,20 +1,20 @@
 'use client'
 
 import Link from 'next/link'
-import FooterIcon from './FooterIcon'
+import { FooterIcon } from './footer-icon'
 import { AiFillYoutube, AiOutlineInstagram, AiFillPhone } from 'react-icons/ai'
 import { IoLogoTiktok } from 'react-icons/io5'
 import { FaFacebook } from 'react-icons/fa'
 import { MdEmail } from 'react-icons/md'
-import Container from '../Container'
+import { Container } from '../container'
 import { useLanguage } from '@/hooks/useLanguage'
 import Fade from 'react-reveal/Fade'
 
-const Footer = () => {
-  const { language } = useLanguage(state => state)
+export const Footer = () => {
+  const { language } = useLanguage((state) => state)
 
   return (
-    <footer className='pt-20 pb-5 bg-green xl:pt-32 xl:pb-10 text-brown'>
+    <footer className='bg-green pb-5 pt-20 text-brown xl:pb-10 xl:pt-32'>
       <Container>
         <div className='flex flex-col items-center justify-between gap-8 xl:flex-row xl:gap-0'>
           <Fade left>
@@ -53,7 +53,7 @@ const Footer = () => {
         </div>
 
         <Fade right>
-          <div className='w-full h-px my-10 bg-brown/60' />
+          <div className='my-10 h-px w-full bg-brown/60' />
         </Fade>
 
         <div className='grid xl:grid-cols-3'>
@@ -154,16 +154,16 @@ const Footer = () => {
           </div>
 
           <Fade left>
-            <div className='w-full h-px my-10 xl:hidden bg-brown/60' />
+            <div className='my-10 h-px w-full bg-brown/60 xl:hidden' />
           </Fade>
 
           <Fade top>
-            <div className='hidden p-4 rounded-md shadow bg-brown text-zinc-400 xl:block'>
+            <div className='hidden rounded-md bg-brown p-4 text-zinc-400 shadow xl:block'>
               <h2 className='mb-5 text-lg font-semibold text-white'>
                 Miloslav Polák Ml.
               </h2>
 
-              <div className='ml-6 mb-7 text-zinc-200'>
+              <div className='mb-7 ml-6 text-zinc-200'>
                 <p className='flex items-center gap-2'>
                   <AiFillPhone />
                   +420 720 566 212
@@ -175,7 +175,7 @@ const Footer = () => {
                 <p>IČO: 04005198</p>
               </div>
 
-              <div className='text-sm text-center'>
+              <div className='text-center text-sm'>
                 <p>Hájek 36</p>
                 <p>34506 Všeruby - Hájek</p>
                 <p>okres Domažlice, Plzeňský kraj, Česko</p>
@@ -220,17 +220,17 @@ const Footer = () => {
           </Fade>
         </div>
         <Fade right>
-          <div className='w-full h-px my-10 bg-brown/60 xl:hidden' />
+          <div className='my-10 h-px w-full bg-brown/60 xl:hidden' />
         </Fade>
 
         <Fade top>
           <div className='grid place-items-center xl:hidden'>
-            <div className='p-4 rounded-md shadow bg-brown text-zinc-400'>
+            <div className='rounded-md bg-brown p-4 text-zinc-400 shadow'>
               <h2 className='mb-5 text-lg font-semibold text-white'>
                 Miloslav Polák Ml.
               </h2>
 
-              <div className='ml-6 mb-7 text-zinc-200'>
+              <div className='mb-7 ml-6 text-zinc-200'>
                 <p className='flex items-center gap-2'>
                   <AiFillPhone />
                   +420 720 566 212
@@ -242,7 +242,7 @@ const Footer = () => {
                 <p>IČO: 04005198</p>
               </div>
 
-              <div className='text-sm text-center'>
+              <div className='text-center text-sm'>
                 <p>Hájek 36</p>
                 <p>34506 Všeruby - Hájek</p>
                 <p>okres Domažlice, Plzeňský kraj, Česko</p>
@@ -252,18 +252,18 @@ const Footer = () => {
         </Fade>
 
         <Fade left>
-          <div className='w-full h-px my-10 bg-brown/60' />
+          <div className='my-10 h-px w-full bg-brown/60' />
         </Fade>
 
         <Fade bottom>
           <div className='flex flex-col justify-center gap-20 lg:flex-row'>
-            <p className='mt-12 text-xs text-center text-light md:text-base sm:mt-4'>
+            <p className='text-light mt-12 text-center text-xs sm:mt-4 md:text-base'>
               &copy;{new Date().getFullYear()} Farmahájek.
               {language === 'cs' && <> Všechna práva vyhrazena.</>}
               {language === 'en' && <> All rights reserved.</>}
               {language === 'de' && <> Alle Rechte vorbehalten.</>}
             </p>
-            <p className='px-2 py-1 mt-12 text-xs text-center rounded-md text-light md:text-base sm:mt-4 bg-brown text-green'>
+            <p className='text-light mt-12 rounded-md bg-brown px-2 py-1 text-center text-xs text-green sm:mt-4 md:text-base'>
               {language === 'cs' && <>Vytvořil </>}
               {language === 'en' && <>Created by </>}
               {language === 'de' && <>Erstellt von </>}
@@ -277,5 +277,3 @@ const Footer = () => {
     </footer>
   )
 }
-
-export default Footer

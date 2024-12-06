@@ -1,10 +1,10 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import DesktopNav from './DesktopNav'
-import MobileNav from './MobileNav'
+import { DesktopNav } from './desktop-nav'
+import { MobileNav } from './mobile-nav'
 
-const Navbar = () => {
+export const Navbar = () => {
   const [isTopOfPage, setIsTopOfPage] = useState<boolean>(true)
 
   useEffect(() => {
@@ -26,5 +26,3 @@ const Navbar = () => {
     </>
   )
 }
-
-export default Navbar

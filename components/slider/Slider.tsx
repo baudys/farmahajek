@@ -1,3 +1,5 @@
+'use client'
+
 import { SizeContext } from '@/utils/sizeObserver'
 import useAnimationFrame from '@/utils/useAnimationFrame'
 import Link from 'next/link'
@@ -14,7 +16,7 @@ interface Props {
   contentWidth: number
 }
 
-const SliderContainer: React.FC<PropsWithChildren<Props>> = ({
+export const SliderContainer: React.FC<PropsWithChildren<Props>> = ({
   children,
   initialOffsetX,
   className,
@@ -41,7 +43,7 @@ const SliderContainer: React.FC<PropsWithChildren<Props>> = ({
           elContainer.scrollLeft = 0
         }
       }
-    }, [])
+    }, []),
   )
 
   return (
@@ -59,8 +61,6 @@ const SliderContainer: React.FC<PropsWithChildren<Props>> = ({
   )
 }
 
-export default SliderContainer
-
 interface ItemProps {
   width: number
   href: string
@@ -73,7 +73,7 @@ export const SliderItem: React.FC<PropsWithChildren<ItemProps>> = ({
 }) => (
   <Link href={href} target='_blank'>
     <div
-      className='inline-flex items-center justify-center p-3 mx-4 rounded-lg hover:bg-zinc-300'
+      className='mx-4 inline-flex items-center justify-center rounded-lg p-3 hover:bg-zinc-300'
       style={{
         width,
       }}

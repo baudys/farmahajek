@@ -1,13 +1,13 @@
 'use client'
 
-import Accordion from '@/components/Accordion'
-import Container from '@/components/Container'
+import { Accordion } from '@/components/sluzby/accordion'
+import { Container } from '@/components/container'
 import { useLanguage } from '@/hooks/useLanguage'
 import { useService } from '@/hooks/useService'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 
-const SluzbyPage = () => {
+export default function SluzbyPage() {
   const {
     drubezarna,
     handleDrubezarna,
@@ -21,14 +21,14 @@ const SluzbyPage = () => {
     handleZemedelstvi,
     brambory,
     handleBrambory,
-  } = useService(state => state)
+  } = useService((state) => state)
 
-  const { language } = useLanguage(state => state)
+  const { language } = useLanguage((state) => state)
 
   return (
-    <div className='pb-28 bg-gradient-to-br from-zinc-200 to-zinc-400 '>
-      <div className='w-full h-[70.72px] xl:h-[84.81px] bg-black' />
-      <Container styles='mt-10'>
+    <div className='bg-gradient-to-br from-zinc-50 to-zinc-100 pb-28'>
+      <div className='h-[70.72px] w-full bg-black xl:h-[84.81px]' />
+      <Container className='mt-10'>
         <motion.div
           initial={{ x: -500, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
@@ -41,10 +41,10 @@ const SluzbyPage = () => {
               language === 'cs'
                 ? 'Drůbežárna'
                 : language === 'en'
-                ? 'Poultry Farm'
-                : language === 'de'
-                ? 'Geflügelfarm'
-                : ''
+                  ? 'Poultry Farm'
+                  : language === 'de'
+                    ? 'Geflügelfarm'
+                    : ''
             }
           >
             {language === 'cs' && (
@@ -132,10 +132,10 @@ const SluzbyPage = () => {
               language === 'cs'
                 ? 'Prodej vajec'
                 : language === 'en'
-                ? 'Sale of eggs'
-                : language === 'de'
-                ? 'Verkauf von Eiern'
-                : ''
+                  ? 'Sale of eggs'
+                  : language === 'de'
+                    ? 'Verkauf von Eiern'
+                    : ''
             }
           >
             {language === 'cs' && (
@@ -206,10 +206,10 @@ const SluzbyPage = () => {
               language === 'cs'
                 ? 'Prodej brambor'
                 : language === 'en'
-                ? 'sale of potatoes'
-                : language === 'de'
-                ? 'Verkauf von Kartoffeln'
-                : ''
+                  ? 'sale of potatoes'
+                  : language === 'de'
+                    ? 'Verkauf von Kartoffeln'
+                    : ''
             }
           >
             {language === 'cs' && (
@@ -289,10 +289,10 @@ const SluzbyPage = () => {
               language === 'cs'
                 ? 'Zahradnictví'
                 : language === 'en'
-                ? 'Horticulture'
-                : language === 'de'
-                ? 'Gartenbau'
-                : ''
+                  ? 'Horticulture'
+                  : language === 'de'
+                    ? 'Gartenbau'
+                    : ''
             }
           >
             {language === 'cs' && (
@@ -343,10 +343,10 @@ const SluzbyPage = () => {
               language === 'cs'
                 ? 'Zemní práce'
                 : language === 'en'
-                ? 'Earthworks'
-                : language === 'de'
-                ? 'Erdarbeiten'
-                : ''
+                  ? 'Earthworks'
+                  : language === 'de'
+                    ? 'Erdarbeiten'
+                    : ''
             }
           >
             {language === 'cs' && (
@@ -440,10 +440,10 @@ const SluzbyPage = () => {
               language === 'cs'
                 ? 'Zemědělství'
                 : language === 'en'
-                ? 'Agriculture'
-                : language === 'de'
-                ? 'Landwirtschaft'
-                : ''
+                  ? 'Agriculture'
+                  : language === 'de'
+                    ? 'Landwirtschaft'
+                    : ''
             }
           >
             {language === 'cs' && (
@@ -560,5 +560,3 @@ const SluzbyPage = () => {
     </div>
   )
 }
-
-export default SluzbyPage

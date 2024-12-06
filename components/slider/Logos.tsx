@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import React from 'react'
-import SliderContainer, { SliderItem } from './Slider'
+import { SliderContainer, SliderItem } from './slider'
 
-const Logos: React.FC = () => (
+export const Logos: React.FC = () => (
   <SliderContainer
     className='flex items-center'
     contentWidth={1290}
@@ -64,5 +64,3 @@ const Logos: React.FC = () => (
     </SliderItem>
   </SliderContainer>
 )
-
-export default Logos
