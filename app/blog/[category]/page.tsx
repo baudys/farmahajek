@@ -6,7 +6,7 @@ import type { Category } from '@/types/blog'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
-import { Container } from '@/components/container'
+import Container from '@/components/container'
 import { Posts } from '@/containers/blog/posts'
 
 export default async function CategoryPage({

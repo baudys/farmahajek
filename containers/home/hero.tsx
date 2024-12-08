@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { Container } from '../../components/container'
+import Container from '../../components/container'
 import { FaLongArrowAltDown } from 'react-icons/fa'
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'

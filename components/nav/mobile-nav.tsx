@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { Container } from '@/components/container'
+import Container from '@/components/container'
 import Image from 'next/image'
 import { NavLink } from './nav-link'
 import { NavIcon } from './nav-icon'

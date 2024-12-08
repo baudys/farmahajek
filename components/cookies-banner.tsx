@@ -4,7 +4,7 @@ import { useCookies } from '@/hooks/useCookies'
 import { useLanguage } from '@/hooks/useLanguage'
 import { Button } from './ui/button'
 import { useEffect } from 'react'
-import { Container } from './container'
+import Container from './container'
 
 export const CookiesBanner = () => {
   const { language } = useLanguage()

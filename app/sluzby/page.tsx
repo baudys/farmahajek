@@ -1,7 +1,7 @@
 'use client'
 
 import { Accordion } from '@/components/sluzby/accordion'
-import { Container } from '@/components/container'
+import Container from '@/components/container'
 import { useLanguage } from '@/hooks/useLanguage'
 import { useService } from '@/hooks/useService'
 import Image from 'next/image'

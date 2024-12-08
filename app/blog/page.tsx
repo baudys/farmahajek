@@ -1,6 +1,6 @@
 import { getPosts } from '@/actions/get-posts'
 import { Categories } from '@/components/blog/categories'
-import { Container } from '@/components/container'
+import Container from '@/components/container'
 import { Title } from '@/components/title'
 import { Posts } from '@/containers/blog/posts'
 

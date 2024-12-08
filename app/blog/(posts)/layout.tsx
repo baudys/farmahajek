@@ -1,4 +1,4 @@
-import { Container } from '@/components/container'
+import Container from '@/components/container'
 import { ArrowLeft } from 'lucide-react'
 import Link from 'next/link'
 

@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Container } from '../../components/container'
+import Container from '../../components/container'
 import {
   VerticalTimeline,
   VerticalTimelineElement,

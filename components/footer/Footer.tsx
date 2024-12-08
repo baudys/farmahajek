@@ -6,7 +6,7 @@ import { AiFillYoutube, AiOutlineInstagram, AiFillPhone } from 'react-icons/ai'
 import { IoLogoTiktok } from 'react-icons/io5'
 import { FaFacebook } from 'react-icons/fa'
 import { MdEmail } from 'react-icons/md'
-import { Container } from '../container'
+import Container from '../container'
 import { useLanguage } from '@/hooks/useLanguage'
 import Fade from 'react-reveal/Fade'
 

@@ -1,4 +1,4 @@
-import { Container } from '@/components/container'
+import Container from '@/components/container'
 import { ModalGallery } from '@/components/modal-gallery'
 import { strongman } from '@/database/gallery'
 

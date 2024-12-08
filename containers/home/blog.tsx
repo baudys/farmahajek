@@ -5,7 +5,7 @@ import { useLanguage } from '@/hooks/useLanguage'
 import { Post } from '@/types/blog'
 import { motion } from 'framer-motion'
 import { Title } from '@/components/title'
-import { Container } from '@/components/container'
+import Container from '@/components/container'
 
 interface Props {
   posts: Post[]
