@@ -16,7 +16,7 @@ export default async function CategoryPage({
 }) {
   const { category } = params
 
-  if (categories.indexOf(category) == -1) notFound()
+  console.log('CATEGORY', category)
 
   const posts = await getPostsByCategory({ category })
 
@@ -33,14 +33,18 @@ export default async function CategoryPage({
               ? 'recap'
               : category === 'novinka'
                 ? 'news'
-                : 'strongman'
+                : category === 'eshop'
+                  ? 'eshop'
+                  : 'strongman'
           }
           textDe={
             category === 'rekapitulace'
               ? 'rekapitulation'
               : category === 'novinka'
                 ? 'nachrichten'
-                : 'strongman'
+                : category === 'eshop'
+                  ? 'eshop'
+                  : 'strongman'
           }
         />
         <Categories />

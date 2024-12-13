@@ -12,10 +12,25 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         {children}
       </h2>
     ),
+    h3: ({ children }) => (
+      <h2 className='mb-3 mt-8 py-1 text-xl font-semibold md:text-2xl lg:text-3xl xl:text-4xl'>
+        {children}
+      </h2>
+    ),
     p: ({ children }) => (
       <p className='text-justify text-zinc-800 md:text-lg lg:text-xl'>
         {children}
       </p>
+    ),
+    a: ({ href, children }) => (
+      <a
+        href={href}
+        className='text-blue-500 hover:underline'
+        target='_blank'
+        rel='noopener noreferrer'
+      >
+        {children}
+      </a>
     ),
     img: (props) => <img className='mx-auto mb-10 w-full' {...props} />,
     ...components,

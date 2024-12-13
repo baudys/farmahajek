@@ -32,13 +32,22 @@ export const Blog = ({ posts }: Props) => {
           className='grid gap-10 md:grid-cols-2 lg:grid-cols-3'
         >
           {filteredPosts.map(
-            ({ slug, title, image, publishDate, categories, lang }) => (
+            ({
+              slug,
+              title,
+              image,
+              publishDate,
+              formattedDate,
+              categories,
+              lang,
+            }) => (
               <Card
                 key={slug}
                 slug={slug}
                 title={title}
                 image={image}
                 publishDate={publishDate}
+                formattedDate={formattedDate}
                 categories={categories}
                 lang={lang}
               />

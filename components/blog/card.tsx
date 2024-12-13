@@ -8,10 +8,12 @@ export const Card = ({
   slug,
   title,
   image,
-  publishDate,
+  formattedDate,
   categories,
 }: Props) => {
   const { language } = useLanguage()
+
+  console.log('formatted date', formattedDate)
 
   return (
     <Link href={`/blog/${slug}`} className='group'>
@@ -23,7 +25,7 @@ export const Card = ({
         />
 
         <span className='absolute bottom-3 right-3 rounded-md bg-black/40 p-1 text-xs text-zinc-100'>
-          {new Date(publishDate).toLocaleDateString('cs-CS')}
+          {formattedDate}
         </span>
       </div>
 
@@ -50,8 +52,8 @@ export const Card = ({
                   : cat === 'rekapitulace' && language === 'de'
                     ? 'rekapitulation'
                     : ''}
-
               {cat === 'strongman' && 'strongman'}
+              {cat === 'eshop' && 'eshop'}
             </Link>
           ))}
         </div>

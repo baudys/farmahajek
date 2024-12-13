@@ -7,6 +7,7 @@ export interface Post {
   title: string
   image: string
   publishDate: string
+  formattedDate: string
   categories: Category[]
   lang: 'cs' | 'en' | 'de'
 }

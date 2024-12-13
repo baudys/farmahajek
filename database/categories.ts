@@ -1,1 +1,6 @@
-export const categories = ['rekapitulace', 'novinka', 'strongman'] as const
+export const categories = [
+  'rekapitulace',
+  'novinka',
+  'strongman',
+  'eshop',
+] as const
