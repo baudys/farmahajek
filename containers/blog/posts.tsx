@@ -1,7 +1,7 @@
 'use client'
 
 import { Card } from '@/components/blog/card'
-import { useLanguage } from '@/hooks/useLanguage'
+import { posts } from '@/database/posts'
 import { Post } from '@/types/blog'
 import { motion } from 'framer-motion'
 
@@ -10,10 +10,6 @@ interface Props {
 }
 
 export const Posts = ({ posts }: Props) => {
-  const { language } = useLanguage()
-
-  const filteredPosts = posts.filter((post) => post.lang === language)
-
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -21,28 +17,16 @@ export const Posts = ({ posts }: Props) => {
       transition={{ delay: 0.3 }}
       className='grid gap-10 md:grid-cols-2 lg:grid-cols-3'
     >
-      {filteredPosts.map(
-        ({
-          slug,
-          title,
-          image,
-          publishDate,
-          formattedDate,
-          categories,
-          lang,
-        }) => (
-          <Card
-            key={slug}
-            slug={slug}
-            title={title}
-            image={image}
-            publishDate={publishDate}
-            formattedDate={formattedDate}
-            categories={categories}
-            lang={lang}
-          />
-        ),
-      )}
+      {posts.map(({ slug, title, image, date, categories }) => (
+        <Card
+          key={slug}
+          slug={slug}
+          title={title}
+          image={image}
+          date={date}
+          categories={categories}
+        />
+      ))}
     </motion.div>
   )
 }

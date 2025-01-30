@@ -1,20 +1,30 @@
 'use client'
 
-import { categories } from '@/database/categories'
 import { cn } from '@/lib/utils'
 import { ChevronDown } from 'lucide-react'
-import Link from 'next/link'
 import { useState } from 'react'
 import { Button } from '../ui/button'
-import { usePathname } from 'next/navigation'
 import { motion } from 'framer-motion'
 import { useLanguage } from '@/hooks/useLanguage'
+import { allCategories } from '@/database/categories'
 
-export const Categories = () => {
-  const pathname = usePathname()
+interface Props {
+  categories: string[]
+  setCategories: (state: string[]) => void
+}
+
+export const Categories = ({ categories, setCategories }: Props) => {
   const { language } = useLanguage()
-
   const [isOpen, setIsOpen] = useState(false)
+
+  //   const toggleCategory = (category: string) => {
+  //     setCategories((prev: string[]) => {
+  //       if (!Array.isArray(prev)) return []
+  //       return prev.includes(category)
+  //         ? prev.filter((c) => c !== category)
+  //         : [...prev, category]
+  //     })
+  //   }
 
   return (
     <motion.div
@@ -35,23 +45,20 @@ export const Categories = () => {
           className={cn('transition', isOpen && 'rotate-180')}
         />
       </h3>
-      {isOpen && (
-        <div className='mt-2 flex gap-2'>
-          {categories.map((category) => (
-            <Link key={category} href={`/blog/${category}`}>
-              <Button
-                variant='category'
-                className={cn(
-                  '',
-                  pathname.includes(category) && 'bg-white text-zinc-900',
-                )}
-              >
-                {category}
-              </Button>
-            </Link>
+
+      {/* {isOpen && (
+        <div className='mt-2 flex flex-wrap gap-2'>
+          {allCategories.map((category) => (
+            <Button
+              key={category}
+              variant={categories.includes(category) ? 'default' : 'outline'}
+              onClick={() => toggleCategory(category)}
+            >
+              {category}
+            </Button>
           ))}
         </div>
-      )}
+      )} */}
     </motion.div>
   )
 }

@@ -4,16 +4,8 @@ import Link from 'next/link'
 
 interface Props extends Post {}
 
-export const Card = ({
-  slug,
-  title,
-  image,
-  formattedDate,
-  categories,
-}: Props) => {
+export const Card = ({ slug, title, image, date, categories }: Props) => {
   const { language } = useLanguage()
-
-  console.log('formatted date', formattedDate)
 
   return (
     <Link href={`/blog/${slug}`} className='group'>
@@ -25,7 +17,7 @@ export const Card = ({
         />
 
         <span className='absolute bottom-3 right-3 rounded-md bg-black/40 p-1 text-xs text-zinc-100'>
-          {formattedDate}
+          {date}
         </span>
       </div>
 

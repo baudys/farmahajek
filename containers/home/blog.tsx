@@ -1,7 +1,6 @@
 'use client'
 
 import { Card } from '@/components/blog/card'
-import { useLanguage } from '@/hooks/useLanguage'
 import { Post } from '@/types/blog'
 import { motion } from 'framer-motion'
 import { Title } from '@/components/title'
@@ -12,10 +11,6 @@ interface Props {
 }
 
 export const Blog = ({ posts }: Props) => {
-  const { language } = useLanguage()
-
-  const filteredPosts = posts.filter((post) => post.lang === language)
-
   return (
     <section className='py-20'>
       <Title
@@ -31,28 +26,19 @@ export const Blog = ({ posts }: Props) => {
           transition={{ delay: 0.3 }}
           className='grid gap-10 md:grid-cols-2 lg:grid-cols-3'
         >
-          {filteredPosts.map(
-            ({
-              slug,
-              title,
-              image,
-              publishDate,
-              formattedDate,
-              categories,
-              lang,
-            }) => (
+          {posts
+            .slice(0, 3)
+            .reverse()
+            .map(({ slug, title, image, date, categories }) => (
               <Card
                 key={slug}
                 slug={slug}
                 title={title}
                 image={image}
-                publishDate={publishDate}
-                formattedDate={formattedDate}
+                date={date}
                 categories={categories}
-                lang={lang}
               />
-            ),
-          )}
+            ))}
         </motion.div>
       </Container>
     </section>

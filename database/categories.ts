@@ -1,4 +1,4 @@
-export const categories = [
+export const allCategories = [
   'rekapitulace',
   'novinka',
   'strongman',
