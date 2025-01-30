@@ -23,7 +23,7 @@ export const Card = ({ slug, title, image, date, categories }: Props) => {
 
       <div className='flex items-center justify-between'>
         <h2 className='mt-2 text-lg font-semibold md:text-xl'>{title}</h2>
-        <div className='flex gap-1'>
+        {/* <div className='flex gap-1'>
           {categories.map((cat, i) => (
             <Link
               key={i}
@@ -48,7 +48,7 @@ export const Card = ({ slug, title, image, date, categories }: Props) => {
               {cat === 'eshop' && 'eshop'}
             </Link>
           ))}
-        </div>
+        </div> */}
       </div>
     </Link>
   )
