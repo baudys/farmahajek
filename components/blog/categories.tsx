@@ -17,14 +17,15 @@ export const Categories = ({ categories, setCategories }: Props) => {
   const { language } = useLanguage()
   const [isOpen, setIsOpen] = useState(false)
 
-  //   const toggleCategory = (category: string) => {
-  //     setCategories((prev: string[]) => {
-  //       if (!Array.isArray(prev)) return []
-  //       return prev.includes(category)
-  //         ? prev.filter((c) => c !== category)
-  //         : [...prev, category]
-  //     })
-  //   }
+  const toggleCategory = (category: string) => {
+    // @ts-ignore
+    setCategories((prev: string[]) => {
+      if (!Array.isArray(prev)) return []
+      return prev.includes(category)
+        ? prev.filter((c) => c !== category)
+        : [...prev, category]
+    })
+  }
 
   return (
     <motion.div
@@ -46,19 +47,20 @@ export const Categories = ({ categories, setCategories }: Props) => {
         />
       </h3>
 
-      {/* {isOpen && (
+      {isOpen && (
         <div className='mt-2 flex flex-wrap gap-2'>
           {allCategories.map((category) => (
             <Button
               key={category}
-              variant={categories.includes(category) ? 'default' : 'outline'}
               onClick={() => toggleCategory(category)}
+              variant={categories.includes(category) ? 'default' : 'outline'}
+              className='border'
             >
               {category}
             </Button>
           ))}
         </div>
-      )} */}
+      )}
     </motion.div>
   )
 }
