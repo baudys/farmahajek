@@ -1,7 +1,7 @@
 export default function Page() {
   return (
     <main>
-      <h1 className='blog-h1'>Nový e-shop</h1>
+      <h1 className='blog-h1'>Máme Nový e-shop 🌐</h1>
       <img
         src='/blog/novy-eshop/2.webp'
         alt='hero image'
@@ -16,23 +16,23 @@ export default function Page() {
       </p>
       <br />
       <h3 className='blog-h3'>Co je nového?</h3>
-      <ul className='blog-p'>
+      <ul className='blog-ul'>
         <li>
-          ✅ Modernější a přehlednější design: Lépe se zorientujete a rychle
-          najdete, co hledáte.
+          ✅ <b>Modernější a přehlednější design:</b> Lépe se zorientujete a
+          rychle najdete, co hledáte.
         </li>
         <li>
-          ✅ Nové produkty: Přidali jsme například dárkové poukazy, které můžete
-          věnovat svým blízkým jako skvělý farmářský dárek.
+          ✅ <b>Nové produkty:</b> Přidali jsme například dárkové poukazy, které
+          můžete věnovat svým blízkým jako skvělý farmářský dárek.
         </li>
         <li>
-          ✅ Lepší funkčnost: Novinkou je platební brána s možností platby
-          kartou.
+          ✅ <b>Lepší funkčnost:</b> Novinkou je platební brána s možností
+          platby kartou.
         </li>
       </ul>
       <br />
       <h3 className='blog-h3'> Co všechno si u nás můžete zamluvit?</h3>
-      <ul className='blog-p'>
+      <ul className='blog-ul'>
         <li>🐔 Slepičky a kohouty</li>
         <li>🏠 Kurníky a králíkárny</li>
         <li>🥚 Krmivo a Vitamíny</li>
@@ -48,7 +48,7 @@ export default function Page() {
       </p>
       <br />
       <h3 className='blog-h3'> Proč se podívat na nový e-shop?</h3>
-      <ul className='blog-p list-inside list-disc'>
+      <ul className='blog-ul list-inside list-disc'>
         <li>Rychlé a snadné objednávání.</li>
         <li>Širší nabídka produktů.</li>
         <li>Stále stejná kvalita a osobní přístup, který znáte.</li>
@@ -61,6 +61,7 @@ export default function Page() {
           https://www.eshop-farmahajek.cz
         </a>
       </span>
+      <br /> <br />
       <p className='blog-p'>
         Děkujeme, že nám pomáháte růst a zůstat věrní poctivému farmaření.
       </p>
