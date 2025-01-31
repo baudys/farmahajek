@@ -1,7 +1,7 @@
 'use client'
 
-import L from 'leaflet'
-import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet'
+import L, { LatLngExpression } from 'leaflet'
+import { MapContainer, Marker, Popup, TileLayer, useMap } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
 import markerIcon2x from 'leaflet/dist/images/marker-icon-2x.png'
 import markerIcon from 'leaflet/dist/images/marker-icon.png'
@@ -10,6 +10,7 @@ import { useMediaQuery } from '@/hooks/useMediaQuery'
 import Link from 'next/link'
 import { FullscreenControl } from 'react-leaflet-fullscreen'
 import 'react-leaflet-fullscreen/styles.css'
+import { ReactNode } from 'react'
 
 // @ts-ignore
 delete L.Icon.Default.prototype._getIconUrl
@@ -27,12 +28,39 @@ const createEmojiIcon = (emoji: string) => {
   })
 }
 
-const Map = () => {
+const ZoomableMarker = ({
+  position,
+  icon,
+  zoomLevel,
+  popupContent,
+}: {
+  position: LatLngExpression
+  icon: L.Icon<L.IconOptions> | L.DivIcon
+  zoomLevel: number
+  popupContent: ReactNode
+}) => {
+  const map = useMap()
+
+  return (
+    <Marker
+      position={position}
+      icon={icon}
+      eventHandlers={{
+        click: () => map.setView(position, zoomLevel, { animate: true }),
+        mouseover: (event) => event.target.openPopup(),
+      }}
+    >
+      <Popup>{popupContent}</Popup>
+    </Marker>
+  )
+}
+
+const ZoomableMap = () => {
   const isDesktop = useMediaQuery('(min-width: 700px)')
 
   return (
     <MapContainer
-      center={[49.9171208544799, 14.67178354882282] as L.LatLngExpression}
+      center={[49.9171208544799, 14.67178354882282]}
       zoom={isDesktop ? 8 : 6}
       scrollWheelZoom={false}
       className='h-[400px] rounded-lg md:h-[700px]'
@@ -40,200 +68,125 @@ const Map = () => {
       <TileLayer url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png' />
       <FullscreenControl />
 
-      <Marker
+      <ZoomableMarker
         position={[49.355362810666996, 13.004856931980328]}
         icon={createEmojiIcon('🧑‍🌾')}
-        eventHandlers={{
-          mouseover: (event) => event.target.openPopup(),
-        }}
-      >
-        <Popup>
-          <h3 className='text-lg font-bold'>Farma Hájek</h3>
-          <div className='mt-2'>
-            <p className='!m-0'>Hájek 36</p>
-            <p className='!m-0'>
-              <span className='mr-2'>345 06</span>Kdyně
-            </p>
-          </div>
-        </Popup>
-      </Marker>
-      <Marker
+        zoomLevel={17}
+        popupContent={
+          <>
+            <h3 className='text-lg font-bold'>Farma Hájek</h3>
+            <p>Hájek 36, 345 06 Kdyně</p>
+          </>
+        }
+      />
+      <ZoomableMarker
         position={[50.66706246845249, 15.093818038881734]}
         icon={createEmojiIcon('🐔')}
-        eventHandlers={{
-          mouseover: (event) => event.target.openPopup(),
-        }}
-      >
-        <Popup>
-          <Link
-            href='https://krmiva-ecofeed.cz/'
-            className='text-lg font-bold underline'
-          >
-            Ecofeed
-          </Link>
-          <div className='mt-2'>
-            <p className='!m-0'>Parkoviště ČD, Nádražní ul.</p>
-            <p className='!m-0'>
-              <span className='mr-2'>463 42</span> Hodkovice nad Mohelkou
-            </p>
-          </div>
-          <div className='mt-4'>
-            <h3 className='!m-0 font-semibold'>Kontaktní údaje</h3>
-            <p className='!m-0'>+420 734 257 555</p>
-            <p className='!m-0'>+420 601 580 048</p>
-            <p className='!m-0'>adabareska@seznam.cz</p>
-          </div>
-        </Popup>
-      </Marker>
-      <Marker
+        zoomLevel={17}
+        popupContent={
+          <>
+            <Link
+              href='https://krmiva-ecofeed.cz/'
+              className='text-lg font-bold underline'
+            >
+              Ecofeed
+            </Link>
+            <p>Parkoviště ČD, Nádražní ul., 463 42 Hodkovice nad Mohelkou</p>
+          </>
+        }
+      />
+      <ZoomableMarker
         position={[49.25440734518299, 13.920485639888442]}
         icon={createEmojiIcon('🐔')}
-        eventHandlers={{
-          mouseover: (event) => event.target.openPopup(),
-        }}
-      >
-        <Popup>
-          <Link
-            href='https://www.cschstrakonice.cz/clanky/novinky/nedelni-trhy.html'
-            className='text-lg font-bold underline'
-          >
-            Trhy Strakonice
-          </Link>
-          <div className='mt-2'>
-            <p className='!m-0'>Podsrpenská 339</p>
-            <p className='!m-0'>
-              <span className='mr-2'>386 01</span> Strakonice
-            </p>
-          </div>
-          <div className='mt-4'>
-            <p className='!m-0'>každou neděli od 8 hodin</p>
-          </div>
-        </Popup>
-      </Marker>
-      <Marker
+        zoomLevel={17}
+        popupContent={
+          <>
+            <Link
+              href='https://www.cschstrakonice.cz/clanky/novinky/nedelni-trhy.html'
+              className='text-lg font-bold underline'
+            >
+              Trhy Strakonice
+            </Link>
+            <p>Podsrpenská 339, 386 01 Strakonice</p>
+          </>
+        }
+      />
+      <ZoomableMarker
         position={[50.37943323600494, 13.269738104650584]}
         icon={createEmojiIcon('🐔')}
-        eventHandlers={{
-          mouseover: (event) => event.target.openPopup(),
-        }}
-      >
-        <Popup>
-          <Link
-            href='https://zooarcha.cz/index.php?str=kadan'
-            className='text-lg font-bold underline'
-          >
-            Archa ZOO
-          </Link>
-          <div className='mt-2'>
-            <p className='!m-0'>Jungmannova 655</p>
-            <p className='!m-0'>
-              <span className='mr-2'>432 01</span> Kadaň
-            </p>
-          </div>
-          <div className='mt-4'>
-            <h3 className='!m-0 font-semibold'>Kontaktní údaje</h3>
-            <p className='!m-0'>+420 724 690 603</p>
-          </div>
-        </Popup>
-      </Marker>
-      <Marker
+        zoomLevel={17}
+        popupContent={
+          <>
+            <Link
+              href='https://zooarcha.cz/index.php?str=kadan'
+              className='text-lg font-bold underline'
+            >
+              Archa ZOO
+            </Link>
+            <p>Jungmannova 655, 432 01 Kadaň</p>
+          </>
+        }
+      />
+      <ZoomableMarker
         position={[49.61727895651927, 13.612682776462778]}
         icon={createEmojiIcon('🐔')}
-        eventHandlers={{
-          mouseover: (event) => event.target.openPopup(),
-        }}
-      >
-        <Popup>
-          <Link
-            href='https://www.krmnesmesikvidera.cz/prodej-kuric'
-            className='text-lg font-bold underline'
-          >
-            Krmné směsi Kvídera s.r.o.
-          </Link>
-          <div className='mt-2'>
-            <p className='!m-0'>Zámecká 200</p>
-            <p className='!m-0'>
-              <span className='mr-2'>335 61</span> Spálené Poříčí
-            </p>
-
-            <p className='!m-0 !mt-4 font-semibold'>Kontaktní údaje:</p>
-            <p className='!m-0'>+420 602 830 823</p>
-            <p className='!m-0'>+420 724 981 414</p>
-          </div>
-        </Popup>
-      </Marker>
-      <Marker
+        zoomLevel={17}
+        popupContent={
+          <>
+            <Link
+              href='https://www.krmnesmesikvidera.cz/prodej-kuric'
+              className='text-lg font-bold underline'
+            >
+              Krmné směsi Kvídera s.r.o.
+            </Link>
+            <p>Zámecká 200, 335 61 Spálené Poříčí</p>
+          </>
+        }
+      />
+      <ZoomableMarker
         position={[50.38785533623291, 13.19428235875933]}
         icon={createEmojiIcon('🐔')}
-        eventHandlers={{
-          mouseover: (event) => event.target.openPopup(),
-        }}
-      >
-        <Popup>
-          <Link
-            href='https://zooarcha.cz/index.php?str=klasterec'
-            className='text-lg font-bold underline'
-          >
-            Archa ZOO
-          </Link>
-          <div className='mt-2'>
-            <p className='!m-0'>Osvobozená 777 200</p>
-            <p className='!m-0'>
-              <span className='mr-2'>431 51</span> Klášterec nad Ohří
-            </p>
-
-            <p className='!m-0 !mt-4 font-semibold'>Kontaktní údaje:</p>
-            <p className='!m-0'>+420 720 739 769</p>
-          </div>
-        </Popup>
-      </Marker>
-
-      <Marker
+        zoomLevel={17}
+        popupContent={
+          <>
+            <Link
+              href='https://zooarcha.cz/index.php?str=klasterec'
+              className='text-lg font-bold underline'
+            >
+              Archa ZOO
+            </Link>
+            <p>Osvobozená 777 200, 431 51 Klášterec nad Ohří</p>
+          </>
+        }
+      />
+      <ZoomableMarker
         position={[50.18710388612348, 14.036772990471738]}
         icon={createEmojiIcon('🐔')}
-        eventHandlers={{
-          mouseover: (event) => event.target.openPopup(),
-        }}
-      >
-        <Popup>
-          <Link href='#' className='text-lg font-bold underline'>
-            Prodejní sklad Smečno
-          </Link>
-          <div className='mt-2'>
-            <p className='!m-0'>Osvobozená 777 200</p>
-            <p className='!m-0'>
-              <span className='mr-2'>273 05</span> Smečno
-            </p>
-
-            <p className='!m-0 !mt-4 font-semibold'>Kontaktní údaje:</p>
-            <p className='!m-0'>+420 774 090 296</p>
-          </div>
-        </Popup>
-      </Marker>
-      <Marker
+        zoomLevel={17}
+        popupContent={
+          <>
+            <Link href='#' className='text-lg font-bold underline'>
+              Prodejní sklad Smečno
+            </Link>
+            <p>Osvobozená 777 200, 273 05 Smečno</p>
+          </>
+        }
+      />
+      <ZoomableMarker
         position={[50.505117522156155, 14.260882544285527]}
         icon={createEmojiIcon('🐔')}
-        eventHandlers={{
-          mouseover: (event) => event.target.openPopup(),
-        }}
-      >
-        <Popup>
-          <Link href='#' className='text-lg font-bold underline'>
-            Prodejní sklad Polepy
-          </Link>
-          <div className='mt-2'>
-            <p className='!m-0'>areál firmy HARIS</p>
-            <p className='!m-0'>
-              <span className='mr-2'>431 51</span> Polepy
-            </p>
-
-            <p className='!m-0 !mt-4 font-semibold'>Kontaktní údaje:</p>
-            <p className='!m-0'>+420 608 717 483</p>
-          </div>
-        </Popup>
-      </Marker>
+        zoomLevel={17}
+        popupContent={
+          <>
+            <Link href='#' className='text-lg font-bold underline'>
+              Prodejní sklad Polepy
+            </Link>
+            <p>Areál firmy HARIS, 431 51 Polepy</p>
+          </>
+        }
+      />
     </MapContainer>
   )
 }
 
-export default Map
+export default ZoomableMap
