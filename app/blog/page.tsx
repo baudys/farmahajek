@@ -16,7 +16,7 @@ export default async function Page() {
   //       )
   //     : posts
 
-  const formattedPosts = posts.toReversed()
+  const formattedPosts = posts.reverse()
 
   return (
     <div className='space-y-20 lg:space-y-40'>
