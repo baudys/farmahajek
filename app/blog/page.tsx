@@ -16,12 +16,14 @@ export default async function Page() {
   //       )
   //     : posts
 
+  const formattedPosts = posts.toReversed()
+
   return (
     <div className='space-y-20 lg:space-y-40'>
       <Container>
         <Title textCs='Blog' textDe='Blog' textEn='Blog' />
         {/* <Categories categories={categories} setCategories={setCategories} /> */}
-        <Posts posts={posts.reverse()} />
+        <Posts posts={formattedPosts} />
       </Container>
     </div>
   )
