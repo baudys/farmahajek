@@ -26,19 +26,16 @@ export const Blog = ({ posts }: Props) => {
           transition={{ delay: 0.3 }}
           className='grid gap-10 md:grid-cols-2 lg:grid-cols-3'
         >
-          {posts
-            .reverse()
-            .slice(0, 3)
-            .map(({ slug, title, image, date, categories }) => (
-              <Card
-                key={slug}
-                slug={slug}
-                title={title}
-                image={image}
-                date={date}
-                categories={categories}
-              />
-            ))}
+          {posts.slice(0, 3).map(({ slug, title, image, date, categories }) => (
+            <Card
+              key={slug}
+              slug={slug}
+              title={title}
+              image={image}
+              date={date}
+              categories={categories}
+            />
+          ))}
         </motion.div>
       </Container>
     </section>
