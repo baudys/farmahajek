@@ -7,7 +7,7 @@ import { Posts } from '@/containers/blog/posts'
 import { posts } from '@/database/posts'
 import { useState } from 'react'
 
-export default async function Page() {
+export default function Page() {
   //   const [categories, setCategories] = useState<string[]>([''])
 
   //   const filteredPosts = categories.length
