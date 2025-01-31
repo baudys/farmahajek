@@ -27,8 +27,8 @@ export const Blog = ({ posts }: Props) => {
           className='grid gap-10 md:grid-cols-2 lg:grid-cols-3'
         >
           {posts
-            .slice(0, 3)
             .reverse()
+            .slice(0, 3)
             .map(({ slug, title, image, date, categories }) => (
               <Card
                 key={slug}

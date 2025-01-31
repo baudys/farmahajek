@@ -21,7 +21,7 @@ export default async function Page() {
       <Container>
         <Title textCs='Blog' textDe='Blog' textEn='Blog' />
         {/* <Categories categories={categories} setCategories={setCategories} /> */}
-        <Posts posts={posts.toReversed()} />
+        <Posts posts={posts.reverse()} />
       </Container>
     </div>
   )
