@@ -1,10 +1,17 @@
 export const posts = [
   {
+    slug: '/leden',
+    title: 'Leden 2025',
+    image: '/blog/leden/1.webp',
+    date: '05.02.2025',
+    categories: ['souhrn'],
+  },
+  {
     slug: '/2024',
     title: 'Děkujeme za rok 2024',
     image: '/blog/2024/1.webp',
     date: '01.01.2025',
-    categories: ['rekapitulace'],
+    categories: ['souhrn'],
   },
   {
     slug: '/novy-eshop',

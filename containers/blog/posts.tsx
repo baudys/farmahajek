@@ -1,7 +1,6 @@
 'use client'
 
 import { Card } from '@/components/blog/card'
-import { posts } from '@/database/posts'
 import { Post } from '@/types/blog'
 import { motion } from 'framer-motion'
 
