@@ -6,7 +6,11 @@ export default function Page() {
   return (
     <main>
       <h1 className='blog-h1'>Lednové novinky 🐔❄️</h1>
-      <img src='/blog/leden/1.webp' alt='hero image' className='blog-img' />
+      <img
+        src='/blog/2025/leden/1.webp'
+        alt='hero image'
+        className='blog-img'
+      />
       <p className='blog-p'>Milí přátelé,</p>
       <p className='blog-p'>
         rok 2025 se rozjel naplno a u nás na farmě to znamená jediné –{' '}
@@ -24,7 +28,11 @@ export default function Page() {
       <p className='blog-p'>
         <b>📸 Podívejte se na naše nejnovější kuřátka:</b>
       </p>
-      <img src='/blog/leden/3.webp' alt='hero image' className='blog-img' />
+      <img
+        src='/blog/2025/leden/3.webp'
+        alt='hero image'
+        className='blog-img'
+      />
       <h2 className='blog-h2'>
         Samoobslužný krámeček – nakupujte kdykoliv! 🏪
       </h2>
@@ -74,7 +82,7 @@ export default function Page() {
         kvalitní kurníky, které najdete v našem e-shopu. Různé velikosti a
         provedení zajistí pohodlí pro vaše chovance – stačí si vybrat ten pravý!
       </p>
-      <img src='/blog/leden/4.webp' alt='kurnik' className='blog-img' />
+      <img src='/blog/2025/leden/4.webp' alt='kurnik' className='blog-img' />
       <span className='blog-p'>
         <b>🛒 Prohlédněte si nabídku zde: </b>
         <a href='https://eshop-farmahajek.cz/kurniky' className='blog-a'>

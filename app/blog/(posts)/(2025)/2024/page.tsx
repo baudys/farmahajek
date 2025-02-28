@@ -8,7 +8,7 @@ export default function Page() {
     <main>
       <h1 className='blog-h1'>Děkujeme za skvělý rok 2024! 🎉🐔</h1>
 
-      <img src='/blog/2024/2.webp' alt='hero image' className='blog-img' />
+      <img src='/blog/2025/2024/2.webp' alt='hero image' className='blog-img' />
 
       <p className='blog-p'>Milí přátelé,</p>
       <p className='blog-p'>

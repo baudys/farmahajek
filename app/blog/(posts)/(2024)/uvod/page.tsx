@@ -2,7 +2,7 @@ export default function Page() {
   return (
     <main>
       <h1 className='blog-h1'>Úvod</h1>
-      <img src='/blog/uvod/1.webp' alt='hero image' className='blog-img' />
+      <img src='/blog/2024/uvod/1.webp' alt='hero image' className='blog-img' />
       <p className='blog-p'>
         Jsme rádi, že jste zavítali na stránky naší farmy, která již celé roky
         přináší kvalitní produkty z lásky k přírodě a poctivému hospodaření.
