@@ -1,11 +1,11 @@
 export const posts = [
-  //   {
-  //     slug: '/unor-2025',
-  //     title: 'Únor 2025',
-  //     image: '/blog/2025/unor/1.webp',
-  //     date: '01.03.2025',
-  //     categories: ['souhrn'],
-  //   },
+  {
+    slug: '/unor-2025',
+    title: 'Únor 2025',
+    image: '/blog/2025/unor/1.webp',
+    date: '01.03.2025',
+    categories: ['souhrn'],
+  },
   {
     slug: '/leden-2025',
     title: 'Leden 2025',
