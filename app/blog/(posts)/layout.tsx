@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <Container className='xl:max-w-screen-md 2xl:max-w-screen-lg'>
+    <Container className='xl:max-w-screen-lg 2xl:max-w-screen-xl'>
       <Link href='/blog' className='flex items-center gap-1'>
         <ArrowLeft size={18} /> Blog
       </Link>
