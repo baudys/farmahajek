@@ -1,5 +1,12 @@
 export const posts = [
   {
+    slug: '/duben-2025',
+    title: 'Duben 2025',
+    image: '/blog/2025/duben/1.webp',
+    date: '01.05.2025',
+    categories: ['souhrn'],
+  },
+  {
     slug: '/brezen-2025',
     title: 'Březen 2025',
     image: '/blog/2025/brezen/1.webp',

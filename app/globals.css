@@ -108,7 +108,7 @@
 }
 
 .blog-img {
-  @apply mx-auto mb-10 w-full;
+  @apply mx-auto mb-10 w-full max-w-[500px];
 }
 
 .blog-ul {
