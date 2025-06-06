@@ -97,8 +97,8 @@ export default function Page() {
         místech.
       </p>
       <br />
-      <a href='https://eshop.farmahajek.cz' className='blog-a'>
-        eshop.farmahajek.cz
+      <a href='https://eshop-farmahajek.cz' className='blog-a'>
+        eshop-farmahajek.cz
       </a>
       {/* --- */}
       <h2 className='blog-h2'>Děkujeme, že jste s námi 💚</h2>
