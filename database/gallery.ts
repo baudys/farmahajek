@@ -146,3 +146,5 @@ export const strongman = [
   '/strongman/78.webp',
   '/strongman/79.webp',
 ]
+
+export const strongman2025 = []

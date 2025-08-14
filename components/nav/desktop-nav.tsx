@@ -13,12 +13,14 @@ import { motion } from 'framer-motion'
 import { LanguageSelector } from './language-selector'
 import { ExpandableNavLink } from './expandable-nav-link'
 import { cn } from '@/lib/utils'
+import { usePathname } from 'next/navigation'
 
 interface DesktopNavProps {
   isTopOfPage: boolean
 }
 
 export const DesktopNav: React.FC<DesktopNavProps> = ({ isTopOfPage }) => {
+  const pathname = usePathname()
   const { language } = useLanguage((state) => state)
 
   return (
@@ -28,6 +30,7 @@ export const DesktopNav: React.FC<DesktopNavProps> = ({ isTopOfPage }) => {
         isTopOfPage
           ? 'bg-transparent'
           : 'bg-green/70 drop-shadow backdrop-blur-xl',
+        isTopOfPage && pathname !== '/' && 'bg-black',
       )}
     >
       <Container>
@@ -125,6 +128,10 @@ export const DesktopNav: React.FC<DesktopNavProps> = ({ isTopOfPage }) => {
                         label: 'Strongman',
                         href: '/galerie/strongman',
                       },
+                      {
+                        label: 'Strongman 2025',
+                        href: '/galerie/strongman-2025',
+                      },
                     ]
                   : language === 'en'
                     ? [
@@ -136,6 +143,10 @@ export const DesktopNav: React.FC<DesktopNavProps> = ({ isTopOfPage }) => {
                           label: 'Strongman',
                           href: '/galerie/strongman',
                         },
+                        {
+                          label: 'Strongman 2025',
+                          href: '/galerie/strongman-2025',
+                        },
                       ]
                     : [
                         {
@@ -145,6 +156,10 @@ export const DesktopNav: React.FC<DesktopNavProps> = ({ isTopOfPage }) => {
                         {
                           label: 'Strongman',
                           href: '/galerie/strongman',
+                        },
+                        {
+                          label: 'Strongman 2025',
+                          href: '/galerie/strongman-2025',
                         },
                       ]
               }
