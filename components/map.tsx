@@ -185,6 +185,58 @@ const ZoomableMap = () => {
           </>
         }
       />
+      <ZoomableMarker
+        position={[50.17989393225716, 12.642782139517404]}
+        icon={createEmojiIcon('🐔')}
+        zoomLevel={17}
+        popupContent={
+          <>
+            <Link href='#' className='text-lg font-bold underline'>
+              Sokolov
+            </Link>
+            <p>Přesná adresa bude zveřejněna týden před prodejem</p>
+          </>
+        }
+      />
+      <ZoomableMarker
+        position={[49.75343254622636, 12.648309016750293]}
+        icon={createEmojiIcon('🐔')}
+        zoomLevel={17}
+        popupContent={
+          <>
+            <Link href='#' className='text-lg font-bold underline'>
+              Maršovy Chody (Tachov)
+            </Link>
+            <p>Přesná adresa bude zveřejněna týden před prodejem</p>
+          </>
+        }
+      />
+      <ZoomableMarker
+        position={[50.28549046671445, 14.828549212785425]}
+        icon={createEmojiIcon('🐔')}
+        zoomLevel={17}
+        popupContent={
+          <>
+            <Link href='#' className='text-lg font-bold underline'>
+              Benátky nad Jizerou
+            </Link>
+            <p>Přesná adresa bude zveřejněna týden před prodejem</p>
+          </>
+        }
+      />
+      <ZoomableMarker
+        position={[49.96452413388497, 14.070017316932102]}
+        icon={createEmojiIcon('🐔')}
+        zoomLevel={17}
+        popupContent={
+          <>
+            <Link href='#' className='text-lg font-bold underline'>
+              Beroun
+            </Link>
+            <p>Přesná adresa bude zveřejněna týden před prodejem</p>
+          </>
+        }
+      />
     </MapContainer>
   )
 }
