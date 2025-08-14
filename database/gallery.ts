@@ -65,7 +65,7 @@ export const farma = [
   '/gallery/64.webp',
 ]
 
-export const strongman = [
+export const strongman2023 = [
   '/strongman/1.webp',
   '/strongman/2.webp',
   '/strongman/3.webp',

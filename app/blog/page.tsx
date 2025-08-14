@@ -20,7 +20,6 @@ export default function Page() {
   return (
     <div className='space-y-20 lg:space-y-40'>
       <Container>
-        <Title textCs='Blog' textDe='Blog' textEn='Blog' />
         <Categories categories={categories} setCategories={setCategories} />
         <Posts posts={filteredPosts} />
       </Container>

@@ -8,8 +8,7 @@ export const metadata = {
 
 export default function GaleriePage() {
   return (
-    <div className='pb-28'>
-      <div className='h-[70.72px] w-full bg-black xl:h-[84.81px]' />
+    <div className='pb-28 pt-24'>
       <Container className='mt-10'>
         <ModalGallery images={farma} />
       </Container>

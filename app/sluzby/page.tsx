@@ -26,8 +26,7 @@ export default function SluzbyPage() {
   const { language } = useLanguage((state) => state)
 
   return (
-    <div className='bg-gradient-to-br from-zinc-50 to-zinc-100 pb-28'>
-      <div className='h-[70.72px] w-full bg-black xl:h-[84.81px]' />
+    <div className='bg-gradient-to-br from-zinc-50 to-zinc-100 pb-28 pt-24'>
       <Container className='mt-10'>
         <motion.div
           initial={{ x: -500, opacity: 0 }}

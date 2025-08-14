@@ -125,8 +125,8 @@ export const DesktopNav: React.FC<DesktopNavProps> = ({ isTopOfPage }) => {
                         href: '/galerie/farma',
                       },
                       {
-                        label: 'Strongman',
-                        href: '/galerie/strongman',
+                        label: 'Strongman 2023',
+                        href: '/galerie/strongman-2023',
                       },
                       {
                         label: 'Strongman 2025',
@@ -140,8 +140,8 @@ export const DesktopNav: React.FC<DesktopNavProps> = ({ isTopOfPage }) => {
                           href: '/galerie/farma',
                         },
                         {
-                          label: 'Strongman',
-                          href: '/galerie/strongman',
+                          label: 'Strongman 2023',
+                          href: '/galerie/strongman-2023',
                         },
                         {
                           label: 'Strongman 2025',
@@ -154,8 +154,8 @@ export const DesktopNav: React.FC<DesktopNavProps> = ({ isTopOfPage }) => {
                           href: '/galerie/farma',
                         },
                         {
-                          label: 'Strongman',
-                          href: '/galerie/strongman',
+                          label: 'Strongman 2023',
+                          href: '/galerie/strongman-2023',
                         },
                         {
                           label: 'Strongman 2025',

@@ -17,12 +17,15 @@ import { useLanguage } from '@/hooks/useLanguage'
 import { motion } from 'framer-motion'
 import { LanguageSelector } from './language-selector'
 import { MobileExpandableNavItem } from './mobile-expandable-nav-link'
+import { usePathname } from 'next/navigation'
+import { cn } from '@/lib/utils'
 
 interface MobileNavProps {
   isTopOfPage: boolean
 }
 
 export const MobileNav: React.FC<MobileNavProps> = ({ isTopOfPage }) => {
+  const pathname = usePathname()
   const [isOpen, setIsOpen] = useState<boolean>(false)
   const { language } = useLanguage((state) => state)
 
@@ -40,11 +43,13 @@ export const MobileNav: React.FC<MobileNavProps> = ({ isTopOfPage }) => {
 
   return (
     <div
-      className={`fixed z-[1111] block w-full py-3 transition lg:hidden ${
+      className={cn(
+        'fixed z-[1111] block w-full py-3 transition lg:hidden',
         isTopOfPage
           ? 'bg-transparent'
-          : 'bg-green/70 drop-shadow backdrop-blur-xl'
-      }`}
+          : 'bg-green/70 drop-shadow backdrop-blur-xl',
+        isTopOfPage && pathname !== '/' && 'bg-black',
+      )}
     >
       <Container>
         <div className='flex items-center justify-between'>
@@ -141,8 +146,12 @@ export const MobileNav: React.FC<MobileNavProps> = ({ isTopOfPage }) => {
                             href: '/galerie/farma',
                           },
                           {
-                            label: 'Strongman',
-                            href: '/galerie/strongman',
+                            label: 'Strongman 2023',
+                            href: '/galerie/strongman-2023',
+                          },
+                          {
+                            label: 'Strongman 2025',
+                            href: '/galerie/strongman-2025',
                           },
                         ]
                       : language === 'en'
@@ -152,8 +161,12 @@ export const MobileNav: React.FC<MobileNavProps> = ({ isTopOfPage }) => {
                               href: '/galerie/farma',
                             },
                             {
-                              label: 'Strongman',
-                              href: '/galerie/strongman',
+                              label: 'Strongman 2023',
+                              href: '/galerie/strongman-2023',
+                            },
+                            {
+                              label: 'Strongman 2025',
+                              href: '/galerie/strongman-2025',
                             },
                           ]
                         : [
@@ -162,8 +175,12 @@ export const MobileNav: React.FC<MobileNavProps> = ({ isTopOfPage }) => {
                               href: '/galerie/farma',
                             },
                             {
-                              label: 'Strongman',
-                              href: '/galerie/strongman',
+                              label: 'Strongman 2023',
+                              href: '/galerie/strongman-2023',
+                            },
+                            {
+                              label: 'Strongman 2025',
+                              href: '/galerie/strongman-2025',
                             },
                           ]
                   }

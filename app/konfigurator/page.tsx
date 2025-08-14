@@ -24,8 +24,7 @@ export default function KonfiguratorPage() {
       : null
 
   return (
-    <main className='pb-28'>
-      <div className='h-[70.72px] w-full bg-black xl:h-[84.81px]' />
+    <main className='pb-28 pt-24'>
       <Container className='mt-10'>
         <h1 className='text-3xl font-bold md:text-4xl lg:text-5xl'>
           Najděte si perfektní slepičku
