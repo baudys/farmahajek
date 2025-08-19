@@ -74,7 +74,7 @@ export default function RootLayout({
       <SklikProvider />
 
       <body className={montserrat.className}>
-        <NewsletterBanner />
+        {/* <NewsletterBanner /> */}
         <CookiesBanner />
 
         <Navbar />
