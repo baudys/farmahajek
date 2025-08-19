@@ -1,5 +1,12 @@
 export const posts = [
   {
+    slug: '/cervenec-2025',
+    title: 'Červenec 2025',
+    image: '/blog/2025/cervenec/1.webp',
+    date: '01.08.2025',
+    categories: ['souhrn'],
+  },
+  {
     slug: '/cerven-2025',
     title: 'Červen 2025',
     image: '/blog/2025/cerven/1.webp',
