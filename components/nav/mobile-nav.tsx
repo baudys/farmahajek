@@ -150,6 +150,10 @@ export const MobileNav: React.FC<MobileNavProps> = ({ isTopOfPage }) => {
                             href: '/galerie/strongman-2023',
                           },
                           {
+                            label: 'Strongman 2024',
+                            href: '/galerie/strongman-2024',
+                          },
+                          {
                             label: 'Strongman 2025',
                             href: '/galerie/strongman-2025',
                           },
@@ -165,6 +169,10 @@ export const MobileNav: React.FC<MobileNavProps> = ({ isTopOfPage }) => {
                               href: '/galerie/strongman-2023',
                             },
                             {
+                              label: 'Strongman 2024',
+                              href: '/galerie/strongman-2024',
+                            },
+                            {
                               label: 'Strongman 2025',
                               href: '/galerie/strongman-2025',
                             },
@@ -177,6 +185,10 @@ export const MobileNav: React.FC<MobileNavProps> = ({ isTopOfPage }) => {
                             {
                               label: 'Strongman 2023',
                               href: '/galerie/strongman-2023',
+                            },
+                            {
+                              label: 'Strongman 2024',
+                              href: '/galerie/strongman-2024',
                             },
                             {
                               label: 'Strongman 2025',
