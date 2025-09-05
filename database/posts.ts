@@ -1,5 +1,12 @@
 export const posts = [
   {
+    slug: '/cesta-kurete',
+    title: 'Cesta kuřete',
+    image: '/blog/2025/cesta-kurete/1.webp',
+    date: '05.09.2025',
+    categories: ['slepičky'],
+  },
+  {
     slug: '/cervenec-2025',
     title: 'Červenec 2025',
     image: '/blog/2025/cervenec/1.webp',
