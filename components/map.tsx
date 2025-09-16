@@ -199,13 +199,13 @@ const ZoomableMap = () => {
         }
       />
       <ZoomableMarker
-        position={[49.75343254622636, 12.648309016750293]}
+        position={[49.711377214851, 12.77723709663926]}
         icon={createEmojiIcon('🐔')}
         zoomLevel={17}
         popupContent={
           <>
             <Link href='#' className='text-lg font-bold underline'>
-              Maršovy Chody (Tachov)
+              Bor u Tachova
             </Link>
             <p>Přesná adresa bude zveřejněna týden před prodejem</p>
           </>
