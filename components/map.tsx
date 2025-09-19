@@ -112,22 +112,6 @@ const ZoomableMap = () => {
         }
       />
       <ZoomableMarker
-        position={[50.37943323600494, 13.269738104650584]}
-        icon={createEmojiIcon('🐔')}
-        zoomLevel={17}
-        popupContent={
-          <>
-            <Link
-              href='https://zooarcha.cz/index.php?str=kadan'
-              className='text-lg font-bold underline'
-            >
-              Archa ZOO
-            </Link>
-            <p>Jungmannova 655, 432 01 Kadaň</p>
-          </>
-        }
-      />
-      <ZoomableMarker
         position={[49.61727895651927, 13.612682776462778]}
         icon={createEmojiIcon('🐔')}
         zoomLevel={17}
