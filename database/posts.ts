@@ -1,5 +1,12 @@
 export const posts = [
   {
+    slug: '/vyber-kurniku',
+    title: 'Výběr kurníku',
+    image: '/blog/2025/vyber-kurniku/1.webp',
+    date: '23.09.2025',
+    categories: ['slepičky'],
+  },
+  {
     slug: '/cesta-kurete',
     title: 'Cesta kuřete',
     image: '/blog/2025/cesta-kurete/1.webp',
