@@ -175,4 +175,20 @@ export const strongman2024 = [
   '/strongman-2024/25.webp',
 ]
 
-export const strongman2025 = []
+export const strongman2025 = [
+  '/strongman-2025/1.webp',
+  '/strongman-2025/2.webp',
+  '/strongman-2025/3.webp',
+  '/strongman-2025/4.webp',
+  '/strongman-2025/5.webp',
+  '/strongman-2025/6.webp',
+  '/strongman-2025/7.webp',
+  '/strongman-2025/8.webp',
+  '/strongman-2025/9.webp',
+  '/strongman-2025/10.webp',
+  '/strongman-2025/11.webp',
+  '/strongman-2025/12.webp',
+  '/strongman-2025/13.webp',
+  '/strongman-2025/14.webp',
+  '/strongman-2025/15.webp',
+]

@@ -18,8 +18,12 @@ export const Photo = ({ photo }: PhotoProps) => {
         <DialogTrigger>
           <img src={photo} alt='photo' />
         </DialogTrigger>
-        <DialogContent className='max-h-[90vh] max-w-[95vw]'>
-          <img src={photo} alt='photo' className='rounded-lg' />
+        <DialogContent className='max-h-[80vh] max-w-[95vw]'>
+          <img
+            src={photo}
+            alt='photo'
+            className='max-h-[80vh] max-w-[95vw] rounded-lg'
+          />
         </DialogContent>
       </Dialog>
     </motion.div>
