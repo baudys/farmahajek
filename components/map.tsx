@@ -195,7 +195,7 @@ const ZoomableMap = () => {
           </>
         }
       />
-      <ZoomableMarker
+      {/* <ZoomableMarker
         position={[50.28549046671445, 14.828549212785425]}
         icon={createEmojiIcon('🐔')}
         zoomLevel={17}
@@ -207,7 +207,7 @@ const ZoomableMap = () => {
             <p>Přesná adresa bude zveřejněna týden před prodejem</p>
           </>
         }
-      />
+    /> */}
       <ZoomableMarker
         position={[49.96452413388497, 14.070017316932102]}
         icon={createEmojiIcon('🐔')}
@@ -216,6 +216,59 @@ const ZoomableMap = () => {
           <>
             <Link href='#' className='text-lg font-bold underline'>
               Beroun
+            </Link>
+            <p>Přesná adresa bude zveřejněna týden před prodejem</p>
+          </>
+        }
+      />
+      {/*  */}
+      <ZoomableMarker
+        position={[50.096485151478156, 16.092989819123286]}
+        icon={createEmojiIcon('🐔')}
+        zoomLevel={17}
+        popupContent={
+          <>
+            <Link href='#' className='text-lg font-bold underline'>
+              Borohrádek
+            </Link>
+            <p>Přesná adresa bude zveřejněna týden před prodejem</p>
+          </>
+        }
+      />
+      <ZoomableMarker
+        position={[50.09763751762603, 15.190659008213602]}
+        icon={createEmojiIcon('🐔')}
+        zoomLevel={17}
+        popupContent={
+          <>
+            <Link href='#' className='text-lg font-bold underline'>
+              Velký Osek
+            </Link>
+            <p>Přesná adresa bude zveřejněna týden před prodejem</p>
+          </>
+        }
+      />
+      <ZoomableMarker
+        position={[50.10566618318882, 14.574065226157481]}
+        icon={createEmojiIcon('🐔')}
+        zoomLevel={17}
+        popupContent={
+          <>
+            <Link href='#' className='text-lg font-bold underline'>
+              Černý Most
+            </Link>
+            <p>Přesná adresa bude zveřejněna týden před prodejem</p>
+          </>
+        }
+      />
+      <ZoomableMarker
+        position={[50.28969998033817, 14.736330608061403]}
+        icon={createEmojiIcon('🐔')}
+        zoomLevel={17}
+        popupContent={
+          <>
+            <Link href='#' className='text-lg font-bold underline'>
+              Mečeříž
             </Link>
             <p>Přesná adresa bude zveřejněna týden před prodejem</p>
           </>
