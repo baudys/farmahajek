@@ -3,7 +3,7 @@ export const posts = [
     slug: '/podzim-na-dvore',
     title: 'Podzim na dvoře',
     image: '/blog/2025/podzim-na-dvore/1.webp',
-    date: '01.11.2025',
+    date: '10.11.2025',
     categories: ['slepičky'],
   },
   {
