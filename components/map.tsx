@@ -178,7 +178,7 @@ const ZoomableMap = () => {
             <Link href='#' className='text-lg font-bold underline'>
               Sokolov
             </Link>
-            <p>Přesná adresa bude zveřejněna týden před prodejem</p>
+            <p>Přesná adresa bude zveřejněna 2 dny před prodejem</p>
           </>
         }
       />
@@ -191,7 +191,7 @@ const ZoomableMap = () => {
             <Link href='#' className='text-lg font-bold underline'>
               Bor u Tachova
             </Link>
-            <p>Přesná adresa bude zveřejněna týden před prodejem</p>
+            <p>Přesná adresa bude zveřejněna 2 dny před prodejem</p>
           </>
         }
       />
@@ -217,7 +217,7 @@ const ZoomableMap = () => {
             <Link href='#' className='text-lg font-bold underline'>
               Beroun
             </Link>
-            <p>Přesná adresa bude zveřejněna týden před prodejem</p>
+            <p>Přesná adresa bude zveřejněna 2 dny před prodejem</p>
           </>
         }
       />
@@ -231,7 +231,7 @@ const ZoomableMap = () => {
             <Link href='#' className='text-lg font-bold underline'>
               Borohrádek
             </Link>
-            <p>Přesná adresa bude zveřejněna týden před prodejem</p>
+            <p>Přesná adresa bude zveřejněna 2 dny před prodejem</p>
           </>
         }
       />
@@ -244,7 +244,7 @@ const ZoomableMap = () => {
             <Link href='#' className='text-lg font-bold underline'>
               Velký Osek
             </Link>
-            <p>Přesná adresa bude zveřejněna týden před prodejem</p>
+            <p>Přesná adresa bude zveřejněna 2 dny před prodejem</p>
           </>
         }
       />
@@ -257,7 +257,7 @@ const ZoomableMap = () => {
             <Link href='#' className='text-lg font-bold underline'>
               Černý Most
             </Link>
-            <p>Přesná adresa bude zveřejněna týden před prodejem</p>
+            <p>Přesná adresa bude zveřejněna 2 dny před prodejem</p>
           </>
         }
       />
@@ -270,7 +270,7 @@ const ZoomableMap = () => {
             <Link href='#' className='text-lg font-bold underline'>
               Mečeříž
             </Link>
-            <p>Přesná adresa bude zveřejněna týden před prodejem</p>
+            <p>Přesná adresa bude zveřejněna 2 dny před prodejem</p>
           </>
         }
       />
