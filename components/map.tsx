@@ -8,8 +8,8 @@ import markerIcon from 'leaflet/dist/images/marker-icon.png'
 import markerShadow from 'leaflet/dist/images/marker-shadow.png'
 import { useMediaQuery } from '@/hooks/useMediaQuery'
 import Link from 'next/link'
-import { FullscreenControl } from 'react-leaflet-fullscreen'
-import 'react-leaflet-fullscreen/styles.css'
+// import { FullscreenControl } from 'react-leaflet-fullscreen'
+// import 'react-leaflet-fullscreen/styles.css'
 import { ReactNode } from 'react'
 
 // @ts-ignore
@@ -66,7 +66,7 @@ const ZoomableMap = () => {
       className='h-[400px] rounded-lg md:h-[700px]'
     >
       <TileLayer url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png' />
-      <FullscreenControl />
+      {/* <FullscreenControl /> */}
 
       <ZoomableMarker
         position={[49.355362810666996, 13.004856931980328]}
