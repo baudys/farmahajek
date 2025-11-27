@@ -144,7 +144,7 @@ const ZoomableMap = () => {
         }
       />
       <ZoomableMarker
-        position={[50.18710388612348, 14.036772990471738]}
+        position={[50.187113540129545, 14.036750534651851]}
         icon={createEmojiIcon('🐔')}
         zoomLevel={17}
         popupContent={
@@ -152,7 +152,7 @@ const ZoomableMap = () => {
             <Link href='#' className='text-lg font-bold underline'>
               Prodejní sklad Smečno
             </Link>
-            <p>Osvobozená 777 200, 273 05 Smečno</p>
+            <p>Kačická 514, 273 05 Smečno</p>
           </>
         }
       />
