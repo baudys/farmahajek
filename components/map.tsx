@@ -249,19 +249,6 @@ const ZoomableMap = () => {
         }
       />
       <ZoomableMarker
-        position={[50.10566618318882, 14.574065226157481]}
-        icon={createEmojiIcon('🐔')}
-        zoomLevel={17}
-        popupContent={
-          <>
-            <Link href='#' className='text-lg font-bold underline'>
-              Černý Most
-            </Link>
-            <p>Přesná adresa bude zveřejněna 2 dny před prodejem</p>
-          </>
-        }
-      />
-      <ZoomableMarker
         position={[50.28969998033817, 14.736330608061403]}
         icon={createEmojiIcon('🐔')}
         zoomLevel={17}
