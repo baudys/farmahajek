@@ -60,7 +60,7 @@ export const Hero = () => {
               <motion.h1
                 initial={{ y: -200, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
-                className={`mb-3 pt-1 text-center text-4xl font-black uppercase text-white lg:text-5xl xl:text-6xl 2xl:text-7xl`}
+                className={`mb-3 mt-24 w-full text-center text-4xl font-black uppercase text-white lg:text-4xl xl:text-5xl 2xl:text-6xl`}
               >
                 {language === 'cs' && <>Ryze čeští chovatelé a farmáři</>}
                 {language === 'en' && <>PURELY CZECH BREEDERS AND FARMERS</>}
