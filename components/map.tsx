@@ -223,7 +223,7 @@ const ZoomableMap = () => {
       />
       {/*  */}
       <ZoomableMarker
-        position={[50.096485151478156, 16.092989819123286]}
+        position={[50.0971790501268, 16.086025029110775]}
         icon={createEmojiIcon('🐔')}
         zoomLevel={17}
         popupContent={
@@ -231,12 +231,12 @@ const ZoomableMap = () => {
             <Link href='#' className='text-lg font-bold underline'>
               Borohrádek
             </Link>
-            <p>Přesná adresa bude zveřejněna 2 dny před prodejem</p>
+            <p>vlakové nádraží</p>
           </>
         }
       />
       <ZoomableMarker
-        position={[50.09763751762603, 15.190659008213602]}
+        position={[50.101915406162995, 15.193056657999412]}
         icon={createEmojiIcon('🐔')}
         zoomLevel={17}
         popupContent={
@@ -244,12 +244,12 @@ const ZoomableMap = () => {
             <Link href='#' className='text-lg font-bold underline'>
               Velký Osek
             </Link>
-            <p>Přesná adresa bude zveřejněna 2 dny před prodejem</p>
+            <p>vlakové nádraží</p>
           </>
         }
       />
       <ZoomableMarker
-        position={[50.28969998033817, 14.736330608061403]}
+        position={[50.290511455129625, 14.739606212663302]}
         icon={createEmojiIcon('🐔')}
         zoomLevel={17}
         popupContent={
@@ -257,7 +257,7 @@ const ZoomableMap = () => {
             <Link href='#' className='text-lg font-bold underline'>
               Mečeříž
             </Link>
-            <p>Přesná adresa bude zveřejněna 2 dny před prodejem</p>
+            <p>Mečeříž 41, parkoviště ZD Mečeříž</p>
           </>
         }
       />
