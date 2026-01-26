@@ -1,5 +1,12 @@
 export const posts = [
   {
+    slug: '/slepicky-chlad',
+    title: 'Slepičky a chlad',
+    image: '/blog/2026/slepicky-chlad/1.webp',
+    date: '26.01.2026',
+    categories: ['slepičky'],
+  },
+  {
     slug: '/podzim-na-dvore',
     title: 'Podzim na dvoře',
     image: '/blog/2025/podzim-na-dvore/1.webp',
