@@ -261,6 +261,19 @@ const ZoomableMap = () => {
           </>
         }
       />
+      <ZoomableMarker
+        position={[50.22913152502321, 13.410247067924091]}
+        icon={createEmojiIcon('🐔')}
+        zoomLevel={17}
+        popupContent={
+          <>
+            <Link href='#' className='text-lg font-bold underline'>
+              Podbořany
+            </Link>
+            <p>Přesná adresa bude zveřejněna den před prodejem</p>
+          </>
+        }
+      />
     </MapContainer>
   )
 }
