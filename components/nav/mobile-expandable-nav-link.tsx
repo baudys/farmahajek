@@ -10,6 +10,7 @@ interface MobileExpandableNavItemProps {
   links: {
     label: string
     href: string
+    prefetch?: boolean
   }[]
   isTopOfPage: boolean
   handleClick?: () => void
@@ -25,8 +26,14 @@ export const MobileExpandableNavItem = ({
   const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    const handleOutsideClick = (event: any) => {
-      if (isOpen && ref.current && !ref?.current?.contains(event.target)) {
+    const handleOutsideClick = (event: MouseEvent) => {
+      const target = event.target
+
+      if (!(target instanceof Node)) {
+        return
+      }
+
+      if (isOpen && ref.current && !ref.current.contains(target)) {
         setIsOpen(false)
       }
     }
@@ -58,6 +65,7 @@ export const MobileExpandableNavItem = ({
             <Link
               key={link.href}
               href={link.href}
+              prefetch={link.prefetch ?? !link.href.startsWith('/galerie/')}
               onClick={handleClick}
               className='whitespace-nowrap text-2xl hover:underline hover:underline-offset-4'
             >

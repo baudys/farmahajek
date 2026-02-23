@@ -16,12 +16,20 @@ export const Photo = ({ photo }: PhotoProps) => {
     >
       <Dialog>
         <DialogTrigger>
-          <img src={photo} alt='photo' />
+          <img
+            src={photo}
+            alt='photo'
+            loading='lazy'
+            decoding='async'
+            fetchPriority='low'
+          />
         </DialogTrigger>
         <DialogContent className='max-h-[80vh] max-w-[95vw]'>
           <img
             src={photo}
             alt='photo'
+            loading='lazy'
+            decoding='async'
             className='max-h-[80vh] max-w-[95vw] rounded-lg'
           />
         </DialogContent>

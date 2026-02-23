@@ -1,52 +1,17 @@
 import Container from '@/components/container'
-import { Photo } from '@/components/gallery/photo'
+import { GalleryGrid } from '@/components/gallery/gallery-grid'
 import { farma } from '@/database/gallery'
 
 export const metadata = {
   title: 'Farma Hájek - Galerie 🖼',
 }
 
-const totalItems = farma.length
-const itemsPer2Column = Math.ceil(totalItems / 2)
-const itemsPer3Column = Math.ceil(totalItems / 3)
-
 export default function GaleriePage() {
   return (
     <div className='pb-28 pt-24'>
       <Container className='mt-10'>
         <section>
-          <div className='grid grid-cols-2 gap-2 md:hidden'>
-            <div className='flex flex-col gap-2'>
-              {farma.slice(0, itemsPer2Column).map((item) => (
-                <Photo key={item} photo={item} />
-              ))}
-            </div>
-            <div className='flex flex-col gap-2'>
-              {farma.slice(itemsPer2Column).map((item) => (
-                <Photo key={item} photo={item} />
-              ))}
-            </div>
-          </div>
-
-          <div className='hidden grid-cols-3 gap-6 md:grid'>
-            <div className='flex flex-col gap-6'>
-              {farma.slice(0, itemsPer3Column).map((item) => (
-                <Photo key={item} photo={item} />
-              ))}
-            </div>
-            <div className='flex flex-col gap-6'>
-              {farma.slice(itemsPer3Column, itemsPer3Column * 2).map((item) => (
-                <Photo key={item} photo={item} />
-              ))}
-            </div>
-            <div className='flex flex-col gap-6'>
-              {farma
-                .slice(itemsPer3Column * 2, itemsPer3Column * 3)
-                .map((item) => (
-                  <Photo key={item} photo={item} />
-                ))}
-            </div>
-          </div>
+          <GalleryGrid photos={farma} />
         </section>
       </Container>
     </div>

@@ -10,6 +10,7 @@ interface ExpandableNavLinkProps {
   links: {
     label: string
     href: string
+    prefetch?: boolean
   }[]
   isTopOfPage: boolean
 }
@@ -45,6 +46,7 @@ export const ExpandableNavLink = ({
             <Link
               key={link.href}
               href={link.href}
+              prefetch={link.prefetch ?? !link.href.startsWith('/galerie/')}
               className='whitespace-nowrap hover:underline hover:underline-offset-4'
             >
               {link.label}

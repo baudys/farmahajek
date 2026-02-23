@@ -6,6 +6,7 @@ interface NavLinkProps {
   href: string
   isTopOfPage: boolean
   handleClick?: () => void
+  prefetch?: boolean
 }
 
 export const NavLink: React.FC<NavLinkProps> = ({
@@ -13,7 +14,10 @@ export const NavLink: React.FC<NavLinkProps> = ({
   href,
   isTopOfPage,
   handleClick,
+  prefetch,
 }) => {
+  const linkPrefetch = href.startsWith('/') ? prefetch : undefined
+
   return (
     <li>
       <Link
@@ -23,6 +27,7 @@ export const NavLink: React.FC<NavLinkProps> = ({
         )}
         href={href}
         onClick={handleClick}
+        prefetch={linkPrefetch}
       >
         {label}
       </Link>
