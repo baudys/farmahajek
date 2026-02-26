@@ -5,35 +5,31 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from '@/components/ui/popover'
-import { Command, CommandGroup, CommandItem } from '@/components/ui/command'
 import { Check, ChevronsUpDown } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { useState } from 'react'
-import Image from 'next/image'
 import { cn } from '@/lib/utils'
 import { useLanguage } from '@/hooks/useLanguage'
+import { FlagIcon } from './flag-icon'
 
 const languages = [
   {
     value: 'cs',
-    src: '/flags/cs.webp',
   },
   {
     value: 'en',
-    src: '/flags/en.webp',
   },
   {
     value: 'de',
-    src: '/flags/de.webp',
   },
-]
+] as const
 
 interface LanguageSelectorProps {
   isTopOfPage: boolean
 }
 
 export const LanguageSelector = ({ isTopOfPage }: LanguageSelectorProps) => {
-  const { language, imgSrc, setLanguage } = useLanguage((state) => state)
+  const { language, setLanguage } = useLanguage((state) => state)
 
   const [open, setOpen] = useState<boolean>(false)
 
@@ -44,9 +40,9 @@ export const LanguageSelector = ({ isTopOfPage }: LanguageSelectorProps) => {
           variant='outline'
           role='combobox'
           aria-expanded={open}
-          className='w-[70px] justify-between border-none bg-transparent text-white hover:bg-zinc-100/10 hover:text-white'
+          className='h-10 w-[82px] justify-between border-none bg-transparent px-2 text-white hover:bg-zinc-100/10 hover:text-white'
         >
-          <Image src={imgSrc(language)} width={30} height={30} alt={language} />
+          <FlagIcon locale={language} width={32} height={21} className='shrink-0' />
           <ChevronsUpDown
             className={cn(
               'ml-2 h-4 w-4 shrink-0 opacity-50 transition duration-300',
@@ -55,29 +51,32 @@ export const LanguageSelector = ({ isTopOfPage }: LanguageSelectorProps) => {
           />
         </Button>
       </PopoverTrigger>
-      <PopoverContent className='z-[1112] w-[100px] bg-zinc-300 p-2'>
-        <Command>
-          <CommandGroup className='space-y-2 bg-zinc-300'>
-            {languages.map(({ src, value }: { src: string; value: string }) => (
-              <CommandItem
-                key={value}
-                onSelect={() => {
-                  setLanguage(value)
-                  setOpen(false)
-                }}
-                className='mb-2 cursor-pointer hover:bg-zinc-400/30'
-              >
-                <Check
-                  className={cn(
-                    'mr-2 h-4 w-4',
-                    language === value ? 'opacity-100' : 'opacity-0',
-                  )}
-                />
-                <Image src={src} width={30} height={30} alt={value} />
-              </CommandItem>
-            ))}
-          </CommandGroup>
-        </Command>
+      <PopoverContent className='z-[1112] w-[124px] border-zinc-200 bg-white/95 p-2 backdrop-blur-sm'>
+        <div className='space-y-1'>
+          {languages.map(({ value }) => (
+            <button
+              key={value}
+              type='button'
+              onClick={() => {
+                setLanguage(value)
+                setOpen(false)
+              }}
+              className={cn(
+                'flex w-full cursor-pointer items-center rounded-md px-2 py-1.5 text-left transition hover:bg-zinc-100',
+                language === value && 'bg-zinc-100',
+              )}
+              aria-label={`Switch language to ${value}`}
+            >
+              <Check
+                className={cn(
+                  'mr-2 h-4 w-4 text-zinc-700',
+                  language === value ? 'opacity-100' : 'opacity-0',
+                )}
+              />
+              <FlagIcon locale={value} width={34} height={22} className='shrink-0' />
+            </button>
+          ))}
+        </div>
       </PopoverContent>
     </Popover>
   )

@@ -13,54 +13,56 @@ export const Logos: React.FC = () => (
         src='/obchody/ecofeed.webp'
         width={150}
         height={150}
-        alt='Shopify'
+        alt='Ecofeed'
       />
     </SliderItem>
     <SliderItem width={220} href='https://www.tespra.cz/'>
-      <h1 className='text-base font-bold xl:text-2xl'>TESPRA Kdyně</h1>
+      <h3 className='text-base font-bold xl:text-2xl'>TESPRA Kdyně</h3>
     </SliderItem>
     <SliderItem width={200} href='https://www.krmnesmesikvidera.cz/'>
       <Image
         src='/obchody/kvidera.webp'
         width={150}
         height={150}
-        alt='Coinbase'
+        alt='Krmné směsi Kvídera'
       />
     </SliderItem>
     <SliderItem
       width={500}
       href='https://rejstrik-firem.kurzy.cz/zivnostnik/a3GTo5mdk6U='
     >
-      <h1 className='text-base font-bold xl:text-2xl'>
+      <h3 className='text-base font-bold xl:text-2xl'>
         Jitka Šilhánková – přebytky Kdyně
-      </h1>
+      </h3>
     </SliderItem>
     <SliderItem width={200} href='https://www.farmavicenice.cz/'>
       <Image
         src='/obchody/vicenice.webp'
         width={150}
         height={150}
-        alt='Rainbow'
+        alt='Farma Vícenice'
       />
     </SliderItem>
     <SliderItem
       width={400}
       href='https://www.firmy.cz/detail/2031327-lubos-ourada-domazlice-mesto.html'
     >
-      <h1 className='text-base font-bold xl:text-2xl'>
+      <h3 className='text-base font-bold xl:text-2xl'>
         Luboš Ouřada Domažlice
-      </h1>
+      </h3>
     </SliderItem>
     <SliderItem width={150} href='https://zodmrakov.cz/'>
       <Image
         src='/obchody/zod-mrakov.webp'
         width={100}
         height={100}
-        alt='Redbull'
+        alt='ZOD Mrákov'
       />
     </SliderItem>
     <SliderItem width={300} href='http://farmarsketrhy.strakonice.eu/'>
-      <h1 className='text-base font-bold xl:text-2xl'>Trhy ve Strakonicích</h1>
+      <h3 className='text-base font-bold xl:text-2xl'>
+        Trhy ve Strakonicích
+      </h3>
     </SliderItem>
   </SliderContainer>
 )

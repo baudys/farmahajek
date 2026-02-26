@@ -5,9 +5,9 @@ This runbook documents the Vercel-side controls required by the edge-request red
 ## Scope
 
 - Block invalid API scans: `/api/*`
-- Block invalid numeric blog paths: `/blog/{number}`
-- Keep valid content routes working, including `/blog/{slug}`
-- Keep allowlisted numeric slug routes working (currently `/blog/2024`)
+- Block invalid numeric blog paths: `/{locale}/blog/{number}` and `/blog/{number}`
+- Keep valid content routes working, including `/{locale}/blog/{slug}`
+- Keep allowlisted numeric slug routes working (currently `/{locale}/blog/2024`)
 
 ## Rules
 
@@ -16,7 +16,7 @@ This runbook documents the Vercel-side controls required by the edge-request red
 - Action: `Block`
 
 2. Add a Firewall rule:
-- Condition: `Request path matches regex ^/blog/(?!2024/?$)[0-9]+/?$`
+- Condition: `Request path matches regex ^/(cs/|en/|de/)?blog/(?!2024/?$)[0-9]+/?$`
 - Action: `Block`
 
 3. Add redirect rule (if not already active from app config):
@@ -39,4 +39,4 @@ After rules are enabled, check these metrics for 24-48 hours:
 - Should stay stable for valid site routes.
 
 4. Valid content verification:
-- `/blog/voda-v-zime` and other slug pages return 200.
+- `/cs/blog/voda-v-zime` and other slug pages return 200.

@@ -1,6 +1,7 @@
 'use client'
 
 import { useLanguage } from '@/hooks/useLanguage'
+import { isLocale } from '@/i18n/config'
 import { useEffect } from 'react'
 
 interface LanguageProviderProps {
@@ -14,7 +15,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
 
   useEffect(() => {
     const storedLanguage = localStorage.getItem('language-storage')
-    if (storedLanguage) {
+    if (isLocale(storedLanguage)) {
       setLanguage(storedLanguage)
     }
   }, [setLanguage])

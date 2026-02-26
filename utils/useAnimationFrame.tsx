@@ -1,11 +1,13 @@
 import { useCallback, useRef, useEffect } from 'react'
 
 const useAnimationFrame = (enabled: boolean, callback: () => void) => {
-  const requestRef = useRef<ReturnType<typeof requestAnimationFrame>>()
+  const requestRef = useRef<ReturnType<typeof requestAnimationFrame> | null>(
+    null,
+  )
 
-  const animate = useCallback(() => {
+  const animate = useCallback(function animateFrame() {
     callback()
-    requestRef.current = requestAnimationFrame(animate)
+    requestRef.current = requestAnimationFrame(animateFrame)
   }, [callback])
 
   useEffect(() => {
@@ -13,8 +15,8 @@ const useAnimationFrame = (enabled: boolean, callback: () => void) => {
       requestRef.current = requestAnimationFrame(animate)
 
       return () => {
-        if (requestRef.current) {
-          return cancelAnimationFrame(requestRef.current)
+        if (requestRef.current !== null) {
+          cancelAnimationFrame(requestRef.current)
         }
       }
     }

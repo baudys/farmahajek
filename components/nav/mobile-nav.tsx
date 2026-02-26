@@ -1,6 +1,6 @@
 'use client'
 
-import Link from 'next/link'
+import { Link } from '@/i18n/navigation'
 import Container from '@/components/container'
 import Image from 'next/image'
 import { NavLink } from './nav-link'
@@ -19,6 +19,7 @@ import { LanguageSelector } from './language-selector'
 import { MobileExpandableNavItem } from './mobile-expandable-nav-link'
 import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
+import { stripLocaleFromPathname } from '@/i18n/config'
 
 interface MobileNavProps {
   isTopOfPage: boolean
@@ -26,6 +27,7 @@ interface MobileNavProps {
 
 export const MobileNav: React.FC<MobileNavProps> = ({ isTopOfPage }) => {
   const pathname = usePathname()
+  const { pathnameWithoutLocale } = stripLocaleFromPathname(pathname ?? '/')
   const [isOpen, setIsOpen] = useState<boolean>(false)
   const { language } = useLanguage((state) => state)
 
@@ -48,7 +50,7 @@ export const MobileNav: React.FC<MobileNavProps> = ({ isTopOfPage }) => {
         isTopOfPage
           ? 'bg-transparent'
           : 'bg-green/70 drop-shadow backdrop-blur-xl',
-        isTopOfPage && pathname !== '/' && 'bg-black',
+        isTopOfPage && pathnameWithoutLocale !== '/' && 'bg-black',
       )}
     >
       <Container>

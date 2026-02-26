@@ -1,8 +1,8 @@
 'use client'
 
 import { cn } from '@/lib/utils'
+import { Link } from '@/i18n/navigation'
 import { ChevronDown } from 'lucide-react'
-import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
 
 interface MobileExpandableNavItemProps {

@@ -1,6 +1,5 @@
 'use client'
 
-import { useState, useEffect } from 'react'
 import Container from '../../components/container'
 import {
   VerticalTimeline,
@@ -42,11 +41,11 @@ const Card: React.FC<CardProps> = ({ item }) => {
     >
       <div className='relative rounded-[20px] bg-[url(/textures/grass.webp)]'>
         <div className='rounded-t-[20px] bg-green/80 p-3'>
-          <h1 className='text-2xl font-bold uppercase text-brown'>
+          <h3 className='text-2xl font-bold uppercase text-brown'>
             {language === 'cs' && <>{item.titlecs}</>}
             {language === 'en' && <>{item.titleen}</>}
             {language === 'de' && <>{item.titlede}</>}
-          </h1>
+          </h3>
           <p className='!text-base !leading-5 text-brown/80'>
             {language === 'cs' && <>{item.textcs}</>}
             {language === 'en' && <>{item.texten}</>}
@@ -67,12 +66,6 @@ const Card: React.FC<CardProps> = ({ item }) => {
 }
 
 export const Timeline = () => {
-  const [isLoading, setIsLoading] = useState(true)
-
-  useEffect(() => {
-    setIsLoading(false)
-  }, [])
-
   return (
     <div
       className='relative bg-[url(/textures/soil.webp)] bg-cover'
@@ -82,10 +75,7 @@ export const Timeline = () => {
       <Container>
         <VerticalTimeline
           lineColor='#BBD700'
-          className={`${
-            !isLoading &&
-            'before:absolute before:left-[18px] before:top-0 before:z-[1110] before:h-full before:w-[4px] before:bg-green before:content-none xl:before:left-1/2 xl:before:ml-[-2px]'
-          }`}
+          className='before:absolute before:left-[18px] before:top-0 before:z-[1110] before:h-full before:w-[4px] before:bg-green before:content-none xl:before:left-1/2 xl:before:ml-[-2px]'
         >
           {timeline.map((item, i) => (
             <Card key={i} item={item} />

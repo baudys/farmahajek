@@ -1,18 +1,21 @@
-import { Hero } from '@/containers/home/hero'
-import { Timeline } from '@/containers/home/timeline'
-import { Outlets } from '@/containers/home/outlets'
-import { Franchise } from '@/containers/home/franchise'
-import { Blog } from '@/containers/home/blog'
-import { posts } from '@/database/posts'
+import { cookies, headers } from 'next/headers'
+import { redirect } from 'next/navigation'
+import {
+  defaultLocale,
+  detectLocaleFromAcceptLanguage,
+  isLocale,
+} from '@/i18n/config'
 
-export default async function Home() {
-  return (
-    <main>
-      <Hero />
-      <Blog posts={posts} />
-      <Franchise />
-      <Timeline />
-      <Outlets />
-    </main>
-  )
+export default async function RootRedirectPage() {
+  const cookieStore = await cookies()
+  const headerStore = await headers()
+
+  const localeCookie = cookieStore.get('NEXT_LOCALE')?.value
+  const acceptLanguage = headerStore.get('accept-language')
+
+  const locale = isLocale(localeCookie)
+    ? localeCookie
+    : detectLocaleFromAcceptLanguage(acceptLanguage) ?? defaultLocale
+
+  redirect(`/${locale}`)
 }

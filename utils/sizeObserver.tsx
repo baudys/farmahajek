@@ -14,13 +14,14 @@ export const SizeContext = React.createContext<ScrollValue>({
 })
 
 const SizeObserver: React.FC<PropsWithChildren> = ({ children }) => {
-  const [innerWidth, setInnerWidth] = useState(0)
+  const [innerWidth, setInnerWidth] = useState(() =>
+    typeof window !== 'undefined' ? window.innerWidth : 0,
+  )
   const handleResize = useCallback(() => {
-    setInnerWidth(window.innerHeight)
+    setInnerWidth(window.innerWidth)
   }, [])
 
   useEffect(() => {
-    handleResize()
     window.addEventListener('resize', handleResize, { passive: true })
 
     return () => window.removeEventListener('resize', handleResize)

@@ -1,6 +1,6 @@
 'use client'
 
-import Link from 'next/link'
+import { Link } from '@/i18n/navigation'
 import Container from '@/components/container'
 import Image from 'next/image'
 import { NavLink } from './nav-link'
@@ -14,6 +14,7 @@ import { LanguageSelector } from './language-selector'
 import { ExpandableNavLink } from './expandable-nav-link'
 import { cn } from '@/lib/utils'
 import { usePathname } from 'next/navigation'
+import { stripLocaleFromPathname } from '@/i18n/config'
 
 interface DesktopNavProps {
   isTopOfPage: boolean
@@ -21,6 +22,7 @@ interface DesktopNavProps {
 
 export const DesktopNav: React.FC<DesktopNavProps> = ({ isTopOfPage }) => {
   const pathname = usePathname()
+  const { pathnameWithoutLocale } = stripLocaleFromPathname(pathname ?? '/')
   const { language } = useLanguage((state) => state)
 
   return (
@@ -30,7 +32,7 @@ export const DesktopNav: React.FC<DesktopNavProps> = ({ isTopOfPage }) => {
         isTopOfPage
           ? 'bg-transparent'
           : 'bg-green/70 drop-shadow backdrop-blur-xl',
-        isTopOfPage && pathname !== '/' && 'bg-black',
+        isTopOfPage && pathnameWithoutLocale !== '/' && 'bg-black',
       )}
     >
       <Container>

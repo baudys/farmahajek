@@ -53,8 +53,10 @@ export const NewsletterBanner = () => {
           aria-hidden='true'
           style={{ position: 'absolute', left: '-5000px' }}
         >
-          /* real people should not fill this in and expect good things - do not
-          remove this or risk form bot signups */
+          {/*
+            real people should not fill this in and expect good things - do not
+            remove this or risk form bot signups
+          */}
           <input
             type='text'
             name='b_4f24db18e7450d7f4259c5da5_f24627c63d'

@@ -8,10 +8,23 @@ import { FaFacebook } from 'react-icons/fa'
 import { MdEmail } from 'react-icons/md'
 import Container from '../container'
 import { useLanguage } from '@/hooks/useLanguage'
-import Fade from 'react-reveal/Fade'
+import { withLocalePath } from '@/i18n/config'
+
+interface FadeProps {
+  children: React.ReactNode
+  left?: boolean
+  right?: boolean
+  top?: boolean
+  bottom?: boolean
+}
+
+const Fade = ({ children }: FadeProps) => <>{children}</>
 
 export const Footer = () => {
   const { language } = useLanguage((state) => state)
+  const servicesHref = withLocalePath('/sluzby', language)
+  const contactHref = withLocalePath('/vydejni-mista', language)
+  const galleryHref = withLocalePath('/galerie/farma', language)
 
   return (
     <footer className='bg-green pb-5 pt-20 text-brown xl:pb-10 xl:pt-32'>
@@ -23,7 +36,7 @@ export const Footer = () => {
                 <>Nezapomeň nás sledovat na sociálních sítích!</>
               )}
               {language === 'en' && (
-                <>Don't forget to follow us on social media!</>
+                <>Don&apos;t forget to follow us on social media!</>
               )}
               {language === 'de' && (
                 <>Vergessen Sie nicht, uns auf den sozialen Medien zu folgen!</>
@@ -120,7 +133,7 @@ export const Footer = () => {
                 <ul>
                   <li>
                     <Link
-                      href='https://farmahajek.cz/sluzby'
+                      href={servicesHref}
                       className='hover:underline'
                     >
                       {language === 'cs' && <>Služby</>}
@@ -130,7 +143,7 @@ export const Footer = () => {
                   </li>
                   <li>
                     <Link
-                      href='https://farmahajek.cz/kontakt'
+                      href={contactHref}
                       className='hover:underline'
                     >
                       {language === 'cs' && <>Kontakt</>}
@@ -140,7 +153,7 @@ export const Footer = () => {
                   </li>
                   <li>
                     <Link
-                      href='https://farmahajek.cz/galerie'
+                      href={galleryHref}
                       className='hover:underline'
                     >
                       {language === 'cs' && <>Galerie</>}
