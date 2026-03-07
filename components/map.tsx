@@ -274,6 +274,19 @@ const ZoomableMap = () => {
           </>
         }
       />
+      <ZoomableMarker
+        position={[48.93653208134197, 14.487322647678177]}
+        icon={createEmojiIcon('🐔')}
+        zoomLevel={17}
+        popupContent={
+          <>
+            <Link href='#' className='text-lg font-bold underline'>
+              Roudné-České Budějovice
+            </Link>
+            <p>Ke Skleníkům 149, 370 07 Roudné-České Budějovice 7</p>
+          </>
+        }
+      />
     </MapContainer>
   )
 }
