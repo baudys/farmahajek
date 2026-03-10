@@ -139,7 +139,7 @@ const ZoomableMap = () => {
             >
               Archa ZOO
             </Link>
-            <p>Osvobozená 777 200, 431 51 Klášterec nad Ohří</p>
+            <p>Klášterec nad Ohří</p>
           </>
         }
       />
