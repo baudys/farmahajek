@@ -17,14 +17,14 @@ delete L.Icon.Default.prototype._getIconUrl
 L.Icon.Default.mergeOptions({
   iconUrl: markerIcon.src,
   iconRetinaUrl: markerIcon2x.src,
-  shadowUrl: markerShadow.src,
+  shadowUrl: markerShadow.src
 })
 
 const createEmojiIcon = (emoji: string) => {
   const iconHTML = `<div class="emoji-icon text-lg">${emoji}</div>`
   return L.divIcon({
     html: iconHTML,
-    className: 'custom-icon',
+    className: 'custom-icon'
   })
 }
 
@@ -32,7 +32,7 @@ const ZoomableMarker = ({
   position,
   icon,
   zoomLevel,
-  popupContent,
+  popupContent
 }: {
   position: LatLngExpression
   icon: L.Icon<L.IconOptions> | L.DivIcon
@@ -47,7 +47,7 @@ const ZoomableMarker = ({
       icon={icon}
       eventHandlers={{
         click: () => map.setView(position, zoomLevel, { animate: true }),
-        mouseover: (event) => event.target.openPopup(),
+        mouseover: (event) => event.target.openPopup()
       }}
     >
       <Popup>{popupContent}</Popup>
@@ -63,7 +63,7 @@ const ZoomableMap = () => {
       center={[49.9171208544799, 14.67178354882282]}
       zoom={isDesktop ? 8 : 6}
       scrollWheelZoom={false}
-      className='h-[400px] rounded-lg md:h-[700px]'
+      className='h-100 rounded-lg md:h-175'
     >
       <TileLayer url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png' />
       {/* <FullscreenControl /> */}
@@ -149,7 +149,10 @@ const ZoomableMap = () => {
         zoomLevel={17}
         popupContent={
           <>
-            <Link href='#' className='text-lg font-bold underline'>
+            <Link
+              href='#'
+              className='text-lg font-bold underline'
+            >
               Prodejní sklad Smečno
             </Link>
             <p>Kačická 514, 273 05 Smečno</p>
@@ -162,7 +165,10 @@ const ZoomableMap = () => {
         zoomLevel={17}
         popupContent={
           <>
-            <Link href='#' className='text-lg font-bold underline'>
+            <Link
+              href='#'
+              className='text-lg font-bold underline'
+            >
               Prodejní sklad Polepy
             </Link>
             <p>Areál firmy HARIS, 431 51 Polepy</p>
@@ -175,7 +181,10 @@ const ZoomableMap = () => {
         zoomLevel={17}
         popupContent={
           <>
-            <Link href='#' className='text-lg font-bold underline'>
+            <Link
+              href='#'
+              className='text-lg font-bold underline'
+            >
               Sokolov
             </Link>
             <p>Přesná adresa bude zveřejněna 2 dny před prodejem</p>
@@ -188,7 +197,10 @@ const ZoomableMap = () => {
         zoomLevel={17}
         popupContent={
           <>
-            <Link href='#' className='text-lg font-bold underline'>
+            <Link
+              href='#'
+              className='text-lg font-bold underline'
+            >
               Bor u Tachova
             </Link>
             <p>Přesná adresa bude zveřejněna 2 dny před prodejem</p>
@@ -214,7 +226,10 @@ const ZoomableMap = () => {
         zoomLevel={17}
         popupContent={
           <>
-            <Link href='#' className='text-lg font-bold underline'>
+            <Link
+              href='#'
+              className='text-lg font-bold underline'
+            >
               Beroun
             </Link>
             <p>Přesná adresa bude zveřejněna 2 dny před prodejem</p>
@@ -228,14 +243,17 @@ const ZoomableMap = () => {
         zoomLevel={17}
         popupContent={
           <>
-            <Link href='#' className='text-lg font-bold underline'>
+            <Link
+              href='#'
+              className='text-lg font-bold underline'
+            >
               Borohrádek
             </Link>
             <p>vlakové nádraží</p>
           </>
         }
       />
-      <ZoomableMarker
+      {/*<ZoomableMarker
         position={[50.101915406162995, 15.193056657999412]}
         icon={createEmojiIcon('🐔')}
         zoomLevel={17}
@@ -247,6 +265,22 @@ const ZoomableMap = () => {
             <p>vlakové nádraží</p>
           </>
         }
+      />*/}
+      <ZoomableMarker
+        position={[50.290511455129625, 14.7396062126633]}
+        icon={createEmojiIcon('🐔')}
+        zoomLevel={17}
+        popupContent={
+          <>
+            <Link
+              href='#'
+              className='text-lg font-bold underline'
+            >
+              Hořátev
+            </Link>
+            <p>Přesná adresa bude zveřejněna den před prodejem</p>
+          </>
+        }
       />
       <ZoomableMarker
         position={[50.290511455129625, 14.739606212663302]}
@@ -254,7 +288,10 @@ const ZoomableMap = () => {
         zoomLevel={17}
         popupContent={
           <>
-            <Link href='#' className='text-lg font-bold underline'>
+            <Link
+              href='#'
+              className='text-lg font-bold underline'
+            >
               Mečeříž
             </Link>
             <p>Mečeříž 41, parkoviště ZD Mečeříž</p>
@@ -267,7 +304,10 @@ const ZoomableMap = () => {
         zoomLevel={17}
         popupContent={
           <>
-            <Link href='#' className='text-lg font-bold underline'>
+            <Link
+              href='#'
+              className='text-lg font-bold underline'
+            >
               Podbořany
             </Link>
             <p>Přesná adresa bude zveřejněna den před prodejem</p>
@@ -280,7 +320,10 @@ const ZoomableMap = () => {
         zoomLevel={17}
         popupContent={
           <>
-            <Link href='#' className='text-lg font-bold underline'>
+            <Link
+              href='#'
+              className='text-lg font-bold underline'
+            >
               Roudné-České Budějovice
             </Link>
             <p>Ke Skleníkům 149, 370 07 Roudné-České Budějovice 7</p>
