@@ -267,7 +267,7 @@ const ZoomableMap = () => {
         }
       />*/}
       <ZoomableMarker
-        position={[50.290511455129625, 14.7396062126633]}
+        position={[50.1502520927873, 15.039144853526814]}
         icon={createEmojiIcon('🐔')}
         zoomLevel={17}
         popupContent={
