@@ -128,18 +128,18 @@ const ZoomableMap = () => {
         }
       />
       <ZoomableMarker
-        position={[50.38785533623291, 13.19428235875933]}
+        position={[50.38119832420698, 13.110281205747993]}
         icon={createEmojiIcon('🐔')}
         zoomLevel={17}
         popupContent={
           <>
             <Link
-              href='https://zooarcha.cz/index.php?str=klasterec'
+              href='#'
               className='text-lg font-bold underline'
             >
-              Archa ZOO
+              Perštejn
             </Link>
-            <p>Klášterec nad Ohří</p>
+            <p>Přesná adresa bude zveřejněna den před prodejem</p>
           </>
         }
       />
