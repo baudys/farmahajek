@@ -253,20 +253,23 @@ const ZoomableMap = () => {
           </>
         }
       />
-      {/*<ZoomableMarker
+      <ZoomableMarker
         position={[50.101915406162995, 15.193056657999412]}
         icon={createEmojiIcon('🐔')}
         zoomLevel={17}
         popupContent={
           <>
-            <Link href='#' className='text-lg font-bold underline'>
+            <Link
+              href='#'
+              className='text-lg font-bold underline'
+            >
               Velký Osek
             </Link>
             <p>vlakové nádraží</p>
           </>
         }
-      />*/}
-      <ZoomableMarker
+      />
+      {/*<ZoomableMarker
         position={[50.1502520927873, 15.039144853526814]}
         icon={createEmojiIcon('🐔')}
         zoomLevel={17}
@@ -281,7 +284,7 @@ const ZoomableMap = () => {
             <p>Přesná adresa bude zveřejněna den před prodejem</p>
           </>
         }
-      />
+      />*/}
       <ZoomableMarker
         position={[50.290511455129625, 14.739606212663302]}
         icon={createEmojiIcon('🐔')}
