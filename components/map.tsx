@@ -171,7 +171,7 @@ const ZoomableMap = () => {
             >
               Prodejní sklad Polepy
             </Link>
-            <p>Areál firmy HARIS, 431 51 Polepy</p>
+            <p>Areál firmy HARIS, 411 47 Polepy</p>
           </>
         }
       />
