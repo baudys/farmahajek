@@ -333,6 +333,46 @@ const ZoomableMap = () => {
           </>
         }
       />
+
+
+<ZoomableMarker
+        position={[49.670780962968706, 17.221061201448308]}
+        icon={createEmojiIcon('🐔')}
+        zoomLevel={17}
+        popupContent={
+          <>
+            <Link
+              href='#'
+              className='text-lg font-bold underline'
+            >
+              Štěpánov
+            </Link>
+            <p>Za Drahou 169/8, 783 13 Štěpánov vlakové nádraží , 783 13 (Olomouc)</p>
+            <br />
+            <p>+420 734 257 555</p>
+            <p>+420 778 208 887</p>
+          </>
+        }
+      />
+       <ZoomableMarker
+        position={[49.669780479142915, 15.632832421951244]}
+        icon={createEmojiIcon('🐔')}
+        zoomLevel={17}
+        popupContent={
+          <>
+            <Link
+              href='#'
+              className='text-lg font-bold underline'
+            >
+              Rozsochatec
+            </Link>
+            <p>Rozsochatec 47, 582 72 Rozsochatec - vlakové nádraží Rozsochatec, 582 72 (Havlíčkův Brod)</p>
+            <br />
+            <p>+420 734 257 555</p>
+            <p>+420 778 208 887</p>
+          </>
+        }
+      />
     </MapContainer>
   )
 }
