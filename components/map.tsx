@@ -373,6 +373,24 @@ const ZoomableMap = () => {
           </>
         }
       />
+       <ZoomableMarker
+        position={[49.834606784355536, 14.592828405611547]}
+        icon={createEmojiIcon('🐔')}
+        zoomLevel={17}
+        popupContent={
+          <>
+            <Link
+              href='#'
+              className='text-lg font-bold underline'
+            >
+              Týnec nad Sázavou
+            </Link>
+            <p>Týnec nad Sázavou (Benešov), U Trati 526</p>
+            <br />
+            <p>+420 734 257 555</p>
+          </>
+        }
+      />
     </MapContainer>
   )
 }
